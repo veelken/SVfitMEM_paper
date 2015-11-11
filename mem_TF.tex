@@ -1,0 +1,152 @@
+\subsection{Transfer functions}
+\label{sec:mem_TF}
+
+The TF $W(p^{\vis(i)}|\phat^{\vis(i)})$ relate the reconstructed
+$\pT$, $\eta$, and $\phi$ components of the momentum vector of the
+visible $\Pgt$ decay products to their respective true values,
+given by the momentum vector $\phat^{\vis(i)}$.
+The case of hadronic and leptonic $\Pgt$ decays is described in
+Sections~\ref{sec:mem_TF_tauToHadDecays}
+and~\ref{sec:mem_TF_tauToLepDecays}, respectively.
+In both cases the neutrinos produced in the $\Pgt$ decays are not
+included in these TF, but are treated separately, as detailed in Sections~\ref{sec:appendix_tauToHadDecays} and~\ref{sec:appendix_tauToLepDecays} of the appendix.
+The TF $W_{\rec}( \bm{p}^{\rec}| \phat^{\rec} )$ that we use to model the experimental resolution on the
+hadronic recoil is discussed in Section~\ref{sec:mem_TF_hadRecoil}.
+
+
+\subsubsection{$\Pgt \to \textrm{hadrons} + \Pnut$ decays}
+\label{sec:mem_TF_tauToHadDecays}
+
+The energy, or equivalently $\pT$, of $\tauh$ decays
+is reconstructed with a
+resolution of typically $5$--$25\%$ at the
+LHC~\cite{Aad:2014rga,TAU-14-001}.
+The resolution may vary as function of $\pT$ and $\eta$ and may depend
+also on the multiplicity of charged and neutral hadrons produced that
+are produced in the $\Pgt$ decay.
+The resolution on the $\tauh$ energy is of similar magnitude as the
+resolution on $m_{\Pgt\Pgt}$ that we aim to achieve and needs to be
+taken into account by suitable TF when evaluating the integral in
+Eq.~\ref{eq:mem_with_hadRecoil}.
+We denote the TF used to model the $\pT$ of the $\tauh$ system by
+$W_{\Phadron}( \bm{p}^{\vis} | \phat^{\vis} )$.
+
+ATLAS as well as CMS report that the energy response for hadronic
+$\Pgt$ decays may be asymmetric~\cite{ATLAS:2011tfa,PRF-14-001}.
+For the purpose of this paper, we assume the TF for the $\pT$ of the
+$\tauh$ system to have the form:
+\begin{equation}
+W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} ) = 
+ \begin{cases}
+   \mathcal{N} \, \zeta_{1} \, \left( \frac{\alpha_{1}}{x_{1}} - x_{1} - \frac{x - \mu}{\sigma} \right)^{-\alpha_{1}} \,  
+ & \mbox{if } x < x_{1} \, , \\
+   \mathcal{N} \, \exp\left( -\frac{1}{2} \, \left( \frac{x - \mu}{\sigma} \right)^{2} \right) \,
+ & \mbox{if } x_{1} < x < x_{2} \, , \\
+   \mathcal{N} \, \zeta_{2} \, \left( \frac{\alpha_{2}}{x_{2}} - x_{2} - \frac{x - \mu}{\sigma} \right)^{-\alpha_{2}} \,
+ & \mbox{if } x > x_{2} \, ,
+ \end{cases}
+\label{eq:tf_tauToHadDecays_pT}
+\end{equation}
+with $\mu = 1.0$, $\sigma = 0.03$, $x_{1} = 0.97$, $\alpha_{1} = 7$,
+$x_{2} = 1.03$, and $\alpha_{2} = 3.5$.
+The factors $\zeta_{1}$ and $\zeta_{2}$ are chosen such that the
+function $W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} )$ is continous at
+the points $x = x_{1}$ and $x = x_{2}$. 
+Their values are $\zeta_{1} = \left( \frac{\alpha}{x_{1}}
+\right)^{\alpha_{1}} \, \exp\left( -\frac{1}{2} \, x_{1}^{2} \right)$ and $\zeta_{2} = \left( \frac{\alpha}{x_{2}}
+\right)^{\alpha_{2}} \, \exp\left( -\frac{1}{2} \, x_{2}^{2} \right)$
+, respectively.
+The factor $\mathcal{N}$ is determined by the condition that the function $W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} )$ 
+satisfies the normalization condition $\int \, d\pT^{\vis} \, W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} ) \equiv 1$.
+
+The resolution of the direction of the $\tauh$ system is on the level
+of a few milliradians and is negligible in practice.
+We hence model the TF for the momentum of the system of hadrons
+produced in $\Pgt$ decays by the product of Eq.~\ref{eq:tf_tauToHadDecays} and two
+$\delta$-functions:
+\begin{equation}
+W_{\Phadron}( \bm{p}^{\vis} | \phat^{\vis} ) =
+ \frac{\sin^{2}\theta_{\vis}}{\pT^{\vis}} \, 
+  W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} ) \,
+  \delta( \theta_{\vis} - \thetahat_{\vis} ) \, 
+  \delta( \phi_{\vis} - \phihat_{\vis} ) \, .
+\label{eq:tf_tauToHadDecays}
+\end{equation}
+The factor $\frac{\sin^{2}\theta_{\vis}}{\pT^{\vis}}$ is needed
+to ensure the correct normalization of the TF:
+\begin{align}
+& \int \, d^{3}\bm{p}  \, W_{\Phadron}( \bm{p}^{\vis} | \phat^{\vis} ) = \int \, d\pX^{\vis} \, d\pY^{\vis} \, d\pZ^{\vis} \, W_{\Phadron}( \bm{p}^{\vis} | \phat^{\vis} ) \nonumber \\
+& \qquad = \int \, d\pT^{\vis} \, d\theta_{\vis} \, d\phi_{\vis} \, W_{\Phadron}( \bm{p}^{\vis} | \phat^{\vis} ) \, 
+  \frac{\pT^{\vis}}{\sin^{2} \theta_{\vis}} \equiv 1 \, ,
+\end{align}
+where the factor $\frac{\pT^{\vis}}{\sin^{2} \theta_{\vis}}$ corresponds to the Jacobian of the variable transformation 
+from $(\pX^{\vis} = \pT^{\vis} \, \cos\phi_{\vis}, \pY^{\vis} = \pT^{\vis} \, \sin\phi_{\vis}, \pZ^{\vis} = \frac{\pT^{\vis}}{\tan\theta_{\vis}})$ 
+to $(\pT^{\vis}, \theta_{\vis}, \phi_{\vis})$.
+
+\subsubsection{$\Pgt \to \enunu$ and $\Pgt \to \mununu$ decays}
+\label{sec:mem_TF_tauToLepDecays}
+
+For leptonic $\Pgt$ decays,
+we use the TF:
+\begin{equation}
+W_{\Plepton}( \bm{p}^{\vis} | \phat^{\vis} ) =  
+ \frac{\sin^{2} \theta_{\vis}}{\pT^{\vis}} \, 
+  \delta( \pT^{\vis} - \pThat^{\vis} ) \, 
+  \delta( \theta_{\vis} - \thetahat_{\vis} ) \, 
+  \delta( \phi_{\vis} - \phihat_{\vis} ) \, ,
+\label{eq:tf_tauToLepDecays}
+\end{equation}
+assuming that the experimental resolution on $\pT^{\vis}$,
+$\eta_{\vis}$, and $\phi_{\vis}$ is negligible for electrons and
+muons.
+
+
+\subsubsection{Hadronic recoil}
+\label{sec:mem_TF_hadRecoil}
+
+We use a two-dimensional normal distribution:
+\begin{align}
+%%& W_{\rec}( \bm{p}^{\rec} | \phat^{\rec} ) = \hspace{7cm} \nonumber \\
+%%& \quad
+%%  \frac{1}{2\pi \, \sqrt{\vert V \vert}} \, \exp \left( -\frac{1}{2}
+%%  \left( \begin{array}{c} \Delta\pX^{\rec} \\ \Delta\pY^{\rec} \end{array} \right)^{T}
+%%  \cdot V^{-1} \cdot
+%%   \left( \begin{array}{c} \Delta\pX^{\rec} \\ \Delta\pY^{\rec} \end{array} \right)
+%%  \right) \, ,
+W_{\rec}( \bm{p}^{\rec} | \phat^{\rec} ) = & 
+  \frac{1}{2\pi \, \sqrt{\vert V \vert}} \, \exp \left( -\frac{1}{2}
+  \left( \begin{array}{c} \Delta\pX^{\rec} \\ \Delta\pY^{\rec} \end{array} \right)^{T}
+  \cdot V^{-1} \cdot
+   \left( \begin{array}{c} \Delta\pX^{\rec} \\ \Delta\pY^{\rec} \end{array} \right)
+  \right) \, ,
+\label{eq:tf_hadRecoil}
+\end{align}
+to model the experimental resolution on the momentum of
+the hadronic recoil in the transverse plane.
+The symbols:
+\begin{equation}
+\Delta\pX^{\rec} = \pX^{\rec} - \pXhat^{\rec} \quad \mbox{ and } \quad
+\Delta\pY^{\rec} = \pY^{\rec} - \pYhat^{\rec} 
+\label{eq:tf_hadRecoil_delta}
+\end{equation}
+refer to the difference between reconstructed and true values of the
+momentum components $\pX^{\rec}$ and $\pY^{\rec}$,
+and the covariance matrix
+\begin{equation}
+V = \left( \begin{array}{cc} \sigma_{x}^{2} & \rho \, \sigma_{x} \, \sigma_{y} \\ \rho \, \sigma_{x} \, \sigma_{y} & \sigma_{y}^{2} \end{array} \right) 
+\label{eq:tf_hadRecoil_V}
+\end{equation}
+represents the experimental resolution,
+with $\vert V \vert$ denoting the determinant of $V$.
+Two-dimensional normal distributions have been demonstrated to model well the resolution on $\vecMET$ in case of the CMS experiment~\cite{CMS-JME-10-009,CMS-JME-13-003}.
+As explained in Section~\ref{sec:mem_hadRecoil}, the resolutions on $\pX^{\rec}$ and $\pY^{\rec}$ and on $\METx$ and $\METy$ are very similar,
+motivating the use of TF of the same type for the modelling of the experimental resolution on the hadronic recoil.
+
+For the purpose of this paper,
+we assume that the components $\pX^{\rec}$ and $\pY^{\rec}$ are reconstructed with a resolution of $\sigma_{x} = \sigma_{y} = 10$~\GeV each
+and that the differences between reconstructed and true values of both
+components are independents, \ie $\rho = 0$.
+In the real experiment, the covariance matrix $V$ is estimated on an
+event-by-event basis,
+depending on the hadronic activity in the event,
+and using resolution functions that are obtained from the Monte Carlo simulation~\cite{CMS-JME-10-009,CMS-JME-13-003}.

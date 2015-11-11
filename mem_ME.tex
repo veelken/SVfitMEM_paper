@@ -1,0 +1,186 @@
+\subsection{Matrix element}
+\label{sec:mem_ME}
+
+We decompose the squared modulus of the ME, $\vert \mathcal{M}(\bm{p},m_{\PHiggs}) \vert^{2}$, for the process $\Pp\Pp \to \PHiggs \to \Pgt\Pgt$
+with subsequent decay of the $\Pgt$ leptons into electrons, muons, or
+hadrons into three parts:
+\begin{equation}
+\vert \mathcal{M}(\bm{p},m_{\PHiggs}) \vert^{2} = 
+ \vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to \Pgt\Pgt}(\bm{p},m_{\PHiggs}) \vert^{2} 
+\cdot \vert \mathcal{M}^{(1)}_{\Pgt}(\bm{p}) \vert^{2} 
+\cdot \vert \mathcal{M}^{(2)}_{\Pgt}(\bm{p}) \vert^{2} .
+ \label{eq:meFactorization}
+\end{equation}
+The first term, $\vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to
+  \Pgt\Pgt}(\bm{p},m_{\PHiggs}) \vert^{2}$, represents the squared
+modulus of the ME for $\PHiggs$ boson production with subsequent decay of the $\PHiggs$ boson into a pair of $\Pgt$ leptons.
+This term can alternatively be computed using automatized tools such as \textsc{CompHEP} or \textsc{MadGraph} or taken from the literature.
+We use the labels $^{(1)}$ and $^{(2)}$ to refer to the first and second $\Pgt$ lepton produced in the $\PHiggs$ boson decay, respectively.
+
+\begin{figure}
+\begin{center}
+\includegraphics*[height=48mm]{figures/ggH_FeynmanDiagram.pdf}
+\end{center}
+\caption{
+  Leading order Feynman diagram for $\PHiggs$ boson production in $\Pp\Pp$ collisions via the gluon fusion process.
+  {\textbf CV: FIGURE DOWNLOADED FROM WEB, TO BE REMADE WITH BETTER QUALITY !!}
+}
+\label{fig:ggH_FeynmanDiagram}
+\end{figure}
+
+We take $\vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to
+  \Pgt\Pgt}(\bm{p},m_{\PHiggs}) \vert^{2}$ from the literature.
+More specifically, we decompose it into a product of three factors:
+\begin{equation}
+\vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to \Pgt\Pgt} \vert^{2} =
+ \vert \mathcal{M}_{\Pg\Pg \to \PHiggs} \vert^{2} 
+\cdot \vert \BW_{\PHiggs} \vert^{2} 
+\cdot \vert \mathcal{M}_{\PHiggs \to \Pgt\Pgt} \vert^{2} \, .
+\label{eq:meHiggsProduction_and_Decay}
+\end{equation}
+We model the $\PHiggs$ boson production using the LO ME for the gluon fusion process $\Pg\Pg \to \PHiggs$,
+which accounts for about $90\%$ of the total $\PHiggs$ boson production rate at the LHC.
+The corresponding Feynman diagram is shown in Fig.~\ref{fig:ggH_FeynmanDiagram}.
+The squared modulus of the ME reads~\cite{me_ggHprod}:
+\begin{equation}
+\vert \mathcal{M}_{\Pg\Pg \to \PHiggs} \vert^{2} = 
+ \frac{\sqrt{2} \, G_{F}}{256 \, \pi^{2}} \, \alpha_{s}^{2} \, \tau^{2} \, m_{\PHiggs}^{4} \vert 1 + (1 - \tau) \, f(\tau) \vert^{2} \, ,
+\label{eq:meHiggsProduction}
+\end{equation}
+with $\tau = 4\, \frac{m_{\Pqt}^{2}}{m_{\PHiggs}^{2}}$ and:
+\begin{equation}
+f(\tau) = 
+\begin{cases} 
+\arcsin^{2} \frac{1}{\sqrt{\tau}}  & \mbox{if } \tau \geq 1 \, , \\
+-\frac{1}{4} \, \left( \log\frac{1 + \sqrt{1 - \tau}}{1 - \sqrt{1 - \tau}} - i\pi \right)^{2} & \mbox{if } \tau < 1 \, .
+\end{cases}
+\label{eq:meHiggsProduction_ftau}
+\end{equation}
+The symbol $G_{F}$ denotes the Fermi constant. Its numerical value is:
+\begin{equation} 
+G_{F}/(\hbar \, c)^3 = 1.166 \times 10^{-5}\mbox{~GeV}^{-2} \, ,
+\label{eq:def_G_F} 
+\end{equation}
+with $\hbar \, c = 0.1973$~GeV~fm~\cite{PDG}.
+The Breit-Wigner propagator $\vert \BW_{\PHiggs} \vert^{2}$ associates $\PHiggs$ boson production and decay.
+Its squared modulus is given by:
+\begin{equation}
+\vert \BW_{\PHiggs} \vert^{2} = \frac{1}{(q_{\PHiggs}^{2} -
+  m_{\PHiggs}^{2})^{2} + m_{\PHiggs}^{2}\Gamma_{\PHiggs}^{2}} \, ,
+\label{eq:meHiggsBreitWigner}
+\end{equation}
+where $q_{\PHiggs}^{2} = (\bm{p^{\Pgt(1)}} + \bm{p^{\Pgt(2)}})^{2}$ denotes the mass of the $\Pgt$ lepton pair.
+We use the symbol $\bm{p^{\Pgt(1)}}$ ($\bm{p^{\Pgt(2)}}$) to refer to the four-vector of the $\Pgt$ lepton of positive (negative) charge.
+Finally, the squared modulus of the ME for the decay of the Higgs into taus is given via~\cite{me_HtoTauTau}:
+\begin{equation}
+\vert \mathcal{M}_{\PHiggs \to \Pgt\Pgt} \vert^{2} = 
+ \frac{2 \, m_{\Pgt}^{2}}{v^{2}} \, m_{\PHiggs}^{2} \left( 1 - \frac{4 \, m_{\Pgt}^{2}}{m_{\PHiggs}^{2}} \right) \, ,
+\label{eq:meHiggsDecay}
+\end{equation}
+with $v = \frac{1}{\sqrt{2} \, G_{F}} = 246.2$~\GeV.
+It is related to the branching ratio $\mathcal{B}(\PHiggs \to \Pgt\Pgt)$
+for the decay of the $\PHiggs$ boson into $\Pgt$ leptons by~\cite{me_HtoTauTau}:
+\begin{equation}
+\mathcal{B}(\PHiggs \to \Pgt\Pgt) 
+ = \frac{1}{16\pi \, m_{\PHiggs}} \, \sqrt{1 - \frac{4 \, m_{\Pgt}^{2}}{m_{\PHiggs}^{2}}} \, \vert \mathcal{M}_{\PHiggs \to \Pgt\Pgt} \vert^{2} \, .
+\label{eq:meHiggsDecay_by_BR}
+\end{equation}
+For a SM $\PHiggs$ boson,
+the branching ratio $\mathcal{B}(\PHiggs \to \Pgt\Pgt)$ becomes small and the total width $\Gamma_{\PHiggs}$ becomes large
+once the decay into a pair of $\PW$ bosons is kinematically possible,
+\ie for $m_{\PHiggs} \gtrsim 2 \, m_{\PW}$.
+In theories beyond the SM, which motivate the search for heavy $\PHiggs$ bosons,
+the branching ratio and total width may be very different from the SM
+values, however.
+In this paper, we assume $\mathcal{B}(\PHiggs \to \Pgt\Pgt) = 100\%$ and compute $\vert \mathcal{M}_{\PHiggs \to \Pgt\Pgt} \vert^{2}$ according to Eq.~(\ref{eq:meHiggsDecay_by_BR}).
+Note that the value of the branching ratio for the decay $\PHiggs \to \Pgt\Pgt$ 
+has no effect on value of $m_{\Pgt\Pgt}$ reconstructed by the algorithm, 
+provided that $\mathcal{B}(\PHiggs \to \Pgt\Pgt)$ is accounted for in a consistent way in the evaluation of the integral in Eq.~(\ref{eq:mem}) and in the computation of the normalization factor $1/\sigma(m_{\PHiggs})$.
+
+The terms $\vert \mathcal{M}^{\Pgt(1)}(\bm{p}) \vert^{2}$ and $\vert
+\mathcal{M}^{\Pgt(2)} \vert^{2}$ in Eq.~\ref{eq:meFactorization} model the decays of the two $\Pgt$ leptons.
+We use the narrow-width approximation (NWA) and assume the $\Pgt$ leptons to be unpolarized,
+effectively ignoring the correlation in polarization between $\Pgt$ production and decay.
+This allows us to decompose the squared moduli $\vert
+\mathcal{M}^{\Pgt(i)}(\bm{p}) \vert^{2}$ for the first ($i=1$) and
+second ($i=2$) $\Pgt$ lepton into the product of two factors:
+\begin{equation}
+\vert \mathcal{M}^{(i)}_{\Pgt} \vert^{2} = \vert \BW_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(i)}_{\textrm{decay}} \vert^{2} \, .
+\end{equation}
+The factor $\vert \BW_{\Pgt} \vert^{2}$ is equal to:
+\begin{equation}
+\vert \BW_{\Pgt} \vert^{2} = \frac{\pi}{m_{\Pgt}\Gamma_{\Pgt}} \,
+\delta ( q_{\Pgt}^{2} - m_{\Pgt}^{2} ) \, \mbox{ with } \, 
+\Gamma_{\Pgt} = \frac{\hbar}{\Delta t} =
+ 2.267 \cdot 10^{-12}\textrm{~\GeV} \, ,
+\end{equation}
+where $\Delta t = 290 \times 10^{-15}$~s denotes the lifetime of the
+$\Pgt$ lepton~\cite{PDG}.
+Concerning the factor $\vert \mathcal{M}^{(i)}_{\textrm{decay}}
+\vert^{2}$, we take the ME for the decays $\Pgt \to \enunu$ and $\Pgt
+\to \mununu$ of unpolarized $\Pgt$ leptons from the literature.
+We refer to these decays as ``leptonic'' $\Pgt$ decays, from the literature.
+The squared modulus is given by~\cite{Barger:1987nn}:
+\begin{equation}
+\vert\mathcal{M}_{\Pgt \to \ellnunu} \vert^{2} = 128 \, G^{2}_{F} \, \left( \bm{p}^{\Pgt} \cdot \bm{p}^{\APnu_{\Plepton}} \right) \, \left(\bm{p}^{\Plepton} \cdot \bm{p}^{\Pnut} \right) \, , 
+\label{eq:leptonic_tau_decays_ME}
+\end{equation}
+The modelling of the decays $\Pgt \to \textrm{hadrons} + \Pnut$ decays
+by ME is more difficult, 
+due to the fact that $\Pgt$ leptons decay to a variety of hadronic
+final states and some of the decays proceed via intermediate vector
+meson resonances~\cite{PDG}.
+We refer to these decays as ``hadronic'' $\Pgt$ decays.
+The ME for the dominant hadronic $\Pgt$ decay modes is discussed in the literature~\cite{Bullock:1992yt,Raychaudhuri:1995kv}.
+We use a simplified formalism and instead treat hadronic $\Pgt$ decays as two-body decays into a hadronic system $\tauh$ of momentum $\bm{p^{\vis}}$ and mass $m_{\vis}$ and a $\Pgt$ neutrino.
+The squared modulus of the ME for the decay is taken to be constant and denoted by $\vert\mathcal{M}^{\eff}_{\Pgt \to \tauhnu}\vert^{2}$.
+The value of $\vert\mathcal{M}^{\eff}_{\Pgt \to \tauhnu}\vert^{2}$ is
+chosen to reproduce the branching fraction for hadronic $\Pgt$ decays.
+For the considered case of a two-body decay we find~\cite{Barger:1987nn}:
+\begin{equation}
+\mathcal{B}(\Pgt \to \textrm{hadrons} + \Pnut) = \frac{\Delta
+  t}{\hbar} \, \frac{1}{16 \pi \, m_{\Pgt}^{3}} \cdot (m_{\Pgt}^{2} - m_{\vis}^{2}) \cdot \vert \mathcal{M}^{\textrm{eff}}_{\Pgt \to
+  \tauhnu} \vert^{2} \, ,
+\end{equation}
+from which it follows that:
+\begin{equation}
+\vert \mathcal{M}^{\textrm{eff}}_{\Pgt \to \tauh\Pnut} \vert^{2} = \frac{16 \pi \, m_{\Pgt}^{3}}{m_{\Pgt}^{2} - m_{\vis}^{2}} \, \frac{\hbar}{\Delta t} \, \mathcal{B}(\Pgt \to \tauhnu) \, , 
+\end{equation}
+with $\mathcal{B}(\Pgt \to \tauhnu) = 0.648$~\cite{PDG}.
+We have verified that the sum of all hadronic final states produced in $\Pgt$ lepton decays
+is well reproduced by our simplified model.
+Fig.~\ref{fig:tauDecay_z} shows the fraction of $\Pgt$ lepton energy,
+in the laboratory frame, carried by the ``visible'' $\Pgt$ decay
+products:
+\begin{equation}
+z = \frac{E_{\vis}}{E_{\Pgt}} \, .
+\label{eq:def_z}
+\end{equation}
+We use the term ``visible'' $\Pgt$ decay products to refer to the sum
+of all hadrons produced in decays of the type $\Pgt \to \textrm{hadrons} + \Pnut$ 
+as well as to the charged lepton produced in the decays $\Pgt \to \enunu$ and $\Pgt \to \mununu$.
+
+\begin{figure}[h]
+\setlength{\unitlength}{1mm}
+\begin{center}
+%%\begin{picture}(150,52)(0,0)
+%%\put(-5.5, 0.0){\mbox{\includegraphics*[height=48mm]
+%%  {figures/makeSVfitToyMCplots_X1_m90_beforeVisPtCuts.pdf}}}
+%%\put(58.0, 0.0){\mbox{\includegraphics*[height=48mm]
+%%  {figures/makeSVfitToyMCplots_X2_m90_beforeVisPtCuts.pdf}}}
+\begin{picture}(150,60)(0,0)
+\put(-5.5, 0.0){\mbox{\includegraphics*[height=58mm]
+  {figures/makeSVfitToyMCplots_X1_m90_beforeVisPtCuts.pdf}}}
+\put(78.0, 0.0){\mbox{\includegraphics*[height=58mm]
+  {figures/makeSVfitToyMCplots_X2_m90_beforeVisPtCuts.pdf}}}
+\end{picture}
+\end{center}
+\caption{
+  Fraction $z$ of $\Pgt$ lepton energy, in the laboratory frame, carried by the visible $\Pgt$ decay products.
+  The case of $\Pgt \to \mununu$ decays is shown on the left and the case of $\Pgt \to \textrm{hadrons} + \Pnut$ decays on the right.
+  Our simplified model, which treats hadronic $\Pgt$ decays as two-body decays into a hadronic system $\tauh$ and a tau neutrino,
+  reproduces the distribution in $z$ obtained with a detailed Monte Carlo simulation based on TAUOLA~\cite{tauola}.
+  {\textbf CV: OLD PLOTS, TO BE UPDATED !!}
+}
+\label{fig:tauDecay_z}
+\end{figure} 

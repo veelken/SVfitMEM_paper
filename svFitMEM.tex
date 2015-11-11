@@ -1,0 +1,197 @@
+\def\verPreprint{1}
+\def\verPAPER{2}
+\def\ver{1}
+
+\ifx\ver\verPreprint
+\documentclass[a4paper,english,11pt]{article}
+\usepackage[bindingoffset=0.5cm,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,footskip=1.0cm]{geometry}
+\usepackage{lineno,hyperref,hepnames,bm,multirow,amssymb,authblk,graphicx}
+\fi
+\ifx\ver\verPAPER
+\documentclass[1p]{elsarticle}
+\usepackage{lineno,hyperref,hepnames,bm,multirow,amssymb}
+\fi
+
+\modulolinenumbers[5]
+
+%%\journal{Journal of \LaTeX\ Templates}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Elsevier bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Numbered
+%\bibliographystyle{model1-num-names}
+
+%% Numbered without titles
+%\bibliographystyle{model1a-num-names}
+
+%% Harvard
+%\bibliographystyle{model2-names.bst}\biboptions{authoryear}
+
+%% Vancouver numbered
+%\usepackage{numcompress}\bibliographystyle{model3-num-names}
+
+%% Vancouver name/year
+%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
+
+%% APA style
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+
+%% AMA style
+%\usepackage{numcompress}\bibliographystyle{model6-num-names}
+
+%% `Elsevier LaTeX' style
+\bibliographystyle{elsarticle-num}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Custom latex macros
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\Plepton}{\ensuremath{\ell}}
+\newcommand{\Phadron}{\ensuremath{\textrm{h}}}
+\newcommand{\tauh}{\ensuremath{\Pgt_{\textrm{h}}}\xspace}
+\newcommand{\tauhnu}{\ensuremath{\tauh \, \Pnu_{\kern-0.10em \Pgt}}\xspace}
+\newcommand{\tauhnuOne}{\ensuremath{\tauh^{(1)} \, \Pnu_{\kern-0.10em \Pgt}^{(1)}}\xspace}
+\newcommand{\tauhnuTwo}{\ensuremath{\tauh^{(2)} \, \Pnu_{\kern-0.10em \Pgt}^{(2)}}\xspace}
+\newcommand{\ellnunu}{\ensuremath{\Plepton \, \APnu_{\kern-0.10em \Plepton} \, \Pnu_{\kern-0.10em \Pgt}}\xspace}
+\newcommand{\ellnunuOne}{\ensuremath{\Plepton^{(1)} \, \APnu_{\kern-0.10em \Plepton}^{(1)} \, \Pnu_{\kern-0.10em \Pgt}^{(1)}}\xspace}
+\newcommand{\ellnunuTwo}{\ensuremath{\Plepton^{(2)} \, \APnu_{\kern-0.10em \Plepton}^{(2)} \, \Pnu_{\kern-0.10em \Pgt}^{(2)}}\xspace}
+\newcommand{\enunu}{\ensuremath{\Pe \, \APnu_{\kern-0.10em \Pe} \, \Pnu_{\kern-0.10em \Pgt}}\xspace}
+\newcommand{\mununu}{\ensuremath{\Pgm \, \APnu_{\kern-0.10em \Pgm} \, \Pnu_{\kern-0.10em \Pgt}}\xspace}
+\newcommand{\nunu}{\ensuremath{\Pnu \, \APnu}\xspace}
+\newcommand{\phat}{\ensuremath{\bm{\hat{p}}}\xspace}
+\newcommand{\pT}{\ensuremath{p_{\textrm{T}}}\xspace}
+\newcommand{\pThat}{\ensuremath{\hat{p}_{\textrm{T}}}\xspace}
+\newcommand{\etahat}{\ensuremath{\hat{\eta}}\xspace}
+\newcommand{\thetahat}{\ensuremath{\hat{\theta}}\xspace}
+\newcommand{\phihat}{\ensuremath{\hat{\phi}}\xspace}
+\newcommand{\Ehat}{\ensuremath{\hat{E}}\xspace}
+\newcommand{\ET}{\ensuremath{E_{\textrm{T}}}\xspace}
+\newcommand{\EThat}{\ensuremath{\hat{E}_{\textrm{T}}}\xspace}
+\newcommand{\pX}{\ensuremath{p_{\textrm{x}}}\xspace}
+\newcommand{\pXhat}{\ensuremath{\hat{p}_{\textrm{x}}}\xspace}
+\newcommand{\pY}{\ensuremath{p_{\textrm{y}}}\xspace}
+\newcommand{\pYhat}{\ensuremath{\hat{p}_{\textrm{y}}}\xspace}
+\newcommand{\pZ}{\ensuremath{p_{\textrm{z}}}\xspace}
+\newcommand{\pZhat}{\ensuremath{\hat{p}_{\textrm{z}}}\xspace}
+\newcommand{\uX}{\ensuremath{u_{\textrm{x}}}\xspace}
+\newcommand{\uY}{\ensuremath{u_{\textrm{y}}}\xspace}
+\newcommand{\vX}{\ensuremath{v_{\textrm{x}}}\xspace}
+\newcommand{\vY}{\ensuremath{v_{\textrm{y}}}\xspace}
+\newcommand{\MET}{\ensuremath{p_{\textrm{T}}^{\textrm{\kern0.10em miss}}}\xspace}
+\newcommand{\vecMET}{\ensuremath{\bm{p}^{\textrm{\kern0.10em miss}}}\xspace}
+\newcommand{\METx}{\ensuremath{p_{\textrm{x}}^{\textrm{\kern0.10em miss}}}\xspace}
+\newcommand{\METy}{\ensuremath{p_{\textrm{y}}^{\textrm{\kern0.10em miss}}}\xspace}
+\newcommand{\MeV}{\ensuremath{\textrm{MeV}}\xspace}
+\newcommand{\GeV}{\ensuremath{\textrm{GeV}}\xspace}
+\newcommand{\TeV}{\ensuremath{\textrm{TeV}}\xspace}
+\newcommand{\rec}{\ensuremath{\textrm{rec}}}
+\newcommand{\true}{\ensuremath{\textrm{true}}}
+\newcommand{\vis}{\ensuremath{\textrm{vis}}}
+\newcommand{\inv}{\ensuremath{\textrm{inv}}}
+\newcommand{\eff}{\ensuremath{\textrm{eff}}}
+\newcommand{\cf}{cf.\xspace}
+\newcommand{\ie}{i.e.\xspace}
+\newcommand{\BW}{\ensuremath{\textrm{BW}}}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\ifx\ver\verPAPER
+\begin{frontmatter}
+\fi
+
+\title{Reconstruction of the Higgs mass in events with Higgs bosons
+  decaying into a pair of $\Pgt$ leptons using matrix element techniques}
+
+%% Group authors per affiliation:
+
+\ifx\ver\verPreprint
+\author[1]{Lorenzo Bianchini}
+\author[2]{Betty Calpas}
+\author[3]{John Conway}
+\author[2]{Andrew Fowlie}
+\author[4]{Luca Marzola}
+\author[2]{Christian Veelken}
+\affil[1]{Institute for Particle Physics, ETH Zurich, 8093 Zurich, Switzerland}
+\affil[2]{National Institute for Chemical Physics and Biophysics, 10143 Tallinn, Estonia}
+\affil[3]{Department of Physics, University of California, Davis, CA 95616}
+\affil[4]{Institute of Physics, University of Tartu, 51014 Tartu, Estonia}
+\fi
+\ifx\ver\verPAPER
+\author[eth]{Lorenzo Bianchini}
+\ead{lorenzo.bianchini@cern.ch}
+\author[tallinn]{Betty Calpas}
+\ead{betty.calpas@cern.ch}
+\author[ucd]{John Conway}
+\ead{conway@physics.ucdavis.edu}
+\author[tallinn]{Andrew Fowlie}
+\ead{andrew.fowlie@kbfi.ee}
+\author[tartu]{Luca Marzola}
+\ead{luca.marzola@ut.ee}
+\author[tallinn]{Christian Veelken}
+\ead{christian.veelken@cern.ch}
+\address[eth]{Institute for Particle Physics, ETH Zurich, 8093 Zurich, Switzerland}
+\address[ucd]{Department of Physics, University of California, Davis, CA 95616}
+\address[tallinn]{National Institute for Chemical Physics and Biophysics, 10143 Tallinn, Estonia}
+\address[tartu]{Institute of Physics, University of Tartu, 51014 Tartu, Estonia}
+\fi
+
+\ifx\ver\verPreprint
+\maketitle
+\fi
+
+\begin{abstract}
+An algorithm for reconstruction of the Higgs mass in events with Higgs
+bosons decaying into a pair of $\Pgt$ leptons is presented.
+The algorithm is based on matrix element (ME) techniques and achieves
+a relative resolution on the Higgs boson mass of typically $15$--$20\%$.
+A previous version of the algorithm has been used in analyses of Higgs
+boson production performed by the CMS collaboration during LHC run
+$1$.
+The algorithm is described in detail and its performance on simulated
+events is assessed.
+The development of techniques to handle $\Pgt$ decays in the ME
+formalism represents an important result of this paper.
+\end{abstract}
+
+\ifx\ver\verPAPER
+\end{frontmatter}
+\fi
+
+\clearpage
+
+\linenumbers
+
+\let\clearpage\relax
+\include{introduction}
+
+\include{mem}
+\include{mem_ME}
+\include{mem_hadRecoil}
+\include{mem_TF}
+\include{mem_PSintegration}
+\include{mem_xSection}
+\include{mem_numericalMaximization}
+\include{mem_logM}
+
+\include{results}
+
+\include{summary}
+
+\clearpage
+
+\include{appendix}
+\include{appendix_tauToHadDecays}
+\include{appendix_tauToLepDecays}
+
+\section*{References}
+
+\bibliography{svFitMEM.bib}
+
+\end{document}

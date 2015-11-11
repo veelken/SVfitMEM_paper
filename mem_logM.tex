@@ -1,0 +1,18 @@
+\subsection{Artificial regularization term}
+\label{sec:mem_logM}
+
+The $m_{\Pgt\Pgt}$ distribution reconstructed in $\PHiggs \to \Pgt\Pgt$ signal events is expected to peak close to the true value of the $\PHiggs$ boson mass,
+while the distribution for the irreducible $\PZ/\Pggx \to \Pgt\Pgt$ background is steeply falling.
+The sensitivity to discover a $\PHiggs$ boson signal increases if high mass tails due to resolution effects are reduced.
+In order to reduce the number of background events reconstructed in the high mass tail,
+we add an artificial regularization term of form $\kappa \, \log m_{\Pgt\Pgt}^{\textrm{test}(i)}$ to the logarithm of the probability density $P(\bm{p^{\vis(1)}},\bm{p^{\vis(2)}},\bm{p^{\rec}}|m_{\Pgt\Pgt}^{\textrm{test}(i)})$, 
+computed according to Eq.~(\ref{eq:mem_with_hadRecoil}).
+In case of non-zero $\kappa$,
+the procedure described in Section~\ref{sec:mem_numericalMaximization} for finding the best estimate $\hat{m}_{\Pgt\Pgt}$ for the mass of the $\Pgt$ pair is altered.
+Instead of fitting $\log P(\bm{p^{\vis(1)}},\bm{p^{\vis(2)}},\bm{p^{\rec}}|m_{\Pgt\Pgt}^{\textrm{test}(i)})$ versus $m_{\Pgt\Pgt}^{\textrm{test}(i)}$ by a second order polynomial,
+we fit the sum of $\log P(\bm{p^{\vis(1)}},\bm{p^{\vis(2)}},\bm{p^{\rec}}|m_{\Pgt\Pgt}^{\textrm{test}(i)})$ and $\kappa \, \log m_{\Pgt\Pgt}^{\textrm{test}(i)}$.
+The value $\hat{m}_{\Pgt\Pgt}$ 
+is still taken to be the point at which the polynomial reaches its maximum.
+The parameter $\kappa$ is chosen with the objective of maximizing the separation of the signal from the background.
+We find that a value $\kappa \approx 5$ represents the best compromise between reducing the high mass tail of the $m_{\Pgt\Pgt}$ distribution 
+for the $\PZ/\Pggx \to \Pgt\Pgt$ background while keeping the bias on the $m_{\Pgt\Pgt}$ distribution reconsted in signal events minimal.

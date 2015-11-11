@@ -1,0 +1,150 @@
+\subsection{Computation of cross section}
+\label{sec:mem_xSection}
+
+According to the paradigm of the ME method, the normalization factor
+$1/\sigma(m_{\PHiggs})$ in Eq.~(\ref{eq:mem_with_hadRecoil}) is to be 
+by means of evaluating the integral:
+\begin{equation}
+\sigma(m_{\PHiggs}) =
+\int \, d^{3}\bm{p^{\vis(1)}} \, d^{3}\bm{p^{\vis(2)}} \,
+d^{2}\bm{p^{\rec}} \, \mathcal{I}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)},\bm{p^{\rec}}|m_{\PHiggs}) \, ,
+\label{eq:xSection}
+\end{equation}
+with:
+\begin{align}
+\mathcal{I} = & \frac{32\pi^{4}}{s} \, \int \, d\bm{p} \,
+\frac{f(x_{a}) f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \, \vert \mathcal{M}(\bm{\tilde{p}},m_{\PHiggs}) \vert^{2} \, \hspace{2cm} \nonumber \\
+& \qquad W(\bm{p}^{\vis(1)}|\bm{\hat{p}}^{\vis(1)}) \, W(\bm{p}^{\vis(2)}|\bm{\hat{p}}^{\vis(2)}) \, W_{\rec}( \bm{p^{\rec}} | \phat^{\rec} ) \, .
+\label{eq:I}
+\end{align}
+The integration over $d\bm{p^{\rec}}$ yields unity,
+as only the TF $W_{\rec}( \bm{p^{\rec}} | \phat^{\rec} )$ for the hadronic recoil 
+depends on $\bm{p^{\rec}}$,
+and the integral $\int \, d\pX^{\rec} \, d\pY^{\rec} \, W_{\rec}(
+\pX^{\rec}, \pY^{\rec} | \pXhat^{\rec}, \pYhat^{\rec} )$ evaluates to unity for all values of $\pXhat^{\rec}$ and $\pYhat^{\rec}$,
+according to the TF normalization condition.
+
+In order to perform the integration over $d^{3}\bm{p^{\vis(1)}} \, d^{3}\bm{p^{\vis(2)}}$ we make two variable transformations.
+In the first step,
+we replace $\pZ^{\vis(2)}$ by $m_{\vis}^{2}$, the mass of the visible $\Pgt$ decay products, given by:
+\begin{equation}
+m_{\vis}^{2} = 
+  \left( E_{\vis(1)} + E_{\vis(2)} \right)^{2} 
+- \left( (\pX^{\vis(1)} + \pX^{\vis(2)})^{2} + (\pY^{\vis(1)} + \pY^{\vis(2)})^{2} + (\pZ^{\vis(1)} + \pZ^{\vis(2)})^{2} \right) \, .
+\label{eq:m_vis}
+\end{equation}
+To do this, we insert
+\begin{align}
+1 = & \int \, \delta\left(
+  \left( E_{\vis(1)} + E_{\vis(2)} \right)^{2} \right. \nonumber \\ 
+& \
+ - \left. \left( (\pX^{\vis(1)} + \pX^{\vis(2)})^{2} + (\pY^{\vis(1)} + \pY^{\vis(2)})^{2} + (\pZ^{\vis(1)} + \pZ^{\vis(2)})^{2} \right) - m_{\vis}^{2} \right) \, dm_{\vis}^{2} \nonumber
+\end{align} 
+into the integrand of Eq.~(\ref{eq:xSection}) and switch the order of the integration 
+over $m_{\vis}^{2}$ and $\pZ^{\vis(2)}$. 
+Concerning the integration over $\pZ^{\vis(2)}$, the argument of the $\delta$-function is of the form $g(\pZ^{\vis(2)})$.
+We apply the $\delta$-function rule:
+\begin{equation} 
+\delta \left( g(x) \right) = \sum_{k} \frac{\delta \left( x - x_{k}
+  \right)}{\vert g'(x_{k}) \vert} \, ,
+\label{eq:deltaFuncRule}
+\end{equation}
+including all roots $x_{k}$ of $g(x)$ into the sum.
+The function $g(\pZ^{\vis(2)})$ has two roots:
+\begin{align} 
+p_{\textrm{z}}^{\vis(2),+} = & \frac{\pZ^{\vis(1)} \left(m_{\vis}^{2} - 2 \,
+  \frac{z^{(2)}}{z_{(1)}} \, \left(p_{\textrm{T}}^{\vis(1)}\right)^{2}\right) + E_{\vis(1)} \,
+  \sqrt{m_{\vis}^{2} \left(m_{\vis}^{2} - 4 \, \frac{z^{(2)}}{z^{(1)}} \, \left(p_{\textrm{T}}^{\vis(1)}\right)^{2}\right)}}{2 \, \left(p_{\textrm{T}}^{\vis(1)}\right)^{2}} \nonumber \\
+p_{\textrm{z}}^{\vis(2),-} = & \frac{\pZ^{\vis(1)} \left(m_{\vis}^{2} - 2 \,
+  \frac{z^{(2)}}{z_{(1)}} \, \left(p_{\textrm{T}}^{\vis(1)}\right)^{2}\right) - E_{\vis(1)} \,
+  \sqrt{m_{\vis}^{2} \left(m_{\vis}^{2} - 4 \, \frac{z^{(2)}}{z^{(1)}} \, \left(p_{\textrm{T}}^{\vis(1)}\right)^{2}\right)}}{2 \, \left(p_{\textrm{T}}^{\vis(1)}\right)^{2}} \, .
+\label{eq:pzMapping}
+\end{align}
+Its derivative is:
+\begin{equation} 
+g'(p_{\textrm{z}}^{\vis(2)}) \equiv 
+  \frac{\partial g(\pZ^{\vis(2)})}{\partial \pZ^{\vis(2)}} = 
+ - 2 \, p_{\textrm{z}}^{\vis(1)} 
+ + 2 \, p_{\textrm{z}}^{\vis(2)} \, \sqrt{\frac{E_{\vis(1)}}{\left( \frac{z^{(2)}}{z^{(1)}} \, p_{\textrm{T}}^{\vis(1)} \right)^{2} + \left(\pZ^{\vis(2)}\right)^{2}}} \, ,
+\end{equation}
+yielding:
+\begin{align}
+& \sigma(m_{\PHiggs}) =
+\int \, d^{3}\bm{p^{\vis(1)}} \, d^{3}\bm{p^{\vis(2)}} \, \mathcal{I} \nonumber \\
+& \qquad 
+ = \Sigma_{k} \, \int \, d\pX^{\vis(1)} \, d\pY^{\vis(1)} \,
+d\pZ^{\vis(1)} \, d\pX^{\vis(2)} \, d\pY^{\vis(2)} \, dm_{\vis}^{2} \,
+\mathcal{I} \, \frac{1}{\vert g'(p_{\textrm{z}}^{\vis(2),k})} \, ,
+\label{eq:xSection2}
+\end{align}
+with the sum extending over the two roots $p_{\textrm{z}}^{\vis(2),+}$
+and $p_{\textrm{z}}^{\vis(2),-}$, given by Eq.~(\ref{eq:pzMapping}).
+
+In the second step,
+we replace $\pX^{\vis(1)}$, $\pY^{\vis(1)}$, $\pX^{\vis(2)}$, and $\pY^{\vis(2)}$ by:
+\begin{align}
+\uX = & \frac{\pX^{\vis(1)}}{z^{(1)}} +
+\frac{\pX^{\vis(2)}}{z^{(2)}} \, , \qquad
+  \uY = \frac{\pY^{\vis(1)}}{z^{(1)}} + \frac{\pX^{\vis(2)}}{z^{(2)}} \nonumber \\
+\vX = & \frac{\pX^{\vis(1)}}{z^{(1)}} -
+\frac{\pX^{\vis(2)}}{z^{(2)}} \, , \qquad
+  \vY = \frac{\pY^{\vis(1)}}{z^{(1)}} - \frac{\pX^{\vis(2)}}{z^{(2)}} \, .
+\label{eq:varTransform_uX_uY_vX_vY}
+\end{align}
+The determinant of the Jacobi matrix for this transformation equals $\vert J \vert = \left( \frac{z^{(1)} \, z^{(2)}}{2} \right)^{2}$.
+The variables $\pX^{\vis(1)}$, $\pY^{\vis(1)}$, $\pX^{\vis(2)}$, and $\pY^{\vis(2)}$ are given 
+as function of $\uX$, $\uY$, $\vX$, and $\vY$ by:
+\begin{align}
+\pX^{\vis(1)} = & \frac{z^{(1)}}{2} \, ( \uX + \vX ) \, , \qquad
+  \pY^{\vis(1)} = \frac{z^{(1)}}{2} \, ( \uY + \vY ) \nonumber \\
+\pX^{\vis(2)} = & \frac{z^{(2)}}{2} \, ( \uX - \vX ) \, , \qquad
+  \pY^{\vis(2)} = \frac{z^{(2)}}{2} \, ( \uY - \vY ) \, . 
+\label{eq:varTransform_uX_uY_vX_vY_inverse}
+\end{align}
+The variables $\uX$ and $\uY$ correspond to the vectorial sum of the $\Pgt^{(1)}$ and $\Pgt^{(2)}$ lepton momenta in the transverse plane,
+\ie to the $x$ and $y$ components of the $\PHiggs$ boson momentum,
+while the variables $\vX$ and $\vY$ correspond to the difference
+between the $\Pgt^{(1)}$ and $\Pgt^{(2)}$ momenta.
+
+The expression for the cross section $\sigma(m_{\PHiggs})$, obtained after the second variable transformation, reads:
+\begin{align}
+& \sigma(m_{\PHiggs}) =
+\int \, d^{3}\bm{p^{\vis(1)}} \, d^{3}\bm{p^{\vis(2)}} \,
+\mathcal{I}(\bm{p^{\vis(1)}},\bm{p^{\vis(2)}},\bm{p^{\rec}}|m_{\PHiggs})
+\nonumber \\
+& \qquad
+  = \Sigma_{k} \, \int \, d\uX \, d\uY \, d\vX \, d\vY \, d\pZ^{\vis(1)}
+\, dm_{\vis}^{2} \, \mathcal{I} \, \frac{1}{\vert g'(p_{\textrm{z}}^{\vis(2),k})} \, \left( \frac{z^{(1)} \, z^{(2)}}{2} \right)^{2} \, .
+\label{eq:xSection3}
+\end{align}
+The integral in Eq.~(\ref{eq:xSection3}) is evaluated numerically.
+
+The cross section $\sigma(m_{\PHiggs})$ obtained by numeric
+integration of Eq.~(\ref{eq:xSection3}) is used for normalization 
+of the probability density $P(\bm{p^{\vis(1)}},\bm{p^{\vis(2)}},\bm{p^{\rec}}|m_{\PHiggs})$ in Eq.~(\ref{eq:mem_with_hadRecoil}).
+Its value cannot be directly compared to the literature,
+due to the fact that we are applying the LO ME to events in which the $\PHiggs$ boson has non-zero $\pT$.
+For the purpose of comparing to literature values of the LO cross section for the gluon fusion process $\Pg\Pg \to \PHiggs$,
+we insert two $\delta$-functions of form $\delta(\uX) \, \delta(\uY)$ into Eq.~(\ref{eq:xSection3}),
+\ie removing the integration over $d\uX$ and $d\uY$ before evaluating
+the integral numerically.
+The values of $\sigma(m_{\PHiggs})$ are shown as function of
+$m_{\PHiggs}$ in Fig.~\ref{fig:xSection}.
+They agree with the literature values for the LO cross section of the
+gluon fusion process $\Pg\Pg \to \PHiggs$ within $10$--$20\%$. 
+Differences of this magnitude are compatible with arising from the
+usage of PDF.
+
+\begin{figure}
+\begin{center}
+%%\includegraphics*[height=60mm]{figures/makeSVfitMEM_xSectionPlot_log.pdf}
+\includegraphics*[height=74mm]{figures/makeSVfitMEM_xSectionPlot_log.pdf}
+\end{center}
+\caption{
+  Cross section $\sigma(m_{\PHiggs})$ 
+  that is used in the normalization of the probability density $P(\bm{y},\pX^{\rec},\pY^{\rec}|m_{\PHiggs})$ in Eq.~(\ref{eq:mem_with_hadRecoil})
+  as function of mass $m_{\PHiggs}$ of the $\PHiggs$ boson.
+}
+\label{fig:xSection}
+\end{figure}
+
