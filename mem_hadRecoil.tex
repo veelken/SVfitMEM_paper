@@ -19,35 +19,46 @@ In order to use the LO ME in analyses at the LHC,
 the momenta of the visible $\Pgt$ decay products and of the neutrinos produced in the $\Pgt$ decay
 need to be transformed into a frame in which the $\PHiggs$ boson has zero $\pT$.
 The transformation is achieved by a Lorentz boost in the transverse plane,
-using $(\EThat^{\rec}, \pXhat^{\rec}, \pYhat^{\rec}, 0)$ as boost vector.
-We refer to the momenta of the $\Pgt$ decay products in the zero
-momentum frame of the $\PHiggs$ boson by the symbol $\bm{\tilde{p}}$.
+using $(\EThat^{\rec}, \pXhat^{\rec}, \pYhat^{\rec}, 0)$ as boost
+vector.
+We denote the true values of energies and momenta by symbols with a
+hat if they are given in the to laboratory frame, and by symbols a tilde in case they are given in the zero momentum frame of the $\PHiggs$ boson.
 
 The hadronic recoil is reconstructed with a typical resolution of $10$--$20$~\GeV at the LHC~\cite{CMS-JME-13-003,ATLAS-CONF-2014-019}.
 It is demonstrated in Ref.~\cite{Alwall:2010cq} that the imperfect reconstruction of the hadronic recoil
 in the detector may cause a significant bias in case one reconstructs the masses of resonances
-with the ME method and ignores the experimental resolution. We account
-for the experimental resolution on the hadronic recoil by introduction
-of a TF $W_{\rec}( \pX^{\rec}, \pYhat^{\rec} | \pXhat^{\rec},
+with the ME method and ignores the experimental resolution on the
+hadronic recoil. We account
+for the experimental resolution by introduction
+of a TF $W_{\rec}( \pX^{\rec}, \pY^{\rec} | \pXhat^{\rec},
 \pYhat^{\rec} )$.
 We then marginalize Eq.~(\ref{eq:mem}) with respect to $\pXhat^{\rec}$ and $\pYhat^{\rec}$:
 \begin{align}
-& P(\bm{y},\bm{p}^{\rec}|m_{\PHiggs}) =
-\frac{1}{\sigma(m_{\PHiggs})} \, \int \, dx_{a} \, dx_{b} \, d\bm{p} \,
-d\pX^{\rec} \, d\pY^{\rec} \, \hspace{5cm} \nonumber \\
-& \qquad \frac{f(x_{a}) f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \,  (2\pi)^{4} \, \delta^{4}( x_{a} \, \bm{p}^{a} + x_{b} \, \bm{p}^{b} - (\bm{p}^{\rec} + \bm{p}^{\Pgt_{1}} + \bm{p}^{\Pgt_{2}}) ) \, 
-       \nonumber \\
-& \qquad \vert \mathcal{M}(\bm{\tilde{p}},m_{\PHiggs}) \vert^{2} \, W(\bm{y}|\bm{p}) \, W_{\rec}( \pX^{\rec}, \pY^{\rec} | \pXhat^{\rec}, \pYhat^{\rec} ) \, ,
+& P(\bm{y},\pX^{\rec},\pY^{\rec}|m_{\PHiggs}) =
+\frac{1}{\sigma(m_{\PHiggs})} \, \int \, dx_{a} \, dx_{b} \, d\Phi_{n} \,
+d\pXhat^{\rec} \, d\pYhat^{\rec} \, \frac{f(x_{a}) f(x_{b})}{2 \,
+  x_{a} \, x_{b} \, s} \nonumber \\
+& \qquad (2\pi)^{4} \, \delta( x_{a} \, \Ehat_{a} + x_{b} \, \Ehat_{b} -
+(\Ehat_{\rec} + \Ehat_{\Pgt(1)} + \Ehat_{\Pgt(2)}) ) \, \delta^{3}( x_{a} \,
+\hat{\bm{p}}^{a} + x_{b} \, \hat{\bm{p}}^{b} - (\hat{\bm{p}}^{\rec} + \hat{\bm{p}}^{\Pgt(1)}
++ \hat{\bm{p}}^{\Pgt(2)}) ) \nonumber \\
+& \qquad \vert \mathcal{M}(\bm{\tilde{p}},m_{\PHiggs}) \vert^{2} \, W(\bm{y}|\hat{\bm{p}}) \, W_{\rec}( \pX^{\rec}, \pY^{\rec} | \pXhat^{\rec}, \pYhat^{\rec} ) \, ,
 \label{eq:mem_mod_hadRecoil}
 \end{align}
 where the symbol $\bm{y}$ refers to the measured momenta of the visible $\Pgt$ decay products, $\bm{p^{\vis(1)}}$ and $\bm{p^{\vis(2)}}$.
-Using the relations $p^{a} = \frac{\sqrt{s}}{2} \, (1, 0, 0, 1)$ and $p^{b} = \frac{\sqrt{s}}{2} \, (1, 0, 0, -1)$ for the momenta of the two colliding protons,
+Using the relations $(\hat{E}_{a},\hat{\bm{p}}^{a}) = \frac{\sqrt{s}}{2} \, (1, 0,
+0, 1)$ and $(\hat{E}_{b},\hat{\bm{p}}^{b}) = \frac{\sqrt{s}}{2} \, (1,
+0, 0, -1)$
+for the energies and momenta of the two colliding protons,
 the integral over the $\delta$-function that ensures the conservation of energy and momentum can be expressed by:
 \begin{align}
-& \int \, dx_{a} \, dx_{b} \, d\pX^{\rec} \, d\pY^{\rec} \, \delta^{4}(
-x_{a} \, \bm{p}^{a} + x_{b} \, \bm{p}^{b} - (\bm{p}^{\rec} +
-\bm{p}^{\Pgt(1)} + \bm{p}^{\Pgt(2)})) \nonumber \\
-& \qquad = \frac{2}{s} \, \int \,
+& \int \, dx_{a} \, dx_{b} \, d\pXhat^{\rec} \, d\pYhat^{\rec} \, \delta(
+x_{a} \, \Ehat_{a} + x_{b} \, \Ehat_{b} - (\Ehat_{\rec} +
+\Ehat_{\Pgt(1)} + \Ehat_{\Pgt(2)})) \nonumber \\
+& \qquad \delta^{3}(
+x_{a} \, \bm{p}^{a} + x_{b} \, \hat{\bm{p}}^{b} - (\hat{\bm{p}}^{\rec} +
+\hat{\bm{p}}^{\Pgt(1)} + \hat{\bm{p}}^{\Pgt(2)})) \nonumber \\
+= & \frac{2}{s} \, \int \,
 d\pXhat^{\rec} \, d\pYhat^{\rec} \, 
 \delta( \pXhat^{\rec} + \pXhat^{\Pgt(1)} + \pXhat^{\Pgt(2)} ) \,
 \delta( \pYhat^{\rec} + \pYhat^{\Pgt(1)} + \pYhat^{\Pgt(2)} ) \, ,
@@ -55,19 +66,21 @@ d\pXhat^{\rec} \, d\pYhat^{\rec} \,
 \end{align}
 with:
 \begin{align}
-x_{a} = & \frac{2}{\sqrt{s}} \, (\Ehat^{\rec} + \Ehat^{\Pgt(1)} +
-\Ehat^{\Pgt(2)} + \pZhat^{\rec} + \pZhat^{\Pgt(1)} + \pZhat^{\Pgt(2)})
+x_{a} = & \frac{2}{\sqrt{s}} \, (\Ehat_{\rec} + \Ehat_{\Pgt(1)} +
+\Ehat_{\Pgt(2)} + \pZhat^{\rec} + \pZhat^{\Pgt(1)} + \pZhat^{\Pgt(2)})
 \, , \nonumber \\
-x_{b} = & \frac{1}{\sqrt{s}} \, (\Ehat^{\rec} + \Ehat^{\Pgt(1)} + \Ehat^{\Pgt(2)} - (\pZhat^{\rec} + \pZhat^{\Pgt(1)} + \pZhat^{\Pgt(2)})) \, .
+x_{b} = & \frac{1}{\sqrt{s}} \, (\Ehat_{\rec} + \Ehat_{\Pgt(1)} + \Ehat_{\Pgt(2)} - (\pZhat^{\rec} + \pZhat^{\Pgt(1)} + \pZhat^{\Pgt(2)})) \, .
 \label{eq:xa_and_xb}
 \end{align}
 The integration over $d\pXhat^{\rec}$ and $d\pYhat^{\rec}$ then removes the $\delta$-functions 
 $\delta( \pXhat^{\rec} + \pXhat^{\Pgt(1)} + \pXhat^{\Pgt(2)} )$ and
 $\delta( \pYhat^{\rec} + \pYhat^{\Pgt(1)} + \pYhat^{\Pgt(2)} )$ and one obtains:
 \begin{align}
-& P(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)},\bm{p}^{\rec}|m_{\PHiggs}) = \frac{1}{\sigma(m_{\PHiggs})} \, \frac{32\pi^{4}}{s} \, \int \, d\bm{p} 
-\frac{f(x_{a}) f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \, \vert \mathcal{M}(\bm{\tilde{p}},m_{\PHiggs}) \vert^{2} \, \hspace{2cm} \nonumber \\
-& \qquad W(\bm{p}^{\vis(1)}|\bm{\hat{p}}^{\vis(1)}) \, W(\bm{p}^{\vis(2)}|\bm{\hat{p}}^{\vis(2)}) \, W_{\rec}( \bm{p}^{\rec} | \phat^{\rec} ) \, ,
+&
+P(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)},\pX^{\rec},\pY^{\rec}|m_{\PHiggs})
+= \frac{1}{\sigma(m_{\PHiggs})} \, \frac{32\pi^{4}}{s} \, \int \,
+d\Phi_{n} \, \frac{f(x_{a}) f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \, \vert \mathcal{M}(\bm{\tilde{p}},m_{\PHiggs}) \vert^{2} \, \hspace{2cm} \nonumber \\
+& \qquad W(\bm{p}^{\vis(1)}|\hat{\bm{p}}^{\vis(1)}) \, W(\bm{p}^{\vis(2)}|\hat{\bm{p}}^{\vis(2)}) \, W_{\rec}( \pX^{\rec},\pY^{\rec} | \pXhat^{\rec},\pYhat^{\rec} ) \, ,
 \label{eq:mem_with_hadRecoil}
 \end{align}
 with $x_{a}$ and $x_{b}$ given by Eq.~(\ref{eq:xa_and_xb}) and:
@@ -76,7 +89,7 @@ with $x_{a}$ and $x_{b}$ given by Eq.~(\ref{eq:xa_and_xb}) and:
 \qquad \pYhat^{\rec} = -(\pYhat^{\Pgt(1)} + \pYhat^{\Pgt(2)}) \, .
 \label{eq:xpXhat_and_pYhat}
 \end{equation}
-The form of the TF $W_{\rec}( \bm{p}^{\rec} | \phat^{\rec} )$ is
+The form of the TF $W_{\rec}( \pX^{\rec},\pY^{\rec} | \pXhat^{\rec},\pYhat^{\rec} )$ is
 discussed in Section~\ref{sec:mem_TF_hadRecoil}.
 
 In practice, the TF for the hadronic recoil is equivalent to modelling
@@ -90,8 +103,10 @@ vector:
 \METy = - \left( \pY^{\vis(1)} + \pY^{\vis(2)} + \pY^{\rec} \right) \, .
 \label{eq:met}
 \end{equation}
-These relations are valid on reconstruction level as well as for the true values of the momenta, \ie in case all $p$ in Eq.~(\ref{eq:met}) are replaced by $\hat{p}$.
-The experimental resolution on electrons, muons and $\tauh$ is typically negligible compared to the resolution on the hadronic recoil.
+These relations are valid on reconstruction level as well as for the
+true values of the momenta, \ie in case all $\pX$ and $\pY$ in
+Eq.~(\ref{eq:met}) are replaced by $\pXhat$ and $\pYhat$.
+The experimental resolution on electrons, muons and also on $\tauh$ is typically negligible compared to the resolution on the hadronic recoil.
 As a consequence, the resolution on $\pX^{\rec}$ and $\pY^{\rec}$ is
 very similar to the resolution on $\METx$ and $\METy$.
 

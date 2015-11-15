@@ -4,10 +4,10 @@
 We treat hadronic $\Pgt$ decays as a two-body decay into a hadronic
 system $\tauh$ plus a tau neutrino,
 as explained in Section~\ref{sec:mem_ME},
-and take the squared modulus of the ME to be constant,
-denoted by $\vert\mathcal{M}^{\eff}_{\Pgt \to \tauhnu}\vert^{2}$.
-We denote the momentum of the neutrino produced in the $\Pgt$ decay by
-$\bm{p^{\inv}}$ and its energy by $E_{\inv}$ (\cf Section~\ref{sec:mem_PSintegration}).
+and take the squared modulus of the ME to be a constant,
+which we denote by $\vert\mathcal{M}^{\eff}_{\Pgt \to \tauhnu}\vert^{2}$.
+We further denote the momentum of the neutrino produced in the $\Pgt$ decay by
+$\bm{p}^{\inv}$ and its energy by $E_{\inv}$ (\cf Section~\ref{sec:mem_PSintegration}).
 For reasons that will become clear later, we allow the neutrino to
 have non-zero mass $m_{\inv}$.
 
@@ -15,73 +15,77 @@ The product of the squared modulus of the ME and the phase space
 element $d\Phi^{(i)}_{\tauhnu}$ reads:
 \begin{align}
  & \, \vert\mathcal{M}_{\Pgt}\vert^{2} \,
- d\Phi_{\tauhnu} = \vert\mathcal{M}_{\Pgt}\vert^{2} \, \frac{d^{3}\bm{p^{\vis}}}{(2\pi)^{3} \, 2
-   E_{\vis}} \, \frac{d^{3}\bm{p^{\inv}}}{(2\pi)^{3} \, 2 E_{\inv}} \nonumber \\
+ d\Phi_{\tauhnu} = \vert\mathcal{M}_{\Pgt}\vert^{2} \, \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2
+   E_{\vis}} \, \frac{d^{3}\bm{p}^{\inv}}{(2\pi)^{3} \, 2 E_{\inv}} \nonumber \\
 = & \, (2\pi)^{3} \, \vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}^{\eff}_{\Pgt \to
   \tauh\Pnut}\vert^{2} \, \delta \left( E_{\Pgt} - E_{\vis} -
-  E_{\inv} \right) \, \delta^{3} \left( \bm{p^{\Pgt}} - \bm{p^{\vis}}
-  - \bm{p^{\inv}} \right) \nonumber \\
-& \qquad \frac{d^{3}\bm{p^{\Pgt}}}{(2\pi)^{3} \, 2 E_{\Pgt}} \, 
-  \frac{d^{3}\bm{p^{\vis}}}{(2\pi)^{3} \, 2E_{\vis}} \, \frac{d^{3}\bm{p^{\inv}}}{(2\pi)^{3} \, 2 E_{\inv}} \, dq^{2}_{\Pgt} \nonumber \\
-= & \, \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \, \frac{\vert\mathcal{M}^{\eff}_{\Pgt \to
-  \tauh\Pnut}\vert^{2}}{(2\pi)^{6}} 
- \cdot \frac{1}{2 E_{\Pgt}(\bm{p^{\vis}}, \bm{p^{\inv}})} \, \delta \left( E_{\Pgt}(\bm{p^{\vis}}, \bm{p^{\inv}}) - E_{\vis} - E_{\inv} \right) \,
-  \frac{d^{3}\bm{p^{\vis}}}{2 E_{\vis}} \, \frac{d^{3}\bm{p^{\inv}}}{2
+  E_{\inv} \right) \, \delta^{3} \left( \bm{p}^{\Pgt} - \bm{p}^{\vis}
+  - \bm{p}^{\inv} \right) \nonumber \\
+& \qquad \frac{d^{3}\bm{p}^{\Pgt}}{(2\pi)^{3} \, 2 E_{\Pgt}} \, 
+  \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2E_{\vis}} \, \frac{d^{3}\bm{p}^{\inv}}{(2\pi)^{3} \, 2 E_{\inv}} \, dq^{2}_{\Pgt} \nonumber \\
+= & \frac{8\pi^{4}}{m_{\Pgt} \, \Gamma_{\Pgt}} \, \vert\mathcal{M}^{\eff}_{\Pgt \to
+  \tauh\Pnut}\vert^{2} \, \delta \left( E_{\Pgt} - E_{\vis} -
+  E_{\inv} \right) \, \delta^{3} \left( \bm{p}^{\Pgt} - \bm{p}^{\vis}
+  - \bm{p}^{\inv} \right) \nonumber \\
+& \qquad \frac{d^{3}\bm{p}^{\Pgt}}{(2\pi)^{3} \, 2 E_{\Pgt}} \, 
+  \frac{d^{3}\bm{p}^{\vis}}{2 E_{\vis}} \, \frac{d^{3}\bm{p}^{\inv}}{2
     E_{\inv}} \nonumber \\
 = & \, \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \, \frac{\vert\mathcal{M}^{\eff}_{\Pgt \to
   \tauh\Pnut}\vert^{2}}{(2\pi)^{6}} 
- \cdot \frac{1}{2 E_{\Pgt}(\bm{p^{\vis}}, \bm{p^{\inv}})} \, \delta
- \left( E_{\Pgt}(\bm{p^{\vis}}, \bm{p^{\inv}}) - E_{\vis} - E_{\inv}
+ \cdot \frac{1}{2 E_{\Pgt}(\bm{p}^{\vis}, \bm{p}^{\inv})} \, \delta
+ \left( E_{\Pgt}(\bm{p}^{\vis}, \bm{p}^{\inv}) - E_{\vis} - E_{\inv}
  \right) \nonumber \\
 & \qquad
-  \frac{d^{3}\bm{p_{\vis}}}{2 E_{\vis}} \, \frac{\vert\bm{p_{\inv}}\vert}{2} \, dE_{\inv} \, d\cos\theta_{\inv} \, d\phi_{\inv} \, ,
+  \frac{d^{3}\bm{p}_{\vis}}{2 E_{\vis}} \, \frac{\vert\bm{p}_{\inv}\vert}{2} \, dE_{\inv} \, d\cos\theta_{\inv} \, d\phi_{\inv} \, ,
 \label{eq:hadTauDecaysPSint}
 \end{align}
 where we have used the formula for recursive phase space generation,
 given by Eq.~(43.12) in Ref.~\cite{PDG}, for transforming the first line into the second
 and the identity:
 \begin{equation} 
-d^{3}\bm{p^{\inv}} = \vert\bm{p^{\inv}}\vert^{2} \,
+d^{3}\bm{p}^{\inv} = \vert\bm{p}^{\inv}\vert^{2} \,
 dp^{inv} \, d\cos\theta_{\inv} \, d\phi_{\inv} =
-\vert\bm{p^{\inv}}\vert \, E_{\inv} \, dp^{\inv} \, d\cos\theta_{\inv}
+\vert\bm{p}^{\inv}\vert \, E_{\inv} \, dE_{\inv} \, d\cos\theta_{\inv}
 \, d\phi_{\inv}
 \end{equation} 
 for rewriting the third line by the fourth.
-The $\delta$-function $\delta ( q_{\Pgt}^{2} - m_{\Pgt}^{2} )$ removes
+The factor $\BW_{\Pgt} \vert^{2} = \frac{\pi}{m_{\Pgt} \,
+  \Gamma_{\Pgt}} \, \delta ( q^{2}_{\Pgt} - m^{2}_{\Pgt} )$ removes
 the integration over $dq^{2}_{\Pgt}$, enforcing the $\Pgt$ lepton
-energy and momentum are related by $E_{\Pgt} =
-\sqrt{\vert\bm{p^{\Pgt}}\vert^{2} + m_{\Pgt}^{2}}$.
-The symbol $E_{\Pgt}(\bm{p^{\vis}}, \bm{p^{\inv}})$
-indicates that $E_{\Pgt}$ is a function of $\bm{p^{\vis}}$
-and $\bm{p^{\inv}}$, as is neccessary to satisfy the $
-delta$-function $\delta^{3} ( \bm{p^{\Pgt}} - \bm{p^{\vis}} - \bm{p^{\inv}} )$.
+energy and momentum to be related by $E_{\Pgt} =
+\sqrt{\vert\bm{p}^{\Pgt}\vert^{2} + m_{\Pgt}^{2}}$.
+The symbol $E_{\Pgt}(\bm{p}^{\vis}, \bm{p}^{\inv})$
+indicates that $E_{\Pgt}$ is a function of $\bm{p}^{\vis}$
+and $\bm{p}^{\inv}$, as is neccessary to satisfy the $
+\delta$-function $\delta^{3} ( \bm{p}^{\Pgt} - \bm{p}^{\vis} - \bm{p}^{\inv} )$.
 
-We now define $z = E_{\vis}/E_{\Pgt}$ according to Eq.~(\ref{eq:def_z}) and replace the integration over $dE_{\inv}$ by an integration over $z$.
+We define $z = E_{\vis}/E_{\Pgt}$ according to Eq.~(\ref{eq:def_z}) and replace the integration over $dE_{\inv}$ by an integration over $z$.
 The Jacobi factor related to this transformation is:
 \begin{equation}
-E_{\inv} = E_{\Pgt} - E_{\vis} = E_{\Pgt} \cdot \left( 1 - z \right) = E_{\vis} \cdot \frac{1 - z}{z} 
+E_{\inv} = E_{\Pgt} - E_{\vis} = \left( 1 - z \right)
+\, E_{\Pgt} = \frac{1 - z}{z} \, E_{\vis}
   \quad \Longleftrightarrow \quad dE_{\inv} = \lvert \frac{\partial E_{\inv}}{\partial z} \rvert \, dz = \frac{E_{\vis}}{z^{2}} \, dz \, .
 \label{eq:hadTauDecaysJacobi}
 \end{equation}
 
-Next, we perform the integration over $d\cos\theta_{\inv}$.
+We then perform the integration over $d\cos\theta_{\inv}$.
 As in Section~\ref{sec:mem_PSintegration}, we choose the coordinate system such that
-$\theta_{\inv}$ is equal to the angle between the $\bm{p^{\vis}}$ and $\bm{p^{\inv}}$ vectors.
-The $\delta$-function $\delta \left( E_{\Pgt}(\bm{p^{\vis}}, \bm{p^{\inv}}) - E_{\vis} - E_{\inv} \right)$ depends on $\cos\theta_{\inv}$ via:
+$\theta_{\inv}$ is equal to the angle between the $\bm{p}^{\vis}$ and $\bm{p}^{\inv}$ vectors.
+The $\delta$-function $\delta \left( E_{\Pgt}(\bm{p}^{\vis}, \bm{p}^{\inv}) - E_{\vis} - E_{\inv} \right)$ depends on $\cos\theta_{\inv}$ via:
 \begin{align}
-& \, E_{\Pgt}(\bm{p^{\vis}}, \bm{p^{\inv}}) 
-= \sqrt{\vert\bm{p^{\Pgt}}\vert^{2} + m^{2}_{\Pgt}} = \sqrt{\left( \bm{p^{\vis}} + \bm{p^{\inv}} \right)^2 + m^{2}_{\Pgt}} \nonumber \\
-& \quad = \sqrt{\vert\bm{p^{\vis}}\vert^{2} + \vert\bm{p^{\inv}}\vert^{2} + 2 \bm{p^{\vis}}
-  \cdot \bm{p^{\inv}} + m^{2}_{\Pgt}} \nonumber \\
-& \quad = \sqrt{\vert\bm{p^{\vis}}\vert^{2} + \vert\bm{p^{\inv}}\vert^{2} + 2 \vert\bm{p^{\vis}}\vert \, \vert\bm{p^{\inv}}\vert \, \cos\theta_{\inv} + m^{2}_{\Pgt}}.
+& \, E_{\Pgt}(\bm{p}^{\vis}, \bm{p}^{\inv}) 
+= \sqrt{\vert\bm{p}^{\Pgt}\vert^{2} + m^{2}_{\Pgt}} = \sqrt{\left( \bm{p}^{\vis} + \bm{p}^{\inv} \right)^2 + m^{2}_{\Pgt}} \nonumber \\
+& \quad = \sqrt{\vert\bm{p}^{\vis}\vert^{2} + \vert\bm{p}^{\inv}\vert^{2} + 2 \bm{p}^{\vis}
+  \cdot \bm{p}^{\inv} + m^{2}_{\Pgt}} \nonumber \\
+& \quad = \sqrt{\vert\bm{p}^{\vis}\vert^{2} + \vert\bm{p}^{\inv}\vert^{2} + 2 \vert\bm{p}^{\vis}\vert \, \vert\bm{p}^{\inv}\vert \, \cos\theta_{\inv} + m^{2}_{\Pgt}}.
 \end{align}
 The $\delta$-function becomes zero if:
 \begin{align}
-& E_{\Pgt}(\bm{p^{\vis}}, \bm{p^{\inv}}) - E_{\vis} - E_{\inv} = 0 \nonumber \\
+& E_{\Pgt}(\bm{p}^{\vis}, \bm{p}^{\inv}) - E_{\vis} - E_{\inv} = 0 \nonumber \\
 \Rightarrow & \cos\theta_{\inv} 
   = \frac{E_{\vis} E_{\inv} - \frac{1}{2} \left(m^{2}_{\Pgt} - \left(
         m^{2}_{\vis} + m^{2}_{\inv} \right)
-    \right)}{\vert\bm{p^{\vis}}\vert \, \vert\bm{p^{\inv}}\vert} \, .
+    \right)}{\vert\bm{p}^{\vis}\vert \, \vert\bm{p}^{\inv}\vert} \, .
 \label{eq:hadTauDecaysCosTheta}
 \end{align}
 We have used this result in Eq.~(\ref{eq:theta_inv}).
@@ -91,38 +95,36 @@ we need to account for the $\delta$-function rule
 Eq.~(\ref{eq:deltaFuncRule}).
 We identify:
 \begin{equation} 
-g(\cos\theta_{\inv}) = \sqrt{\vert\bm{p^{\vis}}\vert^{2} + \vert\bm{p^{\inv}}\vert^{2}
-  + 2 \vert\bm{p^{\vis}}\vert \, \vert\bm{p^{\inv}}\vert \,
+g(\cos\theta_{\inv}) = \sqrt{\vert\bm{p}^{\vis}\vert^{2} + \vert\bm{p}^{\inv}\vert^{2}
+  + 2 \vert\bm{p}^{\vis}\vert \, \vert\bm{p}^{\inv}\vert \,
   \cos\theta_{\inv} + m^{2}_{\Pgt}} - E_{\vis} - E_{\inv}
 \end{equation}
-and obtain $\vert g'(x_{0}) \vert = \vert\bm{p^{\vis}}\vert \cdot
-\vert\bm{p^{\inv}}\vert / \left( E_{\vis} + E_{\inv} \right) = \vert\bm{p^{\vis}}\vert \cdot
-\vert\bm{p^{\inv}}\vert / E_{\Pgt}$.
+and obtain $\vert g'(x_{0}) \vert = \vert\bm{p}^{\vis}\vert \,
+\vert\bm{p}^{\inv}\vert / \left( E_{\vis} + E_{\inv} \right) = \vert\bm{p}^{\vis}\vert \,
+\vert\bm{p}^{\inv}\vert / E_{\Pgt}$.
 
 This yields:
 \begin{equation}
  \vert\mathcal{M}_{\Pgt}\vert^{2} \,
- d\Phi^{(i)}_{\tauhnu} = \vert\mathcal{M}_{\Pgt}\vert^{2} \, \frac{d^{3}\bm{p^{\vis}}}{(2\pi)^{3} \, 2
-   E_{\vis}} \, \frac{d^{3}\bm{p^{\inv}}}{(2\pi)^{3} \, 2 E_{\inv}}
-= \frac{\vert\mathcal{M}^{\eff}_{\Pgt \to
-  \tauh\Pnut}\vert^{2}}{512\pi^{5}\, m_{\Pgt} \, \Gamma_{\Pgt}} \cdot 
-    \frac{1}{\vert\bm{p^{\vis}}\vert \, z^{2}} \, 
-    \frac{d^{3}\bm{p^{\vis}}}{2 E_{\vis}} \, dz \, d\phi_{\inv}
+ d\Phi^{(i)}_{\tauhnu} = \frac{\vert\mathcal{M}^{\eff}_{\Pgt \to
+  \tauh\Pnut}\vert^{2}}{256\pi^{5}\, m_{\Pgt} \, \Gamma_{\Pgt}} \cdot 
+    \frac{1}{\vert\bm{p}^{\vis}\vert \, z^{2}} \, 
+    \frac{d^{3}\bm{p}^{\vis}}{2 E_{\vis}} \, dz \, d\phi_{\inv} \, .
 \label{eq:hadTauDecaysResult}
 \end{equation}
-with $E_{\inv} = E_{\vis} \cdot \frac{1 - z}{z}$ and $\vert\bm{p^{\inv}}\vert = \sqrt{E^{2}_{\inv} - m^{2}_{\inv}}$.
 
 We define:
 \begin{equation}
-f_{h}\left(\bm{p^{\vis}}, m_{\vis}, \bm{p^{\inv}}\right) = 
+f_{h}\left(\bm{p}^{\vis}, m_{\vis}, \bm{p}^{\inv}\right) = 
   \frac{\vert\mathcal{M}^{\eff}_{\Pgt \to
-  \tauh\Pnut}\vert^{2}}{512\pi^{6} \, \vert\bm{p^{\vis}}\vert \, z^{2}} 
+  \tauh\Pnut}\vert^{2}}{512\pi^{6} \, \vert\bm{p}^{\vis}\vert \, z^{2}} 
 \label{eq:hadTauDecays_f}
 \end{equation}
 to obtain:
 \begin{equation}
 \vert\mathcal{M}_{\Pgt}\vert^{2} \,
  d\Phi^{(i)}_{\tauhnu} = \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
- f_{h}(\bm{p^{\vis}}, m_{\vis}, \bm{p^{\inv}}) \, \frac{d^{3}\bm{p^{\vis}}}{2 E_{\vis}} \, dz \, d\phi_{\inv}
- \, .
+ f_{h}(\bm{p}^{\vis}, m_{\vis}, \bm{p}^{\inv}) \, \frac{d^{3}\bm{p}^{\vis}}{2 E_{\vis}} \, dz \, d\phi_{\inv}
+ \, ,
 \end{equation}
+which is the result that we quote in Eq.~(\ref{eq:PSint}).

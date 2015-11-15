@@ -2,33 +2,36 @@
 \label{sec:results}
 
 The performance of the $m_{\Pgt\Pgt}$ reconstruction is studied using
-simulated samples of $\PHiggs \to \Pgt\Pgt$ signal and $\PZ/\Pggx \to
-\Pgt\Pgt$ background events.
-The $\PHiggs \to \Pgt\Pgt$ signal sample is generated with the next-to-leading-order (NLO) program \textsc{POWHEG}~\cite{POWHEG1,POWHEG2,POWHEG3}.
+simulated samples of $\PHiggs \to \Pgt\Pgt$ and $\PZ/\Pggx \to
+\Pgt\Pgt$ events.
+The $\PHiggs \to \Pgt\Pgt$ signal sample is generated with the next-to-leading-order (NLO) program POWHEG~\cite{POWHEG1,POWHEG2,POWHEG3}.
 We study the $m_{\Pgt\Pgt}$ reconstruction in SM $\PHiggs \to \Pgt\Pgt$ events with $m_{\PHiggs} = 125$~\GeV
 and in events containing pseudoscalar $\PHiggs$ bosons of mass $200$, $300$, $500$, and $700$~\GeV.
 In all cases, the $\PHiggs$ boson are produced by the gluon fusion process.
-The $\PZ/\Pggx \to \Pgt\Pgt$ DY background sample is generated with the LO \textsc{MadGraph} program~\cite{MadGraph}.
-Signal and background events are generated for proton-proton collisions at $\sqrt{s} = 13$~\TeV centre-of-mass energy.
-The samples produced by \textsc{MadGraph} are generated with the \textsc{CTEQ6L1} set of PDF,
-while the samples produced by \textsc{POWHEG} use \textsc{CTEQ6M}~\cite{CTEQ6}.
-Parton shower and hadronization processes are modelled using the generator \textsc{PYTHIA}~\cite{pythia8} with the \emph{Z2$^{*}$} tune.
-The \textsc{PYTHIA} \emph{Z2$^{*}$} tune is obtained from the \emph{Z1} tune~\cite{PYTHIA_Z1tune_CMS},
-which uses the \textsc{CTEQ5L} PDF, 
-whereas \emph{Z2$^{*}$} adopts \textsc{CTEQ6L}~\cite{CTEQ6}.
-The decays of $\Pgt$ leptons, including polarization effects, are modelled with \textsc{TAUOLA}~\cite{tauola}.
+The $\PZ/\Pggx \to \Pgt\Pgt$ background sample is generated with the LO MadGraph program~\cite{MadGraph}.
+All events are generated for proton-proton collisions at $\sqrt{s} = 13$~\TeV centre-of-mass energy.
+The samples produced by MadGraph are generated with the CTEQ6L1 set of PDF,
+while the samples produced by POWHEG use CTEQ6M~\cite{CTEQ6}.
+Parton shower and hadronization processes are modelled using the generator PYTHIA~\cite{pythia8} with the \emph{Z2$^{*}$} tune.
+The PYTHIA \emph{Z2$^{*}$} tune is obtained from the \emph{Z1} tune~\cite{PYTHIA_Z1tune_CMS},
+which uses the CTEQ5L PDF, 
+whereas \emph{Z2$^{*}$} adopts CTEQ6L~\cite{CTEQ6}.
+The decays of $\Pgt$ leptons, including polarization effects, are modelled with TAUOLA~\cite{tauola}.
 
-The experimental resolutions on the $\pT$ of the visible decay products in hadronic $\Pgt$ decays
-and on the hadronic recoil are simulated by sampling from the TF described in Sections~\ref{sec:mem_TF_tauToHadDecays} and~\ref{sec:mem_TF_hadRecoil}.
-The $\eta$ and $\phi$ of the visible $\Pgt$ decay products as well as the $\pT$ of electrons and muons are assumed to be reconstructed perfectly.
+The experimental resolutions on $\pT^{\vis(i)}$ in case of hadronic
+$\Pgt$ decays and on the hadronic recoil 
+are simulated by sampling from the TF described in
+Sections~\ref{sec:mem_TF_tauToHadDecays}
+and~\ref{sec:mem_TF_hadRecoil}, respectively.
+The $\eta$ and $\phi$ components of the of the $\bm{p}^{\vis(i)}$ vector as well as the $\pT$ of electrons and muons are assumed to be reconstructed perfectly.
 
-The $m_{\Pgt\Pgt}$ distributions for the $\PHiggs$ boson signal and for the DY background
+The $m_{\Pgt\Pgt}$ distributions for signal and background
 are computed separately for the decay channels 
 $\Pgt\Pgt \to \textrm{hadrons} + \Pnut \, \textrm{hadrons} + \Pnut$ ($\tauh\tauh$), 
 $\Pgt\Pgt \to \mununu \, \textrm{hadrons} + \Pnut$ ($\Pgm\tauh$), 
 and $\Pgt\Pgt \to \mununu \, \enunu$ ($\Pe\Pgm$).
 The events are required to pass selection criteria on $\pT$ and $\eta$ of the visible $\Pgt$ decay products
-which are motivated by the SM $\PHiggs \to \Pgt\Pgt$ analysis performed by the CMS collaboration~\cite{HIG-13-004}.
+that are motivated by the SM $\PHiggs \to \Pgt\Pgt$ analysis performed by the CMS collaboration~\cite{HIG-13-004}.
 Events selected in the $\tauh\tauh$ decay channel are required to contain
 two $\tauh$ with $\pT > 45$~\GeV and $\vert\eta\vert < 2.1$,
 while events selected in the $\Pgm\tauh$ channel
@@ -40,15 +43,17 @@ Similar selection criteria on $\pT$ and $\eta$ are applied in the $\PHiggs \to \
 analyses performed by the ATLAS
 collaboration~\cite{ATLAS_HiggsTauTau_SM,ATLAS_HiggsTauTau_MSSM}.
 
-The improved version of the \textsc{SVfit} algorithm described in this paper (\textsc{SVfitMEM})
+The improved version of the SVfit algorithm described in this paper,
+to which we refer to as SVfitMEM,
 is used with two different values of the $\kappa$ parameter described in Section~\ref{sec:mem_logM}: $0$ and $5$.
-The $m_{\Pgt\Pgt}$ distributions reconstructed by the
-SVfitMEM algorithm are compared to the distributions of
-$m_{\Pgt\Pgt}$ reconstructed by the previous version of the
-\textsc{SVfit} algorithm described in Ref.~\cite{SVfit} (classic \textsc{SVfit}) and by the ``collinear-approximation'' (CA)
+The mass distributions reconstructed by the
+SVfitMEM algorithm are compared to the previous version of the
+SVfit algorithm described in Ref.~\cite{SVfit}, to which we refer to
+as ``classic'' SVfit, and to the distribution of the $\PHiggs$ boson
+mass reconstructed by the ``collinear-approximation'' (CA)
 method~\cite{massRecoCollinearApprox},
-as well as to the distribution of $m_{\vis}$, the mass of the visible $\Pgt$ decay products.
-The distributions are shown in Figs.~\ref{fig:massDistributions_tautau} to~\ref{fig:massDistributions_emu}.
+as well as to the mass distribution of the visible $\Pgt$ decay products.
+The results are shown in Figs.~\ref{fig:massDistributions_tautau} to~\ref{fig:massDistributions_emu}.
 The ordinate is drawn in logarithmic scale to better visualize differences in the high mass tails.
 
 \begin{figure}
@@ -225,42 +230,47 @@ The ordinate is drawn in logarithmic scale to better visualize differences in th
 \label{fig:massDistributions_emu}
 \end{figure}
 
-The distributions reconstructed by the \textsc{SVfitMEM} algorithm with $\kappa = 0$ are very similar to the distributions of $m_{\Pgt\Pgt}$ reconstructed by the CA method.
+The distributions reconstructed by the SVfitMEM algorithm with $\kappa = 0$ are very similar to the distributions of $m_{\Pgt\Pgt}$ reconstructed by the CA method.
 In both cases, there exist pronounced high mass tails, which reduce the sensitivity of the SM $\PHiggs \to \Pgt\Pgt$ analysis,
-as a sizeable number of $\PZ/\Pggx \to \Pgt\Pgt$ DY background events
-are reconstructed within the signal region at $m_{\Pgt\Pgt} \approx 125$~\GeV.
-The main advantage of the \textsc{SVfitMEM} algorithm with $\kappa =
+as a sizeable number of $\PZ/\Pggx \to \Pgt\Pgt$ background events
+are reconstructed near the signal region at $m_{\Pgt\Pgt} \approx 125$~\GeV.
+The main advantage of the SVfitMEM algorithm with $\kappa =
 0$ is that it provides a physical solution for every event,
 while the CA method yields physical solutions for less than $50\%$ of
 the events only.
 The number of events for which the CA method fails to find a physical solution is reflected in the normalization of the distribution.
-The high mass tail in the $m_{\Pgt\Pgt}$ distribution reconstructed by
-the \textsc{SVfitMEM} algorithm is reduced substantially in case
+The high mass tail in the $m_{\Pgt\Pgt}$ distribution of
+the SVfitMEM algorithm is reduced substantially in case
 $\kappa = 5$ is used instead of $\kappa = 0$.
-The distributions of $m_{\Pgt\Pgt}$ reconstructed by the \textsc{SVfitMEM} algorithm with $\kappa = 5$ and by the classic \textsc{SVfit} algorithm are very similar.
-The effect of the arbitrary normalization used by the previous version
-of the \textsc{SVfit} algorithm is about equivalent to adding 
+The distributions of $m_{\Pgt\Pgt}$ reconstructed by the SVfitMEM
+algorithm with $\kappa = 5$ and by the classic SVfit algorithm are
+very similar.
+We conclude that the arbitrary normalization used by the classic SVfit
+algorithm has an effect that is similar to adding 
 an artificial regularization term of form $5 \,
 m_{\Pgt\Pgt}^{\textrm{test}(i)}$ to the logarithm of the probability
 density given by Eq.~(\ref{eq:mem_with_hadRecoil}).
 
 The distributions of $m_{\Pgt\Pgt}$ reconstructed by the
-\textsc{SVfitMEM} algorithm with $\kappa = 5$ exhibit the best
+SVfitMEM algorithm with $\kappa = 5$ exhibit the best
 resolution in the $\tauh\tauh$ channel and the worst resolution in the $\Pe\Pgm$ channel.
-The difference in resolution is due to the fact that the fraction of
-$\Pgt$ lepton energy that is carried by the visible $\Pgt$ decay
-products is typically high for hadronic $\Pgt$ decays
-and low for leptonic $\Pgt$ decays (\cf Fig.~\ref{fig:tauDecay_z}).
-The presence of a $\tauh$ of high $\pT$ indicates the decay of a $\PHiggs$ boson of high mass,
-as in this case either the $\pT$ of the visible decay products is high
-for the second $\Pgt$ also or the event exhibits a significant
-imbalance in transverse momentum and the momentum,
-indicating the presence of high $\pT$ neutrinos, which signalizes also the decay of a $\PHiggs$ boson of high mass.
+The difference in resolution between the $\tauh\tauh$, $\Pgm\tauh$,
+and $\Pe\Pgm$ channels
+is due to the fact that the fraction $z$ of
+$\Pgt$ lepton energy carried by the visible $\Pgt$ decay
+products is typically high in case of hadronic $\Pgt$ decays
+and low in case of leptonic $\Pgt$ decays, \cf Fig.~\ref{fig:tauDecay_z}.
+The presence of a $\tauh$ of high $\pT$ signalizes the decay of a
+$\PHiggs$ boson of high mass.
+In case the $\pT$ of the visible decay products is high
+for one $\Pgt$, the second $\Pgt$ either also has high $\pT$ or the
+event is likely to exhibit a significant
+imbalance in transverse momentum.
+In the latter case, the presence of high $\pT$ neutrinos indicate the decay of a $\PHiggs$ boson of high mass.
 Note that the imbalance in transverse momentum, $\vecMET$, enters the
-\textsc{SVfitMEM} algorithm via the relation between the
-$\bm{p^{vis(i)}}$ and the momentum of the hadronic recoil, $\bm{p^{\rec}}$, \cf Eq.~(\ref{eq:met}).
-The low mass tail that is visible in the $m_{\Pgt\Pgt}$ distribution
-reconstructed by the \textsc{SVfitMEM} algorithm in the $\Pe\Pgm$
+SVfitMEM algorithm via the relation between 
+$\bm{p}^{vis(i)}$ and $\bm{p}^{\rec}$ vectors in Eq.~(\ref{eq:met}).
+The low mass tail of the $m_{\Pgt\Pgt}$ distribution in the $\Pe\Pgm$
 channel arises from events in which the electron as well as the muon
 both have low $\pT$.
 The $\Pgt$ leptons in $\PHiggs \to \Pgt\Pgt$ events produced via the
@@ -270,16 +280,17 @@ causing the neutrinos produced in the $\Pgt$ decays to be emitted into
 opposite hemispheres, with the effect that their contribution to $\vecMET$ cancels.
 Events featuring a low $\pT$ electron, a low $\pT$ muon and low $\MET$
 are indistinguishable from the decays of $\PHiggs$ bosons of low mass
-and are hence assigned low $m_{\Pgt\Pgt}$ values by the \textsc{SVfitMEM} algorithm.
-The effect can be seen too in the distribution of $m_{\vis}$ 
-reconstructed in the $\Pe\Pgm$ channel.
+and are hence assigned low $m_{\Pgt\Pgt}$ values by the SVfitMEM algorithm.
+A similar effect can be seen in the distribution of $m_{\vis}$ 
+for the $\Pe\Pgm$ channel.
 
-In all three decay channels, the \textsc{SVfitMEM} algorithm significantly improves the separation of the $\PHiggs \to \Pgt\Pgt$ signal 
+In all three decay channels, the SVfitMEM algorithm significantly improves the separation of the $\PHiggs \to \Pgt\Pgt$ signal 
 from the irreducible $\PZ/\Pggx \to \Pgt\Pgt$ DY background, yielding a substantial gain in analysis sensitivity.
-The increase in signal-to-background separation is illustrated in Fig.~\ref{fig:distributions_mVis_vs_SVfit}
-that compares the signal and background distributions for $m_{\Pgt\Pgt}$ and $m_{\vis}$.
-Numerical values of the means of the $m_{\Pgt\Pgt}$ and $m_{\vis}$
-distributions of their root-mean-square (RMS) are given in
+The increase in signal-to-background separation is illustrated in
+Fig.~\ref{fig:distributions_mVis_vs_SVfit},
+which compares the signal and background distributions for $m_{\Pgt\Pgt}$ and $m_{\vis}$.
+Numerical values of the means and of the root-mean-square (RMS) values
+of the $m_{\Pgt\Pgt}$ and $m_{\vis}$ distributions are given in
 Table~\ref{tab:resolutions_mVis_vs_SVfit}.
 
 \begin{figure}
@@ -302,8 +313,8 @@ Table~\ref{tab:resolutions_mVis_vs_SVfit}.
 \end{center}
 \caption{
   Distribution of $m_{\vis}$ (left) and of $m_{\Pgt\Pgt}$ reconstructed by the SVfitMEM algorithm with $\kappa = 5$ (right)
-  in simulated $\PZ/\Pggx \to \Pgt\Pgt$ DY background and $\PHiggs \to \Pgt\Pgt$ signal events,
-  for events selected in the decay channels $\tauh\tauh$ (top), $\Pgm\tauh$ (center), and $\Pe\Pgm$ (bottom).
+  in simulated $\PZ/\Pggx \to \Pgt\Pgt$ DY background and $\PHiggs \to
+  \Pgt\Pgt$ signal events selected in the decay channels $\tauh\tauh$ (top), $\Pgm\tauh$ (center), and $\Pe\Pgm$ (bottom).
   The signal events are generated for $\PHiggs$ boson masses of $m_{\PHiggs} = 125$, $200$, and $300$~\GeV. 
   {\textbf CV: OLD PLOTS, TO BE UPDATED !!}
 }
@@ -383,15 +394,13 @@ $\PHiggs \to \Pgt\Pgt$: & & & & \\
 \end{tabular}
 \end{center}
 \caption{
-  Mean and root-mean-square (RMS) of the $m_{\vis}$ and $m_{\Pgt\Pgt}$ distributions
-  reconstructed in $\PZ/\Pggx \to \Pgt\Pgt$ DY background events and
-  in $\PHiggs \to \Pgt\Pgt$ signal events of different mass
-  $m_{\PHiggs}$.
-  The distributions of $m_{\Pgt\Pgt}$ are reconstructed by the
-  SVfitMEM algorithm with $\kappa = 5$.
-  The results for the $\tauh\tauh$ channel are given at the top, the
-  results for the $\Pgm\tauh$ channel at the centre and the results
-  for the $\Pe\Pgm$ channel at the bottom.
+  Mean and root-mean-square (RMS) of the $m_{\vis}$ and $m_{\Pgt\Pgt}$
+  distributions
+  reconstructed by the SVfitMEM algorithm with $\kappa = 5$
+  in simulated $\PZ/\Pggx \to \Pgt\Pgt$ DY background and $\PHiggs \to
+  \Pgt\Pgt$ signal events selected in the decay channels $\tauh\tauh$
+  (top), $\Pgm\tauh$ (centre) and $\Pe\Pgm$ (bottom).
+  The signal events are generated for different $\PHiggs$ boson masses $m_{\PHiggs}$.
   {\textbf CV: NUMBERS TO BE UPDATED !!}
 }
 \label{tab:resolutions_mVis_vs_SVfit}

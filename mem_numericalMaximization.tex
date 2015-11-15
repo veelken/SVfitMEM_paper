@@ -1,27 +1,26 @@
 \subsection{Determination of $\hat{m}_{\Pgt\Pgt}$}
 \label{sec:mem_numericalMaximization}
 
-The best estimate, $\hat{m}_{\Pgt\Pgt}$, for the mass of the $\Pgt$ pair in a given event
-is obtained by computing the probability density $P(\bm{p^{\vis(1)}},\bm{p^{\vis(2)}},\bm{p^{\rec}}|m_{\Pgt\Pgt}^{\textrm{test}(i)})$ according to Eq.~(\ref{eq:mem_with_hadRecoil}) 
-for a series of mass hypotheses $m_{\Pgt\Pgt}^{\textrm{test}(i)}$ and determining the value of $m_{\Pgt\Pgt}$ that maximizes this probability density.
-For each mass hypothesis, the integral in Eq.~(\ref{eq:mem_with_hadRecoil}) is evaluated numerically,
-using an improved implementation~\cite{VAMP} of the \textsc{VEGAS} algorithm~\cite{VEGAS}.
+The best estimate, $\hat{m}_{\Pgt\Pgt}$, for the mass of the $\Pgt$ lepton pair in a given event
+is obtained by computing the probability density $P(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\Pgt\Pgt}^{\textrm{test}(i)})$ 
+for a series of mass hypotheses $m_{\Pgt\Pgt}^{\textrm{test}(i)}$, using Eq.~(\ref{eq:mem_with_hadRecoil}), and determining the value of $m_{\Pgt\Pgt}$ that maximizes this probability density.
+The integral in Eq.~(\ref{eq:mem_with_hadRecoil}) is evaluated numerically
+using an improved implementation~\cite{VAMP} of the VEGAS algorithm~\cite{VEGAS}.
 The series of mass hypotheses is defined by a recursive relation: 
 \begin{equation}
 m_{\Pgt\Pgt}^{\textrm{test}(i + 1)} = (1 + \delta) \,  m_{\Pgt\Pgt}^{\textrm{test}(i)} \, ,
 \label{eq:mTauTau_step_size}
 \end{equation}
 The step size $\delta$ is chosen such that it is small compared to the expected $m_{\Pgt\Pgt}$ resolution,
-which typically amounts to $15$--$20\%$, relative to the true mass of the $\Pgt$ pair.
+typically amounting to $15$--$20\%$ relative to the true mass of the $\Pgt$ lepton pair.
 In order to reduce the computing time the series is computed in two passes.
-The purpose of the initial pass, which uses a step size of $\delta = 0.10$, is to find the region of maximal $P(\bm{p^{\vis(1)}},\bm{p^{\vis(2)}},\bm{p^{\rec}}|m_{\Pgt\Pgt}^{\textrm{test}(i)})$.
+The purpose of the first pass, which uses a step size of $\delta = 0.10$, is to find the region of maximal $P(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\Pgt\Pgt}^{\textrm{test}(i)})$.
 The series is started at $m_{\Pgt\Pgt}^{\textrm{test}(0)} = m_{\vis}$,
 the mass of the visible $\Pgt$ decay products, 
-and stops when $P(\bm{p^{\vis(1)}},\bm{p^{\vis(2)}},\bm{p^{\rec}}|m_{\Pgt\Pgt}^{\textrm{test}(i)})$ falls below one per mille of the maximal value of the $P(\bm{p^{\vis(1)}},\bm{p^{\vis(2)}},\bm{p^{\rec}}|m_{\Pgt\Pgt}^{\textrm{test}(i)})$ 
+and stops when $P(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\Pgt\Pgt}^{\textrm{test}(i)})$ falls below one per mille of the maximal $P(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\Pgt\Pgt}^{\textrm{test}(i)})$ value
 computed for any $m_{\Pgt\Pgt}^{\textrm{test}(i)}$ so far in a given event.
-Further $P(\bm{p^{\vis(1)}},\bm{p^{\vis(2)}},\bm{p^{\rec}}|m_{\Pgt\Pgt}^{\textrm{test}(i)})$ values are computed in the second pass,
-restricted to the region around the maximum.
-A step size of $\delta = 0.01$ is used for the second pass.
-The graph of $\log P(\bm{p^{\vis(1)}},\bm{p^{\vis(2)}},\bm{p^{\rec}}|m_{\Pgt\Pgt}^{\textrm{test}(i)})$ versus $m_{\Pgt\Pgt}^{\textrm{test}(i)}$ is fitted by a second order polynomial
+The the second pass further $P(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\Pgt\Pgt}^{\textrm{test}(i)})$ values are computed for mass hypotheses $m_{\Pgt\Pgt}^{\textrm{test}(i)})$ within a region around the maximum,
+using a step size of $\delta = 0.01$.
+The graph of $\log \left( P(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\Pgt\Pgt}^{\textrm{test}(i)}) \mbox{~GeV}^{8} \right)$ versus $m_{\Pgt\Pgt}^{\textrm{test}(i)}$ is fitted by a second order polynomial
 in the region around the maximum,
 and $\hat{m}_{\Pgt\Pgt}$ is taken to be the point at which the polynomial reaches its maximum.

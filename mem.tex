@@ -1,13 +1,16 @@
 \section{The Matrix element method}
 \label{sec:mem}
 
-An estimate for the unknown model parameter $a$
-is obtained in the ME method by maximizing the probability density:
+In the ME method, an estimate for the unknown model parameter $a$
+is obtained by maximizing the probability density:
 \begin{align}
 P(\bm{y}|a) = & \frac{1}{\sigma(a)} \, \int \, dx_{a} \, dx_{b} \,
-d\bm{p} \, \frac{f(x_{a}) f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \, (2\pi)^{4} \,
-\delta^{4}( x_{a} \, \bm{p}^{a} + x_{b} \, \bm{p}^{b} - \sum_{i}^{n} \bm{p}^{(i)}) \, \nonumber \\
-  & \quad \vert \mathcal{M}(\bm{p},a) \vert^{2} \, W(\bm{y}|\bm{p}) 
+d\Phi_{n} \, \frac{f(x_{a}) f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \, (2\pi)^{4} \,
+\delta( x_{a} \, E_{a} + x_{b} \, E_{b} - \sum_{i}^{n}
+E_{(i)}) \, \nonumber \\
+ & \quad \delta^{3}( x_{a} \, \bm{p}^{a} + x_{b} \, \bm{p}^{b} - \sum_{i}^{n}
+\bm{p}^{(i)}) \, 
+  \vert \mathcal{M}(\bm{p},a) \vert^{2} \, W(\bm{y}|\bm{p}) 
 \label{eq:mem}
 \end{align}
 with respect to $a$.
@@ -16,10 +19,13 @@ protons and $\sqrt{s}$ the centre-of-mass energy;
 $x_{a}$ and $x_{b}$ denote the Bjorken scaling variables~\cite{Bjorkenx}
 and $f(x_{a})$ and $f(x_{b})$ the corresponding parton distribution
 functions (PDF).
+We use the MSTW 2008 LO PDF set~\cite{MSTW} for the purpose of
+evaluating $f(x_{a})$ and $f(x_{b})$.
 The term $1/(2 \, x_{a} \, x_{b} \, s)$ is referred to as ``flux factor'' in the literature.
 We denote by $n$ the number of particles in the final state,
 by $\bm{p}^{(i)}$ the momentum of the $i$-th final state particle
-and by $d\bm{p}$ the differential $n$-particle
+and by $d\Phi_{n} = \prod_{i}^{n} \,
+\frac{d^{3}\bm{p}^{(i)}}{(2\pi)^{3} \, 2 E_{(i)}}$ the differential $n$-particle
 phase space element.
 We use bold letters to indicate vector quantities.
 The symbol $\vert \mathcal{M}(\bm{p},a) \vert^{2}$ represents the
@@ -37,7 +43,7 @@ is referred to as ``transfer function'' (TF) in the
 literature~\cite{Fiedler:2010sg,Volobouev:2011vb}.
 The symbol $\sigma(a)$ corresponds to the cross section for the process under study.
 In case the process includes the production of an unstable resonance,
-the term $\sigma(a)$ needs to include 
+the term $\sigma(a)$ includes 
 the branching ratio for the decay of the resonance into the observable final state particles.
 Division by $\sigma(a)$ ensures that $P(\bm{y}|a)$ has
 the correct normalization for a probability density, 
@@ -48,7 +54,7 @@ for every $\bm{p}$.
 
 The meaning of Eq.~\ref{eq:mem} is as follows.
 The best estimate for the unknown model parameter $a$ is given by the
-value $\hat{a}$ that maximizes the probability to observe precisely the 
+value $\hat{a}$ which maximizes the probability to observe precisely the 
 values $\bm{y}$ that are measured in the detector. 
 Within the scope of this paper, the unknown model parameter $a$
 corresponds to the mass $m_{\PHiggs}$ of the $\PHiggs$ boson that decays into $\Pgt$ pairs.
@@ -63,7 +69,7 @@ is described in Section~\ref{sec:mem_ME}.
 A complication arises from the fact that we use a leading order (LO)
 ME to model the $\PHiggs$ boson production process $\Pp\Pp \to
 \PHiggs$, while the production of $\PHiggs$ bosons at the LHC typically
-proceeds in association with jets~\cite{Alwall:2010cq}.
+proceeds in association with jets.
 The treatment of hadronic activity in the event is detailed in Section~\ref{sec:mem_hadRecoil}.
 The TF are described in section~\ref{sec:mem_TF} and
 the integration over the $n$-particle phase space is described in
@@ -73,13 +79,13 @@ in Eq.~\ref{eq:mem} is described in Section~\ref{sec:mem_xSection}.
 The numerical maximization of the probability density $P(\bm{y}|m_{\PHiggs})$
 with respect to the model parameter $m_{\PHiggs}$ is described in
 Section~\ref{sec:mem_numericalMaximization}.
-We conclude this section with a description of an extra term that we
-choose to add artificially to the probability density $P(\bm{y}|m_{\PHiggs})$, in
+We conclude this section with a description of an artificial term that we
+choose to add to the probability density $P(\bm{y}|m_{\PHiggs})$, in
 order to reduce tails in the $m_{\Pgt\Pgt}$ distribution reconstructed
 by the algorithm. The structure of this ``regularization'' term is described in
 Section~\ref{sec:mem_logM}.
-Distributions of $m_{\Pgt\Pgt}$ reconstructed with and without this
-term in simulated events are shown in Section~\ref{sec:results}.
+Distributions of $m_{\Pgt\Pgt}$ in simulated events,
+reconstructed with and without this term, are shown in Section~\ref{sec:results}.
 
 
 
