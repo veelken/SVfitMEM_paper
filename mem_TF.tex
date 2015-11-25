@@ -51,10 +51,11 @@ $x_{2} = 1.03$, and $\alpha_{2} = 3.5$.
 The factors $\zeta_{1}$ and $\zeta_{2}$ are chosen such that the
 function $W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} )$ is continuous at
 the points $x = x_{1}$ and $x = x_{2}$. 
-Their values are $\zeta_{1} = \left( \frac{\alpha}{x_{1}}
-\right)^{\alpha_{1}} \, \exp\left( -\frac{1}{2} \, x_{1}^{2} \right)$ and $\zeta_{2} = \left( \frac{\alpha}{x_{2}}
-\right)^{\alpha_{2}} \, \exp\left( -\frac{1}{2} \, x_{2}^{2} \right)$
-, respectively.
+Their values are 
+$\zeta_{1} = \exp\left( -\frac{1}{2} \, \left( \frac{x_{1} - \mu}{\sigma} \right)^{2} \right) \, \left( \frac{\alpha_{1}}{x_{1}} - x_{1} - \frac{x_{1} - \mu}{\sigma} \right)^{\alpha_{1}}$
+and
+$\zeta_{2} = \exp\left( -\frac{1}{2} \, \left( \frac{x_{2} - \mu}{\sigma} \right)^{2} \right) \, \left( \frac{\alpha_{2}}{x_{2}} - x_{2} - \frac{x_{2} - \mu}{\sigma} \right)^{\alpha_{2}}$, 
+respectively.
 The factor $\mathcal{N}$ is determined by the condition that the function $W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} )$ 
 satisfies the normalization condition $\int \, d\pT^{\vis} \, W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} ) \equiv 1$.
 

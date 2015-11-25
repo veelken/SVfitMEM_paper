@@ -12,6 +12,9 @@ of the hadronic recoil~\cite{CMS-JME-13-003,ATLAS-CONF-2014-019}.
 
 The effect of the hadronic recoil is to modify the kinematics of the $\PHiggs$ boson decay
 by boosting the $\Pgt$ leptons and their decay products in the transverse plane.
+The component of $\bm{p}^{\rec}$ in beam direction is not a problem, 
+as it only changes the Bjorken scaling variables $x_{a}$ and $x_{b}$ in Eq.~(\ref{eq:mem}) slightly.
+The components of $\bm{p}^{\rec}$ in the transverse plane need to be accounted for, however.
 The LO ME that we use to model $\PHiggs$ boson production and decay
 is adequate for events without hadronic activity,
 in which the $\PHiggs$ boson has zero $\pT$.
@@ -66,7 +69,7 @@ d\pXhat^{\rec} \, d\pYhat^{\rec} \,
 \end{align}
 with:
 \begin{align}
-x_{a} = & \frac{2}{\sqrt{s}} \, (\Ehat_{\rec} + \Ehat_{\Pgt(1)} +
+x_{a} = & \frac{1}{\sqrt{s}} \, (\Ehat_{\rec} + \Ehat_{\Pgt(1)} +
 \Ehat_{\Pgt(2)} + \pZhat^{\rec} + \pZhat^{\Pgt(1)} + \pZhat^{\Pgt(2)})
 \, , \nonumber \\
 x_{b} = & \frac{1}{\sqrt{s}} \, (\Ehat_{\rec} + \Ehat_{\Pgt(1)} + \Ehat_{\Pgt(2)} - (\pZhat^{\rec} + \pZhat^{\Pgt(1)} + \pZhat^{\Pgt(2)})) \, .
