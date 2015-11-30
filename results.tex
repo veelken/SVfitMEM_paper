@@ -4,19 +4,17 @@
 The performance of the $m_{\Pgt\Pgt}$ reconstruction is studied using
 simulated samples of $\PHiggs \to \Pgt\Pgt$ and $\PZ/\Pggx \to
 \Pgt\Pgt$ events.
-The $\PHiggs \to \Pgt\Pgt$ signal sample is generated with the next-to-leading-order (NLO) program POWHEG~\cite{POWHEG1,POWHEG2,POWHEG3}.
-We study the $m_{\Pgt\Pgt}$ reconstruction in SM $\PHiggs \to \Pgt\Pgt$ events with $m_{\PHiggs} = 125$~\GeV
-and in events containing pseudoscalar $\PHiggs$ bosons of mass $200$, $300$, $500$, and $700$~\GeV.
-In all cases, the $\PHiggs$ boson are produced by the gluon fusion process.
-The $\PZ/\Pggx \to \Pgt\Pgt$ background sample is generated with the LO MadGraph program~\cite{MadGraph}.
+The SM $\PHiggs \to \Pgt\Pgt$ signal sample for $m_{\PHiggs} = 125$~\GeV is generated with the next-to-leading-order (NLO) program POWHEG v2~\cite{POWHEG1,POWHEG2,POWHEG3}.
+We also study the $m_{\Pgt\Pgt}$ reconstruction in events containing pseudoscalar $\PHiggs$ bosons of mass $200$, $300$, $500$, and $700$~\GeV.
+The latter samples are generated with the LO generator PYTHIA 8.2~\cite{pythia8}.
+In all cases, the $\PHiggs$ bosons are produced by the gluon fusion process.
+The $\PZ/\Pggx \to \Pgt\Pgt$ background sample is generated with the LO MadGraph program, in the version MadGraph\_aMCatNLO 2.2.2~\cite{MadGraph_aMCatNLO}.
 All events are generated for proton-proton collisions at $\sqrt{s} = 13$~\TeV centre-of-mass energy.
-The samples produced by MadGraph are generated with the CTEQ6L1 set of PDF,
-while the samples produced by POWHEG use CTEQ6M~\cite{CTEQ6}.
-Parton shower and hadronization processes are modelled using the generator PYTHIA~\cite{pythia8} with the \emph{Z2$^{*}$} tune.
-The PYTHIA \emph{Z2$^{*}$} tune is obtained from the \emph{Z1} tune~\cite{PYTHIA_Z1tune_CMS},
-which uses the CTEQ5L PDF, 
-whereas \emph{Z2$^{*}$} adopts CTEQ6L~\cite{CTEQ6}.
-The decays of $\Pgt$ leptons, including polarization effects, are modelled with TAUOLA~\cite{tauola}.
+The samples produced by MadGraph and POWHEG, are generated with the NNPDF3.0 set of PDF,
+while the samples produced by PYTHIA use NNPDF2.3LO~\cite{NNPDF1,NNPDF2,NNPDF3}.
+Parton shower and hadronization processes are modelled using the generator PYTHIA with the tune CUETP8M1~\cite{PYTHIA_CUETP8M1tune_CMS}.
+The CUETP8M1 tune is based on the Monash tune~\cite{PYTHIA_MonashTune}.
+The decays of $\Pgt$ leptons, including polarization effects, are modelled by PYTHIA.
 
 The experimental resolutions on $\pT^{\vis(i)}$ in case of hadronic
 $\Pgt$ decays and on the hadronic recoil 
