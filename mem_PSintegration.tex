@@ -2,126 +2,132 @@
 \label{sec:mem_PSintegration}
 
 The integration over the differential $n$-particle phase space element
-$d\Phi_{n}$ in Eq.~(\ref{eq:mem_with_hadRecoil}) is to be done differently
-for $\Pgt\Pgt \to \textrm{hadrons} + \Pnut \, \textrm{hadrons} +
-\Pnut$, $\Pgt\Pgt \to \textrm{hadrons} + \Pnut \, \ellnunu$, 
-and $\Pgt\Pgt \to \ellnunu \, \ellnunu$ decays ($\Plepton = \Pe, \Pgm$).
+$d\Phi_{n}$ in Eq.~(\ref{eq:mem_with_hadRecoil}) needs to be done differently for
+events in which both $\Pgt$ leptons decay hadronically (``hadronic'' $\Pgt$ pair decays),
+events in which one $\Pgt$ lepton decays hadronically and one leptonically (``semi-leptonic'' $\Pgt$ pair decays),
+and events in which both $\Pgt$ leptons decay leptonically (``leptonic'' $\Pgt$ pair decays).
 With the approximation that we treat hadronic $\Pgt$ decays as
 two-body decays, the integral
-over $d\Phi_{n}$ is of dimension $12$ in case of $\Pgt\Pgt \to \textrm{hadrons} + \Pnut \, \textrm{hadrons} +
-\Pnut$ decays,
-of dimension $15$ in case of $\Pgt\Pgt \to \textrm{hadrons} + \Pnut \, \ellnunu$ decays,
-and of dimension $18$ in case of $\Pgt\Pgt \to \ellnunu \, \ellnunu$ decays.
+over $d\Phi_{n}$ is of dimension $12$ in case of hadronic $\Pgt$ pair decays,
+$15$ in case of semi-leptonic $\Pgt$ pair decays,
+and $18$ in case of leptonic $\Pgt$ pair decays.
 The differential phase space element reads:
 \begin{equation}
 d\Phi_{n}= 
  \begin{cases} 
    d\Phi^{(1)}_{\tauhnu} \, d\Phi^{(2)}_{\tauhnu} \, 
- & \mbox{if } \Pgt\Pgt \to \textrm{hadrons} + \Pnut \, \textrm{hadrons} +
-\Pnut \, , \\
+ & \mbox{if } \Pgt^{+} \to \textrm{hadrons} + \Pnut \mbox{ and } \Pgt^{-} \to \textrm{hadrons} + \Pnut \\
    d\Phi^{(1)}_{\ellnunu} \, d\Phi^{(2)}_{\tauhnu} \, 
- & \mbox{if } \Pgt\Pgt \to \textrm{hadrons} + \Pnut \, \ellnunu \, , \\
+ & \mbox{if } \Pgt^{+} \to \ellnunu \mbox{ and } \Pgt^{-} \to \textrm{hadrons} + \Pnut \\
+   d\Phi^{(1)}_{\tauhnu} \, d\Phi^{(2)}_{\ellnunu} \, 
+ & \mbox{if } \Pgt^{+} \to \textrm{hadrons} + \Pnut \mbox{ and } \Pgt^{-} \to \ellnunu \\
    d\Phi^{(1)}_{\ellnunu} \, d\Phi^{(2)}_{\ellnunu} \, 
- & \mbox{if } \Pgt\Pgt \to \ellnunu \, \ellnunu \, ,
+ & \mbox{if } \Pgt^{+} \to \ellnunu \mbox{ and } \Pgt^{-} \to \ellnunu \, ,
  \end{cases}
 \label{eq:PSintegration_taupair}
 \end{equation}
-where
-\begin{equation}
-d\Phi^{(i)}_{\tauhnu} = \frac{d^{3}\bm{p}^{\vis(i)}}{(2\pi)^{3} \, 2
-  E_{\vis(i)}} \, \frac{d^{3}\bm{p}^{\Pnu(i)}}{(2\pi)^{3} \, 2 E_{\Pnu(i)}}
-\quad \mbox{ and } \quad 
-d\Phi^{(i)}_{\ellnunu} = \frac{d^{3}\bm{p}^{\vis(i)}}{(2\pi)^{3} \, 2
-  E_{\vis(i)}} \, \frac{d^{3}\bm{p}^{\Pnu(i)}}{(2\pi)^{3} \, 2
-  E_{\Pnu(i)}} \, \frac{d^{3}\bm{p}^{\APnu(i)}}{(2\pi)^{3} \, 2
-  E_{\APnu(i)}} \, .
+where:
+\begin{align}
+d\Phi^{(i)}_{\tauhnu} = & \frac{d^{3}\bm{\hat{p}}^{\vis(i)}}{(2\pi)^{3} \, 2
+  \hat{E}_{\vis(i)}} \, \frac{d^{3}\bm{\hat{p}}^{\Pnu(i)}}{(2\pi)^{3} \, 2 \hat{E}_{\Pnu(i)}} \nonumber \\
+d\Phi^{(i)}_{\ellnunu} = & \frac{d^{3}\bm{\hat{p}}^{\vis(i)}}{(2\pi)^{3} \, 2
+  \hat{E}_{\vis(i)}} \, \frac{d^{3}\bm{\hat{p}}^{\Pnu(i)}}{(2\pi)^{3} \, 2
+  \hat{E}_{\Pnu(i)}} \, \frac{d^{3}\bm{\hat{p}}^{\APnu(i)}}{(2\pi)^{3} \, 2
+  \hat{E}_{\APnu(i)}} \, .
 \label{eq:PSintegration_onetau}
-\end{equation}
+\end{align}
 
 The integrand in Eq.~(\ref{eq:mem_with_hadRecoil}) depends on the
-four-momentum of the two $\Pgt$ leptons via the squared modulus of the
-ME, $\vert \mathcal{M}_{\Pg\Pg \to \PHiggs \to \Pgt\Pgt}(\bm{p},m_{\PHiggs}) \vert^{2}$,
-and on the four-momentum of the visible $\Pgt$ decay products via the
-transfer functions $W( \bm{p}^{\vis(1)} | \phat^{\vis(1)} )$ and $W( \bm{p}^{\vis(2)} | \phat^{\vis(2)} )$.
-In case of hadronic $\Pgt$ decays, 
-we parametrize the $\Pgt$ lepton momentum vector as function of the
-momentum of the visible $\Pgt$ decay products $\bm{p}^{\vis(i)}$ and of two kinematic variables,
-$z$ and $\phi_{\inv}$.
-Leptonic $\Pgt$ decays are parametrized by $\bm{p}^{\vis(i)}$ and
-three kinematic variables, $z$, $\phi_{\inv}$ and $m_{\inv}$.
-The variable $z$ represents the fraction of $\Pgt$ lepton energy
-carried by the visible $\Pgt$ decay products (\cf Eq.~(\ref{eq:def_z})).
+four-momentum of the two $\Pgt$ leptons via the 
+product $f(x_{a}) \, f(x_{b}$ of the PDF,
+the factor $\frac{1}{2 \, x_{a} \, x_{b} \, s}$, referred to as ``flux factor'' in the literature,
+and via the squared modulus $\vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to \Pgt\Pgt}(\bm{\tilde{p}},m_{\PHiggs}) \vert^{2}$ 
+of the ME for $\PHiggs$ boson production and subsequent decay into a $\Pgt$ lepton pair.
+In addition, it depends on the four-momentum of the visible $\Pgt$ decay products via the
+squared moduli $\vert \mathcal{M}^{(1)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2}$ and $\vert \mathcal{M}^{(2)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2}$ of the ME for the $\Pgt$ lepton decays
+and via the transfer functions $W( \bm{p}^{\vis(1)} | \phat^{\vis(1)} )$ and $W( \bm{p}^{\vis(2)} | \phat^{\vis(2)} )$.
+The $\Pgt$ lepton energies and momenta need to be computed as function of the integration variables.
+
+The dimension of the integration over the phase-space elements $d^{3}\bm{p}^{\Pnu(i)}$ and $d^{3}\bm{p}^{\Pnu(i)} \, d^{3}\bm{p}^{\APnu(i)}$
+can be reduced by analytic transformations.
+Two variables are sufficient to fully parametrize the kinematics of hadronic $\Pgt$ decays.
+In case of leptonic $\Pgt$ decays, three variables are sufficient.
+We choose to parametrize hadronic $\Pgt$ decays by the variables $z$ and $\phi_{\inv}$.
+The variable $z$ represents the fraction of $\Pgt$ lepton energy, in the laboratory frame,
+that is carried by the visible $\Pgt$ decay products (\cf Eq.~(\ref{eq:def_z})).
 We denote the energy and momentum of the $\Pgt$ neutrino
 produced in hadronic $\Pgt$ decays as well as of the neutrino pair produced in leptonic $\Pgt$
 decays by the symbols $E_{\inv}$ and $\bm{p}^{\inv}$.
 The energy component $E_{\inv}$ is related to the variable $z$ via:
 \begin{equation}
-E_{\inv} = E_{\Pgt} - E_{\vis} = \frac{1 - z}{z} \, E_{\vis} \, .
+E_{\inv} = \frac{1 - z}{z} \, E_{\vis} \, .
 \label{eq:E_inv}
 \end{equation}
-In case of leptonic $\Pgt$ decays, the variable $m_{\inv}$ denotes the
-mass of the neutrino pair. The mass of single neutrinos is assumed
-to be zero.
-The energy fraction $z$ is related to the angle $\theta_{\inv}$ between the $\bm{p}^{\inv}$ vector and the direction of the visible $\Pgt$ decay products:
+The angle $\theta_{\inv}$ between the $\bm{p}^{\inv}$ vector and the $\bm{p}^{\vis}$ vector
+is related to the variable $z$ as well, 
+and is given by Eq.~(\ref{eq:hadTauDecaysCosTheta}) in case of hadronic $\Pgt$ decays 
+and by Eq.~(\ref{eq:lepTauDecaysCosTheta}) in case of leptonic $\Pgt$ decays.
+The variable $\phi_{\inv}$ specifies the orientation of the
+$\bm{p}^{\inv}$ vector relative to the direction of the visible $\Pgt$ decay products.
+In case of hadronic $\Pgt$ decays, the magnitude of the $\bm{p}^{\inv}$ vector is equal to $E_{\inv}$.
+We choose the mass $m_{\inv}$ of the neutrino pair as third variable to parametrize the kinematics of leptonic $\Pgt$ decays,
+so that the magnitude of the $\bm{p}^{\inv}$ vector is given by $\sqrt{\left( \frac{1 - z}{z} \right)^{2} \, E^{2}_{\vis} - m^{2}_{\inv}}$ in that case.
+With the convention that $m_{\inv} = 0$ for hadronic $\Pgt$ decays,
+Eqs.~(\ref{eq:hadTauDecaysCosTheta}) and~(\ref{eq:lepTauDecaysCosTheta}) can be expressed by a common form that is valid for hadronic as well as leptonic $\Pgt$ decays:
 \begin{equation}
-\cos\theta_{\inv} = \frac{E_{\vis} \, E_{\inv} - \frac{1}{2}(m^{2}_{\Pgt} - (m^{2}_{\vis} + m^{2}_{\inv}))}{\vert\bm{p}^{\vis}\vert \, \vert\bm{p}^{\inv}\vert} \, ,
+\cos\theta_{\inv} = \frac{\frac{1 - z}{z} \, E^{2}_{\vis} \, E_{\inv} - \frac{1}{2}(m^{2}_{\Pgt} - (m^{2}_{\vis} + m^{2}_{\inv}))}{\vert\bm{p}^{\vis}\vert \, 
+  \sqrt{\left( \frac{1 - z}{z} \right)^{2} \, E^{2}_{\vis} - m^{2}_{\inv}}} \, ,
 \label{eq:theta_inv}
 \end{equation}
-as derived in Sections~\ref{sec:appendix_tauToHadDecays}
-and~\ref{sec:appendix_tauToLepDecays} of the appendix for
-hadronic and leptonic $\Pgt$ decays, respectively.
-The variable $\phi_{\inv}$ specifies the orientation of the
-$\bm{p}^{\inv}$ vector relative to the $\bm{p}^{\vis}$ vector.
-As illustrated in Fig.~\ref{fig:tauDecayParametrization}, the
-$\bm{p}^{\inv}$ vector is located on the surface of a cone that is centred
-on the $\bm{p}^{\vis}$ vector and has an opening angle $\theta_{\inv}$.
+The $\Pgt$ lepton momentum vector is given by the sum of the
+$\bm{p}^{\vis}$ and $\bm{p}^{\inv}$ vectors.
+
+The angles $\theta_{\inv}$ and $\phi_{\inv}$ are illustrated in Fig.~\ref{fig:tauDecayParametrization}.
+The $\bm{p}^{\inv}$ vector is located on the surface of a cone.
+The axis of the cone is given by the $\bm{p}^{\vis}$ vector and its opening angle is given by Eq.~(\ref{eq:theta_inv}).
 The variable $\phi_{\inv}$ represents the angle of rotation around the
 axis of the cone.
 The value $\phi_{\inv} = 0$ is chosen to correspond to the case that
 the $\bm{p}^{\inv}$ vector is within the plane spanned by the
 $\bm{p}^{\vis}$ vector and the beam direction.
-The $\Pgt$ lepton momentum vector is given by the sum of the
-$\bm{p}^{\vis}$ and $\bm{p}^{\inv}$ vectors.
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics*[height=58mm]{figures/tauDecayParametrization.pdf}
 \end{center}
 \caption{
-  Illustration of the variables $\theta_{\inv}$ and $\phi_{\inv}$ used to parametrize the $\Pgt$ lepton decays.
-  The angle $\theta_{\inv}$ between the $\bm{p}^{\vis}$ and $\bm{p}^{\inv}$ vectors is related 
-  to the fraction $z$ of $\Pgt$ lepton energy carried by the visible $\Pgt$ decay products
-  by, respectively, Eqs.~(\ref{eq:hadTauDecaysCosTheta}) and~(\ref{eq:lepTauDecaysCosTheta}) for hadronic and leptonic $\Pgt$ decays.
+  Illustration of the variables $\theta_{\inv}$ and $\phi_{\inv}$ that specify the orientation of the $\bm{p}^{\inv}$ vector
+  relative to the direction of the visible $\Pgt$ decay products, given by the vector $\bm{p}^{\vis}$.
 }
 \label{fig:tauDecayParametrization}
 \end{figure} 
 
 The parametrization of the $\Pgt$ decay kinematics by $\bm{p}^{\vis}$
 and the variables $z$ and $\phi_{\inv}$, respectively by $z$, $\phi_{\inv}$, and $m_{\inv}$,
-allows to simplify the evaluation of the integral in Eq.~(\ref{eq:mem_with_hadRecoil}) by means of analytic transformations.
+allows to simplify the evaluation of the integral in Eq.~(\ref{eq:mem_with_hadRecoil}) considerably.
 Expressions for the product of the differential phase space elements
 $d\Phi^{(i)}_{\tauhnu}$  and $d\Phi^{(i)}_{\ellnunu}$ with the squared
 modulus of the ME $\vert \mathcal{M}^{(i)}_{\Pgt}(\bm{p}) \vert^{2}$ are derived in Sections~\ref{sec:appendix_tauToHadDecays} and~\ref{sec:appendix_tauToLepDecays} of the appendix.
 The results are:
 \begin{align}
 \vert \mathcal{M}^{(i)}_{\Pgt} \vert^{2} \, d\Phi^{(i)}_{\tauhnu} 
- = & \, \frac{\pi}{m_{\Pgt}\Gamma_{\Pgt}} \,
- f_{\Phadron}\left(\bm{p}^{\vis(i)}, m^{\vis(i)},
-   \bm{p}^{\inv(i)}\right) \, \frac{d^{3}\bm{p}^{\vis}}{2 E_{\vis}} \, dz \, d\phi_{\inv} \nonumber \\
-\vert \mathcal{M}^{(i)}_{\Pgt} \vert^{2} \, d\Phi^{(i)}_{\ellnunu} 
- = & \, \frac{\pi}{m_{\Pgt}\Gamma_{\Pgt}} \, f_{\ell}\left(\bm{p}^{\vis(i)},
- m^{\vis(i)}, \bm{p}^{\inv(i)}\right) \, \frac{d^{3}\bm{p}^{\vis}}{2 E_{\vis}} \, dz \, dm^{2}_{\inv} \, d\phi_{\inv}
+ = & \, \frac{\pi}{m_{\Pgt}\Gamma_{\Pgt}}(\bm{\tilde{p}}) \,
+ f_{\Phadron}\left(\bm{\tilde{p}}^{\vis(i)}, m^{\vis(i)},
+   \bm{\tilde{p}}^{\inv(i)}\right) \, \frac{d^{3}\bm{\hat{p}}^{\vis}}{2 \hat{E}_{\vis}} \, dz \, d\phi_{\inv} \nonumber \\
+\vert \mathcal{M}^{(i)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} \, d\Phi^{(i)}_{\ellnunu} 
+ = & \, \frac{\pi}{m_{\Pgt}\Gamma_{\Pgt}} \, f_{\ell}\left(\bm{\tilde{p}}^{\vis(i)},
+ m^{\vis(i)}, \bm{\tilde{p}}^{\inv(i)}\right) \, \frac{d^{3}\bm{\hat{p}}^{\vis}}{2 \hat{E}_{\vis}} \, dz \, dm^{2}_{\inv} \, d\phi_{\inv}
  \, .
 \label{eq:PSint}
 \end{align}
-The momentum vector $\bm{p}^{\inv(i)}$ is computed as function of
-$\bm{p}^{\vis}$ and of the kinematic variables $z$ and $\phi_{\inv}$
-in case of hadronic $\Pgt$ decays and as function of $\bm{p}^{\vis}$
-and the kinematic variables $z$, $\phi_{\inv}$, and $m_{\inv}$ in case
-of leptonic $\Pgt$ decays.
 The functions $f_{\Phadron}$ and $f_{\Plepton}$ are given by
 Eqs.~(\ref{eq:hadTauDecays_f})
 and~(\ref{eq:lepTauDecays_f}).
+The momenta $\bm{\tilde{p}}^{\vis(i)}$ and $\bm{\tilde{p}}^{\inv(i)}$ in the zero transverse momentum frame of the $\PHiggs$ boson
+are obtained by a Lorentz boost in the transverse plane.
+The boost vector $(\pThat^{\rec}, \pXhat^{\rec}, \pYhat^{\rec}, 0)$ is given by Eq.~(\ref{eq:xpXhat_and_pYhat}),
+as function of $\bm{\hat{p}}^{\Pgt(1)} = \bm{\hat{p}}^{\vis(1)} + \bm{\hat{p}}^{\inv(1)}$ and $\bm{\hat{p}}^{\Pgt(2)} = \bm{\hat{p}}^{\vis(2)} + \bm{\hat{p}}^{\inv(2)}$
+in the laboratory frame.
 
 Eq.~(\ref{eq:PSint}) represents the quintessence of what is needed 
 in order to extend the ME generated by automatized tools such as
@@ -130,8 +136,8 @@ by the capability to handle the $\Pgt$ decays.
 Instead of performing an integration over $d^{3}\bm{p}^{\Pgt(1)} \,
 d^{3}\bm{p}^{\Pgt(2)}$, which treats the $\Pgt$ leptons as stable particles,
 one needs to perform the integration over $\vert
-\mathcal{M}^{(1)}_{\Pgt} \vert^{2} \, d\Phi^{(1)} \, \vert
-\mathcal{M}^{(2)}_{\Pgt} \vert^{2} \, d\Phi^{(2)}$ according to
+\mathcal{M}^{(1)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} \, d\Phi^{(1)} \, \vert
+\mathcal{M}^{(2)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} \, d\Phi^{(2)}$ according to
 Eq.~(\ref{eq:PSint}).
 The momenta of both $\Pgt$ leptons need to be computed as
 function of the integration variables $z^{(1)}$, $\phi_{\inv}^{(1)}$,
@@ -140,20 +146,14 @@ $m_{\inv}^{(2)}$, using Eqs.~(\ref{eq:E_inv})
 and~(\ref{eq:theta_inv}),
 where $m_{\inv}^{(i)}$ is equal to zero in case the $i$-th $\Pgt$ lepton
 decays hadronically.
-The $\Pgt$ lepton momenta can then be used to evaluate the other
-terms in Eq.~(\ref{eq:mem_with_hadRecoil}).
-
-Note that the dimension of the integration depends on the $\Pgt$ decay
-mode.
-In case both $\Pgt$ leptons decay to hadrons, the dimension of the
-integration is $4$, in case one $\Pgt$ lepton decays hadronically and
-the other decays leptonically the dimension is $5$, and in case both
-$\Pgt$ leptons decay into electrons or muons the dimension is $6$.
+The $\Pgt$ lepton momenta can then be used to evaluate the product of the PDF, the flux factor, 
+and the squared modulus $\vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to \Pgt\Pgt}(\bm{\tilde{p}},m_{\PHiggs}) \vert^{2}$ 
+of the ME for $\PHiggs$ boson production and subsequent decay into a $\Pgt$ lepton pair in Eq.~(\ref{eq:mem_with_hadRecoil}).
  
 In order to improve the accuracy of the numerical integration,
-we perform a final variable transformation, replacing $z^{(2)}$ by $t_{\PHiggs}$.
+we perform a further variable transformation, replacing $z^{(2)}$ by $t_{\PHiggs}$.
 The transformation is executed in two steps. 
-In the first step, we replace $z^{(2)}$ by:
+First, we replace $z^{(2)}$ by:
 \begin{equation}
 q_{\PHiggs}^{2} = \frac{m^{2}_{\vis}}{z^{(1)} \, z^{(2)}} \, .
 \label{eq:varTransform_z2_to_tHiggs_1}
@@ -161,20 +161,12 @@ q_{\PHiggs}^{2} = \frac{m^{2}_{\vis}}{z^{(1)} \, z^{(2)}} \, .
 Following Eq.~(8) in Ref.~\cite{Alwall:2010cq}, we then parametrize $q_{\PHiggs}^{2}$ by:
 \begin{equation}
 q_{\PHiggs}^{2} = m_{\PHiggs}^{2} + m_{\PHiggs} \, \Gamma_{\PHiggs}
-\tan t_{\PHiggs} 
+\tan t_{\PHiggs} \, .
 \label{eq:varTransform_z2_to_tHiggs_2}
 \end{equation}
-in the second step.
 The form of the variable transformation in Eqs.~(\ref{eq:varTransform_z2_to_tHiggs_1}) and~(\ref{eq:varTransform_z2_to_tHiggs_2}) 
 is chosen such that the Jacobi factor for the transformation from
-$z^{(2)}$ to $t_{\PHiggs}$ equals the inverse of $\vert \BW_{\PHiggs}
-\vert^{-2}$, the inverse of the squared modulus
-of the Breit-Wigner propagator of the $\PHiggs$ boson in
-Eq.~(\ref{eq:meHiggsBreitWigner}),
-which, by reducing the variance of the integrand,
-improves the numerical precision of evaluating the integral 
-in Eq.~(\ref{eq:mem_with_hadRecoil}).
-The Jacobi factor is given by:
+$z^{(2)}$ to $t_{\PHiggs}$:
 \begin{equation}
 \lvert \frac{\partial z^{(2)}}{\partial q_{\PHiggs}^{2}} \, \frac{\partial
   q_{\PHiggs}^{2}}{\partial t_{\PHiggs}} \rvert =
@@ -183,6 +175,12 @@ The Jacobi factor is given by:
   \Gamma_{\PHiggs}^{2}}{m_{\PHiggs} \, \Gamma_{\PHiggs}} \, .
 \label{eq:JacobiFactor_z2_to_tHiggs}  
 \end{equation}
-Compared to Ref.~\cite{Alwall:2010cq} we differ by a factor $\frac{1}{\pi}$ in the derivative 
-$\frac{\partial q_{\PHiggs}^{2}}{\partial t_{\PHiggs}}$. We have verified that Eq.~(\ref{eq:JacobiFactor_z2_to_tHiggs}) is correct.
+is proportional to the inverse of $\vert \BW_{\PHiggs} \vert^{2}$, 
+the squared modulus of the Breit-Wigner propagator of the $\PHiggs$ boson in
+Eq.~(\ref{eq:meHiggsBreitWigner})~\footnote{
+  Compared to Ref.~\cite{Alwall:2010cq} we differ by a factor $\frac{1}{\pi}$ in the derivative 
+  $\frac{\partial q_{\PHiggs}^{2}}{\partial t_{\PHiggs}}$. We have verified that Eq.~(\ref{eq:JacobiFactor_z2_to_tHiggs}) is correct.
+}.
+This transformation improves the numerical precision of evaluating the integral 
+in Eq.~(\ref{eq:mem_with_hadRecoil}), by reducing the variance of the integrand.
 

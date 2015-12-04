@@ -5,7 +5,7 @@ In the ME method, an estimate for the unknown model parameter $a$
 is obtained by maximizing the probability density:
 \begin{align}
 P(\bm{y}|a) = & \frac{1}{\sigma(a)} \, \int \, dx_{a} \, dx_{b} \,
-d\Phi_{n} \, \frac{f(x_{a}) f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \, (2\pi)^{4} \,
+d\Phi_{n} \, \frac{f(x_{a}) \, f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \, (2\pi)^{4} \,
 \delta( x_{a} \, E_{a} + x_{b} \, E_{b} - \sum_{i}^{n}
 E_{(i)}) \, \nonumber \\
  & \quad \delta^{3}( x_{a} \, \bm{p}^{a} + x_{b} \, \bm{p}^{b} - \sum_{i}^{n}
@@ -14,70 +14,67 @@ E_{(i)}) \, \nonumber \\
 \label{eq:mem}
 \end{align}
 with respect to $a$.
-The symbols $p^{a}$ and $p^{b}$ represent the momenta of the two colliding
-protons and $\sqrt{s}$ the centre-of-mass energy;
+The symbols $E_{a}$ and $E_{b}$ and $\bm{p}^{a}$ and $\bm{p}^{b}$ denote, respectively, the energies and momenta of the two colliding protons,
+$\sqrt{s}$ represents the centre-of-mass energy,
 $x_{a}$ and $x_{b}$ denote the Bjorken scaling variables~\cite{Bjorkenx}
 and $f(x_{a})$ and $f(x_{b})$ the corresponding parton distribution
 functions (PDF).
-We use the MSTW 2008 LO PDF set~\cite{MSTW} for the purpose of
-evaluating $f(x_{a})$ and $f(x_{b})$.
-The term $1/(2 \, x_{a} \, x_{b} \, s)$ is referred to as ``flux factor'' in the literature.
-We denote by $n$ the number of particles in the final state,
+We use the MSTW 2008 LO PDF set~\cite{MSTW} to evaluate $f(x_{a})$ and $f(x_{b})$.
+We furthermore denote by $n$ the number of particles in the final state,
 by $\bm{p}^{(i)}$ the momentum of the $i$-th final state particle
 and by $d\Phi_{n} = \prod_{i}^{n} \,
 \frac{d^{3}\bm{p}^{(i)}}{(2\pi)^{3} \, 2 E_{(i)}}$ the differential $n$-particle
 phase space element.
-We use bold letters to indicate vector quantities.
+Vector quantities are represented by bold letters.
 The symbol $\vert \mathcal{M}(\bm{p},a) \vert^{2}$ represents the
 squared modulus of the ME for
 the process.
-The $\delta$-function $\delta^{4}( x_{a} \, \bm{p}^{a} + x_{b} \,
-\bm{p}^{b} - \sum_{i}^{n} \bm{p}^{(i)})$ imposes energy and momentum
-conservation.
+The $\delta$-functions $\delta( x_{a} \, E_{a} + x_{b} \, E_{b} - \sum_{i}^{n} E_{(i)})$
+and $\delta^{3}( x_{a} \, \bm{p}^{a} + x_{b} \, \bm{p}^{b} - \sum_{i}^{n} \bm{p}^{(i)})$ 
+impose energy and momentum conservation.
 The set of observables measured in the
-detector are denoted by $\bm{y}$.
+detector is denoted by $\bm{y}$.
 The function $W(\bm{y}|\bm{p})$ represents the probability to
-observe the measured values $\bm{y}$ in the detector, given a point $\bm{p}$ in the
-$n$-particle phase space and
+observe the measured values $\bm{y}$, given a point $\bm{p}$ in the
+$n$-particle phase space, and
 is referred to as ``transfer function'' (TF) in the
 literature~\cite{Fiedler:2010sg,Volobouev:2011vb}.
-The symbol $\sigma(a)$ corresponds to the cross section for the process under study.
-In case the process includes the production of an unstable resonance,
-the term $\sigma(a)$ includes 
-the branching ratio for the decay of the resonance into the observable final state particles.
+The symbol $\sigma(a)$ corresponds to the cross section for the process under study,
+in the case considered in this paper the production in $\Pp\Pp$ collisions of a $\PHiggs$ boson decaying into a $\Pgt$ lepton pair
+with subsequent decay of the $\Pgt$ leptons.
 Division by $\sigma(a)$ ensures that $P(\bm{y}|a)$ has
-the correct normalization for a probability density, 
+the correct normalization required for a probability density, 
 i.e. $\int \, d\bm{y} \, P(\bm{y}|a) = 1$ for every $a$, 
 provided that the TF satisfy the normalization condition
 $\int \, d\bm{y}\, W(\bm{y}|\bm{p}) = 1$
 for every $\bm{p}$.
 
-The meaning of Eq.~\ref{eq:mem} is as follows.
+The meaning of Eq.~(\ref{eq:mem}) is as follows.
 The best estimate for the unknown model parameter $a$ is given by the
 value $\hat{a}$ which maximizes the probability to observe precisely the 
 values $\bm{y}$ that are measured in the detector. 
 Within the scope of this paper, the unknown model parameter $a$
-corresponds to the mass $m_{\PHiggs}$ of the $\PHiggs$ boson that decays into $\Pgt$ pairs.
-The $\PHiggs$ boson mass $m_{\PHiggs}$ is equivalent to the mass $m_{\Pgt\Pgt}$ of the $\Pgt$ pair.
+corresponds to the mass $m_{\PHiggs}$ of the $\PHiggs$ boson that decays into a $\Pgt$ lepton pair.
+The $\PHiggs$ boson mass $m_{\PHiggs}$ is synonymous to the mass $m_{\Pgt\Pgt}$ of the $\Pgt$ pair in this context.
 
-The individual terms of Eq.~\ref{eq:mem} are described in
+The individual terms of Eq.~(\ref{eq:mem}) are described in
 Sections~\ref{sec:mem_ME} to~\ref{sec:mem_logM}.
 The ME for the process $\Pp\Pp \to \PHiggs \to \Pgt\Pgt$
 with subsequent decay of the $\Pgt$ leptons 
-via $\Pgt \to \enunu$, $\Pgt \to \mununu$, and $\Pgt \to \textrm{hadrons} + \Pnut$
+via $\Pgt \to \enunu$, $\Pgt \to \mununu$, or $\Pgt \to \textrm{hadrons} + \Pnut$
 is described in Section~\ref{sec:mem_ME}.
 A complication arises from the fact that we use a leading order (LO)
 ME to model the $\PHiggs$ boson production process $\Pp\Pp \to
 \PHiggs$, while the production of $\PHiggs$ bosons at the LHC typically
 proceeds in association with jets.
 The treatment of hadronic activity in the event is detailed in Section~\ref{sec:mem_hadRecoil}.
-The TFs are described in section~\ref{sec:mem_TF} and
+The TFs are described in Section~\ref{sec:mem_TF} and
 the integration over the $n$-particle phase space is described in
 Section~\ref{sec:mem_PSintegration}.
 The computation of the cross section $\sigma(m_{\PHiggs})$ that is needed for a proper normalization of the probability density $P(\bm{y}|m_{\PHiggs})$
-in Eq.~\ref{eq:mem} is described in Section~\ref{sec:mem_xSection}.
+in Eq.~(\ref{eq:mem}) is described in Section~\ref{sec:mem_xSection}.
 The numerical maximization of the probability density $P(\bm{y}|m_{\PHiggs})$
-with respect to the model parameter $m_{\PHiggs}$ is described in
+with respect to the $\PHiggs$ boson mass $m_{\PHiggs}$ is described in
 Section~\ref{sec:mem_numericalMaximization}.
 We conclude this section with a description of an artificial term that we
 choose to add to the probability density $P(\bm{y}|m_{\PHiggs})$, in

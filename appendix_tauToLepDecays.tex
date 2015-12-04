@@ -5,7 +5,7 @@ We treat leptonic $\Pgt$ decays as three-body decays and do
 account for the ME. Assuming the taus to be unpolarized,
 the squared modulus of the ME is given by~\cite{Barger:1987nn}:
 \begin{equation}
-\vert\mathcal{M}_{\Pgt \to \ellnunu} \vert^{2} = 128 \, G^{2}_{F} \,
+\vert\mathcal{M}_{\Pgt \to \ellnunu} \vert^{2} = 64 \, G^{2}_{F} \,
 \left( E_{\Pgt} E_{\APnu} - \bm{p}^{\Pgt} \cdot \bm{p}^{\APnu} \right)
 \, \left( E_{\Plepton} E_{\Pnu} - \bm{p}^{\Plepton} \cdot \bm{p}^{\Pnu} \right) \, , 
 \label{eq:lepTauDecaysME}
@@ -21,14 +21,14 @@ element $d\Phi_{\ellnunu}$ reads:
   \frac{d^{3}\bm{p}^{\Pnu}}{(2\pi)^{3} \, 2 E_{\Pnu}} \, 
   \frac{d^{3}\bm{p}^{\APnu}}{(2\pi)^{3} \, 2 E_{\APnu}} \nonumber \\
 = & (2\pi)^{3} \, \vert \BW_{\Pgt} \vert^{2} \cdot
-\vert\mathcal{M}^{\eff}_{\Pgt \to \ellnunu}\vert^{2} \, \delta \left(
+\vert\mathcal{M}_{\Pgt \to \ellnunu}\vert^{2} \, \delta \left(
   E_{\Pgt} - E_{\vis} - E_{\Pnu} - E_{\APnu} \right) \nonumber \\
 & \qquad
 \delta^{3} \left( \bm{p}^{\Pgt} - \bm{p}^{\vis} - \bm{p}^{\Pnu} - \bm{p}^{\APnu} \right) \, \frac{d^{3}\bm{p}^{\Pgt}}{(2\pi)^{3} \, 2 E_{\Pgt}} \,
   \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2 E_{\vis}} \, 
   \frac{d^{3}\bm{p}^{\Pnu}}{(2\pi)^{3} \, 2 E_{\Pnu}} \, 
   \frac{d^{3}\bm{p}^{\APnu}}{(2\pi)^{3} \, 2 E_{\APnu}} \, dq^{2}_{\Pgt} \nonumber \\
-= & \frac{8\pi^{4}}{m_{\Pgt} \, \Gamma_{\Pgt}} \, \vert\mathcal{M}^{\eff}_{\Pgt \to
+= & \frac{8\pi^{4}}{m_{\Pgt} \, \Gamma_{\Pgt}} \, \vert\mathcal{M}_{\Pgt \to
   \ellnunu}\vert^{2} \, \delta \left( E_{\Pgt} - E_{\vis} -
   E_{\Pnu} - E_{\APnu} \right) \, \delta^{3} \left( \bm{p}^{\Pgt} -
   \bm{p}^{\vis} - \bm{p}^{\Pnu} - \bm{p}^{\APnu} \right)  \nonumber \\
@@ -82,7 +82,7 @@ element can then be expressed by:
 \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2 E_{\vis}} \,
 \frac{du_{0} \, d^{3}\bm{u}}{(2\pi)^{3}} \nonumber \\
  & \qquad
-  \vert\mathcal{M}^{\eff}_{\Pgt \to
+  \vert\mathcal{M}_{\Pgt \to
   \ellnunu}\vert^{2} \, \theta(\frac{1}{2} u_{0} + v_{0}) \, \delta
 \left( \frac{u_{0}^{2} - \vert\bm{u}\vert^{2}}{4} + v_{0}^{2} - \vert\bm{v}\vert^{2} +
   u_{0} \, v_{0} - \bm{u} \cdot \bm{v} \right) \, 
@@ -97,7 +97,7 @@ element can then be expressed by:
 
 We define:
 \begin{align}
-& \, I_{\inv} = \vert\mathcal{M}^{\eff}_{\Pgt \to
+& \, I_{\inv} = \vert\mathcal{M}_{\Pgt \to
   \ellnunu}\vert^{2} \, \theta(\frac{1}{2} u_{0} + v_{0}) \, \delta
 \left( \frac{u_{0}^{2} - \vert\bm{u}\vert^{2}}{4} + v_{0}^{2} - \vert\bm{v}\vert^{2} +
   u_{0} \, v_{0} - \bm{u} \cdot \bm{v} \right) \, 
@@ -119,7 +119,7 @@ Hence $u_{0} \, v_{0} - \bm{u} \cdot \bm{v} = m_{\inv} \, v_{0} $ in this frame.
 Performing the integration over $v_{0}$, we obtain:
 \begin{align}
 I_{\inv}
-= & \, \vert\mathcal{M}^{\eff}_{\Pgt \to
+= & \, \vert\mathcal{M}_{\Pgt \to
   \ellnunu}\vert^{2} \, \frac{1}{2} \, \frac{dv_{0} \, d^{3}\bm{v}}{(2\pi)^{3}} \, \theta ( \frac{1}{2} \, u_{0} + v_{0} ) \, 
     \delta \left( \underbrace{\frac{u_{0}^{2} - \vert\bm{u}\vert^{2}}{4}}_{=
         \frac{m^{2}_{\inv}}{4}} + \underbrace{v_{0}^{2} -
@@ -164,12 +164,13 @@ in the restframe of the neutrino pair.
 
 The energy of the $\Pgt$ lepton and of the electron or muon are
 related by:
-\begin{equation}
-m^{2}_{\vis} = E_{\vis}^{2} - \vert\bm{p}^{\vis}\vert^{2} = \left(
-  E_{\Pgt} - u_{0} \right)^{2} - \left( \bm{p}^{\Pgt} - \bm{u} \right)^{2} 
-  = m^{2}_{\Pgt} + m^{2}_{\inv} - 2 (E_{\Pgt} \, u_{0} - \bm{p}^{\Pgt} \cdot \bm{u}) 
-  = m^{2}_{\Pgt} + m^{2}_{\inv} - 2 m_{\inv} E_{\Pgt} \, ,
-\end{equation}
+\begin{align}
+m^{2}_{\vis} = & E_{\vis}^{2} - \vert\bm{p}^{\vis}\vert^{2} 
+ = \left( E_{\Pgt} - u_{0} \right)^{2} - \left( \bm{p}^{\Pgt} - \bm{u} \right)^{2} \nonumber \\
+& \qquad
+ = m^{2}_{\Pgt} + m^{2}_{\inv} - 2 (E_{\Pgt} \, u_{0} - \bm{p}^{\Pgt} \cdot \bm{u}) 
+ = m^{2}_{\Pgt} + m^{2}_{\inv} - 2 m_{\inv} E_{\Pgt} \, ,
+\end{align}
 from which it follows that:
 %\begin{align}
 \begin{equation}
@@ -242,7 +243,7 @@ with the integration over the neutrino momentum $d^{3}\bm{p}^{\inv}$ in Eq.~(\re
 The differences between the formulae for leptonic and hadronic $\Pgt$ decays
 are the additional integration over $dm^{2}_{\inv}$ and the
 factor $I_{\inv}$ in Eq.~(\ref{eq:finalLepTauDecaysPSint}), which replaces the
-factor $\vert\mathcal{M}^{\textrm{eff}}_{\Pgt \to
+factor $\vert\mathcal{M}_{\Pgt \to
   \tauh\Pnut}\vert^{2}$ in Eq.~(\ref{eq:hadTauDecaysPSint}).
 Note that Eq.~(\ref{eq:finalLepTauDecaysPSint}) as well as Eq.~(\ref{eq:hadTauDecaysPSint}) refer to the laboratory frame.
 The restframe of the neutrino pair was used only for the purpose of evaluating the Lorentz invariant integral $I_{\inv}$.
@@ -252,7 +253,7 @@ $I_{\inv}$ can be considered as constant when performing the integration over $d
 We can hence use Eq.~(\ref{eq:hadTauDecaysResult}) of Section~\ref{sec:appendix_tauToHadDecays} to express Eq.~(\ref{eq:finalLepTauDecaysPSint}) by:
 \begin{align}
 \vert\mathcal{M}_{\Pgt}\vert^{2} \,
- d\Phi_{\ellnunu} = \frac{\vert\mathcal{M}^{\eff}_{\Pgt \to
+ d\Phi_{\ellnunu} = \frac{\vert\mathcal{M}_{\Pgt \to
   \ellnunu}\vert^{2}}{256\pi^{5}\, m_{\Pgt} \, \Gamma_{\Pgt}} \cdot 
     \frac{I_{\inv}}{\vert\bm{p}^{\vis}\vert \, z^{2}} \, 
     \frac{d^{3}\bm{p}^{\vis}}{2 E_{\vis}} \, dz \, dm^{2}_{\inv} \,

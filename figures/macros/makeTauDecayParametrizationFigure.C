@@ -26,7 +26,7 @@ int getLineWidth(int lineWidth, int globalScaleFactor)
   return TMath::Nint(lineWidth_scaled);
 }
 
-void makeTauDecayParametrizationPlot()
+void makeTauDecayParametrizationFigure()
 {
   gROOT->SetBatch(true);
   

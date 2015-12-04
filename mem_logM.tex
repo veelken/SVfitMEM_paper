@@ -3,14 +3,20 @@
 
 The $m_{\Pgt\Pgt}$ distribution reconstructed in $\PHiggs \to \Pgt\Pgt$ signal events is expected to peak close to the true value of the $\PHiggs$ boson mass,
 while the distribution of $m_{\Pgt\Pgt}$ obtained for the irreducible $\PZ/\Pggx \to \Pgt\Pgt$ background is steeply falling.
-The sensitivity to discover a $\PHiggs$ boson signal increases if high mass tails arising from resolution effects are avoided.
-In order to reduce the high mass tails,
-an artificial regularization term of form $\kappa \, \log \left( m_{\Pgt\Pgt}^{\textrm{test}(i)} \mbox{GeV}~{-1} \right)$ is added to the logarithm of the probability density $P(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\Pgt\Pgt}^{\textrm{test}(i)})$
-that is computed according to Eq.~(\ref{eq:mem_with_hadRecoil}).
+The sensitivity to discover a $\PHiggs$ boson signal increases if high mass tails in the $m_{\Pgt\Pgt}$ distribution reconstructed 
+for the $\PZ/\Pggx \to \Pgt\Pgt$ background, arising from resolution effects, are avoided.
+For this purpose,
+we add an artificial regularization term of form 
+$\kappa \, \log \left( m_{\PHiggs}^{\textrm{test}(i)} \cdot \mbox{GeV}~{-1} \right)$ 
+to the logarithm of the probability density $P(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$
+computed according to Eq.~(\ref{eq:mem_with_hadRecoil}).
 In case of non-zero $\kappa$,
-the procedure described in Section~\ref{sec:mem_numericalMaximization} for finding the best estimate $\hat{m}_{\Pgt\Pgt}$ for the mass of the $\Pgt$ lepton pair is altered.
-Instead of fitting $\log \left( P(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\Pgt\Pgt}^{\textrm{test}(i)})  \mbox{~GeV}^{8} \right)$ versus $m_{\Pgt\Pgt}^{\textrm{test}(i)}$ by a second order polynomial,
-we fit the sum $\log \left( P(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\Pgt\Pgt}^{\textrm{test}(i)})  \mbox{~GeV}^{8} \right) + \kappa \, \log \left( m_{\Pgt\Pgt}^{\textrm{test}(i)} \mbox{GeV}~{-1} \right)$.
-The parameter $\kappa$ is chosen with the objective of maximizing the separation between signal and background.
-We find that a value $\kappa \approx 5$ reduces the high mass tail for the $\PZ/\Pggx \to \Pgt\Pgt$ background,
-while causing a small bias on the $m_{\Pgt\Pgt}$ distribution reconstructed in signal events.
+the procedure described in Section~\ref{sec:mem_numericalMaximization} for finding the best estimate $m_{\Pgt\Pgt}$ for the mass of the $\Pgt$ lepton pair is altered.
+Instead of fitting 
+$\log \left( P(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)}) \cdot \mbox{~GeV}^{8} \right)$ 
+versus $m_{\PHiggs}^{\textrm{test}(i)}$ by a second order polynomial,
+we fit the sum of $\log \left( P(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)}) \cdot \mbox{~GeV}^{8} \right)$
+and $\kappa \, \log \left( m_{\PHiggs}^{\textrm{test}(i)} \cdot \mbox{GeV}~{-1} \right)$.
+The parameter $\kappa$ is chosen with the objective of reducing the high mass tail for the $\PZ/\Pggx \to \Pgt\Pgt$ background,
+while causing at most a small bias on the $m_{\Pgt\Pgt}$ distribution reconstructed in signal events.
+We find values $\kappa \approx 5$ to perform optimal for this purpose.

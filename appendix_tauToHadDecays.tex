@@ -79,20 +79,23 @@ The $\delta$-function $\delta \left( E_{\Pgt}(\bm{p}^{\vis}, \bm{p}^{\inv}) - E_
   \cdot \bm{p}^{\inv} + m^{2}_{\Pgt}} \nonumber \\
 & \quad = \sqrt{\vert\bm{p}^{\vis}\vert^{2} + \vert\bm{p}^{\inv}\vert^{2} + 2 \vert\bm{p}^{\vis}\vert \, \vert\bm{p}^{\inv}\vert \, \cos\theta_{\inv} + m^{2}_{\Pgt}}.
 \end{align}
-The $\delta$-function becomes zero if:
-\begin{align}
-& E_{\Pgt}(\bm{p}^{\vis}, \bm{p}^{\inv}) - E_{\vis} - E_{\inv} = 0 \nonumber \\
-\Rightarrow & \cos\theta_{\inv} 
+The $\delta$-function becomes zero if $E_{\Pgt}(\bm{p}^{\vis}, \bm{p}^{\inv}) - E_{\vis} - E_{\inv} = 0$. 
+This yields:
+\begin{equation}
+\cos\theta_{\inv} 
   = \frac{E_{\vis} E_{\inv} - \frac{1}{2} \left(m^{2}_{\Pgt} - \left(
         m^{2}_{\vis} + m^{2}_{\inv} \right)
     \right)}{\vert\bm{p}^{\vis}\vert \, \vert\bm{p}^{\inv}\vert} \, .
 \label{eq:hadTauDecaysCosTheta}
-\end{align}
-We have used this result in Eq.~(\ref{eq:theta_inv}).
+\end{equation}
 
 When substituting the expressions of Eqs.~(\ref{eq:hadTauDecaysJacobi}) and~(\ref{eq:hadTauDecaysCosTheta}) into Eq.~(\ref{eq:hadTauDecaysPSint}),
-we need to account for the $\delta$-function rule
-Eq.~(\ref{eq:deltaFuncRule}).
+we need to account for the $\delta$-function rule:
+\begin{equation} 
+\delta \left( g(x) \right) = \sum_{k} \frac{\delta \left( x - x_{k}
+  \right)}{\vert g'(x_{k}) \vert} \, .
+\label{eq:deltaFuncRule}
+\end{equation}
 We identify:
 \begin{equation} 
 g(\cos\theta_{\inv}) = \sqrt{\vert\bm{p}^{\vis}\vert^{2} + \vert\bm{p}^{\inv}\vert^{2}
