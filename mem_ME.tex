@@ -3,11 +3,14 @@
 
 We decompose the squared modulus of the ME, $\vert \mathcal{M}(\bm{p},m_{\PHiggs}) \vert^{2}$, for the process $\Pp\Pp \to \PHiggs \to \Pgt\Pgt$
 with subsequent decay of the $\Pgt$ leptons into electrons, muons, or
-hadrons into three parts:
+hadrons into five parts:
 \begin{equation}
 \vert \mathcal{M}(\bm{p},m_{\PHiggs}) \vert^{2} = 
- \vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to \Pgt\Pgt}(\bm{p},m_{\PHiggs}) \vert^{2} 
+ \vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to
+   \Pgt\Pgt}(\bm{p},m_{\PHiggs}) \vert^{2} 
+\cdot \vert \BW_{\Pgt}^{(1)} \vert^{2} 
 \cdot \vert \mathcal{M}^{(1)}_{\Pgt}(\bm{p}) \vert^{2} 
+\cdot \vert \BW_{\Pgt}^{(2)} \vert^{2} 
 \cdot \vert \mathcal{M}^{(2)}_{\Pgt}(\bm{p}) \vert^{2} .
  \label{eq:meFactorization}
 \end{equation}
@@ -97,19 +100,15 @@ provided that $\mathcal{B}(\PHiggs \to \Pgt\Pgt)$ and $\Gamma_{\PHiggs}$ are acc
 a consistent way in the evaluation of the integral in
 Eq.~(\ref{eq:mem}), including the computation of the normalization factor $\frac{1}{\sigma(m_{\PHiggs})}$.
 
-The terms $\vert \mathcal{M}^{\Pgt(1)}(\bm{p}) \vert^{2}$ and $\vert
-\mathcal{M}^{\Pgt(2)}(\bm{p}) \vert^{2}$ in Eq.~(\ref{eq:meFactorization}) model the decays of the two $\Pgt$ leptons.
-We use the narrow-width approximation (NWA) and assume the $\Pgt$ leptons to be unpolarized,
-effectively ignoring the correlation of spins between $\Pgt$ production and decay.
-We then decompose the squared moduli $\vert
-\mathcal{M}^{\Pgt(i)}(\bm{p}) \vert^{2}$ of the ME for the $\Pgt$ lepton of positive ($i=1$) and
-for the $\Pgt$ lepton of negative ($i=2$) charge into the product of two factors:
+Concerning the decay of the $\Pgt$ leptons,
+we use the narrow-width approximation (NWA) and assume the $\Pgt$ leptons to be unpolarized,
+effectively ignoring the correlation of spins between $\Pgt$
+production and decay.
+In the NWA, the squared modulus of the Breit-Wigner propagator $\vert
+\BW_{\Pgt} \vert^{2}$ that associates the $\Pgt$ lepton production and
+decay is proportional to a $\delta$-function:
 \begin{equation}
-\vert \mathcal{M}^{(i)}_{\Pgt} \vert^{2} = \vert \BW_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(i)}_{\textrm{decay}} \vert^{2} \, .
-\end{equation}
-The factor $\vert \BW_{\Pgt} \vert^{2}$ is equal to:
-\begin{equation}
-\vert \BW_{\Pgt} \vert^{2} = \frac{\pi}{m_{\Pgt}\Gamma_{\Pgt}} \,
+\vert \BW_{\Pgt} \vert^{2} = \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
 \delta ( q_{\Pgt}^{2} - m_{\Pgt}^{2} ) \, \mbox{ with } \, 
 \Gamma_{\Pgt} = \frac{1}{\Delta t} =
  2.267 \cdot 10^{-12}\textrm{~\GeV} \, ,
@@ -140,7 +139,8 @@ We use a simplified formalism and treat hadronic $\Pgt$ decays as two-body decay
 The squared modulus of the ME for the decay is taken to be constant and denoted by $\vert\mathcal{M}^{\eff}_{\Pgt \to \tauhnu}\vert^{2}$.
 The value of $\vert\mathcal{M}^{\eff}_{\Pgt \to \tauhnu}\vert^{2}$ is
 chosen such that it reproduces the measured branching fraction for hadronic $\Pgt$ decays.
-The following relation holds for the considered case of a two-body decay~\cite{Barger:1987nn}:
+The following relation holds for the considered case of a two-body decay:
+%~\cite{Barger:1987nn}:
 \begin{equation}
 \mathcal{B}(\Pgt \to \textrm{hadrons} + \Pnut) = \frac{1}{16 \pi \, m_{\Pgt} \, \Gamma_{\Pgt}} \cdot \frac{m_{\Pgt}^{2} - m_{\vis}^{2}}{m_{\Pgt}^{2}} \cdot \vert \mathcal{M}^{\textrm{eff}}_{\Pgt \to
   \tauhnu} \vert^{2} \, ,

@@ -5,7 +5,7 @@
 \ifx\ver\verPreprint
 \documentclass[a4paper,english,11pt]{article}
 \usepackage[bindingoffset=0.5cm,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,footskip=1.0cm]{geometry}
-\usepackage{lineno,hyperref,hepnames,bm,multirow,amssymb,authblk,graphicx}
+\usepackage{lineno,hyperref,hepnames,bm,multirow,amssymb,authblk,graphicx,newclude}
 \fi
 \ifx\ver\verPAPER
 \documentclass[1p]{elsarticle}
@@ -168,32 +168,35 @@ formalism represents an important result of this paper.
 
 \linenumbers
 
-\let\clearpage\relax
-\include{introduction}
+%\begingroup
+%\let\clearpage\relax
+\include*{introduction}
 
-\include{mem}
-\include{mem_ME}
-\include{mem_hadRecoil}
-\include{mem_TF}
-\include{mem_PSintegration}
-\include{mem_xSection}
-\include{mem_numericalMaximization}
-\include{mem_logM}
+\include*{mem}
+\include*{mem_ME}
+\include*{mem_hadRecoil}
+\include*{mem_TF}
+\include*{mem_PSintegration}
+\include*{mem_xSection}
+\include*{mem_numericalMaximization}
+\include*{mem_logM}
 
-\include{results}
+\include*{results}
 
-\include{summary}
+\include*{summary}
 
-\include{acknowledgements}
+\include*{acknowledgements}
+%\endgroup
 
-\clearpage
+%\clearpage
 
-\include{appendix}
-\include{appendix_tauToHadDecays}
-\include{appendix_tauToLepDecays}
-
-%%\section*{References}
+%\begingroup
+%\let\clearpage\relax
+\include*{appendix}
+\include*{appendix_tauToHadDecays}
+\include*{appendix_tauToLepDecays}
 
 \bibliography{svFitMEM}
+%\endgroup
 
 \end{document}
