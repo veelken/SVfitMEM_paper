@@ -18,7 +18,7 @@ element $d\Phi^{(i)}_{\tauhnu}$ reads:
  d\Phi_{\tauhnu} = \vert \BW_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(i)}_{\textrm{decay}}
 \vert^{2} \, \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2
    E_{\vis}} \, \frac{d^{3}\bm{p}^{\inv}}{(2\pi)^{3} \, 2 E_{\inv}} \nonumber \\
-= & \, (2\pi)^{3} \, \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
+= & \, (2\pi)^{3} \, \int \, \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
 \delta ( q_{\Pgt}^{2} - m_{\Pgt}^{2} ) \cdot \vert\mathcal{M}^{\eff}_{\Pgt \to
   \tauh\Pnut}\vert^{2} \, \delta \left( E_{\Pgt} - E_{\vis} -
   E_{\inv} \right) \, \delta^{3} \left( \bm{p}^{\Pgt} - \bm{p}^{\vis}
@@ -66,7 +66,7 @@ The Jacobi factor related to this transformation is:
 \begin{equation}
 E_{\inv} = E_{\Pgt} - E_{\vis} = \left( 1 - z \right)
 \, E_{\Pgt} = \frac{1 - z}{z} \, E_{\vis}
-  \quad \Longleftrightarrow \quad dE_{\inv} = \lvert \frac{\partial E_{\inv}}{\partial z} \rvert \, dz = \frac{E_{\vis}}{z^{2}} \, dz \, .
+  \quad \Longleftrightarrow \quad dE_{\inv} = \frac{\partial E_{\inv}}{\partial z} \, dz = \frac{E_{\vis}}{z^{2}} \, dz \, .
 \label{eq:hadTauDecaysJacobi}
 \end{equation}
 
@@ -81,7 +81,7 @@ The $\delta$-function $\delta \left( E_{\Pgt}(\bm{p}^{\vis}, \bm{p}^{\inv}) - E_
   \cdot \bm{p}^{\inv} + m^{2}_{\Pgt}} \nonumber \\
 & \quad = \sqrt{\vert\bm{p}^{\vis}\vert^{2} + \vert\bm{p}^{\inv}\vert^{2} + 2 \vert\bm{p}^{\vis}\vert \, \vert\bm{p}^{\inv}\vert \, \cos\theta_{\inv} + m^{2}_{\Pgt}}.
 \end{align}
-The $\delta$-function becomes zero if $E_{\Pgt}(\bm{p}^{\vis}, \bm{p}^{\inv}) - E_{\vis} - E_{\inv} = 0$. 
+The $\delta$-function argument vanishes if $E_{\Pgt}(\bm{p}^{\vis}, \bm{p}^{\inv}) - E_{\vis} - E_{\inv} = 0$. 
 This yields:
 \begin{equation}
 \cos\theta_{\inv} 
