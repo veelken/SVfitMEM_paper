@@ -56,8 +56,8 @@ We assume that the mass of the $\Pnu$ as well as the mass of the $\APnu$ is zero
 We perform a variable transformation from $(E_{\Pnu}, \bm{p}^{\Pnu})$
 and $(E_{\APnu}, \bm{p}^{\APnu})$ to:
 \begin{align}
-(u_{0}, \bm{u}) = & \, (E_{\Pnu} + E_{\APnu}, \bm{p}^{\Pnu} +
-\bm{p}^{\APnu}) \, , \qquad (v_{0}, \bm{v}) = \frac{1}{2} (
+(u_{0}, \bm{u}) = & \frac{1}{\sqrt{2}} \, (E_{\Pnu} + E_{\APnu}, \bm{p}^{\Pnu} +
+\bm{p}^{\APnu}) \, , \qquad (v_{0}, \bm{v}) = \frac{1}{\sqrt{2}} (
   E_{\Pnu} - E_{\APnu}, \bm{p}^{\Pnu} - \bm{p}^{\APnu} ) \, . \nonumber 
 \end{align}
 The variables $u_{0}$ and $\bm{u}$ represent the energy and momentum of the neutrino pair.
@@ -67,8 +67,8 @@ to $(u_{0}, \bm{u}; v_{0}, \bm{v})$ equals unity.
 Expressed in the new variables, the energy and momentum of the
 $\Pnu$ and of the $\APnu$ produced in the tau decay are given by:
 \begin{align}
-( E_{\Pnu}, \bm{p}^{\Pnu} ) = & \, \frac{1}{2} ( u_{0} + v_{0}, \bm{u}
-+ \bm{v} ) \, \mbox{ and } \, ( E_{\APnu}, \bm{p}^{\APnu} ) = \frac{1}{2} (
+( E_{\Pnu}, \bm{p}^{\Pnu} ) = & \, \frac{1}{\sqrt{2}} ( u_{0} + v_{0}, \bm{u}
++ \bm{v} ) \, \mbox{ and } \, ( E_{\APnu}, \bm{p}^{\APnu} ) = \frac{1}{\sqrt{2}} (
 u_{0} - v_{0}, \bm{u} - \bm{v} ) \, . \nonumber 
 \end{align}
 
@@ -85,14 +85,14 @@ element can then be expressed by:
 \frac{du_{0} \, d^{3}\bm{u}}{(2\pi)^{3}} \nonumber \\
  & \qquad
   \vert\mathcal{M}_{\Pgt \to
-  \ellnunu}\vert^{2} \, \theta(\frac{1}{2} u_{0} + v_{0}) \, \delta
-\left( \frac{u_{0}^{2} - \vert\bm{u}\vert^{2}}{4} + v_{0}^{2} - \vert\bm{v}\vert^{2} +
+  \ellnunu}\vert^{2} \, \theta(u_{0} + v_{0}) \, \delta
+\left( \frac{u_{0}^{2} - \vert\bm{u}\vert^{2}}{2} + \frac{v_{0}^{2} - \vert\bm{v}\vert^{2}}{2} +
   u_{0} \, v_{0} - \bm{u} \cdot \bm{v} \right) \, 
   \frac{dv_{0} \, d^{3}\bm{v}}{(2\pi)^{3}} \nonumber \\
  & \qquad
-  \theta(\frac{1}{2} u_{0}
-  - v_{0}) \, \delta \left( \frac{u_{0}^{2} - \vert\bm{u}\vert^{2}}{4} +
-    v_{0}^{2} - \vert\bm{v}\vert^{2} - u_{0} \, v_{0} + \bm{u}
+  \theta(u_{0}
+  - v_{0}) \, \delta \left( \frac{u_{0}^{2} - \vert\bm{u}\vert^{2}}{2} +
+    \frac{v_{0}^{2} - \vert\bm{v}\vert^{2}}{2} - u_{0} \, v_{0} + \bm{u}
     \cdot \bm{v} \right) \, .
 \label{eq:lepTauDecaysPSint}
 \end{align}
@@ -100,49 +100,53 @@ element can then be expressed by:
 We define:
 \begin{align}
 & \, I_{\inv} = \vert\mathcal{M}_{\Pgt \to
-  \ellnunu}\vert^{2} \, \theta(\frac{1}{2} u_{0} + v_{0}) \, \delta
-\left( \frac{u_{0}^{2} - \vert\bm{u}\vert^{2}}{4} + v_{0}^{2} - \vert\bm{v}\vert^{2} +
+  \ellnunu}\vert^{2} \, \theta(u_{0} + v_{0}) \, \delta
+\left( \frac{u_{0}^{2} - \vert\bm{u}\vert^{2}}{2} + \frac{v_{0}^{2} - \vert\bm{v}\vert^{2}}{2} +
   u_{0} \, v_{0} - \bm{u} \cdot \bm{v} \right) \, 
   \frac{dv_{0} \, d^{3}\bm{v}}{(2\pi)^{3}} \nonumber \\
  & \qquad
-  \theta(\frac{1}{2} u_{0}
-  - v_{0}) \, \delta \left( \frac{u_{0}^{2} - \vert\bm{u}\vert^{2}}{4} +
-    v_{0}^{2} - \vert\bm{v}\vert^{2} - u_{0} \, v_{0} + \bm{u}
+  \theta(u_{0}
+  - v_{0}) \, \delta \left( \frac{u_{0}^{2} - \vert\bm{u}\vert^{2}}{2} +
+    \frac{v_{0}^{2} - \vert\bm{v}\vert^{2}}{2} - u_{0} \, v_{0} + \bm{u}
     \cdot \bm{v} \right) \, .
 \label{eq:def_Iinv}
 \end{align}
 The quantity $I_{\inv}$ is a Lorentz invariant quantity. 
 As such, it can be computed in any frame and will yield the same value as in the laboratory frame.
 We choose to evaluate it in the restframe of the neutrino pair.
-In this frame, the energy $u_{0}$ is given by $u_{0} = m_{\inv}$ 
-and the momentum $\bm{u}$ by $\bm{u} = ( 0, 0, 0 )$, with $m_{\inv}$ denoting
+In this frame, the energy is given by $u_{0} = m_{\inv}$ 
+and the momentum by $\bm{u} = ( 0, 0, 0 )$, with $m_{\inv}$ denoting
 the mass of the neutrino pair.
 Hence $u_{0} \, v_{0} - \bm{u} \cdot \bm{v} = m_{\inv} \, v_{0} $ in this frame.
 Performing the integration over $v_{0}$, we obtain:
 \begin{align}
 I_{\inv}
 = & \, \vert\mathcal{M}_{\Pgt \to
-  \ellnunu}\vert^{2} \, \frac{1}{2} \, \frac{dv_{0} \, d^{3}\bm{v}}{(2\pi)^{3}} \, \theta ( \frac{1}{2} \, u_{0} + v_{0} ) \, 
-    \delta \left( \underbrace{\frac{u_{0}^{2} - \vert\bm{u}\vert^{2}}{4}}_{=
-        \frac{m^{2}_{\inv}}{4}} + \underbrace{v_{0}^{2} -
-        \vert\bm{v}\vert^{2}}_{= -\vert\bm{v}\vert^{2}} \right)
+  \ellnunu}\vert^{2} \, \frac{1}{2} \, \frac{dv_{0} \, d^{3}\bm{v}}{(2\pi)^{3}} \, \theta ( u_{0} + v_{0} ) \, 
+    \delta \left( \underbrace{\frac{u_{0}^{2} - \vert\bm{u}\vert^{2}}{2}}_{=
+        \frac{m^{2}_{\inv}}{2}} + \underbrace{\frac{v_{0}^{2} -
+        \vert\bm{v}\vert^{2}}{2}}_{= -\frac{1}{2} \, \vert\bm{v}\vert^{2}} \right)
     \nonumber \\
 & \qquad
-    \theta ( \frac{1}{2} u_{0} - v_{0} ) \, \underbrace{\delta \left(
+    \theta ( u_{0} - v_{0} ) \, \underbrace{\delta \left(
         u_{0} \, v_{0} - \bm{u} \cdot \bm{v} \right)}_{= \frac{1}{m_{\inv}} \, \delta ( v_{0} )} \nonumber \\
-= & \, \frac{1}{2 m_{\inv}} \, \underbrace{\theta ( \frac{1}{2} \, u_{0} )}_{= \theta ( u_{0} )} \int \, \frac{d^{3}\bm{v}}{(2\pi)^{3}} \, 
+= & \, \frac{1}{2 m_{\inv}} \, \theta ( u_{0} ) \, \int \, \frac{d^{3}\bm{v}}{(2\pi)^{3}} \, 
   \vert\mathcal{M}_{\Pgt \to
-  \ellnunu}\vert^{2} \, \underbrace{\delta \left( \frac{m^{2}_{\inv}}{4} - \vert\bm{v}\vert^{2} \right)}_{
-    = \frac{1}{2 \vert\bm{v}\vert} \, \delta \left( \vert\bm{v}\vert - \frac{m_{\inv}}{2} \right)} \nonumber \\
+  \ellnunu}\vert^{2} \, \underbrace{\delta \left( \frac{m^{2}_{\inv}}{2} - \frac{\vert\bm{v}\vert^{2}}{2} \right)}_{
+    = \frac{1}{2 \vert\bm{v}\vert} \, \delta \left( \vert\bm{v}\vert - m_{\inv} \right)} \nonumber \\
 = & \, \frac{1}{2 m_{\inv}} \, \theta ( u_{0} ) \, \int \, \frac{\vert\bm{v}\vert^2 d\vert\bm{v}\vert d\Omega_{v}}{(2\pi)^{3}} \, 
   \vert\mathcal{M}_{\Pgt \to
-  \ellnunu}\vert^{2} \, \frac{1}{2 \vert\bm{v}\vert} \, \delta \left( \vert\bm{v}\vert - \frac{m_{\inv}}{2} \right) \nonumber \\
+  \ellnunu}\vert^{2} \, \frac{1}{2 \vert\bm{v}\vert} \, \delta \left( \vert\bm{v}\vert - m_{\inv} \right) \nonumber \\
 = & \, \frac{1}{8} \, \theta ( u_{0} ) \, \int \, \frac{d\Omega_{v}}{(2\pi)^{3}} \, \vert\mathcal{M}_{\Pgt \to
   \ellnunu}\vert^{2} \, . 
 \label{eq:lepTauDecaysI}
 \end{align}
 We have used the relation $\delta(a + b) \, \delta(a - b) = \delta(2b) \, \delta(a - b) = \frac{1}{2} \, \delta(b) \, \delta(a)$ 
-to express Eq.~(\ref{eq:def_Iinv}) by the first line in Eq.~(\ref{eq:lepTauDecaysI}).
+to express Eq.~(\ref{eq:def_Iinv}) by the first line in
+Eq.~(\ref{eq:lepTauDecaysI}).
+The identify $\frac{v_{0}^{2} - \vert\bm{v}\vert^{2}}{2} =
+-\frac{1}{2} \, \vert\bm{v}\vert^{2}$ follows from the
+$\delta$-function $\delta ( v_{0} )$ in the first line.
 
 In the restframe of the neutrino pair:
 \begin{align}
