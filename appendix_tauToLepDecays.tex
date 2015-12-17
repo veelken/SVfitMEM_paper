@@ -21,7 +21,7 @@ element $d\Phi_{\ellnunu}$ reads:
   \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2 E_{\vis}} \, 
   \frac{d^{3}\bm{p}^{\Pnu}}{(2\pi)^{3} \, 2 E_{\Pnu}} \, 
   \frac{d^{3}\bm{p}^{\APnu}}{(2\pi)^{3} \, 2 E_{\APnu}} \nonumber \\
-= & (2\pi)^{3} \, \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
+= & (2\pi)^{3} \, \int \, \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
 \delta ( q_{\Pgt}^{2} - m_{\Pgt}^{2} ) \cdot
 \vert\mathcal{M}_{\Pgt \to \ellnunu}\vert^{2} \, \delta \left(
   E_{\Pgt} - E_{\vis} - E_{\Pnu} - E_{\APnu} \right) \nonumber \\
@@ -133,11 +133,11 @@ I_{\inv}
 = & \, \frac{1}{2 m_{\inv}} \, \theta ( u_{0} ) \, \int \, \frac{d^{3}\bm{v}}{(2\pi)^{3}} \, 
   \vert\mathcal{M}_{\Pgt \to
   \ellnunu}\vert^{2} \, \underbrace{\delta \left( \frac{m^{2}_{\inv}}{2} - \frac{\vert\bm{v}\vert^{2}}{2} \right)}_{
-    = \frac{1}{2 \vert\bm{v}\vert} \, \delta \left( \vert\bm{v}\vert - m_{\inv} \right)} \nonumber \\
+    = \frac{1}{\vert\bm{v}\vert} \, \delta \left( \vert\bm{v}\vert - m_{\inv} \right)} \nonumber \\
 = & \, \frac{1}{2 m_{\inv}} \, \theta ( u_{0} ) \, \int \, \frac{\vert\bm{v}\vert^2 d\vert\bm{v}\vert d\Omega_{v}}{(2\pi)^{3}} \, 
   \vert\mathcal{M}_{\Pgt \to
-  \ellnunu}\vert^{2} \, \frac{1}{2 \vert\bm{v}\vert} \, \delta \left( \vert\bm{v}\vert - m_{\inv} \right) \nonumber \\
-= & \, \frac{1}{8} \, \theta ( u_{0} ) \, \int \, \frac{d\Omega_{v}}{(2\pi)^{3}} \, \vert\mathcal{M}_{\Pgt \to
+  \ellnunu}\vert^{2} \, \frac{1}{\vert\bm{v}\vert} \, \delta \left( \vert\bm{v}\vert - m_{\inv} \right) \nonumber \\
+= & \, \frac{1}{2} \, \theta ( u_{0} ) \, \int \, \frac{d\Omega_{v}}{(2\pi)^{3}} \, \vert\mathcal{M}_{\Pgt \to
   \ellnunu}\vert^{2} \, . 
 \label{eq:lepTauDecaysI}
 \end{align}
@@ -160,10 +160,10 @@ where we have chosen the polar axis such that it is parallel to $\bm{p}^{\vis}$.
 The ME given by Eq.~(\ref{eq:lepTauDecaysME}) evaluates to:
 \begin{align}
 \vert\mathcal{M}_{\Pgt \to \ellnunu}\vert^{2} 
- = & \, 128 \, G^{2}_{F} \, 
+ = & \, 64 \, G^{2}_{F} \, 
   \underbrace{\left( E_{\Pgt} \, E_{\vis} - \bm{p}^{\Pgt} \cdot \bm{p}^{\APnu} \right)}_{= E_{\Pgt} \, \frac{m_{\inv}}{2} + \vert\bm{p}^{\Pgt}\vert \, \frac{m_{\inv}}{2} \cos\theta \quad} \,
   \underbrace{\left( E_{\vis} \, E_{\Pnu} - \bm{p}^{\vis} \cdot \bm{p}^{\Pnu} \right)}_{= E_{\vis} \, \frac{m_{\inv}}{2} - \vert\bm{p}^{\vis}\vert \, \frac{m_{\inv}}{2} \cos\theta} \nonumber \\
- = & \, 32 \, G^{2}_{F} \, m^{2}_{\inv} \, \left( E_{\Pgt} + \vert\bm{p}^{\Pgt}\vert \, \cos\theta \right)  \left( E_{\vis} - \vert\bm{p}^{\vis}\vert \, \cos\theta \right) 
+ = & \, 16 \, G^{2}_{F} \, m^{2}_{\inv} \, \left( E_{\Pgt} + \vert\bm{p}^{\Pgt}\vert \, \cos\theta \right)  \left( E_{\vis} - \vert\bm{p}^{\vis}\vert \, \cos\theta \right) 
 \label{eq:lepTauDecaysMErf}
 \end{align}
 in the restframe of the neutrino pair.
@@ -193,11 +193,11 @@ E_{\Pgt} = \frac{m^{2}_{\Pgt} + m^{2}_{\inv} - m^{2}_{\vis}}{2
 Substituting Eq.~(\ref{eq:lepTauDecaysMErf}) into Eq.~(\ref{eq:lepTauDecaysI}) yields:
 \begin{align}
 I_{\inv} 
-= & \, \frac{1}{8} \, \theta ( u_{0} ) \, \int \, \frac{d\Omega_{v}}{(2\pi)^{3}} \, \vert\mathcal{M}_{\Pgt \to
+= & \, \frac{1}{2} \, \theta ( u_{0} ) \, \int \, \frac{d\Omega_{v}}{(2\pi)^{3}} \, \vert\mathcal{M}_{\Pgt \to
   \ellnunu}\vert^{2} \nonumber \\
-= & \, 4 \, G^{2}_{F} \, m^{2}_{\inv} \, \theta ( u_{0} ) \, \int \, \frac{d\cos\theta \, d\phi}{(2\pi)^{3}} \, 
+= & \, 8 \, G^{2}_{F} \, m^{2}_{\inv} \, \theta ( u_{0} ) \, \int \, \frac{d\cos\theta \, d\phi}{(2\pi)^{3}} \, 
   \left( E_{\Pgt} + \vert\bm{p}^{\Pgt}\vert \, \cos\theta \right)  \left( E_{\vis} - \vert\bm{p}^{\vis}\vert \, \cos\theta \right) \nonumber \\
-= & \, \frac{G^{2}_{F}}{2 \pi^{3}} \, m^{2}_{\inv} \, \theta ( u_{0} ) \, \underbrace{\int_{0}^{2 \pi} \, d\phi}_{= 2 \pi} \, 
+= & \, \frac{G^{2}_{F}}{\pi^{3}} \, m^{2}_{\inv} \, \theta ( u_{0} ) \, \underbrace{\int_{0}^{2 \pi} \, d\phi}_{= 2 \pi} \, 
   \left( E_{\Pgt} \, E_{\vis} \, \underbrace{\int_{-1}^{+1}
       d\cos\theta}_{= 2} \right. \nonumber \\
 & \qquad
@@ -206,7 +206,7 @@ I_{\inv}
      \underbrace{\int_{-1}^{+1} \, d\cos\theta \, \cos\theta}_{= 0} 
   - \vert\bm{p}_{\Pgt}\vert \, \vert\bm{p}_{\vis}\vert
        \, \underbrace{\int_{-1}^{+1} \, d\cos\theta \, \cos^{2}\theta}_{= \frac{2}{3}} \right) \nonumber \\
-= & \, \frac{G^{2}_{F}}{\pi^{2}} \, m^{2}_{\inv} \, \theta ( u_{0} ) \, 
+= & \, \frac{2 \, G^{2}_{F}}{\pi^{2}} \, m^{2}_{\inv} \, \theta ( u_{0} ) \, 
   \left( 2 \, E_{\Pgt} \, E_{\vis} - \frac{2}{3} \, \sqrt{E^{2}_{\Pgt} - m^{2}_{\Pgt}} \, \sqrt{E^{2}_{\vis} - m^{2}_{\vis}} \right) \, ,
 \label{eq:lepTauDecaysIrf}
 \end{align}
@@ -216,13 +216,13 @@ _{\inv}$ depends on a single kinematic variable, $m_{\inv}$, only,
 as $m_{\Pgt}$ and $m_{\vis}$ are constants.
 
 Before substituting Eq.~(\ref{eq:lepTauDecaysIrf}) into Eq.~(\ref{eq:lepTauDecaysPSint}),
-we perform a variable transformation from $( u_{0}, u_{1}, u_{2}, u_{3} )$ to $( m^{2}_{\inv}, u_{1}, u_{2}, u_{3} ) = ( {u_{0}}^{2} - {u_{1}}^{2} - {u_{2}}^{2} - {u_{3}}^{2}, u_{1}, u_{2}, u_{3} )$.
+we perform a variable transformation from $( u_{0}, u_{1}, u_{2}, u_{3} )$ to $( m^{2}_{\inv}, u_{1}, u_{2}, u_{3} ) = ( 2 \, ( {u_{0}}^{2} - {u_{1}}^{2} - {u_{2}}^{2} - {u_{3}}^{2}), u_{1}, u_{2}, u_{3} )$.
 The determinant of the Jacobi matrix for this transformation is $\vert J
-\vert = 2 \, u_{0}$,
+\vert = 4 \, u_{0}$,
 from which it follows that:
 \begin{equation}
 du_{0} \, d^{3}\bm{u} = \frac{1}{\vert J \vert} \, dm^{2}_{\inv} \,
-d^{3}\bm{u} = \frac{1}{2 u_{0}} \, dm^{2}_{\inv} \, d^{3}\bm{u} \, .
+d^{3}\bm{u} = \frac{1}{4 u_{0}} \, dm^{2}_{\inv} \, d^{3}\bm{u} \, .
 \label{eq:lepTauDecaysJacobi}
 \end{equation}
 
@@ -238,7 +238,7 @@ Eq.~(\ref{eq:lepTauDecaysPSint}), we then obtain:
   \bm{u} \right) \\
 & \qquad \frac{d^{3}\bm{p}^{\Pgt}}{(2\pi)^{3} \, 2 E_{\Pgt}} \,
   \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2 E_{\vis}} \, 
-  \frac{d^{3}\bm{u}}{(2\pi)^{3} \, 2 u_{0}} \, I_{\inv} \,
+  \frac{d^{3}\bm{u}}{(2\pi)^{3} \, 2 u_{0}} \, \frac{I_{\inv}}{2} \,
   dm^{2}_{\inv} \, ,
 \end{aligned}
 \label{eq:finalLepTauDecaysPSint}
@@ -250,7 +250,7 @@ given by the phase space element $d^{3}\bm{u}$ in Eq.~(\ref{eq:finalLepTauDecays
 with the integration over the neutrino momentum $d^{3}\bm{p}^{\inv}$ in Eq.~(\ref{eq:hadTauDecaysPSint}).
 The differences between the formulae for leptonic and hadronic $\Pgt$ decays
 are the additional integration over $dm^{2}_{\inv}$ and the
-factor $I_{\inv}$ in Eq.~(\ref{eq:finalLepTauDecaysPSint}), which replaces the
+factor $I_{\inv}/2$ in Eq.~(\ref{eq:finalLepTauDecaysPSint}), which replaces the
 factor $\vert\mathcal{M}_{\Pgt \to
   \tauh\Pnut}\vert^{2}$ in Eq.~(\ref{eq:hadTauDecaysPSint}).
 Note that Eq.~(\ref{eq:finalLepTauDecaysPSint}) as well as Eq.~(\ref{eq:hadTauDecaysPSint}) refer to the laboratory frame.
@@ -261,9 +261,8 @@ $I_{\inv}$ can be considered as constant when performing the integration over $d
 We can hence use Eq.~(\ref{eq:hadTauDecaysResult}) of Section~\ref{sec:appendix_tauToHadDecays} to express Eq.~(\ref{eq:finalLepTauDecaysPSint}) by:
 \begin{align}
 \vert\mathcal{M}_{\Pgt}\vert^{2} \,
- d\Phi_{\ellnunu} = \frac{\vert\mathcal{M}_{\Pgt \to
-  \ellnunu}\vert^{2}}{256\pi^{5}\, m_{\Pgt} \, \Gamma_{\Pgt}} \cdot 
-    \frac{I_{\inv}}{\vert\bm{p}^{\vis}\vert \, z^{2}} \, 
+ d\Phi_{\ellnunu} = \frac{1}{256\pi^{5}\, m_{\Pgt} \, \Gamma_{\Pgt}} \cdot 
+    \frac{I_{\inv}}{2\vert\bm{p}^{\vis}\vert \, z^{2}} \, 
     \frac{d^{3}\bm{p}^{\vis}}{2 E_{\vis}} \, dz \, dm^{2}_{\inv} \,
     d\phi_{\inv} \, .
 \label{eq:lepTauDecaysResult}
@@ -283,7 +282,7 @@ of the electron respectively muon is given in analogy to Eq.~(\ref{eq:hadTauDeca
 We define:
 \begin{equation}
 f_{\Plepton}\left(\bm{p}^{\vis}, m_{\vis}, \bm{p}^{\inv}\right) = 
-\frac{I_{\inv}}{256\pi^{6} \, \vert\bm{p}^{\vis}\vert \, z^{2}}
+\frac{I_{\inv}}{512\pi^{6} \, \vert\bm{p}^{\vis}\vert \, z^{2}}
 \label{eq:lepTauDecays_f}
 \end{equation}
 to obtain:
