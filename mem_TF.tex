@@ -31,7 +31,10 @@ when evaluating the integral in Eq.~(\ref{eq:mem_with_hadRecoil}).
 
 ATLAS as well as CMS report that the energy response for hadronic
 $\Pgt$ decays may be asymmetric~\cite{ATLAS:2011tfa,PRF-14-001}.
-For the purpose of this paper, we assume the TF $W_{\Phadron}( \bm{p}_{\T}^{\vis} | \phat_{\T}^{\vis} )$ to be of the form:
+For the purpose of this paper, we assume the TF $W_{\Phadron}( \bm{p}_{\T}^{\vis} | \phat_{\T}^{\vis} )$ 
+to follow a Gaussian distribution within the core region $x = \pT^{\vis}/\pThat^{\vis} \approx 1$ and to feature non-Gaussian tails,
+which follow power-law functions, on both sides of the Gaussian core.
+More specifically, we use the form:
 \begin{equation}
 W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} ) = 
  \begin{cases}
@@ -52,19 +55,24 @@ the points $x = x_{1}$ and $x = x_{2}$.
 The corresponding values are 
 $\zeta_{1} = \exp\left( -\frac{1}{2} \, \left( \frac{x_{1} - \mu}{\sigma} \right)^{2} \right) \cdot \left( \frac{\alpha_{1}}{x_{1}} - x_{1} - \frac{x_{1} - \mu}{\sigma} \right)^{\alpha_{1}}$
 and
-$\zeta_{2} = \exp\left( -\frac{1}{2} \, \left( \frac{x_{2} - \mu}{\sigma} \right)^{2} \right) \cdot \left( \frac{\alpha_{2}}{x_{2}} - x_{2} - \frac{x_{2} - \mu}{\sigma} \right)^{\alpha_{2}}$, 
-respectively.
+$\zeta_{2} = \exp\left( -\frac{1}{2} \, \left( \frac{x_{2} - \mu}{\sigma} \right)^{2} \right) \cdot \left( \frac{\alpha_{2}}{x_{2}} - x_{2} - \frac{x_{2} - \mu}{\sigma} \right)^{\alpha_{2}}$.
 The factor $\mathcal{N}$ is determined by the requirement that the function $W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} )$ 
-satisfies the normalization condition $\int \, d\pT^{\vis} \, W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} ) \equiv 1$ for any given value of $\pThat^{\vis}$.
+satisfies the normalization condition $\int \, d\pT^{\vis} \, W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} ) = 1$ for any given value of $\pThat^{\vis}$.
 The TF given by Eq.~(\ref{eq:tf_tauToHadDecays_pT}) is visualized in Fig.~\ref{fig:tf_tauToHadDecays_pT}.
 
 \begin{figure}
+\setlength{\unitlength}{1mm}
 \begin{center}
-\includegraphics*[height=54mm]{figures/tf_tauToHadDecays_pT.pdf}
+\begin{picture}(160,54)(0,0)
+\put(-2.5, 0.0){\mbox{\includegraphics*[height=54mm]{figures/tf_tauToHadDecays_pT_linear.pdf}}}
+\put(79.0, 0.0){\mbox{\includegraphics*[height=54mm]{figures/tf_tauToHadDecays_pT_log.pdf}}}
+\end{picture}
 \end{center}
 \caption{
   TF $W_{\Phadron}( \bm{p}_{\T}^{\vis} | \phat_{\T}^{\vis} )$ that models the experimental resolution on the $\pT$ of the charged and neutral hadrons produced in $\Pgt$ decays,
-  given by Eq.~(\ref{eq:tf_tauToHadDecays_pT}).
+  given by Eq.~(\ref{eq:tf_tauToHadDecays_pT}),
+  in linear (left) and logarithmic (right) scale of the ordinate.
+  The values of the function parameters $\mu$, $\sigma$, $x_{1}$, $\alpha_{1}$, $x_{2}$, and $\alpha_{2}$ are given in the plot.
 }
 \label{fig:tf_tauToHadDecays_pT}
 \end{figure}
@@ -87,7 +95,7 @@ to ensure the correct normalization of the TF:
 & \int \, d^{3}\bm{p}  \, W_{\Phadron}( \bm{p}^{\vis} | \phat^{\vis} ) = \int \, d\pX^{\vis} \, d\pY^{\vis} \, d\pZ^{\vis} \, W_{\Phadron}( \bm{p}^{\vis} | \phat^{\vis} ) \nonumber \\
 & \qquad = \int \, d\pT^{\vis} \, d\theta_{\vis} \, d\phi_{\vis} \,
 \frac{\pT^{\vis}}{\sin^{2} \theta_{\vis}} \, W_{\Phadron}( \bm{p}^{\vis} | \phat^{\vis} ) \, 
-  \equiv 1 \, ,
+  = 1 \, ,
 \end{align}
 where the factor $\frac{\pT^{\vis}}{\sin^{2} \theta_{\vis}}$ corresponds to the Jacobian of the variable transformation 
 from $(\pX^{\vis} = \pT^{\vis} \, \cos\phi_{\vis}, \pY^{\vis} = \pT^{\vis} \, \sin\phi_{\vis}, \pZ^{\vis} = \frac{\pT^{\vis}}{\tan\theta_{\vis}})$ 

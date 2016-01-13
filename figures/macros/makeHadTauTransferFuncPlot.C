@@ -34,7 +34,7 @@ TGraph* readGraph(TFile* inputFile, const std::string& graphName)
 void showGraph(double canvasSizeX, double canvasSizeY,
 	       TGraph* graph, 
 	       double xMin, double xMax, const std::string& xAxisTitle, double xAxisOffset,
-	       double yMin, double yMax, const std::string& yAxisTitle, double yAxisOffset,
+	       double yMin, double yMax, bool useLogScaleY, const std::string& yAxisTitle, double yAxisOffset,
 	       const std::string& outputFileName)
 {
   if ( !graph ) {
@@ -49,6 +49,7 @@ void showGraph(double canvasSizeX, double canvasSizeY,
   canvas->SetTopMargin(0.03);
   canvas->SetRightMargin(0.02);
   canvas->SetBottomMargin(0.19);
+  canvas->SetLogy(useLogScaleY);
   
   TH1* dummyHistogram = new TH1D("dummyHistogram", "dummyHistogram", 100, xMin, xMax);
   dummyHistogram->SetTitle("");
@@ -82,9 +83,25 @@ void showGraph(double canvasSizeX, double canvasSizeY,
   graph->SetMarkerSize(1);
   graph->Draw("C");
 
+  TPaveText* text = new TPaveText(0.78, 0.47, 0.94, 0.91, "NDC");
+  text->SetFillColor(10);
+  text->SetBorderSize(0);
+  text->AddText("#mu = 1.0");
+  text->AddText("#sigma = 0.03");
+  text->AddText("x_{1} = 0.97");
+  text->AddText("#alpha_{1} = 7");
+  text->AddText("x_{2} = 1.03");
+  text->AddText("#alpha_{2} = 3.5");
+  text->SetTextAlign(12); 
+  text->SetTextSize(0.055); 
+  text->SetTextFont(42); 
+  text->Draw();
+
   canvas->Update();
   size_t idx = outputFileName.find_last_of('.');
   std::string outputFileName_plot = std::string(outputFileName, 0, idx);
+  if ( useLogScaleY ) outputFileName_plot.append("_log");
+  else outputFileName_plot.append("_linear");
   if ( idx != std::string::npos ) canvas->Print(std::string(outputFileName_plot).append(std::string(outputFileName, idx)).data());
   canvas->Print(std::string(outputFileName_plot).append(".png").data());
   canvas->Print(std::string(outputFileName_plot).append(".eps").data());
@@ -112,7 +129,12 @@ void makeHadTauTransferFuncPlot()
   showGraph(800, 600,
 	    graph, 
 	    0., 2., "p_{T}^{vis} / #hat{p}_{T}^{vis}", 1.2,
-	    0., 6., "W_{h}(p_{T}^{vis} | #hat{p}_{T}^{vis})", 1.05,
+	    0., 6., false, "W_{h}(p_{T}^{vis} | #hat{p}_{T}^{vis})", 1.05,
+	    outputFileName);
+  showGraph(800, 600,
+	    graph, 
+	    0., 2., "p_{T}^{vis} / #hat{p}_{T}^{vis}", 1.2,
+	    2.e-3, 7.9, true, "W_{h}(p_{T}^{vis} | #hat{p}_{T}^{vis})", 1.05,
 	    outputFileName);
 
   delete inputFile;
