@@ -33,7 +33,7 @@ void makePlot_legend(TLegend* legend, const std::string& outputFilePath, const s
   legend->SetY1NDC(0.30);
   legend->SetX2NDC(0.80);
   legend->SetY2NDC(0.80);
-  legend->SetTextSize(0.075);
+  legend->SetTextSize(0.070);
   legend->SetMargin(0.20);
   TList* legend_primitives = legend->GetListOfPrimitives();
   TIter legend_nextObj(legend_primitives);
@@ -99,9 +99,9 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
   TCanvas* canvas_new = new TCanvas("canvas_new", "canvas_new", 900, 800);
   canvas_new->SetFillColor(10);
   canvas_new->SetBorderSize(2);
-  canvas_new->SetTopMargin(0.090);
-  canvas_new->SetLeftMargin(0.19);
-  canvas_new->SetBottomMargin(0.19);
+  canvas_new->SetTopMargin(0.065);
+  canvas_new->SetLeftMargin(0.17);
+  canvas_new->SetBottomMargin(0.165);
   canvas_new->SetRightMargin(0.015);
   canvas_new->SetLogx(true);
   canvas_new->SetLogy(true);
@@ -194,10 +194,10 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
   TAxis* xAxis = histogramCA->GetXaxis();
   xAxis->SetTitle("m_{#tau#tau} [GeV]");
   xAxis->SetTitleOffset(1.15);
-  xAxis->SetTitleSize(0.080);
+  xAxis->SetTitleSize(0.070);
   xAxis->SetTitleFont(42);
   xAxis->SetLabelOffset(0.010);
-  xAxis->SetLabelSize(0.060);
+  xAxis->SetLabelSize(0.055);
   xAxis->SetLabelFont(42);
   xAxis->SetTickLength(0.040);
   xAxis->SetNdivisions(510);
@@ -209,10 +209,10 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
   TAxis* yAxis = histogramCA->GetYaxis();
   yAxis->SetTitle("dN/dm_{#tau#tau} [1/GeV]");
   yAxis->SetTitleOffset(1.20);
-  yAxis->SetTitleSize(0.080);
+  yAxis->SetTitleSize(0.070);
   yAxis->SetTitleFont(42);
   yAxis->SetLabelOffset(0.010);
-  yAxis->SetLabelSize(0.060);
+  yAxis->SetLabelSize(0.055);
   yAxis->SetLabelFont(42);
   yAxis->SetTickLength(0.040);  
   yAxis->SetNdivisions(505);
@@ -230,12 +230,12 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
   histogramCA->Draw("axissame");
 
   //TPaveText* label_sample = new TPaveText(0.21, 0.86, 0.46, 0.94, "NDC");
-  TPaveText* label_sample = new TPaveText(0.1900, 0.9450, 0.4800, 1.0350, "NDC");
+  TPaveText* label_sample = new TPaveText(0.1900, 0.9475, 0.4800, 1.0375, "NDC");
   label_sample->SetFillStyle(0);
   label_sample->SetBorderSize(0);
   label_sample->AddText(sample.data());
   label_sample->SetTextFont(42);
-  label_sample->SetTextSize(0.080);
+  label_sample->SetTextSize(0.055);
   label_sample->SetTextColor(1);
   label_sample->SetTextAlign(13);
   label_sample->Draw();
@@ -258,9 +258,9 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
   //legend_new->Draw();
 
   double label_channel_y0;
-  if      ( channel == "e#mu"             ) label_channel_y0 = 0.9100;
-  else if ( channel == "#mu#tau_{h}"      ) label_channel_y0 = 0.9225;
-  else if ( channel == "#tau_{h}#tau_{h}" ) label_channel_y0 = 0.9175;
+  if      ( channel == "e#mu"             ) label_channel_y0 = 0.9275;
+  else if ( channel == "#mu#tau_{h}"      ) label_channel_y0 = 0.9400;
+  else if ( channel == "#tau_{h}#tau_{h}" ) label_channel_y0 = 0.9350;
   else {
     std::cerr << "Invalid channel = " << channel << " !!" << std::endl;
     assert(0);
