@@ -53,7 +53,7 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
   canvas_new->SetFillColor(10);
   canvas_new->SetBorderSize(2);
   canvas_new->SetTopMargin(0.065);
-  canvas_new->SetLeftMargin(0.165);
+  canvas_new->SetLeftMargin(0.17);
   canvas_new->SetBottomMargin(0.155);
   canvas_new->SetRightMargin(0.045);
   canvas_new->SetLogx(false);
@@ -141,7 +141,7 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
 
   TAxis* yAxis = histogramHiggs300->GetYaxis();
   yAxis->SetTitle(yAxisTitle.data());
-  yAxis->SetTitleOffset(1.15);
+  yAxis->SetTitleOffset(1.20);
   yAxis->SetTitleSize(0.070);
   yAxis->SetTitleFont(42);
   yAxis->SetLabelOffset(0.010);
