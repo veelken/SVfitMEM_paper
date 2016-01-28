@@ -40,7 +40,7 @@ void makePlot_legend(TLegend* legend, const std::string& outputFilePath, const s
   while ( TObject* obj = legend_nextObj() ) {
     std::string objName = "";
     if ( dynamic_cast<TNamed*>(obj) ) objName = (dynamic_cast<TNamed*>(obj))->GetName();    
-    std::cout << "obj = " << obj << ": name = " << objName << ", type = " << obj->ClassName() << std::endl;
+    //std::cout << "obj = " << obj << ": name = " << objName << ", type = " << obj->ClassName() << std::endl;
 
     TLegendEntry* legendEntry = dynamic_cast<TLegendEntry*>(obj);
     if ( legendEntry ) {
@@ -99,7 +99,7 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
   TCanvas* canvas_new = new TCanvas("canvas_new", "canvas_new", 900, 800);
   canvas_new->SetFillColor(10);
   canvas_new->SetBorderSize(2);
-  canvas_new->SetTopMargin(0.075);
+  canvas_new->SetTopMargin(0.090);
   canvas_new->SetLeftMargin(0.19);
   canvas_new->SetBottomMargin(0.19);
   canvas_new->SetRightMargin(0.015);
@@ -129,6 +129,7 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
 		<< " lineColor = " << tmpHistogram->GetLineColor() << ", lineStyle = " << tmpHistogram->GetLineStyle() << ", lineWidth = " << tmpHistogram->GetLineWidth() << ","
 		<< " markerColor = " << tmpHistogram->GetMarkerColor() << ", markerStyle = " << tmpHistogram->GetMarkerStyle() << ", markerSize = " << tmpHistogram->GetMarkerSize() << ","
 		<< " integral = " << tmpHistogram->Integral() << std::endl;
+      std::cout << "(mean = " << tmpHistogram->GetMean() << ", rms = " << tmpHistogram->GetRMS() << ": rms/mean = " << (tmpHistogram->GetRMS()/tmpHistogram->GetMean()) << ")" << std::endl;
       if ( tmpHistogram->GetLineColor() == 416 ) histogramCA            = tmpHistogram;
       if ( tmpHistogram->GetLineColor() == 600 ) histogramSVfit         = tmpHistogram;
       if ( tmpHistogram->GetLineColor() == 616 ) histogramSVfitMEMkEq0  = tmpHistogram;
@@ -229,12 +230,12 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
   histogramCA->Draw("axissame");
 
   //TPaveText* label_sample = new TPaveText(0.21, 0.86, 0.46, 0.94, "NDC");
-  TPaveText* label_sample = new TPaveText(0.195, 0.9525, 0.485, 1.0225, "NDC");
+  TPaveText* label_sample = new TPaveText(0.1900, 0.9450, 0.4800, 1.0350, "NDC");
   label_sample->SetFillStyle(0);
   label_sample->SetBorderSize(0);
   label_sample->AddText(sample.data());
-  label_sample->SetTextFont(62);
-  label_sample->SetTextSize(0.065);
+  label_sample->SetTextFont(42);
+  label_sample->SetTextSize(0.080);
   label_sample->SetTextColor(1);
   label_sample->SetTextAlign(13);
   label_sample->Draw();
@@ -250,16 +251,16 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
   legend_new->SetMargin(0.20);
   legend_new->AddEntry(histogramCA, "CA", "l");
   legend_new->AddEntry(histogramSVfit, "SVfit", "l");
-  //legend_new->AddEntry(histogramSVfitMEMkEq0, "SVfitMEM(k=0)", "l");
-  legend_new->AddEntry(histogramSVfitMEMkEq0, "SVfitMEM(k=0)", "p");
+  //legend_new->AddEntry(histogramSVfitMEMkEq0, "SVfitMEM (k=0)", "l");
+  legend_new->AddEntry(histogramSVfitMEMkEq0, "SVfitMEM (k=0)", "p");
   //legend_new->AddEntry(histogramSVfitMEMkNeq0, Form("SVfitMEM(k=%1.0f)", k), "l");
-  legend_new->AddEntry(histogramSVfitMEMkNeq0, Form("SVfitMEM(k=%1.0f)", k), "p");
+  legend_new->AddEntry(histogramSVfitMEMkNeq0, Form("SVfitMEM (k=%1.0f)", k), "p");
   //legend_new->Draw();
 
   double label_channel_y0;
-  if      ( channel == "e#mu"             ) label_channel_y0 = 0.9175;
-  else if ( channel == "#mu#tau_{h}"      ) label_channel_y0 = 0.9325;
-  else if ( channel == "#tau_{h}#tau_{h}" ) label_channel_y0 = 0.9225;
+  if      ( channel == "e#mu"             ) label_channel_y0 = 0.9100;
+  else if ( channel == "#mu#tau_{h}"      ) label_channel_y0 = 0.9225;
+  else if ( channel == "#tau_{h}#tau_{h}" ) label_channel_y0 = 0.9175;
   else {
     std::cerr << "Invalid channel = " << channel << " !!" << std::endl;
     assert(0);
