@@ -230,7 +230,7 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
   histogramCA->Draw("axissame");
 
   //TPaveText* label_sample = new TPaveText(0.21, 0.86, 0.46, 0.94, "NDC");
-  TPaveText* label_sample = new TPaveText(0.1900, 0.9475, 0.4800, 1.0375, "NDC");
+  TPaveText* label_sample = new TPaveText(0.1700, 0.9475, 0.4600, 1.0375, "NDC");
   label_sample->SetFillStyle(0);
   label_sample->SetBorderSize(0);
   label_sample->AddText(sample.data());
