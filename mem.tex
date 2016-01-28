@@ -4,7 +4,7 @@
 In the ME method, an estimate for the unknown model parameter $a$
 is obtained by maximizing the probability density:
 \begin{align}
-P(\bm{y}|a) = & \frac{1}{\sigma(a)} \, \int \, dx_{a} \, dx_{b} \,
+\mathcal{P}(\bm{y}|a) = & \frac{1}{\sigma(a)} \, \int \, dx_{a} \, dx_{b} \,
 d\Phi_{n} \, \frac{f(x_{a}) \, f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \, (2\pi)^{4} \,
 \delta( x_{a} \, E_{a} + x_{b} \, E_{b} - \sum_{i}^{n}
 E_{(i)}) \, \nonumber \\
@@ -42,9 +42,9 @@ literature~\cite{Fiedler:2010sg,Volobouev:2011vb}.
 The symbol $\sigma(a)$ corresponds to the cross section for the process under study,
 in the case considered in this paper the production in $\Pp\Pp$ collisions of a $\PHiggs$ boson decaying into a $\Pgt$ lepton pair
 with subsequent decay of the $\Pgt$ leptons.
-Division by $\sigma(a)$ ensures that $P(\bm{y}|a)$ has
+Division by $\sigma(a)$ ensures that $\mathcal{P}(\bm{y}|a)$ has
 the correct normalization required for a probability density, 
-i.e. $\int \, d\bm{y} \, P(\bm{y}|a) = 1$ for every $a$, 
+i.e. $\int \, d\bm{y} \, \mathcal{P}(\bm{y}|a) = 1$ for every $a$, 
 provided that the TF satisfy the normalization condition
 $\int \, d\bm{y}\, W(\bm{y}|\bm{p}) = 1$
 for every $\bm{p}$.
@@ -71,13 +71,13 @@ The treatment of hadronic activity in the event is detailed in Section~\ref{sec:
 The TFs are described in Section~\ref{sec:mem_TF} and
 the integration over the $n$-particle phase space is described in
 Section~\ref{sec:mem_PSintegration}.
-The computation of the cross section $\sigma(m_{\PHiggs})$ that is needed for a proper normalization of the probability density $P(\bm{y}|m_{\PHiggs})$
+The computation of the cross section $\sigma(m_{\PHiggs})$ that is needed for a proper normalization of the probability density $\mathcal{P}(\bm{y}|m_{\PHiggs})$
 in Eq.~(\ref{eq:mem}) is described in Section~\ref{sec:mem_xSection}.
-The numerical maximization of the probability density $P(\bm{y}|m_{\PHiggs})$
+The numerical maximization of the probability density $\mathcal{P}(\bm{y}|m_{\PHiggs})$
 with respect to the $\PHiggs$ boson mass $m_{\PHiggs}$ is described in
 Section~\ref{sec:mem_numericalMaximization}.
 We conclude this section with a description of an artificial term that we
-choose to add to the probability density $P(\bm{y}|m_{\PHiggs})$, in
+choose to add to the probability density $\mathcal{P}(\bm{y}|m_{\PHiggs})$, in
 order to reduce tails in the $m_{\Pgt\Pgt}$ distribution reconstructed
 by the algorithm. The structure of this ``regularization'' term is described in
 Section~\ref{sec:mem_logM}.

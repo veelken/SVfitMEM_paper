@@ -7,16 +7,17 @@ The sensitivity to discover a $\PHiggs$ boson signal increases if high mass tail
 for the $\PZ/\Pggx \to \Pgt\Pgt$ background, arising from resolution effects, are avoided.
 For this purpose,
 we add an artificial regularization term of form 
-$\kappa \, \log \left( m_{\PHiggs}^{\textrm{test}(i)} \cdot \mbox{GeV}~{-1} \right)$ 
-to the logarithm of the probability density $P(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$
-computed according to Eq.~(\ref{eq:mem_with_hadRecoil}).
+$\kappa \, \log \left( m_{\PHiggs}^{\textrm{test}(i)}~/\mbox{~GeV} \right)$ 
+to the logarithm of the probability density $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$
+that is computed according to Eq.~(\ref{eq:mem_with_hadRecoil}).
 In case of non-zero $\kappa$,
 the procedure described in Section~\ref{sec:mem_numericalMaximization} for finding the best estimate $m_{\Pgt\Pgt}$ for the mass of the $\Pgt$ lepton pair is altered.
 Instead of fitting 
-$\log \left( P(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})~/\mbox{~GeV}^{-8} \right)$ 
+$\log \left( \mathcal{P}~/\mbox{~GeV}^{8} \right)$ 
 versus $m_{\PHiggs}^{\textrm{test}(i)}$ by a second order polynomial,
-we fit the sum of $\log \left( P(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})~/\mbox{~GeV}^{-8} \right)$
-and $\kappa \, \log \left( m_{\PHiggs}^{\textrm{test}(i)}~/\mbox{GeV} \right)$.
+we fit the sum of $\log \left( \mathcal{P}~/\mbox{~GeV}^{8} \right)$
+and $\kappa \, \log \left( m_{\PHiggs}^{\textrm{test}(i)}~/\mbox{~GeV} \right)$.
 The parameter $\kappa$ is chosen with the objective of reducing the high mass tail for the $\PZ/\Pggx \to \Pgt\Pgt$ background,
 while causing at most a small bias on the $m_{\Pgt\Pgt}$ distribution reconstructed in signal events.
-We find values $\kappa \approx 5$ to perform optimal for this purpose.
+We find that the optimal value of $\kappa$ depends on the experimental resolution
+(higher experimental resolutions favor smaller values of $\kappa$) and hence needs to be determined specific to the experimental conditions.
