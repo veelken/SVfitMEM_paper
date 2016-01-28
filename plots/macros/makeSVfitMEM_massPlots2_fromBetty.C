@@ -52,9 +52,9 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
   TCanvas* canvas_new = new TCanvas("canvas_new", "canvas_new", 900, 850);
   canvas_new->SetFillColor(10);
   canvas_new->SetBorderSize(2);
-  canvas_new->SetTopMargin(0.0675);
-  canvas_new->SetLeftMargin(0.190);
-  canvas_new->SetBottomMargin(0.17);
+  canvas_new->SetTopMargin(0.065);
+  canvas_new->SetLeftMargin(0.165);
+  canvas_new->SetBottomMargin(0.155);
   canvas_new->SetRightMargin(0.045);
   canvas_new->SetLogx(false);
   canvas_new->SetLogy(false);
@@ -127,10 +127,10 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
   TAxis* xAxis = histogramHiggs300->GetXaxis();
   xAxis->SetTitle(xAxisTitle.data());
   xAxis->SetTitleOffset(1.00);
-  xAxis->SetTitleSize(0.080);
+  xAxis->SetTitleSize(0.070);
   xAxis->SetTitleFont(42);
   xAxis->SetLabelOffset(0.010);
-  xAxis->SetLabelSize(0.060);
+  xAxis->SetLabelSize(0.050);
   xAxis->SetLabelFont(42);
   xAxis->SetTickLength(0.040);
   xAxis->SetNdivisions(505);
@@ -142,10 +142,10 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
   TAxis* yAxis = histogramHiggs300->GetYaxis();
   yAxis->SetTitle(yAxisTitle.data());
   yAxis->SetTitleOffset(1.15);
-  yAxis->SetTitleSize(0.080);
+  yAxis->SetTitleSize(0.070);
   yAxis->SetTitleFont(42);
   yAxis->SetLabelOffset(0.010);
-  yAxis->SetLabelSize(0.060);
+  yAxis->SetLabelSize(0.055);
   yAxis->SetLabelFont(42);
   yAxis->SetTickLength(0.040);  
   yAxis->SetNdivisions(505);
@@ -160,7 +160,7 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
   histogramDYJets->Draw("histsame");
   histogramHiggs300->Draw("axissame");
 
-  TLegend* legend_new = new TLegend(0.50, 0.615, 0.87, 0.915, NULL, "brNDC");
+  TLegend* legend_new = new TLegend(0.50, 0.62, 0.87, 0.92, NULL, "brNDC");
   legend_new->SetFillColor(10);
   legend_new->SetFillStyle(0);
   legend_new->SetBorderSize(0);
@@ -175,9 +175,9 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
   legend_new->Draw();
 
   double label_channel_y0;
-  if      ( channel == "e#mu"             ) label_channel_y0 = 0.9250;
+  if      ( channel == "e#mu"             ) label_channel_y0 = 0.9275;
   else if ( channel == "#mu#tau_{h}"      ) label_channel_y0 = 0.9400;
-  else if ( channel == "#tau_{h}#tau_{h}" ) label_channel_y0 = 0.9300;
+  else if ( channel == "#tau_{h}#tau_{h}" ) label_channel_y0 = 0.9350;
   else {
     std::cerr << "Invalid channel = " << channel << " !!" << std::endl;
     assert(0);
