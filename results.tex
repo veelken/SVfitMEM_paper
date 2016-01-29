@@ -218,7 +218,7 @@ The axis of abscissae and the ordinate are drawn in logarithmic scale to better 
 \label{fig:massDistributions_emu}
 \end{figure}
 
-The distributions reconstructed by the SVfitMEM algorithm with $\kappa = 0$ are very similar to the distributions in $m_{\Pgt\Pgt}$ reconstructed by the CA method.
+The distributions reconstructed by the SVfitMEM algorithm with $\kappa = 0$ are similar to the distributions in $m_{\Pgt\Pgt}$ reconstructed by the CA method.
 In both cases, pronounced high mass tails reduce the sensitivity of the SM $\PHiggs \to \Pgt\Pgt$ analysis,
 as a sizeable fraction of $\PZ/\Pggx \to \Pgt\Pgt$ background events
 are reconstructed near the signal region $m_{\Pgt\Pgt} \approx 125$~\GeV, due to resolution effects.
@@ -226,6 +226,7 @@ The advantage of the SVfitMEM algorithm with $\kappa =
 0$ is that it provides a physical solution for every event,
 while the CA method fails to yield a physical solution for about $50\%$ of the events.
 The large fraction of events for which the CA method fails to find a physical solution is reflected by the normalization of the distribution.
+
 The high mass tail in the $m_{\Pgt\Pgt}$ distribution reconstructed by
 the SVfitMEM algorithm is reduced substantially by using
 a non-zero $\kappa$.
@@ -237,6 +238,25 @@ algorithm has an effect that is similar to adding
 an artificial regularization term of the form described in Section~\ref{sec:mem_logM}
 to the logarithm of the probability density 
 $P(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$.
+
+In all three decay channels, the SVfitMEM algorithm significantly improves the separation of the $\PHiggs \to \Pgt\Pgt$ signal 
+from the irreducible $\PZ/\Pggx \to \Pgt\Pgt$ background, yielding a substantial gain in analysis sensitivity
+compared to alternative mass observables.
+The increase in signal-to-background separation is illustrated in
+Fig.~\ref{fig:distributions_mVis_vs_SVfit},
+which compares the signal and background distributions for $m_{\Pgt\Pgt}$ reconstructed by the SVfitMEM algorithm with non-zero $\kappa$ and for $m_{\vis}$,
+the mass of the visible $\Pgt$ decay products.
+The mass of the $\Pgt$ lepton pair reconstructed by the CA method performs worse compared to $m_{\vis}$ in terms of resolution
+and has the further disadvantage of not yielding a physical solution for every event.
+Numerical values of the mean and root-mean-square (RMS) values
+of the $m_{\Pgt\Pgt}$ and $m_{\vis}$ distributions are given in
+Table~\ref{tab:resolutions_mVis_vs_SVfit}.
+Compared to $m_{\vis}$,
+the SVfitMEM algorithm with non-zero $\kappa$ improves the relative resolution,
+quantified by the ratio of RMS to mean, by $20$--$30\%$.
+The improvement in resolution is even higher in events containing $\PHiggs$ bosons of high $\pT$,
+a fact which has been utilized to further increase the sensitivity of the SM $\PHiggs \to \Pgt\Pgt$ analysis performed by the CMS collaboration during LHC run $1$~\cite{HIG-13-004}.
+Compared to the classic SVfit algorithm, the SVfitMEM algorithm improves the resolution by $5$--$10\%$.
 
 The distributions in $m_{\Pgt\Pgt}$ reconstructed by the
 SVfitMEM algorithm with non-zero $\kappa$ exhibit the best
@@ -260,32 +280,30 @@ The low mass tail of the $m_{\Pgt\Pgt}$ distribution in the $\Pe\Pgm$
 channel arises from events in which the electron as well as the muon
 both have low $\pT$.
 The $\Pgt$ leptons in $\PHiggs \to \Pgt\Pgt$ events produced via the
-gluon fusion process are typically separated by $\Delta\phi \approx
-\pi$ in the transverse plane,
+gluon fusion process are typically ``back-to-back'' in the transverse plane ($\Delta\phi_{\Pgt\Pgt} \approx \pi$),
 causing the neutrinos produced in the $\Pgt$ decays to be emitted in
 opposite hemispheres, with the effect that their contribution to $\pX^{\miss}$ and $\pY^{\miss}$ cancels.
 Events featuring a low $\pT$ electron, a low $\pT$ muon and low $\MET$
 are indistinguishable from the decays of $\PHiggs$ bosons of low mass
 and are hence assigned low $m_{\Pgt\Pgt}$ values by the SVfitMEM algorithm.
 
-In all three decay channels, the SVfitMEM algorithm significantly improves the separation of the $\PHiggs \to \Pgt\Pgt$ signal 
-from the irreducible $\PZ/\Pggx \to \Pgt\Pgt$ background, yielding a substantial gain in analysis sensitivity
-compared to alternative mass observables.
-The increase in signal-to-background separation is illustrated in
-Fig.~\ref{fig:distributions_mVis_vs_SVfit},
-which compares the signal and background distributions for $m_{\Pgt\Pgt}$ reconstructed by the SVfitMEM algorithm with non-zero $\kappa$ and for $m_{\vis}$,
-the mass of the visible $\Pgt$ decay products.
-The mass of the $\Pgt$ lepton pair reconstructed by the CA method performs worse compared to $m_{\vis}$ in terms of resolution
-and has the further disadvantage of not yielding a physical solution for every event.
-Numerical values of the mean and root-mean-square (RMS) values
-of the $m_{\Pgt\Pgt}$ and $m_{\vis}$ distributions are given in
-Table~\ref{tab:resolutions_mVis_vs_SVfit}.
-Compared to $m_{\vis}$,
-the SVfitMEM algorithm with non-zero $\kappa$ improves the relative resolution,
-quantified by the ratio of RMS to mean, by $20$--$30\%$.
-The improvement in resolution is even higher in events containing $\PHiggs$ bosons of high $\pT$,
-a fact which has been utilized to further increase the sensitivity of the SM $\PHiggs \to \Pgt\Pgt$ analysis performed by the CMS collaboration during LHC run $1$~\cite{HIG-13-004}.
-Compared to the classic SVfit algorithm, the SVfitMEM algorithm improves the resolution by $5$--$10\%$.
+The distributions of $m_{\Pgt\Pgt}$ reconstructed by the SVfitMEM algorithm with non-zero $\kappa$ 
+peak close to the true mass of $\Pgt$ lepton pair.
+The ratio of the mean of the $m_{\Pgt\Pgt}$ distribution to the true mass is closer to unity and the ratio of RMS to mean is smaller
+in case of the $\PZ/\Pggx \to \Pgt\Pgt$ background and of low mass $\PHiggs \to \Pgt\Pgt$ signals, compared to $\PHiggs \to \Pgt\Pgt$ signals of high mass.
+The reason for this behaviour are the $\pT$ cuts that are applied on the visible $\Pgt$ decay products.
+The $\pT$ cuts have the effect of removing events in which the $\Pgt$ leptons are back-to-back in the transverse plane,
+the visible decay products of both $\Pgt$ leptons have low $\pT$ and the $\MET$ is small.
+The effect is present in the $\tauh\tauh$, $\Pgm\tauh$, and $\Pe\Pgm$ channels and can be seen in the $m_{\vis}$ as well as in the $m_{\Pgt\Pgt}$ distributions,
+except for the $\PZ/\Pggx \to \Pgt\Pgt$ background in the $\tauh\tauh$ channel.
+The $\pT > 45$~\GeV cut that both $\tauh$ are required to pass in the $\tauh\tauh$ channel removes all $\PZ/\Pggx \to \Pgt\Pgt$ background in which the $\PZ$ boson has low $\pT$,
+as only the events in which the $\tauh$ are boosted in $\PZ$ boson direction have a chance to satisfy the condition $\pT > 45$~\GeV.
+As a consequence of the boost, the $\Pgt$ leptons are typically not back-to-back in the transverse plane in these events.
+As the angle between the $\Pgt$ leptons decreases with increasing $\PZ$ boson $\pT$,
+$m_{\vis} \approx \vert\bm{p}^{\vis(1)}\vert \cdot \vert\bm{p}^{\vis(2)}\vert \, \left( 1 - \cos\sphericalangle(\Pgt,\Pgt) \right)$
+may be significantly smaller than two times $45$~\GeV in events with $\PZ$ bosons of high $\pT$.
+The distribution in $\PZ$ boson $\pT$ of $\PZ/\Pggx \to \Pgt\Pgt$ background events passing the $\pT > 45$~\GeV cut
+has the effect of broadening the $m_{\vis}$ distribution.
 
 \begin{figure}
 \setlength{\unitlength}{1mm}
