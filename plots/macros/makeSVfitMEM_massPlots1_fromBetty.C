@@ -181,6 +181,17 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
   histogramSVfitMEMkEq0->SetMarkerColor(colors[2]);
   histogramSVfitMEMkEq0->SetMarkerStyle(markerStyles[2]);
   histogramSVfitMEMkEq0->SetMarkerSize(markerSizes[2]);
+  // CV: fix pathological bins at high mass for which dN/dm increases
+  int numBins = histogramSVfitMEMkEq0->GetNbinsX();
+  for ( int idxBin = 1; idxBin <= numBins; ++idxBin ) {
+    double binCenter = histogramSVfitMEMkEq0->GetBinCenter(idxBin);
+    if ( (channel == "#tau_{h}#tau_{h}" && massPoint == 500 && binCenter > 1500.) ||
+	 (channel == "#tau_{h}#tau_{h}" && massPoint == 800 && binCenter > 2000.) ||
+	 (channel == "#mu#tau_{h}"      && massPoint == 500 && binCenter > 1500.) ||
+	 (channel == "#mu#tau_{h}"      && massPoint == 800 && binCenter > 2500.) ) {
+      histogramSVfitMEMkEq0->SetBinContent(idxBin, 0.);
+    }
+  }
 
   histogramSVfitMEMkNeq0->SetFillColor(0);
   histogramSVfitMEMkNeq0->SetFillStyle(0);
@@ -217,10 +228,18 @@ void makePlot(const std::string& inputFilePath, const std::string& canvasName, c
   yAxis->SetTickLength(0.040);  
   yAxis->SetNdivisions(505);
 
+  double massPoint_double = 0.;
+  if ( massPoint == 90 ) massPoint_double = 91.2;
+  else massPoint_double = massPoint;
+  double dLog = (TMath::Log(5.*massPoint_double) - TMath::Log(50.))/25.; // xMin = 50, xMax = 5*massPoint, numBins = 25
+  double binWidth = TMath::Exp(TMath::Log(massPoint_double) + 0.5*dLog) - TMath::Exp(TMath::Log(massPoint_double) - 0.5*dLog);
+  double sf_binWidth = 1./binWidth;
+  std::cout << "massPoint = " << massPoint << ": sf_binWidth = " << sf_binWidth << std::endl;
+
   histogramCA->SetTitle("");
   histogramCA->SetStats(false);
-  histogramCA->SetMaximum(0.59);
-  histogramCA->SetMinimum(1.1e-4);
+  histogramCA->SetMaximum(sf_binWidth*0.79);
+  histogramCA->SetMinimum(sf_binWidth*1.1e-4);
   histogramCA->Draw("hist");
   histogramSVfit->Draw("histsame");
   //histogramSVfitMEMkEq0->Draw("histsame");
@@ -324,7 +343,7 @@ void makeSVfitMEM_massPlots1_fromBetty()
   samples[500] = "H(500 GeV) #rightarrow #tau#tau";
   samples[800] = "H(800 GeV) #rightarrow #tau#tau";
   
-  std::string inputFilePath = "/afs/cern.ch/user/v/veelken/cms/papers/SVfitMEM_NIM_A_git/paper/plots/fromBetty_2016Jan28/";
+  std::string inputFilePath = "/afs/cern.ch/user/v/veelken/cms/papers/SVfitMEM_NIM_A_git/paper/plots/fromBetty_2016Jan29/";
   std::map<int, std::string> inputFileNames_emu; // key = massPoint
   inputFileNames_emu[90]      = "plot_6to8_log_emu.root";
   inputFileNames_emu[125]     = "plot_6to8_log_emu.root";
