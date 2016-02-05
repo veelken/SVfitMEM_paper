@@ -15,32 +15,31 @@ where $G_{F}$ denotes the Fermi constant, given by Eq.~(\ref{eq:def_G_F}).
 The product of the squared modulus of the ME and the phase space
 element $d\Phi_{\ellnunu}$ reads:
 \begin{align}
-& \, \vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\textrm{decay}}\vert^{2} \,
- d\Phi_{\ellnunu} = \vert \BW_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(i)}_{\textrm{decay}}
+& \, \vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\Pgt}\vert^{2} \,
+ d\Phi_{\ellnunu} = \vert \BW_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(i)}_{\Pgt}
 \vert^{2} \, 
   \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2 E_{\vis}} \, 
-  \frac{d^{3}\bm{p}^{\Pnu}}{(2\pi)^{3} \, 2 E_{\Pnu}} \, 
-  \frac{d^{3}\bm{p}^{\APnu}}{(2\pi)^{3} \, 2 E_{\APnu}} \nonumber \\
+  \frac{d^{3}\bm{p}^{\APnu}}{(2\pi)^{3} \, 2 E_{\APnu}} \,
+  \frac{d^{3}\bm{p}^{\Pnu}}{(2\pi)^{3} \, 2 E_{\Pnu}} \nonumber \\
 = & (2\pi)^{3} \, \int \, \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
 \delta ( q_{\Pgt}^{2} - m_{\Pgt}^{2} ) \cdot
 \vert\mathcal{M}_{\Pgt \to \ellnunu}\vert^{2} \, \delta \left(
-  E_{\Pgt} - E_{\vis} - E_{\Pnu} - E_{\APnu} \right) \nonumber \\
+  E_{\Pgt} - E_{\vis} - E_{\APnu} - E_{\Pnu} \right) \nonumber \\
 & \qquad
 \delta^{3} \left( \bm{p}^{\Pgt} - \bm{p}^{\vis} - \bm{p}^{\Pnu} - \bm{p}^{\APnu} \right) \, \frac{d^{3}\bm{p}^{\Pgt}}{(2\pi)^{3} \, 2 E_{\Pgt}} \,
   \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2 E_{\vis}} \, 
-  \frac{d^{3}\bm{p}^{\Pnu}}{(2\pi)^{3} \, 2 E_{\Pnu}} \, 
-  \frac{d^{3}\bm{p}^{\APnu}}{(2\pi)^{3} \, 2 E_{\APnu}} \, dq^{2}_{\Pgt} \nonumber \\
+  \frac{d^{3}\bm{p}^{\APnu}}{(2\pi)^{3} \, 2 E_{\APnu}} \, 
+  \frac{d^{3}\bm{p}^{\Pnu}}{(2\pi)^{3} \, 2 E_{\Pnu}} \, dq^{2}_{\Pgt} \nonumber \\
 = & \frac{8\pi^{4}}{m_{\Pgt} \, \Gamma_{\Pgt}} \, \vert\mathcal{M}_{\Pgt \to
-  \ellnunu}\vert^{2} \, \delta \left( E_{\Pgt} - E_{\vis} -
-  E_{\Pnu} - E_{\APnu} \right) \, \delta^{3} \left( \bm{p}^{\Pgt} -
-  \bm{p}^{\vis} - \bm{p}^{\Pnu} - \bm{p}^{\APnu} \right)  \nonumber \\
+  \ellnunu}\vert^{2} \, \delta \left( E_{\Pgt} - E_{\vis} - E_{\APnu} - E_{\Pnu} \right) \, \delta^{3} \left( \bm{p}^{\Pgt} -
+  \bm{p}^{\vis} - \bm{p}^{\APnu} - \bm{p}^{\Pnu} \right)  \nonumber \\
 & \qquad
   \frac{d^{3}\bm{p}^{\Pgt}}{(2\pi)^{3} \, 2 E_{\Pgt}} \,
   \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2 E_{\vis}} \,
-  \frac{dE_{\Pnu} \, d^{3}\bm{p}^{\Pnu}}{(2\pi)^{3}} \,
-  \theta(E_{\Pnu}) \, \delta \left( E_{\Pnu}^{2} - \vert\bm{p}^{\Pnu}\vert^{2} \right) \, 
   \frac{dE_{\APnu} \, d^{3}\bm{p}^{\APnu}}{(2\pi)^{3}} \,
-  \theta(E_{\APnu}) \, \delta \left( E_{\APnu}^{2} - \vert\bm{p}^{\APnu}\vert^{2} \right) \, , 
+  \theta(E_{\APnu}) \, \delta \left( E_{\APnu}^{2} - \vert\bm{p}^{\APnu}\vert^{2} \right) \,
+  \frac{dE_{\Pnu} \, d^{3}\bm{p}^{\Pnu}}{(2\pi)^{3}} \,
+  \theta(E_{\Pnu}) \, \delta \left( E_{\Pnu}^{2} - \vert\bm{p}^{\Pnu}\vert^{2} \right) \, , 
 \end{align}
 where we have used the identity:
 \begin{equation}
@@ -50,35 +49,37 @@ where we have used the identity:
 \label{eq:PSintFourDim}
 \end{equation}
 for expressing the second line by the third.
-Eq.~(\ref{eq:PSintFourDim}) follows from the delta function rule Eq.~(\ref{eq:deltaFuncRule}).
-We assume that the mass of the $\Pnu$ as well as the mass of the $\APnu$ is zero.
+Eq.~(\ref{eq:PSintFourDim}) follows from the $\delta$-function rule Eq.~(\ref{eq:deltaFuncRule}).
+We assume that the mass of the $\APnu$ as well as the mass of the $\Pnu$ is zero.
 
 We perform a variable transformation from $(E_{\Pnu}, \bm{p}^{\Pnu})$
 and $(E_{\APnu}, \bm{p}^{\APnu})$ to:
 \begin{align}
-(u_{0}, \bm{u}) = & \frac{1}{\sqrt{2}} \, (E_{\Pnu} + E_{\APnu}, \bm{p}^{\Pnu} +
-\bm{p}^{\APnu}) \, , \qquad (v_{0}, \bm{v}) = \frac{1}{\sqrt{2}} (
-  E_{\Pnu} - E_{\APnu}, \bm{p}^{\Pnu} - \bm{p}^{\APnu} ) \, . \nonumber 
+(u_{0}, \bm{u}) = & \frac{1}{\sqrt{2}} \, (E_{\APnu} + E_{\Pnu}, \bm{p}^{\APnu} +
+\bm{p}^{\Pnu}) \, , \qquad (v_{0}, \bm{v}) = \frac{1}{\sqrt{2}} (
+  E_{\APnu} - E_{\Pnu}, \bm{p}^{\APnu} - \bm{p}^{\Pnu} ) \, . \nonumber 
 \end{align}
 The variables $u_{0}$ and $\bm{u}$ represent the energy and momentum of the neutrino pair.
-The determinant of the Jacobi matrix for the transformation from
-$(E_{\Pnu}, \bm{p}^{\Pnu}; E_{\APnu}, \bm{p}^{\APnu})$
+The magnitude of the determinant of the Jacobi matrix for the transformation from
+$(E_{\APnu}, \bm{p}^{\APnu}; E_{\Pnu}, \bm{p}^{\Pnu})$
 to $(u_{0}, \bm{u}; v_{0}, \bm{v})$ equals unity.
 Expressed in the new variables, the energy and momentum of the
 $\Pnu$ and of the $\APnu$ produced in the tau decay are given by:
 \begin{align}
-( E_{\Pnu}, \bm{p}^{\Pnu} ) = & \, \frac{1}{\sqrt{2}} ( u_{0} + v_{0}, \bm{u}
-+ \bm{v} ) \, \mbox{ and } \, ( E_{\APnu}, \bm{p}^{\APnu} ) = \frac{1}{\sqrt{2}} (
-u_{0} - v_{0}, \bm{u} - \bm{v} ) \, . \nonumber 
+( E_{\APnu}, \bm{p}^{\APnu} ) = \frac{1}{\sqrt{2}} (
+u_{0} + v_{0}, \bm{u} + \bm{v} ) \, \mbox{ and } \,
+( E_{\Pnu}, \bm{p}^{\Pnu} ) = & \, \frac{1}{\sqrt{2}} ( u_{0} - v_{0}, \bm{u}
+- \bm{v} ) \, . \nonumber 
 \end{align}
 
 The product of the squared modules of the ME and the phase space
 element can then be expressed by:
 \begin{align}
-& \, \vert\mathcal{M}_{\Pgt}\vert^{2} \,
- d\Phi_{\ellnunu} = \frac{8\pi^{4}}{m_{\Pgt} \, \Gamma_{\Pgt}} \, \delta \left( E_{\Pgt} - E_{\vis} -
-  E_{\Pnu} - E_{\APnu} \right) \, \delta^{3} \left( \bm{p}^{\Pgt} -
-  \bm{p}^{\vis} - \bm{p}^{\Pnu} - \bm{p}^{\APnu} \right) \nonumber \\
+& \, \vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\Pgt}\vert^{2} \,
+ d\Phi_{\ellnunu} = \frac{8\pi^{4}}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
+ \delta \left( E_{\Pgt} - E_{\vis} - E_{\APnu} -
+  E_{\Pnu} \right) \, \delta^{3} \left( \bm{p}^{\Pgt} -
+  \bm{p}^{\vis} - \bm{p}^{\APnu} - \bm{p}^{\Pnu} \right) \nonumber \\
  & \qquad
 \frac{d^{3}\bm{p}^{\Pgt}}{(2\pi)^{3} \, 2 E_{\Pgt}} \,
 \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2 E_{\vis}} \,
@@ -145,15 +146,16 @@ We have used the relation $\delta(a + b) \, \delta(a - b) = \delta(2b) \, \delta
 to express Eq.~(\ref{eq:def_Iinv}) by the first line in
 Eq.~(\ref{eq:lepTauDecaysI}).
 The identify $\frac{v_{0}^{2} - \vert\bm{v}\vert^{2}}{2} =
--\frac{1}{2} \, \vert\bm{v}\vert^{2}$ follows from the
+-\frac{1}{2} \, \vert\bm{v}\vert^{2}$ follows from the presence of the 
 $\delta$-function $\delta ( v_{0} )$ in the first line.
 
 In the restframe of the neutrino pair:
 \begin{align}
 ( E_{\Pgt}, \bm{p}^{\Pgt} ) = & \, ( E_{\Pgt}, 0, 0, \vert\bm{p}^{\Pgt}\vert ) \nonumber \\
-( E_{\vis}, \bm{p}^{\vis} ) = & \, ( E_{\vis}, 0, 0, \vert\bm{p}^{\vis}\vert ) \nonumber \\
-( E_{\Pnu}, \bm{p}^{\Pnu} ) = & \, \frac{m_{\inv}}{2} \, ( 1, 0, \sin\theta, \cos\theta ) \nonumber \\
-( E_{\APnu}, \bm{p}^{\APnu} ) = & \, \frac{m_{\inv}}{2} \, ( 1, 0, \mbox{-}\sin\theta, \mbox{-}\cos\theta ) \, , \nonumber 
+( E_{\vis}, \bm{p}^{\vis} ) = & \, ( E_{\vis}, 0, 0,
+\vert\bm{p}^{\vis}\vert ) \nonumber \\
+( E_{\APnu}, \bm{p}^{\APnu} ) = & \, \frac{m_{\inv}}{2} \, ( 1, 0, \sin\theta, \cos\theta ) \nonumber 
+( E_{\Pnu}, \bm{p}^{\Pnu} ) = & \, \frac{m_{\inv}}{2} \, ( 1, 0, \mbox{-}\sin\theta, \mbox{-}\cos\theta ) \, , \nonumber \\
 \end{align}
 where we have chosen the polar axis such that it is parallel to $\bm{p}^{\vis}$.
 
@@ -212,12 +214,12 @@ I_{\inv}
 \end{align}
 with $E_{\Pgt}$ and $E_{\vis}$ given by Eq.~(\ref{eq:lepTauDecaysEn}).
 Note that $I
-_{\inv}$ depends on a single kinematic variable, $m_{\inv}$, only,
+_{\inv}$ solely depends on a single kinematic variable, $m_{\inv}$, 
 as $m_{\Pgt}$ and $m_{\vis}$ are constants.
 
 Before substituting Eq.~(\ref{eq:lepTauDecaysIrf}) into Eq.~(\ref{eq:lepTauDecaysPSint}),
 we perform a variable transformation from $( u_{0}, u_{1}, u_{2}, u_{3} )$ to $( m^{2}_{\inv}, u_{1}, u_{2}, u_{3} ) = ( 2 \, ( {u_{0}}^{2} - {u_{1}}^{2} - {u_{2}}^{2} - {u_{3}}^{2}), u_{1}, u_{2}, u_{3} )$.
-The determinant of the Jacobi matrix for this transformation is $\vert J
+The magnitude of the determinant of the Jacobi matrix for this transformation is $\vert J
 \vert = 4 \, u_{0}$,
 from which it follows that:
 \begin{equation}
@@ -231,14 +233,14 @@ and~(\ref{eq:lepTauDecaysJacobi}) into
 Eq.~(\ref{eq:lepTauDecaysPSint}), we then obtain:
 \begin{equation}
 \begin{aligned}
-& \, \vert\mathcal{M}_{\Pgt}\vert^{2} \,
- d\Phi_{\ellnunu} = \frac{4\pi^{4}}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
+& \, \vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\Pgt}\vert^{2} \,
+ d\Phi_{\ellnunu} = \frac{8\pi^{4}}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
  \delta \left( E_{\Pgt} - E_{\vis} - u_{0} \right)
  \, \delta^{3} \left( \bm{p}^{\Pgt} - \bm{p}^{\vis} -
   \bm{u} \right) \\
 & \qquad \frac{d^{3}\bm{p}^{\Pgt}}{(2\pi)^{3} \, 2 E_{\Pgt}} \,
   \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2 E_{\vis}} \, 
-  \frac{d^{3}\bm{u}}{(2\pi)^{3} \, 2 u_{0}} \, I_{\inv} \,
+  \frac{d^{3}\bm{u}}{(2\pi)^{3} \, 2 u_{0}} \, \frac{I_{\inv}}{2} \,
   dm^{2}_{\inv} \, ,
 \end{aligned}
 \label{eq:finalLepTauDecaysPSint}
@@ -256,18 +258,19 @@ factor $\vert\mathcal{M}_{\Pgt \to
 Note that Eq.~(\ref{eq:finalLepTauDecaysPSint}) as well as Eq.~(\ref{eq:hadTauDecaysPSint}) refer to the laboratory frame.
 The restframe of the neutrino pair was used only for the purpose of evaluating the Lorentz invariant integral $I_{\inv}$.
 
-Since $I_{\inv}$ depends only on the integration variable $m_{\inv}$, 
-$I_{\inv}$ can be considered as constant when performing the integration over $d^{3}\bm{p}^{\Pgt}$ and $d^{3}\bm{u}$.
+Since, according to Eq.~(\ref{eq:lepTauDecaysIrf}), $I_{\inv}$ 
+depends solely on the integration variable $m_{\inv}$, 
+$I_{\inv}$ can be treated as a constant when performing the integration over $d^{3}\bm{p}^{\Pgt}$ and $d^{3}\bm{u}$.
 We can hence use Eq.~(\ref{eq:hadTauDecaysResult}) of Section~\ref{sec:appendix_tauToHadDecays} to express Eq.~(\ref{eq:finalLepTauDecaysPSint}) by:
 \begin{align}
-\vert\mathcal{M}_{\Pgt}\vert^{2} \,
+\vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\Pgt}\vert^{2} \,
  d\Phi_{\ellnunu} = \frac{1}{512\pi^{5}\, m_{\Pgt} \, \Gamma_{\Pgt}} \cdot 
     \frac{I_{\inv}}{\vert\bm{p}^{\vis}\vert \, z^{2}} \, 
     \frac{d^{3}\bm{p}^{\vis}}{2 E_{\vis}} \, dz \, dm^{2}_{\inv} \,
-    d\phi_{\inv} \, .
+    d\phi_{\inv} \, ,
 \label{eq:lepTauDecaysResult}
 \end{align}
-The symbol $\phi_{\inv}$ specifies the orientation of the neutrino
+where the symbol $\phi_{\inv}$ specifies the orientation of the neutrino
 pair momentum vector $\bm{u}$ with respect to the momentum vector $\bm{p}^{\vis}$
 of the electron or muon.
 
@@ -287,7 +290,7 @@ f_{\Plepton}\left(\bm{p}^{\vis}, m_{\vis}, \bm{p}^{\inv}\right) =
 \end{equation}
 to obtain:
 \begin{equation}
-\vert\mathcal{M}_{\Pgt}\vert^{2} \,
+\vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\Pgt}\vert^{2} \,
  d\Phi_{\ellnunu} = \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
  f_{\Plepton}(\bm{p}^{\vis}, m_{\vis}, \bm{p}^{\inv}) \, \frac{d^{3}\bm{p}^{\vis}}{2 E_{\vis}} \, dz \, dm^{2}_{\inv} \, d\phi_{\inv}
  \, ,

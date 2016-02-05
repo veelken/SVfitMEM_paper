@@ -2,15 +2,15 @@
 \label{sec:mem_xSection}
 
 According to the paradigm of the ME method, the normalization factor
-$\frac{1}{\sigma(m_{\PHiggs})}$ in Eq.~(\ref{eq:mem_with_hadRecoil}) is to be computed
+$1/\sigma(m_{\PHiggs})$ in Eq.~(\ref{eq:mem_with_hadRecoil}) is to be computed
 by evaluating the integral:
 \begin{align}
 \sigma(m_{\PHiggs}) = &
   \frac{32\pi^{4}}{s} \, \int \, d^{3}\bm{p}^{\vis(1)} \, d^{3}\bm{p}^{\vis(2)} \, d\pX^{\rec} \, d\pY^{\rec} \, 
   d\Phi_{n} \, \frac{f(x_{a}) f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \, \hspace{2cm} \nonumber \\
 & \qquad \vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to \Pgt\Pgt}(\bm{\tilde{p}},m_{\PHiggs}) \vert^{2} 
-  \cdot \vert \mathcal{M}^{(1)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} 
-  \cdot \vert \mathcal{M}^{(2)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} \hspace{2cm} \nonumber \\
+  \cdot \vert \BW^{(1)}_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(1)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} 
+  \cdot \vert \BW^{(2)}_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(2)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} \hspace{2cm} \nonumber \\
 & \qquad W(\bm{p}^{\vis(1)}|\bm{\hat{p}}^{\vis(1)}) \, W(\bm{p}^{\vis(2)}|\bm{\hat{p}}^{\vis(2)}) \, W_{\rec}( \pX^{\rec},\pY^{\rec} | \pXhat^{\rec},\pYhat^{\rec} ) \, .
 \label{eq:xSection}
 \end{align}
@@ -28,9 +28,12 @@ so that Eq.~(\ref{eq:xSection}) becomes:
 \begin{align}
 \sigma(m_{\PHiggs}) = &
   \frac{32\pi^{4}}{s} \, \int \, 
-  d\Phi_{n} \, \frac{f(x_{a}) f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \, \vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to \Pgt\Pgt}(\bm{\tilde{p}},m_{\PHiggs}) \vert^{2} \, 
-  \vert \mathcal{M}^{(1)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} 
-  \cdot \vert \mathcal{M}^{(2)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} \, .
+  d\Phi_{n} \, \frac{f(x_{a}) f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \,
+  \hspace{2cm} \nonumber \\
+& \qquad \vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to
+    \Pgt\Pgt}(\bm{\tilde{p}},m_{\PHiggs}) \vert^{2} 
+  \cdot \vert \BW^{(1)}_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(1)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} 
+  \cdot \vert \BW^{(1)}_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(2)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} \, .
 \label{eq:xSection2}
 \end{align}
 
@@ -48,7 +51,8 @@ For the purpose of comparing $\sigma(m_{\PHiggs})$ to literature
 values for the LO $\Pg\Pg \to \PHiggs$ cross section,
 we compute the integral in Eq.~(\ref{eq:xSection2}) for the case that the $\PHiggs$ boson has zero $\pT$,
 by inserting two $\delta$-functions, $\delta(\pX^{\Pgt(1)} + \pX^{\Pgt(2)})$ and $\delta(\pY^{\Pgt(1)} + \pY^{\Pgt(2)})$, into the integrand.
-We then use the $\delta$-functions to remove two integration variables analytically before the integral gets evaluated numerically.
+We then use the $\delta$-functions to remove two integration variables
+analytically before evaluating the integral numerically.
 The values of $\sigma(m_{\PHiggs})$ obtained in this way are shown as function of
 $m_{\PHiggs}$ in Fig.~\ref{fig:xSection}.
 The values agree with the literature values for the LO $\Pg\Pg \to

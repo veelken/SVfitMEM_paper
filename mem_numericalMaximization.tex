@@ -7,23 +7,24 @@ for a series of mass hypotheses $m_{\PHiggs}^{\textrm{test}(i)}$, using Eq.~(\re
 The integral in Eq.~(\ref{eq:mem_with_hadRecoil}) is evaluated numerically using the VAMP algorithm.
 The series of mass hypotheses is defined by a recursive relation: 
 \begin{equation}
-m_{\PHiggs}^{\textrm{test}(i + 1)} = (1 + \delta) \,  m_{\PHiggs}^{\textrm{test}(i)} \, ,
+m_{\PHiggs}^{\textrm{test}(i + 1)} = (1 + \delta) \,  m_{\PHiggs}^{\textrm{test}(i)} \, .
 \label{eq:mTauTau_step_size}
 \end{equation}
-The step size $\delta$ is chosen such that it is small compared to the expected $m_{\PHiggs}$ resolution,
+The step size $\delta$ is chosen such that it is small compared to the
+expected resolution on $m_{\PHiggs}$,
 typically amounting to $15$--$20\%$ relative to the true mass of the $\Pgt$ lepton pair.
 In order to reduce the computing time, the series is computed in two passes.
-The purpose of the first pass, which uses a step size of $\delta = 0.10$, is to find an approximate value of $m_{\Pgt\Pgt}$
+The purpose of the first pass, which uses a step size $\delta = 0.10$, is to find an approximate value of $m_{\Pgt\Pgt}$
 that maximizes $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$.
 The series of mass hypotheses used in the first pass is started at $m_{\PHiggs}^{\textrm{test}(0)} = m_{\vis}$,
 the mass of the visible $\Pgt$ decay products, 
 and stops when $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$ falls below one per mille 
 of the maximal $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$ value
-computed so far for any $m_{\PHiggs}^{\textrm{test}(i)}$ in a given event.
+computed for any $m_{\PHiggs}^{\textrm{test}(i)}$ so far in a given event.
 In the second pass, further $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$ values 
 are computed for mass hypotheses $m_{\PHiggs}^{\textrm{test}(i)}$ that are within a region around the maximum,
 using a step size of $\delta = 0.01$.
-Finally, the graph of $\log \left( \mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)}) \, \times \, \mbox{\GeV}^{8} \right)$ 
+Finally, the graph of $\log \left( \mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)}) \, \cdot \, \mbox{\GeV}^{8} \right)$ 
 versus $m_{\PHiggs}^{\textrm{test}(i)}$ is fitted by a second order polynomial
 in the region around the maximum,
 and $m_{\Pgt\Pgt}$ is taken to be the point at which the polynomial reaches its maximum.

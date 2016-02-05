@@ -14,7 +14,7 @@ The effect of the hadronic recoil is to modify the kinematics of the $\PHiggs$ b
 by boosting the $\Pgt$ leptons and their decay products,
 in the transverse plane and in longitudinal direction.
 The longitudinal component of $\bm{p}^{\rec}$ has a small effect on 
-the Bjorken scaling variables $x_{a}$ and $x_{b}$ of Eq.~(\ref{eq:mem}) only and can be neglected.
+the Bjorken scaling variables $x_{a}$ and $x_{b}$ only and can be neglected.
 The components of $\bm{p}^{\rec}$ in the transverse plane need to be accounted for, however.
 The LO ME that we use to model the production of the $\PHiggs$ boson production 
 is adequate for events without hadronic activity,
@@ -27,7 +27,8 @@ using $(\hat{E}^{\rec} = \pThat^{\rec}, \pXhat^{\rec}, \pYhat^{\rec}, 0)$ as boo
 vector.
 We denote the true values of energies and momenta by symbols with a
 hat if they are given in the laboratory frame, and by symbols a tilde in case they are given in the zero transverse momentum frame of the $\PHiggs$ boson.
-Symbols with neither hat nor tilde denote the measured values.
+Symbols with neither hat nor tilde denote values measured in the
+laboratory frame.
 
 The hadronic recoil is reconstructed with a typical resolution of $10$--$20$~\GeV at the LHC~\cite{CMS-JME-13-003,ATLAS-CONF-2014-019}.
 It is demonstrated in Ref.~\cite{Alwall:2010cq} that the imperfect reconstruction of the hadronic recoil
@@ -63,7 +64,7 @@ x_{a} \, \Ehat_{a} + x_{b} \, \Ehat_{b} - (\Ehat^{\rec} +
 & \qquad \delta^{3}(
 x_{a} \, \bm{p}^{a} + x_{b} \, \bm{\hat{p}}^{b} - (\bm{\hat{p}}^{\rec} +
 \bm{\hat{p}}^{\Pgt(1)} + \bm{\hat{p}}^{\Pgt(2)})) \nonumber \\
-= & \frac{2}{s} \, \int \,
+= & \, \frac{2}{s} \, \int \,
 d\pXhat^{\rec} \, d\pYhat^{\rec} \, 
 \delta( \pXhat^{\rec} + \pXhat^{\Pgt(1)} + \pXhat^{\Pgt(2)} ) \,
 \delta( \pYhat^{\rec} + \pYhat^{\Pgt(1)} + \pYhat^{\Pgt(2)} ) \, ,
@@ -71,25 +72,28 @@ d\pXhat^{\rec} \, d\pYhat^{\rec} \,
 \end{align}
 with:
 \begin{align}
-x_{a} = & \frac{1}{\sqrt{s}} \, (\Ehat^{\rec} + \Ehat_{\Pgt(1)} +
-\Ehat_{\Pgt(2)} + \pZhat^{\rec} + \pZhat^{\Pgt(1)} + \pZhat^{\Pgt(2)})
+x_{a} = & \frac{1}{\sqrt{s}} \, \left( \Ehat^{\rec} + \Ehat_{\Pgt(1)} +
+\Ehat_{\Pgt(2)} + (\pZhat^{\rec} + \pZhat^{\Pgt(1)} +
+\pZhat^{\Pgt(2)}) \right)
 \, , \nonumber \\
-x_{b} = & \frac{1}{\sqrt{s}} \, (\Ehat^{\rec} + \Ehat_{\Pgt(1)} + \Ehat_{\Pgt(2)} - (\pZhat^{\rec} + \pZhat^{\Pgt(1)} + \pZhat^{\Pgt(2)})) \, .
+x_{b} = & \frac{1}{\sqrt{s}} \, \left( \Ehat^{\rec} + \Ehat_{\Pgt(1)}
+  + \Ehat_{\Pgt(2)} - (\pZhat^{\rec} + \pZhat^{\Pgt(1)} +
+  \pZhat^{\Pgt(2)}) \right) \, .
 \label{eq:xa_and_xb}
 \end{align}
-The integration over $d\pXhat^{\rec}$ and $d\pYhat^{\rec}$ then removes the $\delta$-functions 
+The integration over $d\pXhat^{\rec}$ and $d\pYhat^{\rec}$ removes the $\delta$-functions 
 $\delta( \pXhat^{\rec} + \pXhat^{\Pgt(1)} + \pXhat^{\Pgt(2)} )$ and
 $\delta( \pYhat^{\rec} + \pYhat^{\Pgt(1)} + \pYhat^{\Pgt(2)} )$ in Eq.~(\ref{eq:delta4}).
-Substituting Eq.~(\ref{eq:meFactorization}) into Eq.~(\ref{eq:mem_mod_hadRecoil}), we then obtain:
+Substituting Eq.~(\ref{eq:meFactorization}) into Eq.~(\ref{eq:mem_mod_hadRecoil}), we obtain:
 \begin{align}
 &
 \mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs})
 = \frac{1}{\sigma(m_{\PHiggs})} \, \frac{32\pi^{4}}{s} \, \int \,
  d\Phi_{n} \, \frac{f(x_{a}) f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \, 
  \vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to \Pgt\Pgt}(\bm{\tilde{p}},m_{\PHiggs}) \vert^{2} \, \hspace{2cm} \nonumber \\
-& \qquad \vert \mathcal{M}^{(1)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} 
- \cdot \vert \mathcal{M}^{(2)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} \, 
- W(\bm{p}^{\vis(1)}|\bm{\hat{p}}^{\vis(1)}) \, W(\bm{p}^{\vis(2)}|\bm{\hat{p}}^{\vis(2)}) \, W_{\rec}( \pX^{\rec},\pY^{\rec} | \pXhat^{\rec},\pYhat^{\rec} ) \, ,
+& \qquad \vert \BW^{(1)}_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(1)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} 
+ \cdot \vert \BW^{(2)}_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(2)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} \, \nonumber \\
+& \qquad W(\bm{p}^{\vis(1)}|\bm{\hat{p}}^{\vis(1)}) \, W(\bm{p}^{\vis(2)}|\bm{\hat{p}}^{\vis(2)}) \, W_{\rec}( \pX^{\rec},\pY^{\rec} | \pXhat^{\rec},\pYhat^{\rec} ) \, ,
 \label{eq:mem_with_hadRecoil}
 \end{align}
 with $x_{a}$ and $x_{b}$ given by Eq.~(\ref{eq:xa_and_xb}) and:
@@ -110,14 +114,15 @@ The latter is referred to as ``missing transverse momentum'' and denoted by $\ve
 The following relations hold for the components of the $\vecMET$
 vector:
 \begin{equation}
-\METx = - \left( \pX^{\vis(1)} + \pX^{\vis(2)} + \pX^{\rec} \right)
+\METx = - \left( \pX^{\rec} + \pX^{\vis(1)} + \pX^{\vis(2)} \right)
 \, \mbox { and } \,
-\METy = - \left( \pY^{\vis(1)} + \pY^{\vis(2)} + \pY^{\rec} \right) \, .
+\METy = - \left( \pY^{\rec} + \pY^{\vis(1)} + \pY^{\vis(2)} \right) \, .
 \label{eq:met}
 \end{equation}
 These relations are valid on reconstruction level as well as for the
-true values of the momenta, \ie in case all $\pX$ and $\pY$ in
-Eq.~(\ref{eq:met}) are replaced by $\pXhat$ and $\pYhat$.
-Using the resolutions on $\vecMET$ has the advantage that the resolutions
-are studied in detail and published by the ATLAS and CMS collaborations~\cite{CMS-JME-13-003,ATLAS-CONF-2014-019}.
+true values of the momenta, \ie Eq.~(\ref{eq:met}) is valid also
+in case all $\pX$ and $\pY$ are replaced by $\pXhat$ and $\pYhat$.
+Approximating the resolution on the hadronic recoil by the resolution
+on $\vecMET$ has the advantage that the resolutions on $\vecMET$ have
+been studied in detail and published by the ATLAS as well as CMS collaborations~\cite{CMS-JME-13-003,ATLAS-CONF-2014-019}.
 

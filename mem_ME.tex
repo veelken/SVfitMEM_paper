@@ -11,14 +11,14 @@ hadrons into five parts:
 \cdot \vert \BW_{\Pgt}^{(1)} \vert^{2} 
 \cdot \vert \mathcal{M}^{(1)}_{\Pgt}(\bm{p}) \vert^{2} 
 \cdot \vert \BW_{\Pgt}^{(2)} \vert^{2} 
-\cdot \vert \mathcal{M}^{(2)}_{\Pgt}(\bm{p}) \vert^{2} .
+\cdot \vert \mathcal{M}^{(2)}_{\Pgt}(\bm{p}) \vert^{2}  \, ,
  \label{eq:meFactorization}
 \end{equation}
+where we use the superscripts $(1)$ and $(2)$ to refer to the $\Pgt$ lepton of positive and negative charge, respectively.
 The first term, $\vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to
   \Pgt\Pgt}(\bm{p},m_{\PHiggs}) \vert^{2}$, represents the squared
 modulus of the ME for $\PHiggs$ boson production with subsequent decay of the $\PHiggs$ boson into a pair of $\Pgt$ leptons.
 This term can alternatively be computed by using automatized tools such as CompHEP or MadGraph or taken from the literature.
-We use the superscripts $(1)$ and $(2)$ to refer to the $\Pgt$ lepton of positive and negative charge, respectively.
 
 \begin{figure}
 \begin{center}
@@ -60,19 +60,21 @@ f(\tau) =
 \end{equation}
 The symbol $G_{F}$ denotes the Fermi constant. Its numerical value is:
 \begin{equation} 
-G_{F} = 1.166 \times 10^{-5}\mbox{~GeV}^{-2} \, .
+G_{F} = 1.166 \cdot 10^{-5}\mbox{~GeV}^{-2} \, .
 \label{eq:def_G_F} 
 \end{equation}
-The squared modulus of the Breit-Wigner propagator $\vert \BW_{\PHiggs} \vert^{2}$ associates $\PHiggs$ boson production and decay.
-It is given by:
+The squared modulus of the Breit-Wigner propagator $\vert
+\BW_{\PHiggs} \vert^{2}$, given by:
 \begin{equation}
 \vert \BW_{\PHiggs} \vert^{2} = \frac{1}{(q_{\PHiggs}^{2} -
-  m_{\PHiggs}^{2})^{2} + m_{\PHiggs}^{2} \, \Gamma_{\PHiggs}^{2}} \, ,
+  m_{\PHiggs}^{2})^{2} + m_{\PHiggs}^{2} \, \Gamma_{\PHiggs}^{2}} 
 \label{eq:meHiggsBreitWigner}
 \end{equation}
-where $q_{\PHiggs}^{2} = (E_{\Pgt(1)} + E_{\Pgt(2)})^{2} - (\bm{p}^{\Pgt(1)} + \bm{p}^{\Pgt(2)})^{2}$ denotes the mass of the $\Pgt$ lepton pair.
+associates $\PHiggs$ boson production and decay.
+In Eq.~(\ref{eq:meHiggsBreitWigner}), the symbol
+$q_{\PHiggs}^{2} = (E_{\Pgt(1)} + E_{\Pgt(2)})^{2} - (\bm{p}^{\Pgt(1)} + \bm{p}^{\Pgt(2)})^{2}$ denotes the mass of the $\Pgt$ lepton pair.
 The squared modulus of the ME for the decay of the $\PHiggs$ boson
-into $\Pgt$ leptons, summed over the spin states of the two $\Pgt$ leptons, is given by:
+into a $\Pgt$ lepton pair, summed over the spin states of the two $\Pgt$ leptons, is given by:
 \begin{equation}
 \vert \mathcal{M}_{\PHiggs \to \Pgt\Pgt} \vert^{2} = 
  \frac{4 \, G_{F} \, m_{\Pgt}^{2}}{\sqrt{2}\pi} \, m_{\PHiggs}^{2} \left( 1 - \frac{4 \, m_{\Pgt}^{2}}{m_{\PHiggs}^{2}} \right) \, ,
@@ -91,21 +93,23 @@ once the decay into a pair of $\PW$ bosons is kinematically possible,
 \ie for $m_{\PHiggs} \gtrsim 2 \, m_{\PW}$.
 In theories beyond the SM, which motivate the search for heavy $\PHiggs$ bosons,
 the branching ratio and total width may be very different from the SM
-values, however.
-In this paper, we assume $\mathcal{B}(\PHiggs \to \Pgt\Pgt) = 100\%$ and compute $\vert \mathcal{M}_{\PHiggs \to \Pgt\Pgt} \vert^{2}$ according to Eq.~(\ref{eq:meHiggsDecay_by_BR}).
-We further assume that $\Gamma_{\PHiggs} = 10^{-2} \times m_{\PHiggs}$.
-Note that the values of the branching ratio for the decay $\PHiggs \to \Pgt\Pgt$ and of the total width of the $\PHiggs$ boson
-have no effect on the value of $m_{\Pgt\Pgt}$ reconstructed by the algorithm, 
-provided that $\mathcal{B}(\PHiggs \to \Pgt\Pgt)$ and $\Gamma_{\PHiggs}$ are accounted for in
-a consistent way in the evaluation of the integral in
-Eq.~(\ref{eq:mem}), including the computation of the normalization factor $\frac{1}{\sigma(m_{\PHiggs})}$.
+values.
+In this paper, we assume $\mathcal{B}(\PHiggs \to \Pgt\Pgt) = 100\%$
+and $\Gamma_{\PHiggs} = 10^{-2} \cdot m_{\PHiggs}$, 
+and we compute $\vert \mathcal{M}_{\PHiggs \to \Pgt\Pgt} \vert^{2}$ according to Eq.~(\ref{eq:meHiggsDecay_by_BR}).
+The branching ratio for the decay $\PHiggs \to \Pgt\Pgt$ and the total width of the $\PHiggs$ boson
+actually have no effect on the value of $m_{\Pgt\Pgt}$ reconstructed by the algorithm, 
+provided that $\mathcal{B}(\PHiggs \to \Pgt\Pgt)$ and $\Gamma_{\PHiggs}$ are used in
+a consistent way when computing the squared modulus of the ME $\vert \mathcal{M}(\bm{p},m_{\PHiggs}) \vert^{2}$ and
+the normalization factor $1/\sigma(m_{\PHiggs})$ in Eq.~(\ref{eq:mem}) in a
+consistent way.
 
 Concerning the decay of the $\Pgt$ leptons,
 we use the narrow-width approximation (NWA) and assume the $\Pgt$ leptons to be unpolarized,
 effectively ignoring the correlation of spins between $\Pgt$
-production and decay.
+lepton production and decay.
 In the NWA, the squared modulus of the Breit-Wigner propagator $\vert
-\BW_{\Pgt} \vert^{2}$ that associates the $\Pgt$ lepton production and
+\BW_{\Pgt} \vert^{2}$ that associates $\Pgt$ lepton production and
 decay is proportional to a $\delta$-function:
 \begin{equation}
 \vert \BW_{\Pgt} \vert^{2} = \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
@@ -115,27 +119,27 @@ decay is proportional to a $\delta$-function:
 \end{equation}
 where $\Delta t = 290 \times 10^{-15}$~s denotes the lifetime of the
 $\Pgt$ lepton~\cite{PDG}.
-The factor $\vert \mathcal{M}^{(i)}_{\textrm{decay}}
-\vert^{2}$ represents for the decay of the $i$-th $\Pgt$ lepton.
+The factor $\vert \mathcal{M}^{(i)}_{\Pgt}
+\vert^{2}$ in Eq.~(\ref{eq:meFactorization}) represents the decay of the $i$-th $\Pgt$ lepton.
 For the decays $\Pgt \to \enunu$ and $\Pgt
 \to \mununu$, which we refer to as ``leptonic'' $\Pgt$ decays, we take the ME from the literature.
-For the case that the $\Pgt$ leptons are unpolarized and taking the average over the spin states of the $\Pgt$ lepton,
+Assuming the $\Pgt$ leptons to be unpolarized and taking the average over the spin states of the $\Pgt$ lepton,
 the squared modulus of the ME is given by~\cite{Barger:1987nn}:
 \begin{equation}
 \vert\mathcal{M}_{\Pgt \to \ellnunu} \vert^{2} = 64 \, G^{2}_{F} \,
 \left( E_{\Pgt} \, E_{\APnu_{\Plepton}} - \bm{p}^{\Pgt} \cdot
   \bm{p}^{\APnu_{\Plepton}} \right) \, \left( E_{\Plepton} \,
-  E_{\Pnut} - \bm{p}^{\Plepton} \cdot \bm{p}^{\Pnut} \right) \, , 
+  E_{\Pnut} - \bm{p}^{\Plepton} \cdot \bm{p}^{\Pnut} \right) \, .
 \label{eq:leptonic_tau_decays_ME}
 \end{equation}
 The modelling of the decays $\Pgt \to \textrm{hadrons} + \Pnut$ 
-by ME is more difficult, 
+by matrix elements is more difficult, 
 due to the fact that $\Pgt$ leptons decay to a variety of hadronic
 final states, and because some of the decays proceed via intermediate vector
 meson resonances~\cite{PDG}.
 We refer to these decays as ``hadronic'' $\Pgt$ decays.
 The ME for the dominant hadronic $\Pgt$ decay modes are discussed in the literature~\cite{Bullock:1992yt,Raychaudhuri:1995kv}.
-We use a simplified formalism and treat hadronic $\Pgt$ decays as two-body decays into a hadronic system $\tauh$ of momentum $\bm{p}^{\vis}$ and mass $m_{\vis}$ and a $\Pnut$.
+In this paper, we use a simplified formalism and treat $\Pgt \to \textrm{hadrons} + \Pnut$ decays as two-body decays into a hadronic system $\tauh$ of momentum $\bm{p}^{\vis}$ and mass $m_{\vis}$ plus a $\Pnut$.
 The squared modulus of the ME for the decay is taken to be constant and denoted by $\vert\mathcal{M}^{\eff}_{\Pgt \to \tauhnu}\vert^{2}$.
 The value of $\vert\mathcal{M}^{\eff}_{\Pgt \to \tauhnu}\vert^{2}$ is
 chosen such that it reproduces the measured branching fraction for hadronic $\Pgt$ decays.

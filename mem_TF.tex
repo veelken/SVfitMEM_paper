@@ -1,7 +1,7 @@
 \subsection{Transfer functions}
 \label{sec:mem_TF}
 
-The treatment of the experimental resolution on the momenta of the electrons, muons and $\tauh$ produced in the $\Pgt$ decays,
+The treatment of the experimental resolution on the momenta of electrons, muons and $\tauh$ produced in the $\Pgt$ decays,
 as well as of the hadronic recoil, are detailed in this section.
 The resolution on the momentum $\bm{p}^{\vis(i)}$ of the visible $\Pgt$ decay products is parametrized as function of the true momentum $\phat^{\vis(i)}$
 and modeled by TF $W(\bm{p}^{\vis(i)}|\phat^{\vis(i)})$.
@@ -47,7 +47,7 @@ W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} ) =
  \end{cases}
 \label{eq:tf_tauToHadDecays_pT}
 \end{equation}
-and use the values $\mu = 1.0$, $\sigma = 0.03$, $x_{1} = 0.97$, $\alpha_{1} = 7$,
+and we use the values $\mu = 1.0$, $\sigma = 0.03$, $x_{1} = 0.97$, $\alpha_{1} = 7$,
 $x_{2} = 1.03$, and $\alpha_{2} = 3.5$ for its parameters.
 The factors $\zeta_{1}$ and $\zeta_{2}$ are chosen such that the
 function $W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} )$ is continuous at
@@ -72,7 +72,7 @@ The TF given by Eq.~(\ref{eq:tf_tauToHadDecays_pT}) is visualized in Fig.~\ref{f
   TF $W_{\Phadron}( \bm{p}_{\T}^{\vis} | \phat_{\T}^{\vis} )$ that models the experimental resolution on the $\pT$ of the charged and neutral hadrons produced in $\Pgt$ decays,
   given by Eq.~(\ref{eq:tf_tauToHadDecays_pT}),
   in linear (left) and logarithmic (right) scale of the ordinate.
-  The values of the function parameters $\mu$, $\sigma$, $x_{1}$, $\alpha_{1}$, $x_{2}$, and $\alpha_{2}$ are given in the plot.
+  The values of the function parameters $\mu$, $\sigma$, $x_{1}$, $\alpha_{1}$, $x_{2}$, and $\alpha_{2}$ are given in the figure.
 }
 \label{fig:tf_tauToHadDecays_pT}
 \end{figure}
@@ -89,7 +89,7 @@ W_{\Phadron}( \bm{p}^{\vis} | \phat^{\vis} ) =
   \delta( \phi_{\vis} - \phihat_{\vis} ) \, .
 \label{eq:tf_tauToHadDecays}
 \end{equation}
-The factor $\frac{\sin^{2}\theta_{\vis}}{\pT^{\vis}}$ is needed
+The factor $\sin^{2}\theta_{\vis}/\pT^{\vis}$ is needed
 to ensure the correct normalization of the TF:
 \begin{align}
 & \int \, d^{3}\bm{p}  \, W_{\Phadron}( \bm{p}^{\vis} | \phat^{\vis} ) = \int \, d\pX^{\vis} \, d\pY^{\vis} \, d\pZ^{\vis} \, W_{\Phadron}( \bm{p}^{\vis} | \phat^{\vis} ) \nonumber \\
@@ -97,8 +97,8 @@ to ensure the correct normalization of the TF:
 \frac{\pT^{\vis}}{\sin^{2} \theta_{\vis}} \, W_{\Phadron}( \bm{p}^{\vis} | \phat^{\vis} ) \, 
   = 1 \, ,
 \end{align}
-where the factor $\frac{\pT^{\vis}}{\sin^{2} \theta_{\vis}}$ corresponds to the Jacobian of the variable transformation 
-from $(\pX^{\vis} = \pT^{\vis} \, \cos\phi_{\vis}, \pY^{\vis} = \pT^{\vis} \, \sin\phi_{\vis}, \pZ^{\vis} = \frac{\pT^{\vis}}{\tan\theta_{\vis}})$ 
+where the factor $\pT^{\vis}/\sin^{2} \theta_{\vis}$ corresponds to the Jacobian of the variable transformation 
+from $(\pX^{\vis} = \pT^{\vis} \, \cos\phi_{\vis}, \pY^{\vis} = \pT^{\vis} \, \sin\phi_{\vis}, \pZ^{\vis} = \pT^{\vis}/\tan\theta_{\vis})$ 
 to $(\pT^{\vis}, \theta_{\vis}, \phi_{\vis})$.
 
 
@@ -164,7 +164,7 @@ motivating the use of TF of the same type for the modelling of the experimental 
 For the purpose of this paper,
 we assume that the components $\pX^{\rec}$ and $\pY^{\rec}$ are reconstructed with a resolution of $\sigma_{x} = \sigma_{y} = 10$~\GeV each
 and that the differences $\Delta\pX^{\rec}$ and $\Delta\pY^{\rec}$ 
-between the reconstructed and true values of both components are uncorrelated, \ie $\rho = 0$.
+between reconstructed and true values of both components are uncorrelated, \ie $\rho = 0$.
 In the real experiment, the covariance matrix $V$ is computed on an
 event-by-event basis, based on the reconstructed hadronic activity in a given event,
 using resolution functions obtained from the Monte Carlo simulation~\cite{CMS-JME-13-003,CMS-JME-10-009}.

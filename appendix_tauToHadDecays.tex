@@ -2,7 +2,7 @@
 \label{sec:appendix_tauToHadDecays}
 
 We treat hadronic $\Pgt$ decays as a two-body decay into a hadronic
-system $\tauh$ plus a tau neutrino,
+system $\tauh$ plus a $\Pnut$,
 as explained in Section~\ref{sec:mem_ME},
 and take the squared modulus of the ME to be a constant,
 which we denote by $\vert\mathcal{M}^{\eff}_{\Pgt \to \tauhnu}\vert^{2}$.
@@ -11,11 +11,11 @@ $\bm{p}^{\inv}$ and its energy by $E_{\inv}$ (\cf Section~\ref{sec:mem_PSintegra
 For reasons that will become clear later, we allow the neutrino to
 have non-zero mass $m_{\inv}$.
 
-The product of the squared modulus of the ME and the phase space
+The product of the squared modulus of the ME and of the phase space
 element $d\Phi^{(i)}_{\tauhnu}$ reads:
 \begin{align}
- & \, \vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\textrm{decay}}\vert^{2} \,
- d\Phi_{\tauhnu} = \vert \BW_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(i)}_{\textrm{decay}}
+ & \, \vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\Pgt}\vert^{2} \,
+ d\Phi_{\tauhnu} = \vert \BW_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(i)}_{\Pgt}
 \vert^{2} \, \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2
    E_{\vis}} \, \frac{d^{3}\bm{p}^{\inv}}{(2\pi)^{3} \, 2 E_{\inv}} \nonumber \\
 = & \, (2\pi)^{3} \, \int \, \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
@@ -51,7 +51,7 @@ dp^{inv} \, d\cos\theta_{\inv} \, d\phi_{\inv} =
 \, d\phi_{\inv}
 \end{equation} 
 for rewriting the third line by the fourth.
-The factor $\BW_{\Pgt} \vert^{2} = \frac{\pi}{m_{\Pgt} \,
+The factor $\vert \BW_{\Pgt} \vert^{2} = \frac{\pi}{m_{\Pgt} \,
   \Gamma_{\Pgt}} \, \delta ( q^{2}_{\Pgt} - m^{2}_{\Pgt} )$ removes
 the integration over $dq^{2}_{\Pgt}$, enforcing the $\Pgt$ lepton
 energy and momentum to be related by $E_{\Pgt} =
@@ -71,15 +71,17 @@ E_{\inv} = E_{\Pgt} - E_{\vis} = \left( 1 - z \right)
 \end{equation}
 
 We then perform the integration over $d\cos\theta_{\inv}$.
-As in Section~\ref{sec:mem_PSintegration}, we choose the coordinate system such that
+Following the convention that we introduced in Section~\ref{sec:mem_PSintegration}, we choose the coordinate system such that
 $\theta_{\inv}$ is equal to the angle between the $\bm{p}^{\vis}$ and $\bm{p}^{\inv}$ vectors.
 The $\delta$-function $\delta \left( E_{\Pgt}(\bm{p}^{\vis}, \bm{p}^{\inv}) - E_{\vis} - E_{\inv} \right)$ depends on $\cos\theta_{\inv}$ via:
 \begin{align}
 & \, E_{\Pgt}(\bm{p}^{\vis}, \bm{p}^{\inv}) 
 = \sqrt{\vert\bm{p}^{\Pgt}\vert^{2} + m^{2}_{\Pgt}} = \sqrt{\left( \bm{p}^{\vis} + \bm{p}^{\inv} \right)^2 + m^{2}_{\Pgt}} \nonumber \\
-& \quad = \sqrt{\vert\bm{p}^{\vis}\vert^{2} + \vert\bm{p}^{\inv}\vert^{2} + 2 \bm{p}^{\vis}
+& \quad = \sqrt{\vert\bm{p}^{\vis}\vert^{2} +
+  \vert\bm{p}^{\inv}\vert^{2} + 2 \, \bm{p}^{\vis}
   \cdot \bm{p}^{\inv} + m^{2}_{\Pgt}} \nonumber \\
-& \quad = \sqrt{\vert\bm{p}^{\vis}\vert^{2} + \vert\bm{p}^{\inv}\vert^{2} + 2 \vert\bm{p}^{\vis}\vert \, \vert\bm{p}^{\inv}\vert \, \cos\theta_{\inv} + m^{2}_{\Pgt}}.
+& \quad = \sqrt{\vert\bm{p}^{\vis}\vert^{2} +
+  \vert\bm{p}^{\inv}\vert^{2} + 2 \, \vert\bm{p}^{\vis}\vert \, \vert\bm{p}^{\inv}\vert \, \cos\theta_{\inv} + m^{2}_{\Pgt}}.
 \end{align}
 The $\delta$-function argument vanishes if $E_{\Pgt}(\bm{p}^{\vis}, \bm{p}^{\inv}) - E_{\vis} - E_{\inv} = 0$. 
 This yields:
@@ -110,7 +112,7 @@ and obtain $\vert g'(x_{0}) \vert = \vert\bm{p}^{\vis}\vert \,
 
 This yields:
 \begin{equation}
- \vert\mathcal{M}_{\Pgt}\vert^{2} \,
+\vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\Pgt}\vert^{2} \,
  d\Phi^{(i)}_{\tauhnu} = \frac{\vert\mathcal{M}^{\eff}_{\Pgt \to
   \tauh\Pnut}\vert^{2}}{256\pi^{5}\, m_{\Pgt} \, \Gamma_{\Pgt}} \cdot 
     \frac{1}{\vert\bm{p}^{\vis}\vert \, z^{2}} \, 
@@ -127,7 +129,7 @@ f_{h}\left(\bm{p}^{\vis}, m_{\vis}, \bm{p}^{\inv}\right) =
 \end{equation}
 to obtain:
 \begin{equation}
-\vert\mathcal{M}_{\Pgt}\vert^{2} \,
+\vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\Pgt}\vert^{2} \,
  d\Phi^{(i)}_{\tauhnu} = \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
  f_{h}(\bm{p}^{\vis}, m_{\vis}, \bm{p}^{\inv}) \, \frac{d^{3}\bm{p}^{\vis}}{2 E_{\vis}} \, dz \, d\phi_{\inv}
  \, ,
