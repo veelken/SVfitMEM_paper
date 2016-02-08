@@ -196,7 +196,7 @@ void showHistograms1d(std::vector<TH1*>& histograms, double massPoint, const std
   xAxisLabel->Draw();
   canvas->cd();
 
-  TPad* yAxisPad = new TPad("yAxisPad","yAxisPad", 0.00, 0.76, 0.14, 0.94);
+  TPad* yAxisPad = new TPad("yAxisPad","yAxisPad", 0.00, 0.64, 0.14, 0.94);
   yAxisPad->SetFillColor(0);
   yAxisPad->SetBorderSize(0);
   yAxisPad->Draw();
