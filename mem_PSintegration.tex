@@ -39,12 +39,12 @@ d\Phi^{(i)}_{\ellnunu} = &
 
 The integrand in Eq.~(\ref{eq:mem_with_hadRecoil}) depends on the
 four-momentum of the two $\Pgt$ leptons via the 
-product $f(x_{a}) \, f(x_{b}$ of the PDF,
+product $f(x_{a}) \, f(x_{b})$ of the PDF,
 the factor $1/(2 \, x_{a} \, x_{b} \, s)$, referred to as ``flux factor'' in the literature,
 and via the squared modulus $\vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to \Pgt\Pgt}(\bm{\tilde{p}},m_{\PHiggs}) \vert^{2}$ 
 of the ME for $\PHiggs$ boson production and subsequent decay into a $\Pgt$ lepton pair.
 In addition, it depends on the four-momentum of the visible $\Pgt$ decay products via the
-squared moduli $\vert \mathcal{M}^{(1)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2}$ and $\vert \mathcal{M}^{(2)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2}$ of the ME for the $\Pgt$ lepton decays
+squared moduli $\vert \mathcal{M}^{(1)}_{\Pgt\to\cdots}(\bm{\tilde{p}}) \vert^{2}$ and $\vert \mathcal{M}^{(2)}_{\Pgt\to\cdots}(\bm{\tilde{p}}) \vert^{2}$ of the ME for the $\Pgt$ lepton decays
 and via the transfer functions $W( \bm{p}^{\vis(1)} | \phat^{\vis(1)} )$ and $W( \bm{p}^{\vis(2)} | \phat^{\vis(2)} )$.
 The $\Pgt$ lepton energies and momenta need to be computed as function of the integration variables.
 
@@ -111,14 +111,14 @@ and the variables $z$ and $\phi_{\inv}$, respectively by $z$, $\phi_{\inv}$, and
 allows to simplify the evaluation of the integral in Eq.~(\ref{eq:mem_with_hadRecoil}) considerably.
 Expressions for the product of the differential phase space elements
 $d\Phi^{(i)}_{\tauhnu}$  and $d\Phi^{(i)}_{\ellnunu}$ with the squared
-modulus of the ME $\vert \BW_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(i)}_{\Pgt}(\bm{p}) \vert^{2}$ are derived in Sections~\ref{sec:appendix_tauToHadDecays} and~\ref{sec:appendix_tauToLepDecays} of the appendix.
+modulus of the ME $\vert \BW_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(i)}_{\Pgt\to\cdots}(\bm{p}) \vert^{2}$ are derived in Sections~\ref{sec:appendix_tauToHadDecays} and~\ref{sec:appendix_tauToLepDecays} of the appendix.
 The results are:
 \begin{align}
-\vert \BW_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(i)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} \, d\Phi^{(i)}_{\tauhnu} 
+\vert \BW_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(i)}_{\Pgt\to\cdots}(\bm{\tilde{p}}) \vert^{2} \, d\Phi^{(i)}_{\tauhnu} 
  = & \, \frac{\pi}{m_{\Pgt}\Gamma_{\Pgt}} \,
  f_{\Phadron}\left(\bm{\tilde{p}}^{\vis(i)}, m^{\vis(i)},
    \bm{\tilde{p}}^{\inv(i)}\right) \, \frac{d^{3}\bm{\hat{p}}^{\vis}}{2 \hat{E}_{\vis}} \, dz \, d\phi_{\inv} \nonumber \\
-\vert \BW_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(i)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} \, d\Phi^{(i)}_{\ellnunu} 
+\vert \BW_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(i)}_{\Pgt\to\cdots}(\bm{\tilde{p}}) \vert^{2} \, d\Phi^{(i)}_{\ellnunu} 
  = & \, \frac{\pi}{m_{\Pgt}\Gamma_{\Pgt}} \, f_{\ell}\left(\bm{\tilde{p}}^{\vis(i)},
  m^{\vis(i)}, \bm{\tilde{p}}^{\inv(i)}\right) \, \frac{d^{3}\bm{\hat{p}}^{\vis}}{2 \hat{E}_{\vis}} \, dz \, dm^{2}_{\inv} \, d\phi_{\inv}
  \, .
@@ -141,8 +141,8 @@ by the capability to handle the $\Pgt$ decays.
 Instead of performing an integration over $d^{3}\bm{p}^{\Pgt(1)} \,
 d^{3}\bm{p}^{\Pgt(2)}$, which treats the $\Pgt$ leptons as stable particles,
 one needs to perform the integration over $\vert \BW^{(1)}_{\Pgt} \vert^{2} \cdot \vert
-\mathcal{M}^{(1)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} \, d\Phi^{(1)} \, \vert \BW^{(2)}_{\Pgt} \vert^{2} \cdot \vert
-\mathcal{M}^{(2)}_{\Pgt}(\bm{\tilde{p}}) \vert^{2} \, d\Phi^{(2)}$ according to
+\mathcal{M}^{(1)}_{\Pgt\to\cdots}(\bm{\tilde{p}}) \vert^{2} \, d\Phi^{(1)} \, \vert \BW^{(2)}_{\Pgt} \vert^{2} \cdot \vert
+\mathcal{M}^{(2)}_{\Pgt\to\cdots}(\bm{\tilde{p}}) \vert^{2} \, d\Phi^{(2)}$ according to
 Eq.~(\ref{eq:PSint}).
 The momenta of both $\Pgt$ leptons need to be computed as
 function of the integration variables $z^{(1)}$, $\phi_{\inv}^{(1)}$,

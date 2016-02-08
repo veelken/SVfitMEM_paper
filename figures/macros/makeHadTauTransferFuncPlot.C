@@ -129,12 +129,12 @@ void makeHadTauTransferFuncPlot()
   showGraph(800, 600,
 	    graph, 
 	    0., 2., "p_{T}^{vis} / #hat{p}_{T}^{vis}", 1.2,
-	    0., 6., false, "W_{h}(p_{T}^{vis} | #hat{p}_{T}^{vis})", 1.05,
+	    0., 6., false, "W_{h}(p_{T}^{vis} | #hat{p}_{T}^{vis}) [1/GeV]", 1.05,
 	    outputFileName);
   showGraph(800, 600,
 	    graph, 
 	    0., 2., "p_{T}^{vis} / #hat{p}_{T}^{vis}", 1.2,
-	    2.e-3, 7.9, true, "W_{h}(p_{T}^{vis} | #hat{p}_{T}^{vis})", 1.05,
+	    2.e-3, 7.9, true, "W_{h}(p_{T}^{vis} | #hat{p}_{T}^{vis}) [1/GeV]", 1.05,
 	    outputFileName);
 
   delete inputFile;
