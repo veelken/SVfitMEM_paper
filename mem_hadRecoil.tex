@@ -7,7 +7,7 @@ and as a consequence, particles with masses up to a few hundred GeV
 are typically produced in association with a sizeable hadronic activity~\cite{Alwall:2010cq}.
 We refer to the vectorial sum of all particles in the event that do not originate from the $\PHiggs$ boson decay
 as the ``hadronic recoil'' and denote the corresponding momentum by $\bm{p}^{\rec}$.
-CMS as well as ATLAS have developed sophisticated techniques to improve the reconstruction 
+CMS, as well as ATLAS, have developed sophisticated techniques to improve the reconstruction 
 of the hadronic recoil~\cite{CMS-JME-13-003,ATLAS-CONF-2014-019}.
 
 The effect of the hadronic recoil is to modify the kinematics of the $\PHiggs$ boson decay
@@ -15,7 +15,7 @@ by boosting the $\Pgt$ leptons and their decay products,
 in the transverse plane and in longitudinal direction.
 The longitudinal component of $\bm{p}^{\rec}$ has a small effect on 
 the Bjorken scaling variables $x_{a}$ and $x_{b}$ only and can be neglected.
-The components of $\bm{p}^{\rec}$ in the transverse plane need to be accounted for, however.
+However, the components of $\bm{p}^{\rec}$ in the transverse plane need to be accounted for.
 The LO ME that we use to model the production of the $\PHiggs$ boson production 
 is adequate for events without hadronic activity,
 in which the $\PHiggs$ boson has zero $\pT$.
@@ -43,11 +43,11 @@ We then marginalize Eq.~(\ref{eq:mem}) with respect to $\pXhat^{\rec}$ and $\pYh
 & \mathcal{P}(\bm{y};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}) =
 \frac{1}{\sigma(m_{\PHiggs})} \, \int \, dx_{a} \, dx_{b} \, d\Phi_{n} \,
 d\pXhat^{\rec} \, d\pYhat^{\rec} \, \frac{f(x_{a}) f(x_{b})}{2 \,
-  x_{a} \, x_{b} \, s} \nonumber \\
+  x_{a} \, x_{b} \, s} \cdot \nonumber \\
 & \qquad (2\pi)^{4} \, \delta( x_{a} \, \Ehat_{a} + x_{b} \, \Ehat_{b} -
 (\Ehat^{\rec} + \Ehat_{\Pgt(1)} + \Ehat_{\Pgt(2)}) ) \, \delta^{3}( x_{a} \,
 \bm{\hat{p}}^{a} + x_{b} \, \bm{\hat{p}}^{b} - (\bm{\hat{p}}^{\rec} + \bm{\hat{p}}^{\Pgt(1)}
-+ \bm{\hat{p}}^{\Pgt(2)}) ) \nonumber \\
++ \bm{\hat{p}}^{\Pgt(2)}) ) \cdot \nonumber \\
 & \qquad \vert \mathcal{M}(\bm{\tilde{p}},m_{\PHiggs}) \vert^{2} \, W(\bm{y}|\bm{\hat{p}}) \, W_{\rec}( \pX^{\rec}, \pY^{\rec} | \pXhat^{\rec}, \pYhat^{\rec} ) \, .
 \label{eq:mem_mod_hadRecoil}
 \end{align}
@@ -60,7 +60,7 @@ the integral over the $\delta$-function that ensures the conservation of energy 
 \begin{align}
 & \int \, dx_{a} \, dx_{b} \, d\pXhat^{\rec} \, d\pYhat^{\rec} \, \delta(
 x_{a} \, \Ehat_{a} + x_{b} \, \Ehat_{b} - (\Ehat^{\rec} +
-\Ehat_{\Pgt(1)} + \Ehat_{\Pgt(2)})) \nonumber \\
+\Ehat_{\Pgt(1)} + \Ehat_{\Pgt(2)})) \cdot \nonumber \\
 & \qquad \delta^{3}(
 x_{a} \, \bm{p}^{a} + x_{b} \, \bm{\hat{p}}^{b} - (\bm{\hat{p}}^{\rec} +
 \bm{\hat{p}}^{\Pgt(1)} + \bm{\hat{p}}^{\Pgt(2)})) \nonumber \\
@@ -90,9 +90,9 @@ Substituting Eq.~(\ref{eq:meFactorization}) into Eq.~(\ref{eq:mem_mod_hadRecoil}
 \mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs})
 = \frac{1}{\sigma(m_{\PHiggs})} \, \frac{32\pi^{4}}{s} \, \int \,
  d\Phi_{n} \, \frac{f(x_{a}) f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \, 
- \vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to \Pgt\Pgt}(\bm{\tilde{p}},m_{\PHiggs}) \vert^{2} \, \hspace{2cm} \nonumber \\
+ \vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to \Pgt\Pgt}(\bm{\tilde{p}},m_{\PHiggs}) \vert^{2} \cdot \hspace{2cm} \nonumber \\
 & \qquad \vert \BW^{(1)}_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(1)}_{\Pgt\to\cdots}(\bm{\tilde{p}}) \vert^{2} 
- \cdot \vert \BW^{(2)}_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(2)}_{\Pgt\to\cdots}(\bm{\tilde{p}}) \vert^{2} \, \nonumber \\
+ \cdot \vert \BW^{(2)}_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(2)}_{\Pgt\to\cdots}(\bm{\tilde{p}}) \vert^{2} \cdot \nonumber \\
 & \qquad W(\bm{p}^{\vis(1)}|\bm{\hat{p}}^{\vis(1)}) \, W(\bm{p}^{\vis(2)}|\bm{\hat{p}}^{\vis(2)}) \, W_{\rec}( \pX^{\rec},\pY^{\rec} | \pXhat^{\rec},\pYhat^{\rec} ) \, ,
 \label{eq:mem_with_hadRecoil}
 \end{align}

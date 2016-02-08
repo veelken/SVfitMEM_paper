@@ -1,19 +1,19 @@
 \section{The Matrix element method}
 \label{sec:mem}
 
-In the ME method, an estimate for the unknown model parameter $a$
+In the ME method, an estimate for the unknown model parameter $\theta$
 is obtained by maximizing the probability density:
 \begin{align}
-\mathcal{P}(\bm{y}|a) = & \frac{1}{\sigma(a)} \, \int \, dx_{a} \, dx_{b} \,
+\mathcal{P}(\bm{y}|\theta) = & \frac{1}{\sigma(\theta)} \, \int \, dx_{a} \, dx_{b} \,
 d\Phi_{n} \, \frac{f(x_{a}) \, f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \, (2\pi)^{4} \,
 \delta( x_{a} \, E_{a} + x_{b} \, E_{b} - \sum_{i}^{n}
-E_{(i)}) \, \nonumber \\
+E_{(i)}) \cdot \nonumber \\
  & \quad \delta^{3}( x_{a} \, \bm{p}^{a} + x_{b} \, \bm{p}^{b} - \sum_{i}^{n}
 \bm{p}^{(i)}) \, 
-  \vert \mathcal{M}(\bm{p},a) \vert^{2} \, W(\bm{y}|\bm{p}) 
+  \vert \mathcal{M}(\bm{p},\theta) \vert^{2} \, W(\bm{y}|\bm{p}) 
 \label{eq:mem}
 \end{align}
-with respect to $a$.
+with respect to $theta$.
 The symbols $E_{a}$ and $E_{b}$ and $\bm{p}^{a}$ and $\bm{p}^{b}$ denote, respectively, the energies and momenta of the two colliding protons,
 $\sqrt{s}$ represents the centre-of-mass energy,
 $x_{a}$ and $x_{b}$ denote the Bjorken scaling variables~\cite{Bjorkenx}
@@ -26,7 +26,7 @@ and by $d\Phi_{n} = \prod_{i}^{n} \,
 \frac{d^{3}\bm{p}^{(i)}}{(2\pi)^{3} \, 2 E_{(i)}}$ the differential $n$-particle
 phase space element.
 Vector quantities are represented by bold letters.
-The symbol $\vert \mathcal{M}(\bm{p},a) \vert^{2}$ represents the
+The symbol $\vert \mathcal{M}(\bm{p},\theta) \vert^{2}$ represents the
 squared modulus of the ME for
 the process.
 The $\delta$-functions $\delta( x_{a} \, E_{a} + x_{b} \, E_{b} - \sum_{i}^{n} E_{(i)})$
@@ -39,22 +39,22 @@ observe the measured values $\bm{y}$, given a point $\bm{p}$ in the
 $n$-particle phase space, and
 is referred to as ``transfer function'' (TF) in the
 literature~\cite{Fiedler:2010sg,Volobouev:2011vb}.
-The symbol $\sigma(a)$ corresponds to the cross section for the process under study,
+The symbol $\sigma(\theta)$ corresponds to the cross section for the process under study,
 in the case considered in this paper the production, in $\Pp\Pp$
 collisions, of a $\PHiggs$ boson decaying into a pair of $\Pgt$ leptons
 with subsequent decay of the $\Pgt$ pair.
-Division by $\sigma(a)$ ensures that $\mathcal{P}(\bm{y}|a)$ has
+Division by $\sigma(\theta)$ ensures that $\mathcal{P}(\bm{y}|\theta)$ has
 the correct normalization required for a probability density, 
-i.e. $\int \, d\bm{y} \, \mathcal{P}(\bm{y}|a) = 1$ for every $a$, 
+i.e. $\int \, d\bm{y} \, \mathcal{P}(\bm{y}|\theta) = 1$ for every $\theta$, 
 provided that the TF satisfy the normalization condition
 $\int \, d\bm{y}\, W(\bm{y}|\bm{p}) = 1$
 for every $\bm{p}$.
 
 The meaning of Eq.~(\ref{eq:mem}) is as follows.
-The best estimate for the unknown model parameter $a$ is given by the
-value $\hat{a}$ which maximizes the probability density to observe precisely the 
+The best estimate for the unknown model parameter $\theta$ is given by the
+value $\hat{\theta}$ which maximizes the probability density to observe precisely the 
 values $\bm{y}$ that are measured in the detector. 
-Within the scope of this paper, the unknown model parameter $a$
+Within the scope of this paper, the unknown model parameter $\theta$
 corresponds to the mass $m_{\PHiggs}$ of the $\PHiggs$ boson or,
 equivalently, to the true mass $m_{\Pgt\Pgt}$ of the $\Pgt$ lepton
 pair in a given event.

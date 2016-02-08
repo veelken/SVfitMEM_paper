@@ -14,10 +14,11 @@ have non-zero mass $m_{\inv}$.
 The product of the squared modulus of the ME and of the phase space
 element $d\Phi^{(i)}_{\tauhnu}$ reads:
 \begin{align}
- & \, \vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\Pgt\to\cdots}\vert^{2} \,
- d\Phi_{\tauhnu} = \vert \BW_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(i)}_{\Pgt\to\cdots}
+ & \, \vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\Pgt\to\cdots}(\bm{\tilde{p}})\vert^{2} \,
+ d\Phi_{\tauhnu} = \vert \BW_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(i)}_{\Pgt\to\cdots}(\bm{\tilde{p}})
 \vert^{2} \, \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2
-   E_{\vis}} \, \frac{d^{3}\bm{p}^{\inv}}{(2\pi)^{3} \, 2 E_{\inv}} \nonumber \\
+   E_{\vis}} \, \frac{d^{3}\bm{p}^{\inv}}{(2\pi)^{3} \, 2 E_{\inv}}
+ \cdot \nonumber \\
 = & \, (2\pi)^{3} \, \int \, \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
 \delta ( q_{\Pgt}^{2} - m_{\Pgt}^{2} ) \cdot \vert\mathcal{M}^{\eff}_{\Pgt \to
   \tauh\Pnut}\vert^{2} \, \delta \left( E_{\Pgt} - E_{\vis} -
@@ -28,15 +29,14 @@ element $d\Phi^{(i)}_{\tauhnu}$ reads:
 = & \frac{8\pi^{4}}{m_{\Pgt} \, \Gamma_{\Pgt}} \, \vert\mathcal{M}^{\eff}_{\Pgt \to
   \tauh\Pnut}\vert^{2} \, \delta \left( E_{\Pgt} - E_{\vis} -
   E_{\inv} \right) \, \delta^{3} \left( \bm{p}^{\Pgt} - \bm{p}^{\vis}
-  - \bm{p}^{\inv} \right) \nonumber \\
-& \qquad \frac{d^{3}\bm{p}^{\Pgt}}{(2\pi)^{3} \, 2 E_{\Pgt}} \, 
+  - \bm{p}^{\inv} \right) \, \frac{d^{3}\bm{p}^{\Pgt}}{(2\pi)^{3} \, 2 E_{\Pgt}} \, 
   \frac{d^{3}\bm{p}^{\vis}}{2 E_{\vis}} \, \frac{d^{3}\bm{p}^{\inv}}{2
     E_{\inv}} \nonumber \\
 = & \, \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \, \frac{\vert\mathcal{M}^{\eff}_{\Pgt \to
   \tauh\Pnut}\vert^{2}}{(2\pi)^{6}} 
  \cdot \frac{1}{2 E_{\Pgt}(\bm{p}^{\vis}, \bm{p}^{\inv})} \, \delta
  \left( E_{\Pgt}(\bm{p}^{\vis}, \bm{p}^{\inv}) - E_{\vis} - E_{\inv}
- \right) \nonumber \\
+ \right) \cdot \nonumber \\
 & \qquad
   \frac{d^{3}\bm{p}_{\vis}}{2 E_{\vis}} \, \frac{\vert\bm{p}_{\inv}\vert}{2} \, dE_{\inv} \, d\cos\theta_{\inv} \, d\phi_{\inv} \, ,
 \label{eq:hadTauDecaysPSint}
@@ -112,7 +112,7 @@ and obtain $\vert g'(x_{0}) \vert = \vert\bm{p}^{\vis}\vert \,
 
 This yields:
 \begin{equation}
-\vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\Pgt\to\cdots}\vert^{2} \,
+\vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\Pgt\to\cdots}(\bm{\tilde{p}})\vert^{2} \,
  d\Phi^{(i)}_{\tauhnu} = \frac{\vert\mathcal{M}^{\eff}_{\Pgt \to
   \tauh\Pnut}\vert^{2}}{256\pi^{5}\, m_{\Pgt} \, \Gamma_{\Pgt}} \cdot 
     \frac{1}{\vert\bm{p}^{\vis}\vert \, z^{2}} \, 
@@ -129,7 +129,7 @@ f_{h}\left(\bm{p}^{\vis}, m_{\vis}, \bm{p}^{\inv}\right) =
 \end{equation}
 to obtain:
 \begin{equation}
-\vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\Pgt\to\cdots}\vert^{2} \,
+\vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\Pgt\to\cdots}(\bm{\tilde{p}})\vert^{2} \,
  d\Phi^{(i)}_{\tauhnu} = \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
  f_{h}(\bm{p}^{\vis}, m_{\vis}, \bm{p}^{\inv}) \, \frac{d^{3}\bm{p}^{\vis}}{2 E_{\vis}} \, dz \, d\phi_{\inv}
  \, ,

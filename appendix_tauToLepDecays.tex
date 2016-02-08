@@ -15,16 +15,18 @@ where $G_{F}$ denotes the Fermi constant, given by Eq.~(\ref{eq:def_G_F}).
 The product of the squared modulus of the ME and the phase space
 element $d\Phi_{\ellnunu}$ reads:
 \begin{align}
-& \, \vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\Pgt\to\cdots}\vert^{2} \,
- d\Phi_{\ellnunu} = \vert \BW_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(i)}_{\Pgt\to\cdots}
+& \, \vert \BW_{\Pgt} \vert^{2} \cdot
+\underbrace{\vert\mathcal{M}_{\Pgt\to\cdots}(\bm{\tilde{p}})\vert^{2}}_{=
+\vert\mathcal{M}_{\Pgt\to\cdots}(\bm{p})\vert^{2}} \,
+ d\Phi_{\ellnunu} = \vert \BW_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(i)}_{\Pgt\to\cdots}(\bm{p})
 \vert^{2} \, 
   \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2 E_{\vis}} \, 
   \frac{d^{3}\bm{p}^{\APnu}}{(2\pi)^{3} \, 2 E_{\APnu}} \,
   \frac{d^{3}\bm{p}^{\Pnu}}{(2\pi)^{3} \, 2 E_{\Pnu}} \nonumber \\
-= & (2\pi)^{3} \, \int \, \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
+= & \, (2\pi)^{3} \, \int \, \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
 \delta ( q_{\Pgt}^{2} - m_{\Pgt}^{2} ) \cdot
-\vert\mathcal{M}_{\Pgt \to \ellnunu}\vert^{2} \, \delta \left(
-  E_{\Pgt} - E_{\vis} - E_{\APnu} - E_{\Pnu} \right) \nonumber \\
+\vert\mathcal{M}_{\Pgt \to \ellnunu}(\bm{p})\vert^{2} \, \delta \left(
+  E_{\Pgt} - E_{\vis} - E_{\APnu} - E_{\Pnu} \right) \cdot \nonumber \\
 & \qquad
 \delta^{3} \left( \bm{p}^{\Pgt} - \bm{p}^{\vis} - \bm{p}^{\Pnu} - \bm{p}^{\APnu} \right) \, \frac{d^{3}\bm{p}^{\Pgt}}{(2\pi)^{3} \, 2 E_{\Pgt}} \,
   \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2 E_{\vis}} \, 
@@ -32,16 +34,21 @@ element $d\Phi_{\ellnunu}$ reads:
   \frac{d^{3}\bm{p}^{\Pnu}}{(2\pi)^{3} \, 2 E_{\Pnu}} \, dq^{2}_{\Pgt} \nonumber \\
 = & \frac{8\pi^{4}}{m_{\Pgt} \, \Gamma_{\Pgt}} \, \vert\mathcal{M}_{\Pgt \to
   \ellnunu}\vert^{2} \, \delta \left( E_{\Pgt} - E_{\vis} - E_{\APnu} - E_{\Pnu} \right) \, \delta^{3} \left( \bm{p}^{\Pgt} -
-  \bm{p}^{\vis} - \bm{p}^{\APnu} - \bm{p}^{\Pnu} \right)  \nonumber \\
+  \bm{p}^{\vis} - \bm{p}^{\APnu} - \bm{p}^{\Pnu} \right)  \cdot \nonumber \\
 & \qquad
   \frac{d^{3}\bm{p}^{\Pgt}}{(2\pi)^{3} \, 2 E_{\Pgt}} \,
   \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2 E_{\vis}} \,
   \frac{dE_{\APnu} \, d^{3}\bm{p}^{\APnu}}{(2\pi)^{3}} \,
   \theta(E_{\APnu}) \, \delta \left( E_{\APnu}^{2} - \vert\bm{p}^{\APnu}\vert^{2} \right) \,
   \frac{dE_{\Pnu} \, d^{3}\bm{p}^{\Pnu}}{(2\pi)^{3}} \,
-  \theta(E_{\Pnu}) \, \delta \left( E_{\Pnu}^{2} - \vert\bm{p}^{\Pnu}\vert^{2} \right) \, , 
+  \theta(E_{\Pnu}) \, \delta \left( E_{\Pnu}^{2} - \vert\bm{p}^{\Pnu}\vert^{2} \right) \, .
 \end{align}
-where we have used the identity:
+The equality
+$\vert\mathcal{M}_{\Pgt\to\cdots}(\bm{\tilde{p}})\vert^{2} =
+\vert\mathcal{M}_{\Pgt\to\cdots}(\bm{p})\vert^{2}$
+follows from the fact that the matrix element is a Lorentz invariant
+quantity and as such has the same value in any frame.
+We have used the identity:
 \begin{equation}
 \int \, dE \, d^{3}\bm{p} \, \theta(E) \, \delta \left( E^{2} -
   \vert\bm{p}\vert^{2} - m^{2} \right) = \int \, \frac{d^{3}\bm{p}}{2
@@ -104,7 +111,7 @@ We define:
   \ellnunu}\vert^{2} \, \theta(u_{0} + v_{0}) \, \delta
 \left( \frac{u_{0}^{2} - \vert\bm{u}\vert^{2}}{2} + \frac{v_{0}^{2} - \vert\bm{v}\vert^{2}}{2} +
   u_{0} \, v_{0} - \bm{u} \cdot \bm{v} \right) \, 
-  \frac{dv_{0} \, d^{3}\bm{v}}{(2\pi)^{3}} \nonumber \\
+  \frac{dv_{0} \, d^{3}\bm{v}}{(2\pi)^{3}} \cdot \nonumber \\
  & \qquad
   \theta(u_{0}
   - v_{0}) \, \delta \left( \frac{u_{0}^{2} - \vert\bm{u}\vert^{2}}{2} +
@@ -114,7 +121,7 @@ We define:
 \end{align}
 The quantity $I_{\inv}$ is a Lorentz invariant quantity. 
 As such, it can be computed in any frame and will yield the same value as in the laboratory frame.
-We choose to evaluate it in the restframe of the neutrino pair.
+We choose to evaluate it in the rest frame of the neutrino pair.
 In this frame, the energy is given by $u_{0} = m_{\inv}$ 
 and the momentum by $\bm{u} = ( 0, 0, 0 )$, with $m_{\inv}$ denoting
 the mass of the neutrino pair.
@@ -127,7 +134,7 @@ I_{\inv}
     \delta \left( \underbrace{\frac{u_{0}^{2} - \vert\bm{u}\vert^{2}}{2}}_{=
         \frac{m^{2}_{\inv}}{2}} + \underbrace{\frac{v_{0}^{2} -
         \vert\bm{v}\vert^{2}}{2}}_{= -\frac{1}{2} \, \vert\bm{v}\vert^{2}} \right)
-    \nonumber \\
+    \cdot \nonumber \\
 & \qquad
     \theta ( u_{0} - v_{0} ) \, \underbrace{\delta \left(
         u_{0} \, v_{0} - \bm{u} \cdot \bm{v} \right)}_{= \frac{1}{m_{\inv}} \, \delta ( v_{0} )} \nonumber \\
@@ -149,7 +156,7 @@ The identify $\frac{v_{0}^{2} - \vert\bm{v}\vert^{2}}{2} =
 -\frac{1}{2} \, \vert\bm{v}\vert^{2}$ follows from the presence of the 
 $\delta$-function $\delta ( v_{0} )$ in the first line.
 
-In the restframe of the neutrino pair:
+In the rest frame of the neutrino pair:
 \begin{align}
 ( E_{\Pgt}, \bm{p}^{\Pgt} ) = & \, ( E_{\Pgt}, 0, 0, \vert\bm{p}^{\Pgt}\vert ) \nonumber \\
 ( E_{\vis}, \bm{p}^{\vis} ) = & \, ( E_{\vis}, 0, 0,
@@ -168,7 +175,7 @@ The ME given by Eq.~(\ref{eq:lepTauDecaysME}) evaluates to:
  = & \, 16 \, G^{2}_{F} \, m^{2}_{\inv} \, \left( E_{\Pgt} + \vert\bm{p}^{\Pgt}\vert \, \cos\theta \right)  \left( E_{\vis} - \vert\bm{p}^{\vis}\vert \, \cos\theta \right) 
 \label{eq:lepTauDecaysMErf}
 \end{align}
-in the restframe of the neutrino pair.
+in the rest frame of the neutrino pair.
 
 The energy of the $\Pgt$ lepton and of the electron or muon are
 related by:
@@ -237,7 +244,7 @@ Eq.~(\ref{eq:lepTauDecaysPSint}), we then obtain:
  d\Phi_{\ellnunu} = \frac{8\pi^{4}}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
  \delta \left( E_{\Pgt} - E_{\vis} - u_{0} \right)
  \, \delta^{3} \left( \bm{p}^{\Pgt} - \bm{p}^{\vis} -
-  \bm{u} \right) \\
+  \bm{u} \right) \cdot \nonumber \\
 & \qquad \frac{d^{3}\bm{p}^{\Pgt}}{(2\pi)^{3} \, 2 E_{\Pgt}} \,
   \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2 E_{\vis}} \, 
   \frac{d^{3}\bm{u}}{(2\pi)^{3} \, 2 u_{0}} \, \frac{I_{\inv}}{2} \,
@@ -256,7 +263,7 @@ factor $I_{\inv}/2$ in Eq.~(\ref{eq:finalLepTauDecaysPSint}), which replaces the
 factor $\vert\mathcal{M}_{\Pgt \to
   \tauh\Pnut}\vert^{2}$ in Eq.~(\ref{eq:hadTauDecaysPSint}).
 Note that Eq.~(\ref{eq:finalLepTauDecaysPSint}) as well as Eq.~(\ref{eq:hadTauDecaysPSint}) refer to the laboratory frame.
-The restframe of the neutrino pair was used only for the purpose of evaluating the Lorentz invariant integral $I_{\inv}$.
+The rest frame of the neutrino pair was used only for the purpose of evaluating the Lorentz invariant integral $I_{\inv}$.
 
 Since, according to Eq.~(\ref{eq:lepTauDecaysIrf}), $I_{\inv}$ 
 depends solely on the integration variable $m_{\inv}$, 
@@ -270,7 +277,7 @@ We can hence use Eq.~(\ref{eq:hadTauDecaysResult}) of Section~\ref{sec:appendix_
     d\phi_{\inv} \, ,
 \label{eq:lepTauDecaysResult}
 \end{align}
-where the symbol $\phi_{\inv}$ specifies the orientation of the neutrino
+where the angle $\phi_{\inv}$ specifies the orientation of the neutrino
 pair momentum vector $\bm{u}$ with respect to the momentum vector $\bm{p}^{\vis}$
 of the electron or muon.
 
