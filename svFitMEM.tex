@@ -5,11 +5,11 @@
 \ifx\ver\verPreprint
 \documentclass[a4paper,english,11pt]{article}
 \usepackage[bindingoffset=0.5cm,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm,footskip=1.0cm]{geometry}
-\usepackage{lineno,hyperref,hepnames,bm,multirow,amssymb,authblk,graphicx,newclude}
+\usepackage{lineno,hyperref,hepnames,bm,multirow,amssymb,authblk,graphicx,newclude,xspace}
 \fi
 \ifx\ver\verPAPER
 \documentclass[1p]{elsarticle}
-\usepackage{lineno,hyperref,hepnames,bm,multirow,amssymb}
+\usepackage{lineno,hyperref,hepnames,bm,multirow,amssymb,xspace}
 \fi
 
 \modulolinenumbers[5]
@@ -60,12 +60,9 @@
 \newcommand{\tauhnuTwo}{\ensuremath{\tauh^{(2)} \, \Pnu^{(2)}_{\kern-0.10em \Pgt}}\xspace}
 \newcommand{\ellnunu}{\ensuremath{\Plepton \, \APnu_{\kern-0.10em \Plepton} \, \Pnu_{\kern-0.10em \Pgt}}\xspace}
 \newcommand{\ellnunuOne}{\ensuremath{\Plepton^{(1)} \, \APnu^{(1)}_{\kern-0.10em \Plepton} \, \Pnu^{(1)}_{\kern-0.10em \Pgt}}\xspace}
-\newcommand{\ellnunuTwo}{\ensuremath{\Plepton^{(2)} \,
-    \APnu^{(2)}_{\kern-0.10em \Plepton} \, \Pnu^{(2)}_{\kern-0.10em
-      \Pgt}}\xspace}
+\newcommand{\ellnunuTwo}{\ensuremath{\Plepton^{(2)} \, \APnu^{(2)}_{\kern-0.10em \Plepton} \, \Pnu^{(2)}_{\kern-0.10em \Pgt}}\xspace}
 \newcommand{\ellMinusnunu}{\ensuremath{\Plepton^{-} \, \APnu_{\kern-0.10em \Plepton} \, \Pnu_{\kern-0.10em \Pgt}}\xspace}
-\newcommand{\ellPlusnunu}{\ensuremath{\Plepton^{+} \,
-    \Pnu_{\kern-0.10em \Plepton} \, \APnu_{\kern-0.10em \Pgt}}\xspace}
+\newcommand{\ellPlusnunu}{\ensuremath{\Plepton^{+} \, \Pnu_{\kern-0.10em \Plepton} \, \APnu_{\kern-0.10em \Pgt}}\xspace}
 \newcommand{\enunu}{\ensuremath{\Pe \, \APnu_{\kern-0.10em \Pe} \, \Pnu_{\kern-0.10em \Pgt}}\xspace}
 \newcommand{\mununu}{\ensuremath{\Pgm \, \APnu_{\kern-0.10em \Pgm} \, \Pnu_{\kern-0.10em \Pgt}}\xspace}
 \newcommand{\nunu}{\ensuremath{\Pnu \, \APnu}\xspace}
@@ -94,6 +91,7 @@
 \newcommand{\METy}{\ensuremath{p_{\textrm{y}}^{\textrm{\kern0.10em miss}}}\xspace}
 \newcommand{\MeV}{\ensuremath{\textrm{MeV}}\xspace}
 \newcommand{\GeV}{\ensuremath{\textrm{GeV}}\xspace}
+%%\xspaceaddexceptions{]}  
 \newcommand{\TeV}{\ensuremath{\textrm{TeV}}\xspace}
 \newcommand{\rec}{\ensuremath{\textrm{rec}}}
 \newcommand{\true}{\ensuremath{\textrm{true}}}
