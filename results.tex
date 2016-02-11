@@ -255,13 +255,13 @@ the mass of the visible $\Pgt$ decay products.
 The mass of the $\Pgt$ lepton pair reconstructed by the CA method is not included in the comparison, as it performs worse compared to $m_{\vis}$ in terms of resolution
 and has the further disadvantage of not yielding a physical solution
 for approximately half of the events.
-Numerical values of the mean and root-mean-square (RMS) values
+Numerical values of the median $\textrm{M}$ and of the standard deviation $\sigma$ 
 of the $m_{\Pgt\Pgt}$ and $m_{\vis}$ distributions in simulated $\PZ/\Pggx \to \Pgt\Pgt$ background events
 and in $\PHiggs \to \Pgt\Pgt$ signal events of mass $125$, $200$, $300$, $500$, $800$, $1200$, $1800$, and $2600$~GeV
 are given in Table~\ref{tab:resolutions_mVis_vs_SVfit}.
 Compared to $m_{\vis}$,
 the SVfitMEM algorithm with small positive $\kappa$ improves the relative resolution,
-quantified by the ratio of RMS to mean, by up to $60\%$.
+quantified by the ratio $\sigma/\textrm{M}$, by up to $60\%$.
 The improvement in resolution for $\PHiggs$ boson signals of high mass improves the separation of hypothetical high mass signals
 from backgrounds other than $\PZ/\Pggx \to \Pgt\Pgt$ also.
 The improvement in mass resolution achieved by the SVfitMEM algorithm
@@ -304,7 +304,8 @@ and are hence assigned low $m_{\Pgt\Pgt}$ values by the SVfitMEM algorithm.
 
 The distributions in $m_{\Pgt\Pgt}$ reconstructed by the SVfitMEM algorithm 
 peak close to the true mass of the $\Pgt$ lepton pair.
-The ratio of the mean of the $m_{\Pgt\Pgt}$ distribution to the true mass is closer to unity and the ratio of RMS to mean is smaller
+The ratio of the median of the $m_{\Pgt\Pgt}$ distribution to the true
+mass is closer to unity and the ratio $\sigma/\textrm{M}$ is smaller
 in case of the $\PZ/\Pggx \to \Pgt\Pgt$ background and of low mass $\PHiggs \to \Pgt\Pgt$ signals, compared to $\PHiggs \to \Pgt\Pgt$ signals of high mass.
 The reason for this behaviour are the $\pT$ cuts that are applied on the visible $\Pgt$ decay products.
 The $\pT$ cuts have the effect of removing events in which both $\Pgt$
@@ -366,18 +367,18 @@ typically exceeds two times the value of the $\pT$ cut that is applied on the vi
 \hline
 \multirow{2}{17mm}{Sample} & \multicolumn{2}{c|}{$m_{\vis}$} & \multicolumn{2}{c|}{$m_{\Pgt\Pgt}$ (SVfitMEM, $\kappa = 3$)} \\
 \cline{2-5}
- & Mean~[\GeV] & RMS/Mean & Mean~[\GeV] & RMS/Mean \\
+ & $\textrm{M}$~[\GeV] & $\sigma$/$\textrm{M}$ & $\textrm{M}$~[\GeV] & $\sigma$/$\textrm{M}$ \\
 \hline
-$\PZ/\Pggx \to \Pgt\Pgt$         &   $82.8$ & $0.197$ &  $101.1$ & $0.162$ \\
+$\PZ/\Pggx \to \Pgt\Pgt$         &   $81.5$ & $0.200$ &  $96.5$ & $0.170$ \\
 $\PHiggs \to \Pgt\Pgt$: & & & & \\
- $\quad m_{\PHiggs} = 125$~\GeV  &  $105.0$ & $0.140$ &  $130.1$ & $0.107$ \\
- $\quad m_{\PHiggs} = 200$~\GeV  &  $147.0$ & $0.169$ &  $190.2$ & $0.132$ \\
- $\quad m_{\PHiggs} = 300$~\GeV  &  $202.4$ & $0.216$ &  $273.8$ & $0.162$ \\
- $\quad m_{\PHiggs} = 500$~\GeV  &  $313.5$ & $0.260$ &  $447.6$ & $0.181$ \\
- $\quad m_{\PHiggs} = 800$~\GeV  &  $487.4$ & $0.282$ &  $712.4$ & $0.181$ \\
- $\quad m_{\PHiggs} = 1200$~\GeV &  $718.5$ & $0.297$ & $1066.8$ & $0.179$ \\
- $\quad m_{\PHiggs} = 1800$~\GeV & $1067.0$ & $0.310$ & $1577.9$ & $0.171$ \\
- $\quad m_{\PHiggs} = 2600$~\GeV & $1534.7$ & $0.314$ & $2259.3$ & $0.176$ \\
+ $\quad m_{\PHiggs} = 125$~\GeV  &  $106.5$ & $0.138$ &  $128.5$ & $0.108$ \\
+ $\quad m_{\PHiggs} = 200$~\GeV  &  $146.5$ & $0.170$ &  $191.5$ & $0.131$ \\
+ $\quad m_{\PHiggs} = 300$~\GeV  &  $201.5$ & $0.217$ &  $278.5$ & $0.159$ \\
+ $\quad m_{\PHiggs} = 500$~\GeV  &  $312.5$ & $0.261$ &  $459.5$ & $0.176$ \\
+ $\quad m_{\PHiggs} = 800$~\GeV  &  $487.5$ & $0.282$ &  $732.5$ & $0.176$ \\
+ $\quad m_{\PHiggs} = 1200$~\GeV &  $721.5$ & $0.295$ & $1103.5$ & $0.173$ \\
+ $\quad m_{\PHiggs} = 1800$~\GeV & $1074.5$ & $0.308$ & $1626.5$ & $0.166$ \\
+ $\quad m_{\PHiggs} = 2600$~\GeV & $1547.5$ & $0.311$ & $2339.5$ & $0.170$ \\
 \hline
 \end{tabular}
 
@@ -390,18 +391,18 @@ $\PHiggs \to \Pgt\Pgt$: & & & & \\
 \hline
 \multirow{2}{17mm}{Sample} & \multicolumn{2}{c|}{$m_{\vis}$} & \multicolumn{2}{c|}{$m_{\Pgt\Pgt}$ (SVfitMEM, $\kappa = 3$)} \\
 \cline{2-5}
- & Mean~[\GeV] & RMS/Mean & Mean~[\GeV] & RMS/Mean \\
+ & $\textrm{M}$~[\GeV] & $\sigma$/$\textrm{M}$ & $\textrm{M}$~[\GeV] & $\sigma$/$\textrm{M}$ \\
 \hline
-$\PZ/\Pggx \to \Pgt\Pgt$         &   $67.2$ & $0.135$ &   $97.2$ & $0.137$ \\
+$\PZ/\Pggx \to \Pgt\Pgt$         &   $66.5$ & $0.137$ &   $96.5$ & $0.138$ \\
 $\PHiggs \to \Pgt\Pgt$: & & & & \\
- $\quad m_{\PHiggs} = 125$~\GeV  &   $80.9$ & $0.185$ &  $123.1$ & $0.154$ \\
- $\quad m_{\PHiggs} = 200$~\GeV  &  $113.1$ & $0.252$ &  $184.5$ & $0.185$ \\
- $\quad m_{\PHiggs} = 300$~\GeV  &  $156.0$ & $0.303$ &  $269.3$ & $0.209$ \\
- $\quad m_{\PHiggs} = 500$~\GeV  &  $243.8$ & $0.351$ &  $443.9$ & $0.220$ \\
- $\quad m_{\PHiggs} = 800$~\GeV  &  $372.1$ & $0.383$ &  $708.0$ & $0.216$ \\
- $\quad m_{\PHiggs} = 1200$~\GeV &  $538.7$ & $0.406$ & $1060.3$ & $0.208$ \\
- $\quad m_{\PHiggs} = 1800$~\GeV &  $796.7$ & $0.423$ & $1562.6$ & $0.200$ \\
- $\quad m_{\PHiggs} = 2600$~\GeV & $1132.7$ & $0.435$ & $2213.1$ & $0.206$ \\
+ $\quad m_{\PHiggs} = 125$~\GeV  &   $80.5$ & $0.186$ &  $122.5$ & $0.155$ \\
+ $\quad m_{\PHiggs} = 200$~\GeV  &  $111.5$ & $0.256$ &  $187.5$ & $0.182$ \\
+ $\quad m_{\PHiggs} = 300$~\GeV  &  $151.5$ & $0.312$ &  $277.5$ & $0.203$ \\
+ $\quad m_{\PHiggs} = 500$~\GeV  &  $237.5$ & $0.360$ &  $464.5$ & $0.210$ \\
+ $\quad m_{\PHiggs} = 800$~\GeV  &  $360.5$ & $0.395$ &  $740.5$ & $0.207$ \\
+ $\quad m_{\PHiggs} = 1200$~\GeV &  $522.5$ & $0.418$ & $1118.5$ & $0.197$ \\
+ $\quad m_{\PHiggs} = 1800$~\GeV &  $771.5$ & $0.418$ & $1644.5$ & $0.190$ \\
+ $\quad m_{\PHiggs} = 2600$~\GeV & $1105.5$ & $0.446$ & $2343.5$ & $0.195$ \\
 \hline
 \end{tabular}
 
@@ -414,30 +415,30 @@ $\PHiggs \to \Pgt\Pgt$: & & & & \\
 \hline
 \multirow{2}{17mm}{Sample} & \multicolumn{2}{c|}{$m_{\vis}$} & \multicolumn{2}{c|}{$m_{\Pgt\Pgt}$ (SVfitMEM, $\kappa = 2$)} \\
 \cline{2-5}
- & Mean~[\GeV] & RMS/Mean & Mean~[\GeV] & RMS/Mean \\
+ & $\textrm{M}$~[\GeV] & $\sigma$/$\textrm{M}$ & $\textrm{M}$~[\GeV] & $\sigma$/$\textrm{M}$ \\
 \hline
-$\PZ/\Pggx \to \Pgt\Pgt$         &   $49.6$ & $0.222$ &   $98.7$ & $0.230$ \\
+$\PZ/\Pggx \to \Pgt\Pgt$         &   $48.5$ & $0.227$ &   $95.5$ & $0.238$ \\
 $\PHiggs \to \Pgt\Pgt$: & & & & \\
- $\quad m_{\PHiggs} = 125$~\GeV  &   $57.2$ & $0.270$ &  $123.5$ & $0.240$ \\
- $\quad m_{\PHiggs} = 200$~\GeV  &   $79.7$ & $0.349$ &  $188.3$ & $0.257$ \\
- $\quad m_{\PHiggs} = 300$~\GeV  &  $109.6$ & $0.401$ &  $274.7$ & $0.267$ \\
- $\quad m_{\PHiggs} = 500$~\GeV  &  $171.4$ & $0.457$ &  $454.1$ & $0.264$ \\
- $\quad m_{\PHiggs} = 800$~\GeV  &  $260.6$ & $0.488$ &  $721.4$ & $0.254$ \\
- $\quad m_{\PHiggs} = 1200$~\GeV &  $385.0$ & $0.505$ & $1079.7$ & $0.238$ \\
- $\quad m_{\PHiggs} = 1800$~\GeV &  $562.4$ & $0.527$ & $1566.4$ & $0.222$ \\
- $\quad m_{\PHiggs} = 2600$~\GeV &  $815.4$ & $0.538$ & $2190.5$ & $0.238$ \\
+ $\quad m_{\PHiggs} = 125$~\GeV  &   $54.5$ & $0.283$ &  $122.5$ & $0.242$ \\
+ $\quad m_{\PHiggs} = 200$~\GeV  &   $75.5$ & $0.368$ &  $191.5$ & $0.252$ \\
+ $\quad m_{\PHiggs} = 300$~\GeV  &  $103.5$ & $0.425$ &  $286.5$ & $0.256$ \\
+ $\quad m_{\PHiggs} = 500$~\GeV  &  $161.5$ & $0.485$ &  $481.5$ & $0.249$ \\
+ $\quad m_{\PHiggs} = 800$~\GeV  &  $245.5$ & $0.518$ &  $764.5$ & $0.240$ \\
+ $\quad m_{\PHiggs} = 1200$~\GeV &  $361.5$ & $0.538$ & $1156.5$ & $0.222$ \\
+ $\quad m_{\PHiggs} = 1800$~\GeV &  $520.5$ & $0.570$ & $1674.5$ & $0.208$ \\
+ $\quad m_{\PHiggs} = 2600$~\GeV &  $764.5$ & $0.573$ & $2376.5$ & $0.219$ \\
 \hline
 \end{tabular}
 \end{center}
 \caption{
-  Mean and root-mean-square (RMS) of the distributions in $m_{\vis}$ 
+  Median $\textrm{M}$ and standard deviation $\sigma$ of the distributions in $m_{\vis}$ 
   and in $m_{\Pgt\Pgt}$ reconstructed by the SVfitMEM algorithm
   in simulated $\PZ/\Pggx \to \Pgt\Pgt$ background and in $\PHiggs \to
   \Pgt\Pgt$ signal events selected in the decay channels $\tauh\tauh$
   (top), $\Pgm\tauh$ (centre) and $\Pe\Pgm$ (bottom).
   The signal events are generated for different $\PHiggs$ boson masses
   $m_{\PHiggs}$.
-  The mean and RMS of the $m_{\vis}$ ($m_{\Pgt\Pgt}$) distributions are computed for
+  The $\textrm{M}$ and $\sigma$ of the $m_{\vis}$ ($m_{\Pgt\Pgt}$) distributions are computed for
   events in which the reconstructed $m_{\vis}$ ($m_{\Pgt\Pgt}$) value
   is within the range $0$ to $5$ times the true mass of the $\Pgt$
   lepton pair.

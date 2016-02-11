@@ -1,16 +1,17 @@
-\subsection{Computation of $\sigma(m_{\PHiggs})$}
+\subsection{Computation of $\sigma'(m_{\PHiggs})$}
 \label{sec:mem_xSection}
 
 According to the paradigm of the ME method, the normalization factor
-$1/\sigma(m_{\PHiggs})$ in Eq.~(\ref{eq:mem_with_hadRecoil}) is to be computed
+$1/\sigma'(m_{\PHiggs})$ in Eq.~(\ref{eq:mem_with_hadRecoil}) is to be computed
 by evaluating the integral:
 \begin{align}
-\sigma(m_{\PHiggs}) = &
+\sigma'(m_{\PHiggs}) = &
   \frac{32\pi^{4}}{s} \, \int \, d^{3}\bm{p}^{\vis(1)} \, d^{3}\bm{p}^{\vis(2)} \, d\pX^{\rec} \, d\pY^{\rec} \, 
-  d\Phi_{n} \, \frac{f(x_{a}) f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \, \hspace{2cm} \nonumber \\
+  d\Phi_{n} \, \frac{f(x_{a}) f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \cdot \hspace{2cm} \nonumber \\
 & \qquad \vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to \Pgt\Pgt}(\bm{\tilde{p}},m_{\PHiggs}) \vert^{2} 
   \cdot \vert \BW^{(1)}_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(1)}_{\Pgt\to\cdots}(\bm{\tilde{p}}) \vert^{2} 
-  \cdot \vert \BW^{(2)}_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(2)}_{\Pgt\to\cdots}(\bm{\tilde{p}}) \vert^{2} \hspace{2cm} \nonumber \\
+  \cdot \vert \BW^{(2)}_{\Pgt} \vert^{2} \cdot \vert
+  \mathcal{M}^{(2)}_{\Pgt\to\cdots}(\bm{\tilde{p}}) \vert^{2} \cdot \nonumber \\
 & \qquad W(\bm{p}^{\vis(1)}|\bm{\hat{p}}^{\vis(1)}) \, W(\bm{p}^{\vis(2)}|\bm{\hat{p}}^{\vis(2)}) \, W_{\rec}( \pX^{\rec},\pY^{\rec} | \pXhat^{\rec},\pYhat^{\rec} ) \, .
 \label{eq:xSection}
 \end{align}
@@ -26,7 +27,7 @@ According to the TF normalization conditions
 \end{align}
 so that Eq.~(\ref{eq:xSection}) becomes:
 \begin{align}
-\sigma(m_{\PHiggs}) = &
+\sigma'(m_{\PHiggs}) = &
   \frac{32\pi^{4}}{s} \, \int \, 
   d\Phi_{n} \, \frac{f(x_{a}) f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \,
   \hspace{2cm} \nonumber \\
@@ -44,7 +45,7 @@ an improved implementation of the VEGAS algorithm~\cite{VEGAS}.
 The result is used for the purpose of normalizing the probability density $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs})$
 in Eq.~(\ref{eq:mem_with_hadRecoil}).
 
-The cross sections $\sigma(m_{\PHiggs})$ computed in this way cannot 
+The cross sections $\sigma'(m_{\PHiggs})$ computed in this way cannot 
 be directly compared to literature values,
 due to the fact that we are applying the LO ME to events in which the $\PHiggs$ boson has non-zero $\pT$.
 For the purpose of comparing $\sigma(m_{\PHiggs})$ to literature
