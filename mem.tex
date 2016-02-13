@@ -40,9 +40,8 @@ The function $W(\bm{y}|\bm{p})$ represents the probability density to
 observe the measured values $\bm{y}$, given a point $\bm{p}$ in the
 $n$-particle phase space, and
 is referred to as ``transfer function'' (TF) in the
-literature~\cite{Fiedler:2010sg,Volobouev:2011vb}.
-The function $\Omega(\bm{y})$ is referred to as ``indicator function''~\cite{Volobouev:2011vb}. 
-Its value is $1$ for events which pass the event selection criteria and $0$ otherwise.
+literature, while the function $\Omega(\bm{y})$ is referred to as ``indicator function''~\cite{Fiedler:2010sg,Volobouev:2011vb}.
+The value of the indicator function is $1$ for events which pass the event selection criteria and $0$ otherwise.
 The efficiency for an event originating at the phase space point
 $\bm{p}$ to pass the event selection, \ie to end up with measured
 observables $\bm{y}$ for which $\Omega(\bm{y}) = 1$,
@@ -107,11 +106,12 @@ the probability for the particles produced in the $\Pgt$ lepton decays to pass s
 which are necessitated by trigger requirements at the LHC,
 may vary significantly as function of $\PHiggs$ boson $\pT$.
 For this reason, we will assume that $m_{\Pgt\Pgt}$ is reconstructed before any event selection criteria are applied,
-\ie $\Omega(\bm{y}) = 1$ for all events,
-and $\epsilon(\bm{p},m_{\PHiggs}) = 1$ as well as $\mathcal{A}(m_{\PHiggs}) = 1$ for all $m_{\PHiggs}$.
-We expect this assumption to introduce a small bias on the reconstructed $m_{\Pgt\Pgt}$ values.
-As the bias can be corrected with the Monte Carlo simulation,
-we do not expect it to cause a problem in practical applications of our algorithm.
+\ie $\Omega(\bm{y}) = 1$, $\epsilon(\bm{p},m_{\PHiggs}) = 1$, and $\mathcal{A}(m_{\PHiggs}) = 1$
+for all evaluations of Eq.~(\ref{eq:mem}).
+We expect these assumptions to introduce a small bias on the reconstructed $m_{\Pgt\Pgt}$ values
+and possibly a small degradation in $m_{\Pgt\Pgt}$ resolution.
+The bias can be corrected with the Monte Carlo simulation, 
+and we do not expect it to cause a problem in practical applications of our algorithm.
 
 
 

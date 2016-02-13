@@ -48,7 +48,10 @@ method~\cite{massRecoCollinearApprox}.
 The improved version of the SVfit algorithm is denoted by SVfitMEM 
 and is used with and without the artificial regularization term described in Section~\ref{sec:mem_logM}.
 In the latter case, we use $\kappa = 3$ for the $\Pgm\tauh$ and $\tauh\tauh$ channels and $\kappa = 2$ for the $\Pe\Pgm$ channel.
-The value of $\kappa$ has been chosen such that the optimal resolution on $m_{\Pgt\Pgt}$ is achieved in each channel.
+The value of $\kappa$ has been chosen such that the optimal resolution on $m_{\Pgt\Pgt}$, quantified as described below, is achieved in each channel.
+We expect the optimal choice of $\kappa$ to depend on the experimental resolution on the $\pT$ of $\tauh$ and on the hadronic recoil,
+with a smaller (larger) value of $\kappa$ to be optimal in case of better (worse) experimental resolution,
+and we recommend to perform a reoptimization of $\kappa$ in practical applications of our algorithm.
 We refer to the previous version of the SVfit algorithm as ``classic'' SVfit.
 The $m_{\Pgt\Pgt}$ distributions reconstructed by the different algorithms
 in $\PZ/\Pggx \to \Pgt\Pgt$ background and $\PHiggs \to \Pgt\Pgt$ signal events
@@ -229,25 +232,25 @@ The shift is largest in the $\Pe\Pgm$ channel and smallest in the $\tauh\tauh$ c
 This is due to the fact that the fraction $z$ of $\Pgt$ lepton energy that is carried by the visible $\Pgt$ decay products
 is typically high in case of hadronic $\Pgt$ decays and is typically low in case of leptonic $\Pgt$ decays,
 \cf Fig.~\ref{fig:tauDecay_z}.
-We take the difference in peak position between the mass distributions reconstructed by the different algorithms
-into account by quantifying their resolution in terms of the ratio
+The shift in peak position needs to be accounted for when comparing the resolutions of the different algorithms.
+We quantify the resolution in terms of the ratio
 of the standard deviation $\sigma$ to the median $\textrm{M}$
 of the mass distributions.
 Note that all algorithms can be trivially calibrated such that the median of each mass distribution coincides with the true mass of the $\Pgt$ lepton pair,
-by scaling the output of the algorithm by the ratio of the true mass to the median obtained before the calibration is applied.
+by scaling the output of the algorithm by a suitably chosen factor that is constant for all events reconstructed in a given channel.
 Such trivial calibrations do not change the ratio $\sigma/\textrm{M}$.
 
 The distributions in $m_{\Pgt\Pgt}$ reconstructed by the CA method
 exhibits pronounced high mass tails, which reduce the sensitivity of the SM $\PHiggs \to \Pgt\Pgt$ analysis,
 as, due to resolution effects, a sizeable fraction of $\PZ/\Pggx \to \Pgt\Pgt$ background events
 is reconstructed near the signal region $m_{\Pgt\Pgt} \approx 125$~\GeV.
-The relative resolution on $m_{\Pgt\Pgt}$, quantified by the ratio $\sigma/\textrm{M}$,
-is actually worse for the CA method compared to the relative resolution on $m_{\vis}$.
+The resolution, quantified by the ratio $\sigma/\textrm{M}$,
+is worse for $m_{\Pgt\Pgt}$ reconstructed by the CA method compared to $m_{\vis}$.
 A further disadvantage of the CA method is that it fails to yield a physical solution for approximately half of the events,
 while all other algorithms provide a physical solution for every event.
-The fraction of events for which the CA method fails to find a physical solution is reflected by the normalization of the distribution.
+The fraction of events for which the CA method fails to find a physical solution is reflected by the normalization of the distributions.
 
-In all three decay channels, the SVfitMEM algorithm provides a substantial improvement in the relative mass resolution.
+In all three decay channels, the SVfitMEM algorithm provides a substantial improvement in the mass resolution.
 Numerical values of the median $\textrm{M}$ and of the standard deviation $\sigma$ 
 of the $m_{\Pgt\Pgt}$ and $m_{\vis}$ distributions in simulated $\PZ/\Pggx \to \Pgt\Pgt$ background events
 and in $\PHiggs \to \Pgt\Pgt$ signal events of mass $125$, $200$, $300$, $500$, $800$, $1200$, $1800$, and $2600$~GeV
@@ -265,11 +268,11 @@ Compared to the classic SVfit algorithm, the SVfitMEM algorithm yields an improv
 The relative resolution for the SVfitMEM algorithm with and without the artificial regularization term is similar.
 The motivation for adding the artificial regularization term is to avoid high mass tails in the $m_{\Pgt\Pgt}$ distribution
 reconstructed in $\PZ/\Pggx \to \Pgt\Pgt$ background events,
-on the expense of increasing the low mass tails in the $m_{\Pgt\Pgt}$ distribution reconstructed in signal events.
+albeit on the expense of increasing the low mass tails in the $m_{\Pgt\Pgt}$ distribution reconstructed in signal events.
 The reduction of high mass tails is important not only for the SM $\PHiggs \to \Pgt\Pgt$ analysis,
-but also in the context of searches for new heavy resonances.
-As the signal cross section is expected to fall steeply as function of resonance mass,
-potential high mass signals would likely be buried underneath the high mass tail of the background otherwise.
+but also in the context of searches for new heavy resonances,
+as the signal cross section is expected to fall steeply as function of resonance mass,
+such that potential high mass signals would likely be buried underneath the high mass tail of the background otherwise.
 
 The distributions in $m_{\Pgt\Pgt}$ reconstructed by the SVfitMEM
 algorithm with $\kappa = 3$ in the $\tauh\tauh$ and $\Pgm\tauh$ channels and with $\kappa = 2$ in the $\Pe\Pgm$ channel
@@ -282,10 +285,10 @@ First, the distributions in $m_{\Pgt\Pgt}$ reconstructed by the SVfitMEM algorit
 exhibit the best resolution in the $\tauh\tauh$ channel and the worst resolution in the $\Pe\Pgm$ channel.
 The difference in resolution between the $\tauh\tauh$, $\Pgm\tauh$, and $\Pe\Pgm$ channels
 is due to the fact that the fraction $z$ of $\Pgt$ lepton energy carried by the visible $\Pgt$ decay
-products is typically high in case of hadronic $\Pgt$ decays and low in case of leptonic $\Pgt$ decays.
+products is typically higher in hadronic compared to leptonic $\Pgt$ decays.
 The presence, in the event, of a $\tauh$ of high $\pT$ signals the decay of a
-$\PHiggs$ boson of high mass.
-In this case, either the $\pT$ of the visible decay products of the
+$\PHiggs$ boson of high mass,
+as in this case either the $\pT$ of the visible decay products of the
 other $\Pgt$ lepton is high too,
 or the event contains high $\pT$ neutrinos, the momenta of which are imbalanced in the transverse plane,
 indicating the decay of a $\PHiggs$ boson of high mass  by means of large $\MET$.
