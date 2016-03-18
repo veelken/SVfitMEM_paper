@@ -1,0 +1,475 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{Higgs-Discovery_CMS}
+S.~Chatrchyan, et~al., {Observation of a new boson at a mass of 125 GeV with
+  the CMS experiment at the LHC}, Phys.~Lett. B~716 (2012) 30.
+\newblock \href {http://arxiv.org/abs/1207.7235} {\path{arXiv:1207.7235}},
+  \href {http://dx.doi.org/10.1016/j.physletb.2012.08.021}
+  {\path{doi:10.1016/j.physletb.2012.08.021}}.
+
+\bibitem{Higgs-Discovery_ATLAS}
+G.~Aad, et~al., {Observation of a new particle in the search for the Standard
+  Model Higgs boson with the ATLAS detector at the LHC}, Phys.~Lett. B~716
+  (2012) 1.
+\newblock \href {http://arxiv.org/abs/1207.7214} {\path{arXiv:1207.7214}},
+  \href {http://dx.doi.org/10.1016/j.physletb.2012.08.020}
+  {\path{doi:10.1016/j.physletb.2012.08.020}}.
+
+\bibitem{Englert:1964et}
+F.~Englert, R.~Brout, {Broken symmetry and the mass of gauge vector mesons},
+  Phys.~Rev.~Lett. 13 (1964) 321.
+\newblock \href {http://dx.doi.org/10.1103/PhysRevLett.13.321}
+  {\path{doi:10.1103/PhysRevLett.13.321}}.
+
+\bibitem{Higgs:1964ia}
+P.~W. Higgs, {Broken symmetries, massless particles and gauge fields},
+  Phys.~Lett. 12 (1964) 132.
+\newblock \href {http://dx.doi.org/10.1016/0031-9163(64)91136-9}
+  {\path{doi:10.1016/0031-9163(64)91136-9}}.
+
+\bibitem{Higgs:1964pj}
+P.~W. Higgs, {Broken symmetries and the masses of gauge bosons},
+  Phys.~Rev.~Lett. 13 (1964) 508.
+\newblock \href {http://dx.doi.org/10.1103/PhysRevLett.13.508}
+  {\path{doi:10.1103/PhysRevLett.13.508}}.
+
+\bibitem{Guralnik:1964eu}
+G.~S. Guralnik, C.~R. Hagen, T.~W.~B. Kibble, {Global conservation laws and
+  massless particles}, Phys.~Rev.~Lett. 13 (1964) 585.
+\newblock \href {http://dx.doi.org/10.1103/PhysRevLett.13.585}
+  {\path{doi:10.1103/PhysRevLett.13.585}}.
+
+\bibitem{Higgs:1966ev}
+P.~W. Higgs, {Spontaneous symmetry breakdown without massless bosons},
+  Phys.~Rev. 145 (1966) 1156.
+\newblock \href {http://dx.doi.org/10.1103/PhysRev.145.1156}
+  {\path{doi:10.1103/PhysRev.145.1156}}.
+
+\bibitem{Kibble:1967sv}
+T.~W.~B. Kibble, {Symmetry breaking in non-Abelian gauge theories}, Phys.~Rev.
+  155 (1967) 1554.
+\newblock \href {http://dx.doi.org/10.1103/PhysRev.155.1554}
+  {\path{doi:10.1103/PhysRev.155.1554}}.
+
+\bibitem{HIG-14-014}
+{CMS Collaboration}, \href{https://cds.cern.ch/record/1728251}{Constraints on
+  anomalous $\textrm{H}\textrm{V}\textrm{V}$ interactions using $\textrm{H} \to
+  4 \ell$ decays}, CMS Physics Analysis Summary CMS-PAS-HIG-14-014 (2014).
+\newline\urlprefix\url{https://cds.cern.ch/record/1728251}
+
+\bibitem{Chatrchyan:2014tja}
+S.~Chatrchyan, et~al., {Search for invisible decays of Higgs bosons in the
+  vector boson fusion and associated $\textrm{Z}\textrm{H}$ production modes},
+  Eur.~Phys.~J. C~74~(8) (2014) 2980.
+\newblock \href {http://arxiv.org/abs/1404.1344} {\path{arXiv:1404.1344}},
+  \href {http://dx.doi.org/10.1140/epjc/s10052-014-2980-6}
+  {\path{doi:10.1140/epjc/s10052-014-2980-6}}.
+
+\bibitem{Khachatryan:2014iha}
+V.~Khachatryan, et~al., {Constraints on the Higgs boson width from off-shell
+  production and decay to $\textrm{Z}$ boson pairs}, Phys.~Lett. B~736 (2014)
+  64.
+\newblock \href {http://arxiv.org/abs/1405.3455} {\path{arXiv:1405.3455}},
+  \href {http://dx.doi.org/10.1016/j.physletb.2014.06.077}
+  {\path{doi:10.1016/j.physletb.2014.06.077}}.
+
+\bibitem{HIG-14-009}
+V.~Khachatryan, et~al., {Precise determination of the mass of the Higgs boson
+  and tests of compatibility of its couplings with the Standard Model
+  predictions using proton collisions at $7$ and $8$~TeV}, Eur.~Phys.~J.
+  C~75~(5) (2015) 212.
+\newblock \href {http://arxiv.org/abs/1412.8662} {\path{arXiv:1412.8662}},
+  \href {http://dx.doi.org/10.1140/epjc/s10052-015-3351-7}
+  {\path{doi:10.1140/epjc/s10052-015-3351-7}}.
+
+\bibitem{HIG-15-002}
+{CMS Collaboration},
+  \href{http://cms-physics.web.cern.ch/cms-physics/public/HIG-15-002.pdf}{{Mea%
+surements of the Higgs boson production and decay rates and constraints on its
+  couplings from a combined ATLAS and CMS analysis of the LHC
+  $\textrm{p}\textrm{p}$ collision data at $\sqrt{s} = 7$ and $8$~TeV}}, CMS
+  Physics Analysis Summary CMS-PAS-HIG-15-002 (2015).
+\newline\urlprefix\url{http://cms-physics.web.cern.ch/cms-physics/public/HIG-1%
+5-002.pdf}
+
+\bibitem{HIG-13-004}
+S.~Chatrchyan, et~al., {Evidence for the $125$~GeV Higgs boson decaying to a
+  pair of $\tau$ leptons}, JHEP 05 (2014) 104.
+\newblock \href {http://arxiv.org/abs/1401.5041} {\path{arXiv:1401.5041}},
+  \href {http://dx.doi.org/10.1007/JHEP05(2014)104}
+  {\path{doi:10.1007/JHEP05(2014)104}}.
+
+\bibitem{HIG-14-002}
+V.~Khachatryan, et~al., {Constraints on the Higgs boson width from off-shell
+  production and decay to $\textrm{Z}$-boson pairs}, Phys.~Lett. B~736 (2014)
+  64.
+\newblock \href {http://arxiv.org/abs/1405.3455} {\path{arXiv:1405.3455}},
+  \href {http://dx.doi.org/10.1016/j.physletb.2014.06.077}
+  {\path{doi:10.1016/j.physletb.2014.06.077}}.
+
+\bibitem{Aad:2015xua}
+G.~Aad, et~al., {Constraints on the off-shell Higgs boson signal strength in
+  the high-mass $\textrm{Z}\textrm{Z}$ and $\textrm{W}\textrm{W}$ final states
+  with the ATLAS detector}, Eur.~Phys.~J. C~75~(7) (2015) 335.
+\newblock \href {http://arxiv.org/abs/1503.01060} {\path{arXiv:1503.01060}},
+  \href {http://dx.doi.org/10.1140/epjc/s10052-015-3542-2}
+  {\path{doi:10.1140/epjc/s10052-015-3542-2}}.
+
+\bibitem{massRecoCollinearApprox}
+R.~K. Ellis, I.~Hinchliffe, M.~Soldate, J.~J. van~der Bij, {Higgs decay to
+  $\tau^{+}\tau^{-}$: a possible signature of intermediate mass Higgs bosons at
+  the SSC}, Nucl.~Phys. B~297 (1988) 221.
+\newblock \href {http://dx.doi.org/10.1016/0550-3213(88)90019-3}
+  {\path{doi:10.1016/0550-3213(88)90019-3}}.
+
+\bibitem{neutrinoRecByVertexInfo}
+S.~Dambach, U.~Langenegger, A.~Starodumov, {Neutrino reconstruction with
+  topological information}, Nucl.~Instrum.~Meth. A~569 (2006) 824.
+\newblock \href {http://arxiv.org/abs/hep-ph/0607294}
+  {\path{arXiv:hep-ph/0607294}}, \href
+  {http://dx.doi.org/10.1016/j.nima.2006.08.144}
+  {\path{doi:10.1016/j.nima.2006.08.144}}.
+
+\bibitem{MMC}
+A.~Elagin, P.~Murat, A.~Pranko, A.~Safonov, {A new mass reconstruction
+  technique for resonances decaying to $\tau\tau$}, Nucl.~Instrum.~Meth. A~654
+  (2011) 481.
+\newblock \href {http://arxiv.org/abs/1012.4686} {\path{arXiv:1012.4686}},
+  \href {http://dx.doi.org/10.1016/j.nima.2011.07.009}
+  {\path{doi:10.1016/j.nima.2011.07.009}}.
+
+\bibitem{Barr:2011he}
+A.~J. Barr, S.~T. French, J.~A. Frost, C.~G. Lester, {Speedy Higgs boson
+  discovery in decays to $\tau$ lepton pairs: $\textrm{H} \to \tau\tau$}, JHEP
+  10 (2011) 080.
+\newblock \href {http://arxiv.org/abs/1106.2322} {\path{arXiv:1106.2322}},
+  \href {http://dx.doi.org/10.1007/JHEP10(2011)080}
+  {\path{doi:10.1007/JHEP10(2011)080}}.
+
+\bibitem{Gripaios:2012th}
+B.~Gripaios, K.~Nagao, M.~Nojiri, K.~Sakurai, B.~Webber, {Reconstruction of
+  Higgs bosons in the di-$\tau$ channel via $3$-prong decay}, JHEP 03 (2013)
+  106.
+\newblock \href {http://arxiv.org/abs/1210.1938} {\path{arXiv:1210.1938}},
+  \href {http://dx.doi.org/10.1007/JHEP03(2013)106}
+  {\path{doi:10.1007/JHEP03(2013)106}}.
+
+\bibitem{SVfit}
+L.~Bianchini, J.~Conway, E.~K. Friis, C.~Veelken, {Reconstruction of the Higgs
+  mass in $\textrm{H} \to \tau\tau$ events by dynamical likelihood techniques},
+  J.~Phys.~Conf.~Ser. 513 (2014) 022035.
+\newblock \href {http://dx.doi.org/10.1088/1742-6596/513/2/022035}
+  {\path{doi:10.1088/1742-6596/513/2/022035}}.
+
+\bibitem{HIG-10-002}
+S.~Chatrchyan, et~al., {Search for neutral MSSM Higgs bosons decaying to $\tau$
+  pairs in $\textrm{p}\textrm{p}$ collisions at $\sqrt{s}=7$~TeV},
+  Phys.~Rev.~Lett. 106 (2011) 231801.
+\newblock \href {http://arxiv.org/abs/1104.1619} {\path{arXiv:1104.1619}},
+  \href {http://dx.doi.org/10.1103/PhysRevLett.106.231801}
+  {\path{doi:10.1103/PhysRevLett.106.231801}}.
+
+\bibitem{HIG-11-029}
+S.~Chatrchyan, et~al., {Search for neutral Higgs bosons decaying to $\tau$
+  pairs in $\textrm{p}\textrm{p}$ collisions at $\sqrt{s} = 7$~TeV},
+  Phys.~Lett. B~713 (2012) 68.
+\newblock \href {http://arxiv.org/abs/1202.4083} {\path{arXiv:1202.4083}},
+  \href {http://dx.doi.org/10.1016/j.physletb.2012.05.028}
+  {\path{doi:10.1016/j.physletb.2012.05.028}}.
+
+\bibitem{HIG-13-021}
+V.~Khachatryan, et~al., {Search for neutral MSSM Higgs bosons decaying to a
+  pair of $\tau$ leptons in $\textrm{p}\textrm{p}$ collisions}, JHEP 10 (2014)
+  160.
+\newblock \href {http://arxiv.org/abs/1408.3316} {\path{arXiv:1408.3316}},
+  \href {http://dx.doi.org/10.1007/JHEP10(2014)160}
+  {\path{doi:10.1007/JHEP10(2014)160}}.
+
+\bibitem{HIG-14-029}
+{CMS Collaboration}, \href{https://cds.cern.ch/record/2041463}{{Search for
+  additional neutral Higgs bosons decaying to a pair of $\tau$ leptons in
+  $\textrm{p}\textrm{p}$ collisions at $\sqrt{s} = 7$ and $8$~TeV}}, CMS
+  Physics Analysis Summary CMS-PAS-HIG-14-029 (2014).
+\newline\urlprefix\url{https://cds.cern.ch/record/2041463}
+
+\bibitem{HIG-14-033}
+V.~Khachatryan, et~al., {Search for a low mass pseudoscalar Higgs boson
+  produced in association with a $\textrm{b}\bar{\textrm{b}}$ pair in
+  $\textrm{p}\textrm{p}$ collisions at $\sqrt{s} = 8$~TeV. }\href
+  {http://arxiv.org/abs/1511.03610} {\path{arXiv:1511.03610}}.
+
+\bibitem{HIG-15-001}
+{CMS Collaboration}, \href{https://cds.cern.ch/record/2014119}{{Search for
+  $\textrm{H}$/$\textrm{A}$ decaying into $\textrm{Z}$ and
+  $\textrm{H}$/$\textrm{A}$, with $\textrm{Z} \to \ell\ell$ and
+  $\textrm{H}$/$\textrm{A} \to \textrm{b}\textrm{b}$ or
+  $\textrm{H}$/$\textrm{A} \to \tau\tau$}}, CMS Physics Analysis Summary
+  CMS-PAS-HIG-15-001 (2015).
+\newline\urlprefix\url{https://cds.cern.ch/record/2014119}
+
+\bibitem{Kondo:1988yd}
+K.~Kondo, {Dynamical likelihood method for reconstruction of events with
+  missing momentum. 1: method and toy models}, J.~Phys.~Soc.~Jap. 57 (1988)
+  4126--4140.
+\newblock \href {http://dx.doi.org/10.1143/JPSJ.57.4126}
+  {\path{doi:10.1143/JPSJ.57.4126}}.
+
+\bibitem{Kondo:1991dw}
+K.~Kondo, {Dynamical likelihood method for reconstruction of events with
+  missing momentum. 2: mass spectra for $2 \to 2$ processes},
+  J.~Phys.~Soc.~Jap. 60 (1991) 836--844.
+\newblock \href {http://dx.doi.org/10.1143/JPSJ.60.836}
+  {\path{doi:10.1143/JPSJ.60.836}}.
+
+\bibitem{CompHEP1}
+A.~Pukhov, E.~Boos, M.~Dubinin, V.~Edneral, V.~Ilyin, D.~Kovalenko, A.~Kryukov,
+  V.~Savrin, S.~Shichanin, A.~Semenov, {CompHEP: A package for evaluation of
+  Feynman diagrams and integration over multiparticle phase space. }\href
+  {http://arxiv.org/abs/hep-ph/9908288} {\path{arXiv:hep-ph/9908288}}.
+
+\bibitem{CompHEP2}
+E.~Boos, V.~Bunichev, M.~Dubinin, L.~Dudko, V.~Ilyin, A.~Kryukov, V.~Edneral,
+  V.~Savrin, A.~Semenov, A.~Sherstnev, {CompHEP 4.4: Automatic computations
+  from Lagrangians to events}, Nucl. Instrum. Meth. A534 (2004) 250--259.
+\newblock \href {http://arxiv.org/abs/hep-ph/0403113}
+  {\path{arXiv:hep-ph/0403113}}, \href
+  {http://dx.doi.org/10.1016/j.nima.2004.07.096}
+  {\path{doi:10.1016/j.nima.2004.07.096}}.
+
+\bibitem{MadGraph}
+J.~Alwall, R.~Frederix, S.~Frixione, V.~Hirschi, F.~Maltoni, O.~Mattelaer,
+  H.-S. Shao, T.~Stelzer, P.~Torrielli, M.~Zaro, The automated computation of
+  tree-level and next-to-leading order differential cross sections, and their
+  matching to parton shower simulations, JHEP 07 (2014) 079.
+\newblock \href {http://arxiv.org/abs/1405.0301} {\path{arXiv:1405.0301}},
+  \href {http://dx.doi.org/10.1007/JHEP07(2014)079}
+  {\path{doi:10.1007/JHEP07(2014)079}}.
+
+\bibitem{Bjorkenx}
+J.~D. Bjorken, {Asymptotic sum rules at infinite momentum}, Phys.~Rev. 179
+  (1969) 1547.
+\newblock \href {http://dx.doi.org/10.1103/PhysRev.179.1547}
+  {\path{doi:10.1103/PhysRev.179.1547}}.
+
+\bibitem{MSTW}
+A.~D. Martin, W.~J. Stirling, R.~S. Thorne, G.~Watt, {Parton distributions for
+  the LHC}, Eur.~Phys.~J. C~63 (2009) 189.
+\newblock \href {http://arxiv.org/abs/0901.0002} {\path{arXiv:0901.0002}},
+  \href {http://dx.doi.org/10.1140/epjc/s10052-009-1072-5}
+  {\path{doi:10.1140/epjc/s10052-009-1072-5}}.
+
+\bibitem{Fiedler:2010sg}
+F.~Fiedler, A.~Grohsjean, P.~Haefner, P.~Schieferdecker, {The matrix element
+  method and its application in measurements of the top quark mass},
+  Nucl.~Instrum.~Meth. A~624 (2010) 203.
+\newblock \href {http://arxiv.org/abs/1003.1316} {\path{arXiv:1003.1316}},
+  \href {http://dx.doi.org/10.1016/j.nima.2010.09.024}
+  {\path{doi:10.1016/j.nima.2010.09.024}}.
+
+\bibitem{Volobouev:2011vb}
+I.~Volobouev, {Matrix element method in HEP: transfer functions, efficiencies,
+  and likelihood normalization. }\href {http://arxiv.org/abs/1101.2259}
+  {\path{arXiv:1101.2259}}.
+
+\bibitem{me_ggHprod}
+R.~N. Cahn, S.~Dawson, {Production of very massive Higgs bosons}, Phys.~Lett.
+  B~136 (1984) 196, [Erratum: Phys.~Lett.~B~138~(1984)~464].
+\newblock \href {http://dx.doi.org/10.1016/0370-2693(84)91180-8}
+  {\path{doi:10.1016/0370-2693(84)91180-8}}.
+
+\bibitem{me_HtoTauTau}
+J.~R. Ellis, M.~K. Gaillard, D.~V. Nanopoulos, {A phenomenological profile of
+  the Higgs boson}, Nucl.~Phys. B~106 (1976) 292.
+\newblock \href {http://dx.doi.org/10.1016/0550-3213(76)90382-5}
+  {\path{doi:10.1016/0550-3213(76)90382-5}}.
+
+\bibitem{PDG}
+K.~A. Olive, et~al., {Review of particle physics}, Chin.~Phys. C~38 (2014)
+  090001.
+\newblock \href {http://dx.doi.org/10.1088/1674-1137/38/9/090001}
+  {\path{doi:10.1088/1674-1137/38/9/090001}}.
+
+\bibitem{Barger:1987nn}
+V.~D. Barger, R.~Phillips, Collider physics, updated Edition, Westview Press,
+  Boulder, Colorado, 1991.
+
+\bibitem{Bullock:1992yt}
+B.~K. Bullock, K.~Hagiwara, A.~D. Martin, {Tau polarization and its
+  correlations as a probe of new physics}, Nucl.~Phys. B~395 (1993) 499.
+\newblock \href {http://dx.doi.org/10.1016/0550-3213(93)90045-Q}
+  {\path{doi:10.1016/0550-3213(93)90045-Q}}.
+
+\bibitem{Raychaudhuri:1995kv}
+S.~Raychaudhuri, D.~P. Roy, {Charged Higgs boson search at the TeVatron upgrade
+  using $\tau$ polarization}, Phys.~Rev. D~52 (1995) 1556.
+\newblock \href {http://arxiv.org/abs/hep-ph/9503251}
+  {\path{arXiv:hep-ph/9503251}}, \href
+  {http://dx.doi.org/10.1103/PhysRevD.52.1556}
+  {\path{doi:10.1103/PhysRevD.52.1556}}.
+
+\bibitem{tauola}
+S.~Jadach, Z.~Was, R.~Decker, J.~H. Kuhn, {The $\tau$ decay library TAUOLA:
+  version 2.4}, Comput.~Phys.~Commun. 76 (1993) 361.
+\newblock \href {http://dx.doi.org/10.1016/0010-4655(93)90061-G}
+  {\path{doi:10.1016/0010-4655(93)90061-G}}.
+
+\bibitem{Alwall:2010cq}
+J.~Alwall, A.~Freitas, O.~Mattelaer, {The matrix element method and QCD
+  radiation}, Phys.~Rev. D~83 (2011) 074010.
+\newblock \href {http://arxiv.org/abs/1010.2263} {\path{arXiv:1010.2263}},
+  \href {http://dx.doi.org/10.1103/PhysRevD.83.074010}
+  {\path{doi:10.1103/PhysRevD.83.074010}}.
+
+\bibitem{CMS-JME-13-003}
+V.~Khachatryan, et~al., {Performance of the CMS missing transverse momentum
+  reconstruction in $\textrm{p}\textrm{p}$ data at $\sqrt{s} = 8$~TeV}, JINST
+  10~(02) (2015) P02006.
+\newblock \href {http://arxiv.org/abs/1411.0511} {\path{arXiv:1411.0511}},
+  \href {http://dx.doi.org/10.1088/1748-0221/10/02/P02006}
+  {\path{doi:10.1088/1748-0221/10/02/P02006}}.
+
+\bibitem{ATLAS-CONF-2014-019}
+{The ATLAS collaboration}, {Pile-up suppression in missing transverse momentum
+  reconstruction in the ATLAS experiment in $\textrm{p}\textrm{p}$ collisions
+  at $\sqrt{s} = 8$~TeV}.
+
+\bibitem{Aad:2014rga}
+G.~Aad, et~al., {Identification and energy calibration of hadronically decaying
+  $\tau$ leptons with the ATLAS experiment in $\textrm{p}\textrm{p}$ collisions
+  at $\sqrt{s} = 8$~TeV}, Eur.~Phys.~J. C~75~(7) (2015) 303.
+\newblock \href {http://arxiv.org/abs/1412.7086} {\path{arXiv:1412.7086}},
+  \href {http://dx.doi.org/10.1140/epjc/s10052-015-3500-z}
+  {\path{doi:10.1140/epjc/s10052-015-3500-z}}.
+
+\bibitem{TAU-14-001}
+V.~Khachatryan, et~al., {Reconstruction and identification of $\tau$ lepton
+  decays to hadrons and $\nu_{\tau}$ at CMS. }\href
+  {http://arxiv.org/abs/1510.07488} {\path{arXiv:1510.07488}}.
+
+\bibitem{ATLAS:2011tfa}
+\href{http://cds.cern.ch/record/1353226}{{Reconstruction, energy calibration,
+  and identification of hadronically decaying $\tau$ leptons}}, ATLAS Note
+  ATLAS-CONF-2011-077 (2011).
+\newline\urlprefix\url{http://cds.cern.ch/record/1353226}
+
+\bibitem{PRF-14-001}
+{CMS Collaboration}, {Particle flow and global event description in CMS}, in
+  preparation.
+
+\bibitem{CMS-JME-10-009}
+S.~Chatrchyan, et~al., {Missing transverse energy performance of the CMS
+  detector}, JINST 6 (2011) P09001.
+\newblock \href {http://arxiv.org/abs/1106.5048} {\path{arXiv:1106.5048}},
+  \href {http://dx.doi.org/10.1088/1748-0221/6/09/P09001}
+  {\path{doi:10.1088/1748-0221/6/09/P09001}}.
+
+\bibitem{VAMP}
+T.~Ohl, {Vegas revisited: Adaptive Monte Carlo integration beyond
+  factorization}, Comput.~Phys.~Commun. 120 (1999) 13.
+\newblock \href {http://arxiv.org/abs/hep-ph/9806432}
+  {\path{arXiv:hep-ph/9806432}}, \href
+  {http://dx.doi.org/10.1016/S0010-4655(99)00209-X}
+  {\path{doi:10.1016/S0010-4655(99)00209-X}}.
+
+\bibitem{VEGAS}
+G.~P. Lepage, {A new algorithm for adaptive multidimensional integration},
+  J.~Comput.~Phys. 27 (1978) 192.
+\newblock \href {http://dx.doi.org/10.1016/0021-9991(78)90004-9}
+  {\path{doi:10.1016/0021-9991(78)90004-9}}.
+
+\bibitem{POWHEG1}
+P.~Nason, {A new method for combining NLO QCD with shower Monte Carlo
+  algorithms}, JHEP 11 (2004) 040.
+\newblock \href {http://arxiv.org/abs/hep-ph/0409146}
+  {\path{arXiv:hep-ph/0409146}}, \href
+  {http://dx.doi.org/10.1088/1126-6708/2004/11/040}
+  {\path{doi:10.1088/1126-6708/2004/11/040}}.
+
+\bibitem{POWHEG2}
+S.~Frixione, P.~Nason, C.~Oleari, {Matching NLO QCD computations with parton
+  shower simulations: the POWHEG method}, JHEP 11 (2007) 070.
+\newblock \href {http://arxiv.org/abs/0709.2092} {\path{arXiv:0709.2092}},
+  \href {http://dx.doi.org/10.1088/1126-6708/2007/11/070}
+  {\path{doi:10.1088/1126-6708/2007/11/070}}.
+
+\bibitem{POWHEG3}
+S.~Alioli, P.~Nason, C.~Oleari, E.~Re, {A general framework for implementing
+  NLO calculations in shower Monte Carlo programs: the POWHEG BOX}, JHEP 06
+  (2010) 043.
+\newblock \href {http://arxiv.org/abs/1002.2581} {\path{arXiv:1002.2581}},
+  \href {http://dx.doi.org/10.1007/JHEP06(2010)043}
+  {\path{doi:10.1007/JHEP06(2010)043}}.
+
+\bibitem{pythia8}
+T.~Sjostrand, S.~Mrenna, P.~Z. Skands, {A brief introduction to PYTHIA 8.1},
+  Comput.~Phys.~Commun. 178 (2008) 852.
+\newblock \href {http://arxiv.org/abs/0710.3820} {\path{arXiv:0710.3820}},
+  \href {http://dx.doi.org/10.1016/j.cpc.2008.01.036}
+  {\path{doi:10.1016/j.cpc.2008.01.036}}.
+
+\bibitem{MadGraph_aMCatNLO}
+J.~Alwall, R.~Frederix, S.~Frixione, V.~Hirschi, F.~Maltoni, O.~Mattelaer,
+  H.~S. Shao, T.~Stelzer, P.~Torrielli, M.~Zaro, {The automated computation of
+  tree-level and next-to-leading order differential cross sections, and their
+  matching to parton shower simulations}, JHEP 07 (2014) 079.
+\newblock \href {http://arxiv.org/abs/1405.0301} {\path{arXiv:1405.0301}},
+  \href {http://dx.doi.org/10.1007/JHEP07(2014)079}
+  {\path{doi:10.1007/JHEP07(2014)079}}.
+
+\bibitem{NNPDF1}
+R.~D. Ball, V.~Bertone, S.~Carrazza, L.~Del~Debbio, S.~Forte, A.~Guffanti,
+  N.~P. Hartland, J.~Rojo, {Parton distributions with QED corrections},
+  Nucl.~Phys. B~877 (2013) 290.
+\newblock \href {http://arxiv.org/abs/1308.0598} {\path{arXiv:1308.0598}},
+  \href {http://dx.doi.org/10.1016/j.nuclphysb.2013.10.010}
+  {\path{doi:10.1016/j.nuclphysb.2013.10.010}}.
+
+\bibitem{NNPDF2}
+R.~D. Ball, V.~Bertone, F.~Cerutti, L.~Del~Debbio, S.~Forte, A.~Guffanti, J.~I.
+  Latorre, J.~Rojo, M.~Ubiali, {Unbiased global determination of parton
+  distributions and their uncertainties at NNLO and at LO}, Nucl.~Phys. B~855
+  (2012) 153.
+\newblock \href {http://arxiv.org/abs/1107.2652} {\path{arXiv:1107.2652}},
+  \href {http://dx.doi.org/10.1016/j.nuclphysb.2011.09.024}
+  {\path{doi:10.1016/j.nuclphysb.2011.09.024}}.
+
+\bibitem{NNPDF3}
+R.~D. Ball, et~al., {Parton distributions for the LHC Run II}, JHEP 04 (2015)
+  040.
+\newblock \href {http://arxiv.org/abs/1410.8849} {\path{arXiv:1410.8849}},
+  \href {http://dx.doi.org/10.1007/JHEP04(2015)040}
+  {\path{doi:10.1007/JHEP04(2015)040}}.
+
+\bibitem{PYTHIA_CUETP8M1tune_CMS}
+V.~Khachatryan, et~al., {Event generator tunes obtained from underlying event
+  and multiparton scattering measurements. }\href
+  {http://arxiv.org/abs/1512.00815} {\path{arXiv:1512.00815}}.
+
+\bibitem{PYTHIA_MonashTune}
+P.~Skands, S.~Carrazza, J.~Rojo, {Tuning PYTHIA 8.1: the Monash 2013 tune},
+  Eur.~Phys.~J. C~74~(8) (2014) 3024.
+\newblock \href {http://arxiv.org/abs/1404.5630} {\path{arXiv:1404.5630}},
+  \href {http://dx.doi.org/10.1140/epjc/s10052-014-3024-y}
+  {\path{doi:10.1140/epjc/s10052-014-3024-y}}.
+
+\bibitem{ATLAS_HiggsTauTau_SM}
+G.~Aad, et~al., {Evidence for the Higgs-boson Yukawa coupling to $\tau$ leptons
+  with the ATLAS detector}, JHEP 04 (2015) 117.
+\newblock \href {http://arxiv.org/abs/1501.04943} {\path{arXiv:1501.04943}},
+  \href {http://dx.doi.org/10.1007/JHEP04(2015)117}
+  {\path{doi:10.1007/JHEP04(2015)117}}.
+
+\bibitem{ATLAS_HiggsTauTau_MSSM}
+G.~Aad, et~al., {Search for neutral Higgs bosons of the minimal supersymmetric
+  standard model in $\textrm{p}\textrm{p}$ collisions at $\sqrt{s} = 8$~TeV
+  with the ATLAS detector}, JHEP 11 (2014) 056.
+\newblock \href {http://arxiv.org/abs/1409.6064} {\path{arXiv:1409.6064}},
+  \href {http://dx.doi.org/10.1007/JHEP11(2014)056}
+  {\path{doi:10.1007/JHEP11(2014)056}}.
+
+\end{thebibliography}
