@@ -204,13 +204,16 @@ V.~Khachatryan, et~al., {Search for a low mass pseudoscalar Higgs boson
   {http://arxiv.org/abs/1511.03610} {\path{arXiv:1511.03610}}.
 
 \bibitem{HIG-15-001}
-{CMS Collaboration}, \href{https://cds.cern.ch/record/2014119}{{Search for
-  $\textrm{H}$/$\textrm{A}$ decaying into $\textrm{Z}$ and
-  $\textrm{H}$/$\textrm{A}$, with $\textrm{Z} \to \ell\ell$ and
-  $\textrm{H}$/$\textrm{A} \to \textrm{b}\textrm{b}$ or
-  $\textrm{H}$/$\textrm{A} \to \tau\tau$}}, CMS Physics Analysis Summary
-  CMS-PAS-HIG-15-001 (2015).
-\newline\urlprefix\url{https://cds.cern.ch/record/2014119}
+V.~Khachatryan, et~al., {Search for neutral resonances decaying into a $\PZ$
+  boson and a pair of $\Pbottom$ jets or $\Pgt$ leptons}\href
+  {http://arxiv.org/abs/1603.02991} {\path{arXiv:1603.02991}}.
+
+\bibitem{HIG-15-013}
+{CMS Collaboration}, \href{https://cds.cern.ch/record/2139335}{{Model
+  independent search for $\PHiggs$ boson pair production
+  $\Pbottom\APbottom\Pgt^{+}\Pgt^{-}$ final state}}, CMS Physics Analysis
+  Summary CMS-PAS-HIG-15-013 (2015).
+\newline\urlprefix\url{https://cds.cern.ch/record/2139335}
 
 \bibitem{Kondo:1988yd}
 K.~Kondo, {Dynamical likelihood method for reconstruction of events with
@@ -312,12 +315,6 @@ S.~Raychaudhuri, D.~P. Roy, {Charged Higgs boson search at the TeVatron upgrade
   {http://dx.doi.org/10.1103/PhysRevD.52.1556}
   {\path{doi:10.1103/PhysRevD.52.1556}}.
 
-\bibitem{tauola}
-S.~Jadach, Z.~Was, R.~Decker, J.~H. Kuhn, {The $\tau$ decay library TAUOLA:
-  version 2.4}, Comput.~Phys.~Commun. 76 (1993) 361.
-\newblock \href {http://dx.doi.org/10.1016/0010-4655(93)90061-G}
-  {\path{doi:10.1016/0010-4655(93)90061-G}}.
-
 \bibitem{Alwall:2010cq}
 J.~Alwall, A.~Freitas, O.~Mattelaer, {The matrix element method and QCD
   radiation}, Phys.~Rev. D~83 (2011) 074010.
@@ -337,6 +334,12 @@ V.~Khachatryan, et~al., {Performance of the CMS missing transverse momentum
 {The ATLAS collaboration}, {Pile-up suppression in missing transverse momentum
   reconstruction in the ATLAS experiment in $\textrm{p}\textrm{p}$ collisions
   at $\sqrt{s} = 8$~TeV}.
+
+\bibitem{tauola}
+S.~Jadach, Z.~Was, R.~Decker, J.~H. Kuhn, {The $\tau$ decay library TAUOLA:
+  version 2.4}, Comput.~Phys.~Commun. 76 (1993) 361.
+\newblock \href {http://dx.doi.org/10.1016/0010-4655(93)90061-G}
+  {\path{doi:10.1016/0010-4655(93)90061-G}}.
 
 \bibitem{Aad:2014rga}
 G.~Aad, et~al., {Identification and energy calibration of hadronically decaying
@@ -381,6 +384,18 @@ G.~P. Lepage, {A new algorithm for adaptive multidimensional integration},
   J.~Comput.~Phys. 27 (1978) 192.
 \newblock \href {http://dx.doi.org/10.1016/0021-9991(78)90004-9}
   {\path{doi:10.1016/0021-9991(78)90004-9}}.
+
+\bibitem{Metropolis_Hastings}
+W.~K. Hastings, {Monte Carlo sampling methods using Markov Chains and their
+  applications}, Biometrika 57 (1970) 97.
+\newblock \href {http://dx.doi.org/10.1093/biomet/57.1.97}
+  {\path{doi:10.1093/biomet/57.1.97}}.
+
+\bibitem{HIG-16-006}
+{CMS Collaboration}, \href{https://cds.cern.ch/record/XXXXXXX}{{Search for a
+  neutral MSSM Higgs boson decaying into $\Pgt\Pgt$ at $13$~TeV}}, CMS Physics
+  Analysis Summary CMS-PAS-HIG-16-006 (2016).
+\newline\urlprefix\url{https://cds.cern.ch/record/XXXXXXX}
 
 \bibitem{POWHEG1}
 P.~Nason, {A new method for combining NLO QCD with shower Monte Carlo
