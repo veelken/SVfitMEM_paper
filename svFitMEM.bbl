@@ -472,6 +472,26 @@ P.~Skands, S.~Carrazza, J.~Rojo, {Tuning PYTHIA 8.1: the Monash 2013 tune},
   \href {http://dx.doi.org/10.1140/epjc/s10052-014-3024-y}
   {\path{doi:10.1140/epjc/s10052-014-3024-y}}.
 
+\bibitem{FEWZ}
+K.~Melnikov, F.~Petriello, {Electroweak gauge boson production at hadron
+  colliders through O(alpha(s)**2)}, Phys.~Rev. D~74 (2006) 114017.
+\newblock \href {http://arxiv.org/abs/hep-ph/0609070}
+  {\path{arXiv:hep-ph/0609070}}, \href
+  {http://dx.doi.org/10.1103/PhysRevD.74.114017}
+  {\path{doi:10.1103/PhysRevD.74.114017}}.
+
+\bibitem{Dittmaier:2011ti}
+S.~Dittmaier, et~al., {Handbook of LHC Higgs cross--sections: 1. inclusive
+  observables}\href {http://arxiv.org/abs/1101.0593} {\path{arXiv:1101.0593}},
+  \href {http://dx.doi.org/10.5170/CERN-2011-002}
+  {\path{doi:10.5170/CERN-2011-002}}.
+
+\bibitem{Heinemeyer:2013tqa}
+J.~R. Andersen, et~al., {Handbook of LHC Higgs cross--sections: 3. Higgs
+  properties}\href {http://arxiv.org/abs/1307.1347} {\path{arXiv:1307.1347}},
+  \href {http://dx.doi.org/10.5170/CERN-2013-004}
+  {\path{doi:10.5170/CERN-2013-004}}.
+
 \bibitem{ATLAS_HiggsTauTau_SM}
 G.~Aad, et~al., {Evidence for the Higgs-boson Yukawa coupling to $\tau$ leptons
   with the ATLAS detector}, JHEP 04 (2015) 117.

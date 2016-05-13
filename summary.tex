@@ -11,17 +11,28 @@ collaboration during LHC Run $1$.
 It improves the sensitivity of the SM $\PHiggs \to \Pgt\Pgt$ analysis by $\approx 40\%$,
 corresponding to a gain in integrated luminosity by about a factor of two.
 
-Two improvements to the algorithm have been developed in preparation
+An improved version of the algorithm have been developed in preparation
 for LHC Run $2$.
-The first improvement concerns the rigorous formulation of the
-algorithm in terms of the ME method
-and the proper normalization of the probability density 
+Two variants of the improved algorithm have been implemented.
+The first variant, SVfitMEM, has been rigorously developed within the
+formalism of the ME method. It is based on proper normalization of the probability density 
 $\mathcal{P}$, given by Eq.~(\ref{eq:mem_with_hadRecoil}).
-The modelling of the experimental resolution on the $\pT$ of $\tauh$ via TF in the ME
-formalism, described in Section~\ref{sec:mem_TF_tauToHadDecays}, constitutes the second improvement.
-The two improvements enhance the relative resolution on the $\PHiggs$ boson mass
-achieved by the algorithm by $5$--$10\%$, 
-compared to the previous version of the SVfit algorithm, used during LHC Run $1$.
+The second variant of the improved algorithm uses a likelihood
+function of arbitrary normalization.
+It allows to compute, on an event-by-event basis, any kinematic
+function of the two $\Pgt$ leptons and furthermore provides a substantial
+reduction in computing time.
+A further improvement concerns the modelling of the experimental
+resolution on the $\pT$ of $\tauh$ via TF, described in
+Section~\ref{sec:mem_TF_tauToHadDecays}.
+
+The performance of the algorithm has been studied in simulated SM
+$\PHiggs \to \Pgt\Pgt$ signal and $\PZ/\Pggx \to \Pgt\Pgt$ background
+events, as well as in simulated samples of heavy pseudoscalar Higgs
+bosons and heavy spin $1$ resonances.
+The SVfit algorithm is found to perform well in all event
+categories and over the full range in true mass of the $\Pgt$ lepton
+pair that we studied.
 
 The development of the formalism to handle $\Pgt$ lepton decays
 in the ME method constitutes an important result of this paper.
