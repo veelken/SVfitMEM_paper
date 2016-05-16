@@ -18,7 +18,8 @@ where we use the superscripts $(1)$ and $(2)$ to refer to the $\Pgt$ lepton of p
 The first term, $\vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to
   \Pgt\Pgt}(\bm{p},m_{\PHiggs}) \vert^{2}$, represents the squared
 modulus of the ME for $\PHiggs$ boson production with subsequent decay of the $\PHiggs$ boson into a pair of $\Pgt$ leptons.
-This term can alternatively be computed by using automatized tools such as CompHEP or MadGraph or taken from the literature.
+This term can be computed by using automatized tools such as
+CompHEP or MadGraph or it can be taken from the literature.
 
 \begin{figure}
 \begin{center}
@@ -46,21 +47,23 @@ The corresponding Feynman diagram is shown in Fig.~\ref{fig:ggH_FeynmanDiagram}.
 The squared modulus of the ME reads~\cite{me_ggHprod}:
 \begin{equation}
 \vert \mathcal{M}_{\Pg\Pg \to \PHiggs} \vert^{2} = 
- \frac{\sqrt{2} \, G_{F}}{256 \, \pi^{2}} \, \alpha_{s}^{2} \, \tau^{2} \, m_{\PHiggs}^{4} \vert 1 + (1 - \tau) \, f(\tau) \vert^{2} \, ,
+ \frac{\sqrt{2} \, G_{F}}{256 \, \pi^{2}} \, \alpha_{s}^{2} \, \zeta^{2} \, m_{\PHiggs}^{4} \vert 1 + (1 - \zeta) \, f(\zeta) \vert^{2} \, ,
 \label{eq:meHiggsProduction}
 \end{equation}
-with $\tau = 4\, \frac{m_{\Pqt}^{2}}{m_{\PHiggs}^{2}}$ and:
+with $\zeta = 4\, \frac{m_{\Pqt}^{2}}{m_{\PHiggs}^{2}}$ and:
 \begin{equation}
-f(\tau) = 
+f(\zeta) = 
 \begin{cases} 
-\arcsin^{2} \frac{1}{\sqrt{\tau}}  & \mbox{if } \tau \geq 1 \, , \\
--\frac{1}{4} \, \left( \log\frac{1 + \sqrt{1 - \tau}}{1 - \sqrt{1 - \tau}} - i\pi \right)^{2} & \mbox{if } \tau < 1 \, .
+\arcsin^{2} \frac{1}{\sqrt{\zeta}}  & \mbox{if } \zeta \geq 1 \, , \\
+-\frac{1}{4} \, \left( \log\frac{1 + \sqrt{1 - \zeta}}{1 - \sqrt{1 - \zeta}} - i\pi \right)^{2} & \mbox{if } \zeta < 1 \, .
 \end{cases}
 \label{eq:meHiggsProduction_ftau}
 \end{equation}
-The symbol $G_{F}$ denotes the Fermi constant. Its numerical value is:
+The symbols $G_{F}$ and $\alpha_{s}$ denote, respectively, the Fermi and
+strong coupling constant. Their numerical values are:
 \begin{equation} 
-G_{F} = 1.166 \cdot 10^{-5}\mbox{~GeV}^{-2} \, .
+G_{F} = 1.166 \cdot 10^{-5}\mbox{~GeV}^{-2} \, \mbox{ and } \,
+\alpha_{s}(m_{\PZ}) = 0.139384 \, .
 \label{eq:def_G_F} 
 \end{equation}
 The squared modulus of the Breit-Wigner propagator $\vert
@@ -105,9 +108,10 @@ when computing the squared modulus of the ME $\vert \mathcal{M}(\bm{p},m_{\PHigg
 the normalization factor $1/\sigma(m_{\PHiggs})$ in Eq.~(\ref{eq:mem}).
 
 Concerning the decay of the $\Pgt$ leptons,
-we again use the narrow-width approximation (NWA) and assume the $\Pgt$ leptons to be unpolarized,
-effectively ignoring the correlation of spins between $\Pgt$
-lepton production and decay.
+we use the narrow-width approximation (NWA) and for each $\Pgt$
+lepton we take a separate and independent average over its spin
+states, effectively ignoring the correlation in spin orientations between
+the two $\Pgt$ leptons.
 In the NWA, the squared modulus of the Breit-Wigner propagator $\vert
 \BW_{\Pgt} \vert^{2}$ that associates $\Pgt$ lepton production and
 decay yields a $\delta$-function:
@@ -123,7 +127,7 @@ The factor $\vert \mathcal{M}^{(i)}_{\Pgt\to\cdots}
 \vert^{2}$ in Eq.~(\ref{eq:meFactorization}) represents the decay of the $i$-th $\Pgt$ lepton.
 For the decays $\Pgt \to \enunu$ and $\Pgt
 \to \mununu$, which we refer to as ``leptonic'' $\Pgt$ decays, we take the ME from the literature.
-Assuming the $\Pgt$ leptons to be unpolarized and taking the average over the spin states of the $\Pgt$ lepton,
+Taking the average over the spin states of the $\Pgt$ lepton,
 the squared modulus of the ME is given by~\cite{Barger:1987nn}:
 \begin{equation}
 \vert\mathcal{M}_{\Pgt \to \ellnunu} \vert^{2} = 64 \, G^{2}_{F} \,
@@ -135,7 +139,7 @@ the squared modulus of the ME is given by~\cite{Barger:1987nn}:
 The modelling of the decays $\Pgt \to \textrm{hadrons} + \Pnut$ 
 by matrix elements is more difficult, 
 due to the fact that $\Pgt$ leptons decay to a variety of hadronic
-final states, and because some of the decays proceed via intermediate vector
+final states, and because some of the decays proceed via intermediate 
 meson resonances~\cite{PDG}.
 We refer to these decays as ``hadronic'' $\Pgt$ decays.
 The ME for the dominant hadronic $\Pgt$ decay modes are discussed in the literature~\cite{Bullock:1992yt,Raychaudhuri:1995kv}.
@@ -171,20 +175,17 @@ as well as to the electron or muon produced in the decays $\Pgt \to \enunu$ and 
 \begin{figure}[h]
 \setlength{\unitlength}{1mm}
 \begin{center}
-%%\begin{picture}(150,52)(0,0)
-%%\put(-5.5, 0.0){\mbox{\includegraphics*[height=48mm]
-%%  {figures/makeSVfitToyMCplots_X1_m90_beforeVisPtCuts.pdf}}}
-%%\put(58.0, 0.0){\mbox{\includegraphics*[height=48mm]
-%%  {figures/makeSVfitToyMCplots_X2_m90_beforeVisPtCuts.pdf}}}
 \begin{picture}(150,52)(0,0)
 \put(-4.5, -4.0){\mbox{\includegraphics*[height=56mm]
-  {figures/makeSVfitToyMCplots_X1_m90_beforeVisPtCuts.pdf}}}
+  {figures/makeSVfitToyMCplots_X1_m125_beforeVisPtCuts.pdf}}}
 \put(77.0, -4.0){\mbox{\includegraphics*[height=56mm]
-  {figures/makeSVfitToyMCplots_X2_m90_beforeVisPtCuts.pdf}}}
+  {figures/makeSVfitToyMCplots_X2_m125_beforeVisPtCuts.pdf}}}
 \end{picture}
 \end{center}
 \caption{
-  Fraction $z$ of the $\Pgt$ lepton energy, in the laboratory frame, carried by visible $\Pgt$ decay products.
+  Fraction $z$ of the $\Pgt$ lepton energy, in the laboratory frame,
+  carried by visible $\Pgt$ decay products in simulated SM $\PHiggs
+  \to \Pgt\Pgt$ events of $m_{\PHiggs} = 125$~\GeV.
   The case of $\Pgt \to \mununu$ decays is shown on the left and the case of $\Pgt \to \textrm{hadrons} + \Pnut$ decays on the right.
   Our simplified model, which treats hadronic $\Pgt$ decays as
   two-body decays into a hadronic system $\tauh$ and a $\Pnut$,

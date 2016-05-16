@@ -38,11 +38,11 @@ More specifically, we use the form:
 \begin{equation}
 W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} ) = 
  \begin{cases}
-   \mathcal{N} \, \zeta_{1} \, \left( \frac{\alpha_{1}}{x_{1}} - x_{1} - \frac{x - \mu}{\sigma} \right)^{-\alpha_{1}} \,  
+   \mathcal{N} \, \xi_{1} \, \left( \frac{\alpha_{1}}{x_{1}} - x_{1} - \frac{x - \mu}{\sigma} \right)^{-\alpha_{1}} \,  
  & \mbox{if } x < x_{1} \\
    \mathcal{N} \, \exp\left( -\frac{1}{2} \, \left( \frac{x - \mu}{\sigma} \right)^{2} \right) \,
  & \mbox{if } x_{1} \leq x \leq x_{2} \\
-   \mathcal{N} \, \zeta_{2} \, \left( \frac{\alpha_{2}}{x_{2}} - x_{2} - \frac{x - \mu}{\sigma} \right)^{-\alpha_{2}} \,
+   \mathcal{N} \, \xi_{2} \, \left( \frac{\alpha_{2}}{x_{2}} - x_{2} - \frac{x - \mu}{\sigma} \right)^{-\alpha_{2}} \,
  & \mbox{if } x > x_{2} 
  \end{cases}
 \label{eq:tf_tauToHadDecays_pT}
@@ -50,13 +50,13 @@ W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} ) =
 and we use the values $\mu = 1.0$, $\sigma = 0.03$, $x_{1} = 0.97$, $\alpha_{1} = 7$,
 $x_{2} = 1.03$, and $\alpha_{2} = 3.5$ for its parameters.
 The parameter values are chosen to approximately reproduce the $\tauh$ energy resolution expected for LHC Run $2$ in case of the CMS experiment.
-The factors $\zeta_{1}$ and $\zeta_{2}$ are chosen such that the
+The factors $\xi_{1}$ and $\xi_{2}$ are chosen such that the
 function $W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} )$ is continuous at
 the points $x = x_{1}$ and $x = x_{2}$. 
 The corresponding values are 
-$\zeta_{1} = \exp\left( -\frac{1}{2} \, \left( \frac{x_{1} - \mu}{\sigma} \right)^{2} \right) \cdot \left( \frac{\alpha_{1}}{x_{1}} - x_{1} - \frac{x_{1} - \mu}{\sigma} \right)^{\alpha_{1}}$
+$\xi_{1} = \exp\left( -\frac{1}{2} \, \left( \frac{x_{1} - \mu}{\sigma} \right)^{2} \right) \cdot \left( \frac{\alpha_{1}}{x_{1}} - x_{1} - \frac{x_{1} - \mu}{\sigma} \right)^{\alpha_{1}}$
 and
-$\zeta_{2} = \exp\left( -\frac{1}{2} \, \left( \frac{x_{2} - \mu}{\sigma} \right)^{2} \right) \cdot \left( \frac{\alpha_{2}}{x_{2}} - x_{2} - \frac{x_{2} - \mu}{\sigma} \right)^{\alpha_{2}}$.
+$\xi_{2} = \exp\left( -\frac{1}{2} \, \left( \frac{x_{2} - \mu}{\sigma} \right)^{2} \right) \cdot \left( \frac{\alpha_{2}}{x_{2}} - x_{2} - \frac{x_{2} - \mu}{\sigma} \right)^{\alpha_{2}}$.
 The factor $\mathcal{N}$ is determined by the requirement that the function $W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} )$ 
 satisfies the normalization condition $\int \, d\pT^{\vis} \, W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} ) = 1$ for any given value of $\pThat^{\vis}$.
 The TF given by Eq.~(\ref{eq:tf_tauToHadDecays_pT}) is visualized in Fig.~\ref{fig:tf_tauToHadDecays_pT}.
@@ -101,6 +101,23 @@ to ensure the correct normalization of the TF:
 where the factor $\pT^{\vis}/\sin^{2} \theta_{\vis}$ corresponds to the Jacobian of the variable transformation 
 from $(\pX^{\vis} = \pT^{\vis} \, \cos\phi_{\vis}, \pY^{\vis} = \pT^{\vis} \, \sin\phi_{\vis}, \pZ^{\vis} = \pT^{\vis}/\tan\theta_{\vis})$ 
 to $(\pT^{\vis}, \theta_{\vis}, \phi_{\vis})$.
+
+A few words of explanation are in order concerning the treatment of
+the mass $m_{\vis}$ of the hadronic system $\tauh$ produced in $\Pgt
+\to \textrm{hadrons} + \Pnut$ decays.
+Within the scope of this paper, we will assume that $m_{\vis}$ can be
+reconstructed with negligible experimental resolution.
+The $\tauh$ reconstruction algorithm of the CMS experiment~\cite{TAU-14-001} allows to
+reconstruct $m_{\vis}$. The resolution on $m_{\vis}$ can be taken into
+account by adding, to Eq.~(\ref{eq:mem_with_hadRecoil}), a suitable TF $W_{\Phadron}( m_{\vis} | \mhat_{\vis}
+)$ and marginalization with respect to $\mhat_{\vis}$.
+We have checked that the effect of the experimental resolution on
+$m_{\vis}$ on the reconstruction of $m_{\Pgt\Pgt}$ is small in case of
+the CMS experiment.
+The $\tauh$ reconstruction algorithm used by the ATLAS experiment during LHC Run $1$~\cite{Aad:2014rga} does not
+allow to reconstruct $m_{\vis}$.
+In case $m_{\vis}$ cannot be reconstructed, one needs to add, to Eq.~(\ref{eq:mem_with_hadRecoil}),
+a marginalization with respect to $m_{\vis}$.
 
 
 \subsubsection{Leptonic $\Pgt$ decays}

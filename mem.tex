@@ -1,21 +1,21 @@
 \section{The Matrix element method}
 \label{sec:mem}
 
-In the ME method, an estimate for the unknown model parameter $\theta$
+In the ME method, an estimate for the unknown model parameter $\Theta$
 is obtained by maximizing the probability density:
 \begin{align}
-\mathcal{P}(\bm{y}|\theta) = & \frac{\Omega(\bm{y})}{\sigma(\theta) \,
-\mathcal{A}(\theta)} \, \int \, dx_{a} \, dx_{b} \,
+\mathcal{P}(\bm{y}|\Theta) = & \frac{\Omega(\bm{y})}{\sigma(\Theta) \,
+\mathcal{A}(\Theta)} \, \int \, dx_{a} \, dx_{b} \,
 d\Phi_{n} \, \frac{f(x_{a}) \, f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \, (2\pi)^{4} \,
 \delta( x_{a} \, E_{a} + x_{b} \, E_{b} - \sum_{i}^{n}
 E_{(i)}) \cdot \nonumber \\
  & \quad \delta^{3}( x_{a} \, \bm{p}^{a} + x_{b} \, \bm{p}^{b} - \sum_{i}^{n}
 \bm{p}^{(i)}) \, 
-  \vert \mathcal{M}(\bm{p},\theta) \vert^{2} \, W(\bm{y}|\bm{p}) \,
-  \epsilon(\bm{p},\theta) 
+  \vert \mathcal{M}(\bm{p},\Theta) \vert^{2} \, W(\bm{y}|\bm{p}) \,
+  \epsilon(\bm{p},\Theta) 
 \label{eq:mem}
 \end{align}
-with respect to $\theta$.
+with respect to $\Theta$.
 The symbols $E_{a}$ and $E_{b}$ and $\bm{p}^{a}$ and $\bm{p}^{b}$ denote, respectively, the energies and momenta of the two colliding protons,
 $\sqrt{s}$ represents the centre-of-mass energy,
 $x_{a}$ and $x_{b}$ denote the Bjorken scaling variables~\cite{Bjorkenx}
@@ -28,7 +28,7 @@ and by $d\Phi_{n} = \prod_{i}^{n} \,
 \frac{d^{3}\bm{p}^{(i)}}{(2\pi)^{3} \, 2 E_{(i)}}$ the differential $n$-particle
 phase space element.
 Vector quantities are represented by bold letters.
-The symbol $\vert \mathcal{M}(\bm{p},\theta) \vert^{2}$ represents the
+The symbol $\vert \mathcal{M}(\bm{p},\Theta) \vert^{2}$ represents the
 squared modulus of the ME for
 the process.
 The $\delta$-functions $\delta( x_{a} \, E_{a} + x_{b} \, E_{b} - \sum_{i}^{n} E_{(i)})$
@@ -45,26 +45,26 @@ The value of the indicator function is $1$ for events which pass the event selec
 The efficiency for an event originating at the phase space point
 $\bm{p}$ to pass the event selection, \ie to end up with measured
 observables $\bm{y}$ for which $\Omega(\bm{y}) = 1$,
-is denoted by $\epsilon(\bm{p},\theta)$. 
-The symbol $\sigma(\theta)$ corresponds to the inclusive cross section for the process under study,
+is denoted by $\epsilon(\bm{p},\Theta)$. 
+The symbol $\sigma(\Theta)$ corresponds to the inclusive cross section for the process under study,
 in the case considered in this paper the production, in $\Pp\Pp$
 collisions, of a $\PHiggs$ boson decaying into a pair of $\Pgt$ leptons
 with subsequent decay of the $\Pgt$ pair.
-The symbol $\mathcal{A}(\theta)$ represents the acceptance of the
+The symbol $\mathcal{A}(\Theta)$ represents the acceptance of the
 event selection, that is, the percentage of events which pass the event
 selection criteria.
-Division by $\sigma(\theta) \cdot \mathcal{A}(\theta)$ ensures that $\mathcal{P}(\bm{y}|\theta)$ has
+Division by $\sigma(\Theta) \cdot \mathcal{A}(\Theta)$ ensures that $\mathcal{P}(\bm{y}|\Theta)$ has
 the correct normalization required for a probability density, 
-i.e. $\int \, d\bm{y} \, \mathcal{P}(\bm{y}|\theta) = 1$ for every $\theta$, 
+i.e. $\int \, d\bm{y} \, \mathcal{P}(\bm{y}|\Theta) = 1$ for every $\Theta$, 
 provided that the TF satisfy the normalization condition
 $\int \, d\bm{y} \, \Omega(\bm{y}) \, W(\bm{y}|\bm{p}) = 1$
 for every $\bm{p}$.
 
 The meaning of Eq.~(\ref{eq:mem}) is as follows.
-The best estimate for the unknown model parameter $\theta$ is given by the
-value $\hat{\theta}$ which maximizes the probability density to observe precisely the 
+The best estimate for the unknown model parameter $\Theta$ is given by the
+value $\hat{\Theta}$ which maximizes the probability density to observe precisely the 
 values $\bm{y}$ that are measured in the detector. 
-Within the scope of this paper, the unknown model parameter $\theta$
+Within the scope of this paper, the unknown model parameter $\Theta$
 corresponds to the mass $m_{\PHiggs}$ of the $\PHiggs$ boson or,
 equivalently, to the true mass $m_{\Pgt\Pgt}$ of the $\Pgt$ lepton
 pair in a given event.
@@ -88,7 +88,7 @@ Section~\ref{sec:mem_PSintegration}.
 The computation of the cross section $\sigma(m_{\PHiggs})$ that is needed for a proper normalization of the probability density $\mathcal{P}(\bm{y}|m_{\PHiggs})$
 in Eq.~(\ref{eq:mem}) is described in Section~\ref{sec:mem_xSection}.
 The numerical maximization of the probability density $\mathcal{P}(\bm{y}|m_{\PHiggs})$
-with respect to the $\PHiggs$ boson mass $m_{\PHiggs}$ is described in
+with respect to the mass $m_{\PHiggs}$ of the $\PHiggs$ boson is described in
 Section~\ref{sec:mem_numericalMaximization}.
 We denote this version of the SVfit algorithm by SVfitMEM.
 

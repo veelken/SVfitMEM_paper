@@ -89,7 +89,8 @@ The angles $\theta_{\inv}$ and $\phi_{\inv}$ are illustrated in Fig.~\ref{fig:ta
 The $\bm{p}^{\inv}$ vector is located on the surface of a cone,
 the axis of which is given by the $\bm{p}^{\vis}$ vector and the
 opening angle of which is given by Eq.~(\ref{eq:theta_inv}).
-The variable $\phi_{\inv}$ represents the angle of rotation around the
+The variable $\phi_{\inv}$ represents the angle of rotation, in
+counter-clockwise direction, around the
 axis of the cone.
 The value $\phi_{\inv} = 0$ is chosen to correspond to the case that
 the $\bm{p}^{\inv}$ vector is within the plane spanned by the
@@ -160,9 +161,11 @@ we perform a further variable transformation, replacing $z^{(2)}$ by $t_{\PHiggs
 The transformation is executed in two steps. 
 First, we replace $z^{(2)}$ by:
 \begin{equation}
-q_{\PHiggs}^{2} = \frac{m^{2}_{\vis}}{z^{(1)} \, z^{(2)}} \, .
+q_{\PHiggs}^{2} = \frac{q^{2}_{\vis}}{z^{(1)} \, z^{(2)}} \, ,
 \label{eq:varTransform_z2_to_tHiggs_1}
 \end{equation}
+with $q_{\vis}$ denoting the mass of the visible decay products of both
+$\Pgt$ leptons.
 Following Eq.~(8) in Ref.~\cite{Alwall:2010cq}, we then parametrize $q_{\PHiggs}^{2}$ by:
 \begin{equation}
 q_{\PHiggs}^{2} = m_{\PHiggs}^{2} + m_{\PHiggs} \, \Gamma_{\PHiggs}
@@ -178,7 +181,7 @@ The Jacobi factor is given by:
 \begin{equation}
 \left\lvert \frac{\partial z^{(2)}}{\partial q_{\PHiggs}^{2}} \cdot \frac{\partial
   q_{\PHiggs}^{2}}{\partial t_{\PHiggs}} \right\rvert =
-\frac{m^{2}_{\vis}}{q_{\PHiggs}^{4} \, z^{(1)}} \cdot \frac{(q_{\PHiggs}^{2}
+\frac{q^{2}_{\vis}}{q_{\PHiggs}^{4} \, z^{(1)}} \cdot \frac{(q_{\PHiggs}^{2}
   - m_{\PHiggs}^{2})^{2} + m_{\PHiggs}^{2} \,
   \Gamma_{\PHiggs}^{2}}{m_{\PHiggs} \, \Gamma_{\PHiggs}} \, .
 \label{eq:JacobiFactor_z2_to_tHiggs}  
