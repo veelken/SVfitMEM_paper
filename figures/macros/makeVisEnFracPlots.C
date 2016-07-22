@@ -252,9 +252,10 @@ void makeVisEnFracPlots()
 {
   gROOT->SetBatch(true);
 
-  //std::string inputFilePath = "/data1/veelken/tmp/svFitStudies/";
-  std::string inputFilePath = "/afs/cern.ch/user/v/veelken/cms/papers/SVfitMEM_NIM_A_git/paper/plots/macros/";
-  std::string inputFileName = Form("%s/studySVfitVisPtCuts_2013Jun17.root", inputFilePath.data());
+  //std::string inputFilePath = "/afs/cern.ch/user/v/veelken/cms/papers/SVfitMEM_NIM_A_git/paper/plots/macros/";
+  //std::string inputFileName = Form("%s/studySVfitVisPtCuts_2013Jun17.root", inputFilePath.data());
+  std::string inputFilePath = "/afs/cern.ch/user/v/veelken/scratch0/CMSSW_7_6_3/src/TauAnalysis/CandidateTools/test/";
+  std::string inputFileName = Form("%s/studySVfitVisPtCuts_2016May26.root", inputFilePath.data());
   TFile* inputFile = new TFile(inputFileName.data());
 
   std::vector<std::string> directories;
@@ -282,13 +283,15 @@ void makeVisEnFracPlots()
   xAxisTitles["histogramLeg2X"] = "z_{h}";
   
   std::vector<double> massPoints;
-  massPoints.push_back(90.);
 /*
+  massPoints.push_back(90.);
   massPoints.push_back(105.);
   massPoints.push_back(110.);
   massPoints.push_back(115.);
   massPoints.push_back(120.);
+ */
   massPoints.push_back(125.);
+/*
   massPoints.push_back(130.);
   massPoints.push_back(135.);
   massPoints.push_back(140.);

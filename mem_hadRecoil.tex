@@ -43,7 +43,7 @@ of a TF $W_{\rec}( \pX^{\rec}, \pY^{\rec} | \pXhat^{\rec},
 We then marginalize Eq.~(\ref{eq:mem}) with respect to $\pXhat^{\rec}$ and $\pYhat^{\rec}$:
 \begin{align}
 & \mathcal{P}(\bm{y};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}) =
-\frac{1}{\sigma(m_{\PHiggs})} \, \int \, dx_{a} \, dx_{b} \, d\Phi_{n} \,
+\frac{1}{\sigma'(m_{\PHiggs})} \, \int \, dx_{a} \, dx_{b} \, d\Phi_{n} \,
 d\pXhat^{\rec} \, d\pYhat^{\rec} \, \frac{f(x_{a}) f(x_{b})}{2 \,
   x_{a} \, x_{b} \, s} \cdot \nonumber \\
 & \qquad (2\pi)^{4} \, \delta( x_{a} \, \Ehat_{a} + x_{b} \, \Ehat_{b} -
@@ -53,7 +53,7 @@ d\pXhat^{\rec} \, d\pYhat^{\rec} \, \frac{f(x_{a}) f(x_{b})}{2 \,
 & \qquad \vert \mathcal{M}(\bm{\tilde{p}},m_{\PHiggs}) \vert^{2} \, W(\bm{y}|\bm{\hat{p}}) \, W_{\rec}( \pX^{\rec}, \pY^{\rec} | \pXhat^{\rec}, \pYhat^{\rec} ) \, .
 \label{eq:mem_mod_hadRecoil}
 \end{align}
-The cross section $\sigma(m_{\PHiggs})$ needs to be replaced by
+The cross section $\sigma(m_{\PHiggs})$ needs to be replaced by:
 \begin{equation}
 \sigma'(m_{\PHiggs}) = \sigma(m_{\PHiggs}) \, \int \, d\pXhat^{\rec} \, d\pYhat^{\rec} 
 \end{equation}
@@ -95,7 +95,7 @@ Substituting Eq.~(\ref{eq:meFactorization}) into Eq.~(\ref{eq:mem_mod_hadRecoil}
 \begin{align}
 &
 \mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs})
-= \frac{1}{\sigma(m_{\PHiggs})} \, \frac{32\pi^{4}}{s} \, \int \,
+= \frac{1}{\sigma'(m_{\PHiggs})} \, \frac{32\pi^{4}}{s} \, \int \,
  d\Phi_{n} \, \frac{f(x_{a}) f(x_{b})}{2 \, x_{a} \, x_{b} \, s} \, 
  \vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to \Pgt\Pgt}(\bm{\tilde{p}},m_{\PHiggs}) \vert^{2} \cdot \hspace{2cm} \nonumber \\
 & \qquad \vert \BW^{(1)}_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(1)}_{\Pgt\to\cdots}(\bm{\tilde{p}}) \vert^{2} 

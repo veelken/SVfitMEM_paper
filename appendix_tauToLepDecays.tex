@@ -159,10 +159,9 @@ $\delta$-function $\delta ( v_{0} )$ in the first line.
 In the rest frame of the neutrino pair:
 \begin{align}
 ( E_{\Pgt}, \bm{p}^{\Pgt} ) = & \, ( E_{\Pgt}, 0, 0, \vert\bm{p}^{\Pgt}\vert ) \nonumber \\
-( E_{\vis}, \bm{p}^{\vis} ) = & \, ( E_{\vis}, 0, 0,
-\vert\bm{p}^{\vis}\vert ) \nonumber \\
-( E_{\APnu}, \bm{p}^{\APnu} ) = & \, \frac{m_{\inv}}{2} \, ( 1, 0, \sin\theta, \cos\theta ) \nonumber 
-( E_{\Pnu}, \bm{p}^{\Pnu} ) = & \, \frac{m_{\inv}}{2} \, ( 1, 0, \mbox{-}\sin\theta, \mbox{-}\cos\theta ) \, , \nonumber \\
+( E_{\vis}, \bm{p}^{\vis} ) = & \, ( E_{\vis}, 0, 0, \vert\bm{p}^{\vis}\vert ) \nonumber \\
+( E_{\Pnu}, \bm{p}^{\Pnu} ) = & \, \frac{m_{\inv}}{2} \, ( 1, 0, \sin\theta, \cos\theta ) \nonumber \\
+( E_{\APnu}, \bm{p}^{\APnu} ) = & \, \frac{m_{\inv}}{2} \, ( 1, 0, \mbox{-}\sin\theta, \mbox{-}\cos\theta ) \, , \nonumber 
 \end{align}
 where we have chosen the polar axis such that it is parallel to $\bm{p}^{\vis}$.
 
@@ -238,8 +237,7 @@ d^{3}\bm{u} = \frac{1}{4 u_{0}} \, dm^{2}_{\inv} \, d^{3}\bm{u} \, .
 Substituting Eqs.~(\ref{eq:lepTauDecaysIrf})
 and~(\ref{eq:lepTauDecaysJacobi}) into
 Eq.~(\ref{eq:lepTauDecaysPSint}), we then obtain:
-\begin{equation}
-\begin{aligned}
+\begin{align}
 & \, \vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\Pgt\to\cdots}\vert^{2} \,
  d\Phi_{\ellnunu} = \frac{8\pi^{4}}{m_{\Pgt} \, \Gamma_{\Pgt}} \,
  \delta \left( E_{\Pgt} - E_{\vis} - u_{0} \right)
@@ -249,9 +247,8 @@ Eq.~(\ref{eq:lepTauDecaysPSint}), we then obtain:
   \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2 E_{\vis}} \, 
   \frac{d^{3}\bm{u}}{(2\pi)^{3} \, 2 u_{0}} \, \frac{I_{\inv}}{2} \,
   dm^{2}_{\inv} \, ,
-\end{aligned}
 \label{eq:finalLepTauDecaysPSint}
-\end{equation}
+\end{align}
 with $u_{0} \equiv E_{\inv}$ and $\bm{u} \equiv \bm{p}^{\inv}$.
 The expression in Eq.~(\ref{eq:finalLepTauDecaysPSint}) is very similar in structure to the third line of Eq.~(\ref{eq:hadTauDecaysPSint}),
 if we identify the integration over the momentum of the neutrino pair,
@@ -271,14 +268,14 @@ $I_{\inv}$ can be treated as a constant when performing the integration over $d^
 We can hence use Eq.~(\ref{eq:hadTauDecaysResult}) of Section~\ref{sec:appendix_tauToHadDecays} to express Eq.~(\ref{eq:finalLepTauDecaysPSint}) by:
 \begin{align}
 \vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\Pgt\to\cdots}\vert^{2} \,
- d\Phi_{\ellnunu} = \frac{1}{512\pi^{5}\, m_{\Pgt} \, \Gamma_{\Pgt}} \cdot 
-    \frac{I_{\inv}}{\vert\bm{p}^{\vis}\vert \, z^{2}} \, 
+ d\Phi_{\ellnunu} = \frac{I_{\inv}}{512\pi^{5}\, m_{\Pgt} \, \Gamma_{\Pgt}} \cdot 
+    \frac{E_{\vis}}{\vert\bm{p}^{\vis}\vert \, z^{2}} \, 
     \frac{d^{3}\bm{p}^{\vis}}{2 E_{\vis}} \, dz \, dm^{2}_{\inv} \,
     d\phi_{\inv} \, ,
 \label{eq:lepTauDecaysResult}
 \end{align}
 where the angle $\phi_{\inv}$ specifies the orientation of the neutrino
-pair momentum vector $\bm{u}$ with respect to the momentum vector $\bm{p}^{\vis}$
+pair momentum vector $\bm{p}^{\inv}$ with respect to the momentum vector $\bm{p}^{\vis}$
 of the electron or muon.
 
 The opening angle between the vector $\bm{p}^{\inv}$ and the direction
@@ -292,7 +289,7 @@ of the electron respectively muon is given in analogy to Eq.~(\ref{eq:hadTauDeca
 We define:
 \begin{equation}
 f_{\Plepton}\left(\bm{p}^{\vis}, m_{\vis}, \bm{p}^{\inv}\right) = 
-\frac{I_{\inv}}{512\pi^{6} \, \vert\bm{p}^{\vis}\vert \, z^{2}}
+\frac{I_{\inv}}{512\pi^{6}} \cdot \frac{E_{\vis}}{\vert\bm{p}^{\vis}\vert \, z^{2}}
 \label{eq:lepTauDecays_f}
 \end{equation}
 to obtain:

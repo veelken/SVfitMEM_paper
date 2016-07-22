@@ -29,8 +29,9 @@ element $d\Phi^{(i)}_{\tauhnu}$ reads:
 = & \frac{8\pi^{4}}{m_{\Pgt} \, \Gamma_{\Pgt}} \, \vert\mathcal{M}^{\eff}_{\Pgt \to
   \tauh\Pnut}\vert^{2} \, \delta \left( E_{\Pgt} - E_{\vis} -
   E_{\inv} \right) \, \delta^{3} \left( \bm{p}^{\Pgt} - \bm{p}^{\vis}
-  - \bm{p}^{\inv} \right) \, \frac{d^{3}\bm{p}^{\Pgt}}{(2\pi)^{3} \, 2 E_{\Pgt}} \, 
-  \frac{d^{3}\bm{p}^{\vis}}{2 E_{\vis}} \, \frac{d^{3}\bm{p}^{\inv}}{2
+  - \bm{p}^{\inv} \right) \nonumber \\
+& \qquad \frac{d^{3}\bm{p}^{\Pgt}}{(2\pi)^{3} \, 2 E_{\Pgt}} \, 
+  \frac{d^{3}\bm{p}^{\vis}}{(2\pi)^{3} \, 2 E_{\vis}} \, \frac{d^{3}\bm{p}^{\inv}}{(2\pi)^{3} \, 2
     E_{\inv}} \nonumber \\
 = & \, \frac{\pi}{m_{\Pgt} \, \Gamma_{\Pgt}} \, \frac{\vert\mathcal{M}^{\eff}_{\Pgt \to
   \tauh\Pnut}\vert^{2}}{(2\pi)^{6}} 
@@ -38,11 +39,11 @@ element $d\Phi^{(i)}_{\tauhnu}$ reads:
  \left( E_{\Pgt}(\bm{p}^{\vis}, \bm{p}^{\inv}) - E_{\vis} - E_{\inv}
  \right) \cdot \nonumber \\
 & \qquad
-  \frac{d^{3}\bm{p}_{\vis}}{2 E_{\vis}} \, \frac{\vert\bm{p}_{\inv}\vert}{2} \, dE_{\inv} \, d\cos\theta_{\inv} \, d\phi_{\inv} \, ,
+  \frac{d^{3}\bm{p}^{\vis}}{2 E_{\vis}} \, \frac{\vert\bm{p}^{\inv}\vert}{2} \, dE_{\inv} \, d\cos\theta_{\inv} \, d\phi_{\inv} \, ,
 \label{eq:hadTauDecaysPSint}
 \end{align}
 where we have used the formula for recursive phase space generation,
-given by Eq.~(43.12) in Ref.~\cite{PDG}, for transforming the first line into the second
+given by Eq.~(46.12) in Ref.~\cite{PDG}, for transforming the first line into the second
 and the identity:
 \begin{equation} 
 d^{3}\bm{p}^{\inv} = \vert\bm{p}^{\inv}\vert^{2} \,
@@ -66,7 +67,7 @@ The Jacobi factor related to this transformation is:
 \begin{equation}
 E_{\inv} = E_{\Pgt} - E_{\vis} = \left( 1 - z \right)
 \, E_{\Pgt} = \frac{1 - z}{z} \, E_{\vis}
-  \quad \Longleftrightarrow \quad dE_{\inv} = \frac{\partial E_{\inv}}{\partial z} \, dz = \frac{E_{\vis}}{z^{2}} \, dz \, .
+  \quad \Longleftrightarrow \quad dE_{\inv} = \Big\lvert \frac{\partial E_{\inv}}{\partial z} \Big\rvert \, dz = \frac{E_{\vis}}{z^{2}} \, dz \, .
 \label{eq:hadTauDecaysJacobi}
 \end{equation}
 
@@ -115,7 +116,7 @@ This yields:
 \vert \BW_{\Pgt} \vert^{2} \cdot \vert\mathcal{M}_{\Pgt\to\cdots}(\bm{\tilde{p}})\vert^{2} \,
  d\Phi^{(i)}_{\tauhnu} = \frac{\vert\mathcal{M}^{\eff}_{\Pgt \to
   \tauh\Pnut}\vert^{2}}{256\pi^{5}\, m_{\Pgt} \, \Gamma_{\Pgt}} \cdot 
-    \frac{1}{\vert\bm{p}^{\vis}\vert \, z^{2}} \, 
+    \frac{E_{\vis}}{\vert\bm{p}^{\vis}\vert \, z^{2}} \, 
     \frac{d^{3}\bm{p}^{\vis}}{2 E_{\vis}} \, dz \, d\phi_{\inv} \, .
 \label{eq:hadTauDecaysResult}
 \end{equation}
@@ -124,7 +125,7 @@ We define:
 \begin{equation}
 f_{h}\left(\bm{p}^{\vis}, m_{\vis}, \bm{p}^{\inv}\right) = 
   \frac{\vert\mathcal{M}^{\eff}_{\Pgt \to
-  \tauh\Pnut}\vert^{2}}{256\pi^{6} \, \vert\bm{p}^{\vis}\vert \, z^{2}} 
+  \tauh\Pnut}\vert^{2}}{256\pi^{6}} \cdot \frac{E_{\vis}}{\vert\bm{p}^{\vis}\vert \, z^{2}} 
 \label{eq:hadTauDecays_f}
 \end{equation}
 to obtain:

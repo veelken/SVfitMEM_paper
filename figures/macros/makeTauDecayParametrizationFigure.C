@@ -261,6 +261,15 @@ void makeTauDecayParametrizationFigure()
   tauCoordDefPad->Draw();
   tauCoordDefPad->cd();
   TImage* tauCoordDef = TImage::Open("./tauCoordinateSystem.tiff");
+  //
+  // CV: tauCoordinateSystem.tiff made with latexit, using the input
+  //       e_{z} & = & \frac{\bf{p}^{\textrm{vis}}}{\lvert \bf{p}^{\textrm{vis}} \rvert} \\
+  //        & & \								\
+  //       e_{y} & = & \frac{e_{z} \times (0,0,1)}{\lvert e_{z} \times (0,0,1) \rvert} \ \
+  //        & & \\
+  //       e_{x} & = & e_{y} \times e_{z}
+  //     in 36 pt font, copying the graphics into Preview and saving it as picture in tiff file format
+  //
   tauCoordDef->Draw();
   canvas->cd();
 

@@ -84,21 +84,21 @@ We hence model the TF for the momentum of the $\tauh$ by the product of Eq.~(\re
 $\delta$-functions:
 \begin{equation}
 W_{\Phadron}( \bm{p}^{\vis} | \phat^{\vis} ) =
- \frac{\sin^{2}\theta_{\vis}}{\pT^{\vis}} \, 
+ \frac{\sin^{2}\theta_{\vis}}{(\pT^{\vis})^{2}} \, 
   W_{\Phadron}( \pT^{\vis} | \pThat^{\vis} ) \,
   \delta( \theta_{\vis} - \thetahat_{\vis} ) \, 
   \delta( \phi_{\vis} - \phihat_{\vis} ) \, .
 \label{eq:tf_tauToHadDecays}
 \end{equation}
-The factor $\sin^{2}\theta_{\vis}/\pT^{\vis}$ is needed
+The factor $\sin^{2}\theta_{\vis}/(\pT^{\vis})^{2}$ is needed
 to ensure the correct normalization of the TF:
 \begin{align}
 & \int \, d^{3}\bm{p}  \, W_{\Phadron}( \bm{p}^{\vis} | \phat^{\vis} ) = \int \, d\pX^{\vis} \, d\pY^{\vis} \, d\pZ^{\vis} \, W_{\Phadron}( \bm{p}^{\vis} | \phat^{\vis} ) \nonumber \\
 & \qquad = \int \, d\pT^{\vis} \, d\theta_{\vis} \, d\phi_{\vis} \,
-\frac{\pT^{\vis}}{\sin^{2} \theta_{\vis}} \, W_{\Phadron}( \bm{p}^{\vis} | \phat^{\vis} ) \, 
+\frac{(\pT^{\vis})^{2}}{\sin^{2} \theta_{\vis}} \, W_{\Phadron}( \bm{p}^{\vis} | \phat^{\vis} ) \, 
   = 1 \, ,
 \end{align}
-where the factor $\pT^{\vis}/\sin^{2} \theta_{\vis}$ corresponds to the Jacobian of the variable transformation 
+where the factor $(\pT^{\vis})^{2}/\sin^{2} \theta_{\vis}$ corresponds to the Jacobian of the variable transformation 
 from $(\pX^{\vis} = \pT^{\vis} \, \cos\phi_{\vis}, \pY^{\vis} = \pT^{\vis} \, \sin\phi_{\vis}, \pZ^{\vis} = \pT^{\vis}/\tan\theta_{\vis})$ 
 to $(\pT^{\vis}, \theta_{\vis}, \phi_{\vis})$.
 
@@ -108,14 +108,12 @@ the mass $m_{\vis}$ of the hadronic system $\tauh$ produced in $\Pgt
 Within the scope of this paper, we will assume that $m_{\vis}$ can be
 reconstructed with negligible experimental resolution.
 The $\tauh$ reconstruction algorithm of the CMS experiment~\cite{TAU-14-001} allows to
-reconstruct $m_{\vis}$. The resolution on $m_{\vis}$ can be taken into
+reconstruct the mass of $\tauh$. The experimental resolution on $m_{\vis}$ can be taken into
 account by adding, to Eq.~(\ref{eq:mem_with_hadRecoil}), a suitable TF $W_{\Phadron}( m_{\vis} | \mhat_{\vis}
-)$ and marginalization with respect to $\mhat_{\vis}$.
-We have checked that the effect of the experimental resolution on
-$m_{\vis}$ on the reconstruction of $m_{\Pgt\Pgt}$ is small in case of
-the CMS experiment.
+)$ and marginalization with respect to the true mass $\mhat_{\vis}$ of the $\tauh$.
+In case of the CMS experiment the effect of the resolution on $m_{\vis}$ on the reconstruction of $m_{\Pgt\Pgt}$ is found to be small.
 The $\tauh$ reconstruction algorithm used by the ATLAS experiment during LHC Run $1$~\cite{Aad:2014rga} does not
-allow to reconstruct $m_{\vis}$.
+allow to reconstruct the mass of $\tauh$.
 In case $m_{\vis}$ cannot be reconstructed, one needs to add, to Eq.~(\ref{eq:mem_with_hadRecoil}),
 a marginalization with respect to $m_{\vis}$.
 
@@ -128,7 +126,7 @@ of the electrons and muons produced in $\Pgt$ decays are measured with negligibl
 Correspondingly, we model the TF by a product of three $\delta$-functions:
 \begin{equation}
 W_{\Plepton}( \bm{p}^{\vis} | \phat^{\vis} ) =  
- \frac{\sin^{2} \theta_{\vis}}{\pT^{\vis}} \, 
+ \frac{\sin^{2} \theta_{\vis}}{(\pT^{\vis})^{2}} \, 
   \delta( \pT^{\vis} - \pThat^{\vis} ) \, 
   \delta( \theta_{\vis} - \thetahat_{\vis} ) \, 
   \delta( \phi_{\vis} - \phihat_{\vis} ) \, .
