@@ -1,0 +1,3 @@
+scp -r lucia@quasar.hep.kbfi.ee://home/lucia/SVfitPerformanceStudiesII/CMSSW_7_6_3/src/TauAnalysis/SVfitPerformanceStudies/test/plot/finalplots/makeSVfitMEM_PerformancePlots_*all_categories_*log_ratio.pdf .
+scp -r lucia@quasar.hep.kbfi.ee://home/lucia/SVfitPerformanceStudiesII/CMSSW_7_6_3/src/TauAnalysis/SVfitPerformanceStudies/test/plot/finalplots/makeSVfitMEM_PerformancePlots_legend*.pdf .
+scp -r lucia@quasar.hep.kbfi.ee://home/lucia/SVfitPerformanceStudiesII/CMSSW_7_6_3/src/TauAnalysis/SVfitPerformanceStudies/test/plot/finalplots/makeSVfitMEM_PerformancePlots_HiggsSUSYGluGlu*log_ratio.pdf .
