@@ -24,8 +24,8 @@ while the samples produced by PYTHIA use the NNPDF2.3LO set~\cite{NNPDF1,NNPDF2,
 Parton shower and hadronization processes are modelled using the generator PYTHIA with the tune CUETP8M1~\cite{PYTHIA_CUETP8M1tune_CMS}.
 The latter is based on the Monash tune~\cite{PYTHIA_MonashTune}.
 The decays of $\Pgt$ leptons, including polarization effects, are modelled by PYTHIA.
-The samples are normalized according to cross section for the purpose of comparing different mass reconstruction algorithms in terms of analysis sensitivity.
-The cross section of the irreducible $\PZ/\Pggx \to \Pgt\Pgt$ background is computed at NNLO accuracy and amounts to $2.01 \times 10^{3}$~pb~\cite{FEWZ}.
+The samples are normalized according to cross section for the purpose of comparing different mass reconstruction algorithms in terms of signal-to-background separation.
+The cross section of the irreducible $\PZ/\Pggx \to \Pgt\Pgt$ background is computed at NNLO accuracy and amounts to $1.92 \times 10^{3}$~pb~\cite{FEWZ}.
 The cross sections for the SM $\PHiggs \to \Pgt\Pgt$ signal have been computed as detailed in Ref.~\cite{Dittmaier:2011ti},
 with the updates described in Ref.~\cite{Heinemeyer:2013tqa} included.
 They amount to $43.9$~pb for the $\Pg\Pg \to \PHiggs$ and to $3.75$~pb for the $\Pquark\APquark \to \PHiggs$ production process.
@@ -60,47 +60,30 @@ The $m_{\Pgt\Pgt}$ reconstruction in SM $\PHiggs \to \Pgt\Pgt$ signal events is 
 SM $\PHiggs \to \Pgt\Pgt$ analysis performed by the CMS collaboration during LHC Run $1$~\cite{HIG-13-004}:
 \begin{itemize}
 \item $0$-jet: 
-  $\Pg\Pg \to \PHiggs$ signal events 
-  containing no jets of $\pT > 30$~\GeV and $\lvert \eta \rvert < 4.5$.
-\item $1$-jet non--boosted:
-  $\Pg\Pg \to \PHiggs$ signal events 
-  containing exactly one jet of $\pT > 30$~\GeV and $\lvert \eta \rvert < 4.5$,
-  and a $\PHiggs$ boson of $\pT < 100$~\GeV.
+  Events containing no jets of $\pT > 30$~\GeV and $\lvert \eta \rvert < 4.5$.
+\item $1$-jet non-boosted:
+  Events containing one or more jets of $\pT > 30$~\GeV and $\lvert \eta \rvert < 4.5$
+  in which the $\PHiggs$ (respectively $\PZ$) boson satisfies $\pT < 100$~\GeV and that are not selected in the $2$-jet VBF event category.
 \item $1$-jet boosted:
-  $\Pg\Pg \to \PHiggs$ signal events 
-  containing exactly one jet of $\pT > 30$~\GeV and $\lvert \eta \rvert < 4.5$,
-  and a $\PHiggs$ boson of $\pT > 100$~\GeV.
+  Events containing one or more jets of $\pT > 30$~\GeV and $\lvert \eta \rvert < 4.5$
+  in which the $\PHiggs$ (respectively $\PZ$) boson satisfies $\pT > 100$~\GeV and that are not selected in the $2$-jet VBF event category.
 \item $2$-jet VBF:
-  $\Pquark\APquark \to \PHiggs$ signal events
-  containing two or more jets of $\pT > 30$~\GeV and $\lvert \eta \rvert < 4.5$,
+  Events containing two or more jets of $\pT > 30$~\GeV and $\lvert \eta \rvert < 4.5$,
   with at least one pair of jets satisfying $m_{jj} > 500$~\GeV and $\Delta\eta_{jj} > 3.5$.
 \end{itemize}
 The event categorization is based on generator level quantities.
+
 The $m_{\Pgt\Pgt}$ distributions reconstructed by the SVfitMEM and cSVfit algorithms in these event categories 
 in the $\tauh\tauh$, $\Pgm\tauh$, and $\Pe\Pgm$ decay channels are shown in Figs.~\ref{fig:massDistributions_sm_tautau} to~\ref{fig:massDistributions_sm_emu}.
 They are compared to the distributions in $m_{\Pgt\Pgt}$  reconstructed by the previous version of the
 SVfit algorithm, described in Ref.~\cite{SVfit}, to which we refer to as the SVfit ``standalone'' (SVfitSA) algorithm,
 and by the ``collinear-approximation'' (CA) method~\cite{massRecoCollinearApprox}.
-The distributions reconstructed by the SVfitMEM and cSVfit algorithms are compared
-for the case that the artificial regularization term described in Section~\ref{sec:mem_logM} is used as well as for the case that it is not used.
-In case of the SVfitMEM (cSVfit) algorithm we use $\kappa = 3$ ($\kappa = X$) for the $\Pgm\tauh$ and $\tauh\tauh$ channels and $\kappa = 2$ ($\kappa = X$) for the $\Pe\Pgm$ channel.
-The values of $\kappa$ have been chosen such that the optimal resolution on $m_{\Pgt\Pgt}$, 
+The SVfitMEM and cSVfit algorithms are run with and without the artificial regularization term described in Section~\ref{sec:mem_logM}.
+The value of $\kappa$ used for each channel is chosen such that the optimal resolution on $m_{\Pgt\Pgt}$, 
 quantified in terms of the ratio of the standard deviation $\sigma$ to the median $\textrm{M}$ of the distribution,
-is achieved in each channel.
-We expect the optimal choice of $\kappa$ for data analyses
-to depend on the rates of signal and background processes as well as on the experimental resolution,
-and we recommend to perform a reoptimization of $\kappa$ in practical applications of our algorithm.
-Numerical values for the resolution in $m_{\Pgt\Pgt}$ achieved by the different algorithms are given in Tables~\ref{tab:resolutions_sm_tautau} to~\ref{tab:resolutions_sm_emu}.
-The mass of the visible $\Pgt$ decay products, $m_{\vis}$, is included in the Tables for comparison.
-The choice of quantifying the resolution in terms of the ratio $\sigma/\textrm{M}$ is motivated 
-by the fact that the distributions in $m_{\Pgt\Pgt}$, respectively in $m_{\vis}$, may be shifted with respect to $m_{\Pgt\Pgt}^{\true}$.
-While the distributions in $m_{\Pgt\Pgt}$ reconstructed by the different versions of the SVfit algorithm,
-as well as by the CA method, peak close to $m_{\Pgt\Pgt}^{\true}$,
-the distributions in $m_{\vis}$ exhibit significant shifts towards lower mass.
-All algorithms can be trivially calibrated such that the median of each mass distribution coincides with the true mass of the $\Pgt$ lepton pair,
-by scaling the output of the algorithm by a suitably chosen constant.
-The advantage of quantifying the resolution in terms of the ratio $\sigma/\textrm{M}$ is that the ratio
-is invariant under such scaling.
+is attained.
+We find that the choice of $\kappa = 5$ for the $\tauh\tauh$ channel, $\kappa = 4$ for the $\Pgm\tauh$ channel,
+and $\kappa = 3$ for the $\Pe\Pgm$ channel performs well for the SVfitMEM and for the cSVfit algorithm.
 
 %----------------------------------------------------------------------------------------------------
 %
@@ -110,19 +93,20 @@ is invariant under such scaling.
 \begin{figure}
 \setlength{\unitlength}{1mm}
 \begin{center}
-\begin{picture}(160,210)(0,0)
-\put(-2.5, -4.0){\mbox{\includegraphics*[height=214mm]
+\begin{picture}(160,212)(0,0)
+\put(-4.0, -4.0){\mbox{\includegraphics*[height=216mm]
 {plots_sept_16/makeSVfitMEM_PerformancePlots_DYJets_HiggsSM_all_categories_hadhad_log_ratio.pdf}}}
-\put(121.0, 145.5){\mbox{\includegraphics*[width=52mm]
+\put(117.5, 145.5){\mbox{\includegraphics*[width=52mm]
 {plots_sept_16/makeSVfitMEM_PerformancePlots_legend_hadhad.pdf}}}
 \end{picture}
 \end{center}
 \caption{
   Distributions in $m_{\Pgt\Pgt}$ reconstructed by different algorithms in simulated $\PZ/\Pggx \to \Pgt\Pgt$ background ground events (a,c,e,g)
   and in SM $\PHiggs \to \Pgt\Pgt$ signal events produced via the $\Pg\Pg \to \PHiggs$ (b,d,f) and $\Pquark\APquark \to \PHiggs$ (h) production processes
-  in different event categories: $0$-jet (a,b), $1$-jet non--boosted (c,d), $1$-jet boosted (e,f),
+  in different event categories: $0$-jet (a,b), $1$-jet non-boosted (c,d), $1$-jet boosted (e,f),
   and $2$-jet VBF (g,h).
   The events are selected in the $\tauh\tauh$ decay channel. 
+  The axis of abscissae ranges from $0.4$ to $8$.
 }
 \label{fig:massDistributions_sm_tautau}
 \end{figure}
@@ -130,19 +114,20 @@ is invariant under such scaling.
 \begin{figure}
 \setlength{\unitlength}{1mm}
 \begin{center}
-\begin{picture}(160,210)(0,0)
-\put(-2.5, -4.0){\mbox{\includegraphics*[height=214mm]
+\begin{picture}(160,212)(0,0)
+\put(-4.0, -4.0){\mbox{\includegraphics*[height=216mm]
 {plots_sept_16/makeSVfitMEM_PerformancePlots_DYJets_HiggsSM_all_categories_muhad_log_ratio.pdf}}}
-\put(121.0, 145.5){\mbox{\includegraphics*[width=52mm]
+\put(117.5, 145.5){\mbox{\includegraphics*[width=52mm]
 {plots_sept_16/makeSVfitMEM_PerformancePlots_legend_muhad.pdf}}}
 \end{picture}
 \end{center}
 \caption{
   Distributions in $m_{\Pgt\Pgt}$ reconstructed by different algorithms in simulated $\PZ/\Pggx \to \Pgt\Pgt$ background ground events (a,c,e,g)
   and in SM $\PHiggs \to \Pgt\Pgt$ signal events produced via the $\Pg\Pg \to \PHiggs$ (b,d,f) and $\Pquark\APquark \to \PHiggs$ (h) production processes
-  in different event categories: $0$-jet (a,b), $1$-jet non--boosted (c,d), $1$-jet boosted (e,f),
+  in different event categories: $0$-jet (a,b), $1$-jet non-boosted (c,d), $1$-jet boosted (e,f),
   and $2$-jet VBF (g,h).
   The events are selected in the $\Pgm\tauh$ decay channel. 
+  The axis of abscissae ranges from $0.4$ to $8$.
 }
 \label{fig:massDistributions_sm_mutau}
 \end{figure}
@@ -150,307 +135,59 @@ is invariant under such scaling.
 \begin{figure}
 \setlength{\unitlength}{1mm}
 \begin{center}
-\begin{picture}(160,210)(0,0)
-\put(-2.5, -4.0){\mbox{\includegraphics*[height=214mm]
+\begin{picture}(160,212)(0,0)
+\put(-4.0, -4.0){\mbox{\includegraphics*[height=216mm]
 {plots_sept_16/makeSVfitMEM_PerformancePlots_DYJets_HiggsSM_all_categories_emu_log_ratio.pdf}}}
-\put(121.0, 145.5){\mbox{\includegraphics*[width=52mm]
+\put(117.5, 145.5){\mbox{\includegraphics*[width=52mm]
 {plots_sept_16/makeSVfitMEM_PerformancePlots_legend_emu.pdf}}}
 \end{picture}
 \end{center}
 \caption{
   Distributions in $m_{\Pgt\Pgt}$ reconstructed by different algorithms in simulated $\PZ/\Pggx \to \Pgt\Pgt$ background ground events (a,c,e,g)
   and in SM $\PHiggs \to \Pgt\Pgt$ signal events produced via the $\Pg\Pg \to \PHiggs$ (b,d,f) and $\Pquark\APquark \to \PHiggs$ (h) production processes
-  in different event categories: $0$-jet (a,b), $1$-jet non--boosted (c,d), $1$-jet boosted (e,f),
+  in different event categories: $0$-jet (a,b), $1$-jet non-boosted (c,d), $1$-jet boosted (e,f),
   and $2$-jet VBF (g,h).
   The events are selected in the $\Pe\Pgm$ decay channel.
+  The axis of abscissae ranges from $0.4$ to $8$.
 }
 \label{fig:massDistributions_sm_emu}
 \end{figure}
 %----------------------------------------------------------------------------------------------------
 
-%----------------------------------------------------------------------------------------------------
-%
-% mass resolutions in SM Higgs->tautau signal and Z/gamma*->tautau background events,
-% in event categories motivated by Run 1 SM Higgs->tautau analysis
-%
-\begin{table}
-\begin{center}
-\begin{tabular}{|l|ccc|ccc|}
-\hline
-\multicolumn{7}{|c|}{$\tauh\tauh$ decay channel} \\
-\hline
-\hline
-\multirow{2}{17mm}{Sample} & \multicolumn{3}{c|}{$m_{\vis}$} & \multicolumn{3}{c|}{SVfitSA} \\
-\cline{2-7}
- & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] \\
-\hline
-$\PZ \to \Pgt\Pgt$: & & & & & & \\
-        $\quad$ $0$-jet              &  $100.0$ & $ 0.089$ & $-$     &  $117.9$ & $ 0.096$ & $-$  \\
-        $\quad$ $1$-jet non--boosted &  $80.5$ & $ 0.179$  & $-$     &  $97.0$  & $ 0.146$ & $-$  \\
-        $\quad$ $1$-jet boosted      &  $69.9$ & $ 0.201$  & $-$     &  $90.4$  & $ 0.115$ & $-$  \\
-        $\quad$ $2$-jet VBF          &  $69.0$ & $ 0.196$  & $-$     &  $92.0$  & $ 0.087$ & $-$  \\
-        SM $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
-        $\quad$ $0$-jet              &  $109.2$ & $ 0.091$ & $21.81\pm0.70$  &  $130.0$ & $ 0.096$ & $24.06\pm1.54$ \\
-        $\quad$ $1$-jet non--boosted &  $103.9$ & $ 0.138$ & $13.55\pm0.71$  &  $127.0$ & $ 0.106$ & $33.17\pm4.23$  \\
-        $\quad$ $1$-jet boosted      &  $93.8$  & $ 0.199$ & $2.30\pm0.10$   &  $123.3$ & $ 0.095$ & $26.34\pm4.89$  \\
-        SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & &  \\
-        $\quad$ $2$-jet VBF          &  $94.7$  & $ 0.183$ & $20.89\pm1.49$  &  $123.4$ & $ 0.100$ & $1^{+0}_{-0.1}$  \\
-\hline
-\end{tabular}
-
-\begin{tabular}{|l|ccc|ccc|}
-\hline
-\multirow{2}{17mm}{Sample} & \multicolumn{3}{c|}{cSVfit, $\kappa=0$} & \multicolumn{3}{c|}{cSVfit, $\kappa=5$} \\
-\cline{2-7}
- & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] \\
-\hline
-$\PZ \to \Pgt\Pgt$: & & & & & & \\
- $\quad$ $0$-jet              &  $128.8$ & $ 0.340$ & $-$     &  $115.6$ & $ 0.097$ & $-$  \\
- $\quad$ $1$-jet non--boosted &  $99.6$  & $ 0.157$ & $-$     &  $95.0$  & $ 0.144$ & $-$  \\
- $\quad$ $1$-jet boosted      &  $91.6$  & $ 0.117$ & $-$     &  $89.0$  & $ 0.117$ & $-$  \\
- $\quad$ $2$-jet VBF          &  $93.0$  & $ 0.090$ & $-$     &  $90.5$  & $ 0.091$ & $-$  \\
- SM $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
- $\quad$ $0$-jet              &  $143.6$ & $ 0.217$ & $26.49\pm1.64$ &  $127.6$ & $ 0.093$ & $26.91\pm1.67$ \\
- $\quad$ $1$-jet non--boosted &  $133.3$ & $ 0.143$ & $28.63\pm3.49$ &  $124.7$ & $ 0.104$ & $26.88\pm3.23$  \\
- $\quad$ $1$-jet boosted      &  $125.0$ & $ 0.096$ & $26.02\pm4.71$ &  $121.8$ & $ 0.096$ & $26.46\pm4.76$  \\
- SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
- $\quad$ $2$-jet VBF          &  $125.8$ & $ 0.109$ & $1^{+0}_{-0.1}$  &  $121.6$ & $ 0.099$ & $1^{+0}_{-0.1}$  \\
-\hline
-\end{tabular}
-
-\begin{tabular}{|l|ccc|ccc|}
-\hline
-\multirow{2}{17mm}{Sample} & \multicolumn{3}{c|}{SVfitMEM, $\kappa=0$} & \multicolumn{3}{c|}{SVfitMEM, $\kappa=5$} \\
-\cline{2-7}
- & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] \\
-\hline
-$\PZ \to \Pgt\Pgt$: & & & & & & \\
-        $\quad$ $0$-jet              &  $128.1$ & $ 0.159$ & $-$     &  $115.6$ & $ 0.101$ & $-$  \\
-        $\quad$ $1$-jet non--boosted &  $99.2$  & $ 0.163$ & $-$     &  $95.4$  & $ 0.141$ & $-$  \\
-        $\quad$ $1$-jet boosted      &  $91.8$  & $ 0.118$ & $-$     &  $89.2$  & $ 0.116$ & $-$  \\
-        $\quad$ $2$-jet VBF          &  $94.5$  & $ 0.091$ & $-$     &  $91.5$  & $ 0.085$ & $-$  \\
-        SM $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
-        $\quad$ $0$-jet              &  $142.2$ & $ 0.878$ & $22.59\pm1.51$ &  $127.9$ & $ 0.097$ & $24.63\pm1.68$  \\
-        $\quad$ $1$-jet non--boosted &  $133.0$ & $ 0.744$ & $27.52\pm3.33$ &  $125.1$ & $ 0.106$ & $26.72\pm3.22$  \\
-        $\quad$ $1$-jet boosted      &  $125.1$ & $ 0.095$ & $24.16\pm4.46$ &  $121.9$ & $ 0.096$ & $28.93\pm5.64$  \\
-        SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
-        $\quad$ $2$-jet VBF          &  $125.7$ & $ 0.100$ & $1^{+0}_{-0.1}$ &  $121.8$ & $ 0.100$ & $1^{+0}_{-0.1}$  \\
-\hline
-\end{tabular}
-\end{center}
-\caption{
-  Median $\textrm{M}$ and resolution $\sigma/\textrm{M}$ 
-  of the distributions in $m_{\vis}$ 
-  and in $m_{\Pgt\Pgt}$ reconstructed different versions of SVfit algorithm
-  in simulated $\PZ/\Pggx \to \Pgt\Pgt$ background (B) and SM $\PHiggs \to \Pgt\Pgt$ signal (S) events 
-  selected in different event categories of the $\tauh\tauh$ decay channel.
-  For the signal also the ratio $S/(S+B)$,
-  computed within a mass window that contains $68\%$ of signal events, is given.
-}
-\label{tab:resolutions_sm_tautau}
-\end{table}
-
-\begin{table}
-\begin{center}
-\begin{tabular}{|l|ccc|ccc|}
-\hline
-\multicolumn{7}{|c|}{$\Pgm\tauh$ decay channel} \\
-\hline
-\hline
-\multirow{2}{17mm}{Sample} & \multicolumn{3}{c|}{$m_{\vis}$} & \multicolumn{3}{c|}{SVfitSA} \\
-\cline{2-7}
- & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] \\
-\hline
-$\PZ \to \Pgt\Pgt$: & & & & & & \\
-        $\quad$ $0$-jet              &  $66.8$ & $ 0.135$ & $-$      &  $95.4$ & $ 0.134$  & $-$  \\
-        $\quad$ $1$-jet non--boosted &  $62.7$ & $ 0.185$ & $-$      &  $93.9$ & $ 0.139$  & $-$  \\
-        $\quad$ $1$-jet boosted      &  $59.1$ & $ 0.250$ & $-$      &  $90.7$ & $ 0.119$  & $-$  \\
-        $\quad$ $2$-jet VBF          &  $55.1$ & $ 0.275$ & $-$      &  $89.9$ & $ 0.141$  & $-$  \\
-        SM $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
-        $\quad$ $0$-jet              &  $80.6$ & $ 0.179$ & $0.76\pm0.01$  &  $119.4$ & $ 0.167$ & $1.10\pm0.02$  \\
-        $\quad$ $1$-jet non--boosted &  $77.4$ & $ 0.217$ & $1.44\pm0.02$  &  $122.7$ & $ 0.141$ & $5.54\pm0.31$  \\
-        $\quad$ $1$-jet boosted      &  $80.0$ & $ 0.244$ & $1.96\pm0.03$  &  $124.5$ & $ 0.103$ & $21.7\pm5.68$  \\
-        SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: &  & & & & & \\
-        $\quad$ $2$-jet VBF          &  $74.2$ & $ 0.248$ & $10.62\pm0.14$  &  $122.8$ & $ 0.117$ & $50.33\pm17.68$  \\
-\hline
-\end{tabular}
-
-\begin{tabular}{|l|ccc|ccc|}
-\hline
-\multirow{2}{17mm}{Sample} & \multicolumn{3}{c|}{cSVfit, $\kappa=0$} & \multicolumn{3}{c|}{cSVfit, $\kappa=4$} \\
-\cline{2-7}
- & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] \\
-\hline
-$\PZ \to \Pgt\Pgt$: & & & & & & \\
-        $\quad$ $0$-jet              &  $121.6$ & $ 0.859$ & $-$     &  $94.8$ & $ 0.136$ & $-$  \\
-        $\quad$ $1$-jet non--boosted &  $100.9$ & $ 0.385$ & $-$     &  $92.9$ & $ 0.138$ & $-$  \\
-        $\quad$ $1$-jet boosted      &  $92.4$  & $ 0.117$ & $-$     &  $90.5$ & $ 0.12$ & $-$  \\
-        $\quad$ $2$-jet VBF          &  $92.1$  & $ 0.162$ & $-$     &  $90.1$ & $ 0.136$ & $-$  \\
-        SM $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
-        $\quad$ $0$-jet              &  $150.6$ & $ 0.772$ & $1.12\pm0.02$  &  $119.2$ & $ 0.165$ & $ 1.19\pm0.02$  \\
-        $\quad$ $1$-jet non--boosted &  $133.1$ & $ 0.418$ & $4.62\pm0.24$  &  $122.1$ & $ 0.140$ & $ 5.97\pm0.34$  \\
-        $\quad$ $1$-jet boosted      &  $126.1$ & $ 0.110$ & $20.33\pm5.14$ &  $123.5$ & $ 0.103$ & $ 26.51\pm7.38$  \\
-        SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
-        $\quad$ $2$-jet VBF          &  $127.2$ & $ 0.116$ & $28.53\pm9.12$ &  $122.0$ & $ 0.116$ & $ 50.06\pm17.68$  \\
-\hline
-\end{tabular}
-
-\begin{tabular}{|l|ccc|ccc|}
-\hline
-\multirow{2}{17mm}{Sample} & \multicolumn{3}{c|}{SVfitMEM, $\kappa=0$} & \multicolumn{3}{c|}{SVfitMEM, $\kappa=4$} \\
-\cline{2-7}
- & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] \\
-\hline
-$\PZ \to \Pgt\Pgt$: & & & & & & \\
-        $\quad$ $0$-jet              &  $116.4$ & $ 0.343$ & $-$     &  $94.0$ & $ 0.138$ & $-$  \\
-        $\quad$ $1$-jet non--boosted &  $100.4$ & $ 0.232$ & $-$     &  $92.4$ & $ 0.139$ & $-$  \\
-        $\quad$ $1$-jet boosted      &  $92.6$  & $ 0.117$ & $-$     &  $89.8$ & $ 0.121$ & $-$  \\
-        $\quad$ $2$-jet VBF          &  $93.1$  & $ 0.164$ & $-$     &  $89.8$ & $ 0.142$ & $-$  \\
-        SM $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
-        $\quad$ $0$-jet              &  $145.3$ & $ 0.362$ & $1.00\pm0.02$  &  $118.4$ & $ 0.165$ & $ 1.07\pm0.02$  \\
-        $\quad$ $1$-jet non--boosted &  $132.5$ & $ 0.233$ & $4.47\pm0.22$  &  $121.5$ & $ 0.140$ & $ 5.67\pm0.32$  \\
-        $\quad$ $1$-jet boosted      &  $126.2$ & $ 0.110$ & $19.96\pm5.14$ &  $123.5$ & $ 0.103$ & $ 23.82\pm6.51$  \\
-        SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
-        $\quad$ $2$-jet VBF          &  $127.4$ & $ 0.116$ & $28.84\pm9.13$ &  $121.9$ & $ 0.116$ & $ 50.39\pm17.68$  \\
-\hline
-\end{tabular}
-\end{center}
-\caption{
-  Median $\textrm{M}$ and resolution $\sigma/\textrm{M}$ 
-  of the distributions in $m_{\vis}$ 
-  and in $m_{\Pgt\Pgt}$ reconstructed different versions of SVfit algorithm
-  in simulated $\PZ/\Pggx \to \Pgt\Pgt$ background (B) and SM $\PHiggs \to \Pgt\Pgt$ signal (S) events 
-  selected in different event categories of the $\Pgm\tauh$ decay channel.
-  For the signal also the ratio $S/(S+B)$,
-  computed within a mass window that contains $68\%$ of signal events, is given.
-}
-\label{tab:resolutions_sm_mutau}
-\end{table}
-
-\begin{table}
-\begin{center}
-%\begin{tabular}{|l|ccc|ccc|}
-\begin{tabular}{|l|C{1.2cm}C{1.2cm}C{2.1cm}|C{1.2cm}C{1.2cm}C{2cm}|}
-\hline
-\multicolumn{7}{|c|}{$\Pe\Pgm$ decay channel} \\
-\hline
-\hline
-\multirow{2}{17mm}{Sample} & \multicolumn{3}{c|}{$m_{\vis}$} & \multicolumn{3}{c|}{SVfitSA} \\
-\cline{2-7}
- & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] \\
-\hline
-$\PZ \to \Pgt\Pgt$: & & & & & & \\
-        $\quad$ $0$-jet              &  $48.1$ & $ 0.229$ & $-$ &  $88.2$ & $ 0.219$ & $-$  \\
-        $\quad$ $1$-jet non--boosted &  $46.1$ & $ 0.259$ & $-$ &  $89.5$ & $ 0.177$ & $-$  \\
-        $\quad$ $1$-jet boosted      &  $53.6$ & $ 0.302$ & $-$ &  $91.1$ & $ 0.156$ & $-$  \\
-        $\quad$ $2$-jet VBF          &  $38.5$ & $ 0.217$ & $-$ &  $90.0$ & $ 0.150$ & $-$  \\
-        SM $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
-        $\quad$ $0$-jet              &  $55.6$ & $ 0.274$ & $0.18\pm0.00$ &  $108.4$ & $ 0.260$ & $0.20\pm0.00$  \\
-        $\quad$ $1$-jet non--boosted &  $53.3$ & $ 0.300$ & $0.35\pm0.01$ &  $119.4$ & $ 0.191$ & $0.78\pm0.03$  \\
-        $\quad$ $1$-jet boosted      &  $64.3$ & $ 0.278$ & $0.38\pm0.01$ &  $124.4$ & $ 0.116$ & $8.11\pm5.29$  \\
-        SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
-        $\quad$ $2$-jet VBF          &  $51.2$ & $ 0.332$ & $4.38\pm0.07$ &  $122.1$ & $ 0.159$ & $1^{+0}_{-0.1}$ \\
-\hline
-\end{tabular}
-
-%\begin{tabular}{|l|ccc|ccc|}
-\begin{tabular}{|l|C{1.2cm}C{1.2cm}C{2.1cm}|C{1.2cm}C{1.2cm}C{2cm}|}
-\hline
-\multirow{2}{17mm}{Sample} & \multicolumn{3}{c|}{cSVfit, $\kappa=0$} & \multicolumn{3}{c|}{cSVfit, $\kappa=3$} \\
-\cline{2-7}
- & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] \\
-\hline
-$\PZ \to \Pgt\Pgt$: & & & & & & \\
- $\quad$ $0$-jet              &  $159.8$ & $ 1.646$ & $-$ &  $92.8$ & $ 0.24$ & $-$  \\
- $\quad$ $1$-jet non--boosted &  $103.8$ & $ 1.066$ & $-$ &  $91.4$ & $ 0.195$ & $-$  \\
- $\quad$ $1$-jet boosted      &  $92.1$  & $ 0.280$ & $-$ &  $89.9$ & $ 0.156$ & $-$  \\
- $\quad$ $2$-jet VBF          &  $97.0$  & $ 0.568$ & $-$ &  $89.8$ & $ 0.134$ & $-$  \\
- SM $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
- $\quad$ $0$-jet              &  $174.4$ & $ 1.352$ & $0.35\pm0.01$ &  $114.7$ & $ 0.274$ & $0.31\pm0.01$  \\
- $\quad$ $1$-jet non--boosted &  $135.2$ & $ 0.825$ & $1.27\pm0.06$ &  $121.6$ & $ 0.191$ & $1.17\pm0.05$  \\
- $\quad$ $1$-jet boosted      &  $126.2$ & $ 0.576$ & $0.16\pm0.09$ &  $124.0$ & $ 0.111$ & $0.24\pm0.17$  \\
- SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
- $\quad$ $2$-jet VBF          &  $129.2$ & $ 0.160$ & $1^{+0}_{-0.1}$ &  $122.7$ & $ 0.160$  & $1^{+0}_{-0.1}$  \\
-\hline
-\end{tabular}
-
-%\begin{tabular}{|l|ccc|ccc|}
-\begin{tabular}{|l|C{1.2cm}C{1.2cm}C{2.1cm}|C{1.2cm}C{1.2cm}C{2cm}|}
-\hline
-\multirow{2}{17mm}{Sample} & \multicolumn{3}{c|}{SVfitMEM, $\kappa=0$} & \multicolumn{3}{c|}{SVfitMEM, $\kappa=3$} \\
-\cline{2-7}
- & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] \\
-\hline
-$\PZ \to \Pgt\Pgt$: & & & & & & \\
- $\quad$ $0$-jet              &  $140.4$ & $ 0.614$ & $-$ &  $89.0$ & $ 0.232$ & $-$  \\
- $\quad$ $1$-jet non--boosted &  $102.6$ & $ 0.362$ & $-$ &  $90.1$ & $ 0.183$ & $-$  \\
- $\quad$ $1$-jet boosted      &  $92.3$  & $ 0.287$ & $-$ &  $90.8$ & $ 0.249$ & $-$  \\
- $\quad$ $2$-jet VBF          &  $95.5$  & $ 0.225$ & $-$ &  $88.0$ & $ 0.161$ & $-$  \\
- SM $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
- $\quad$ $0$-jet              &  $161.2$ & $ 0.506$ & $0.21\pm0.01$ &  $110.4$ & $ 0.267$ & $0.21\pm0.01$  \\
- $\quad$ $1$-jet non--boosted &  $134.6$ & $ 0.343$ & $0.97\pm0.05$ &  $120.7$ & $ 0.192$ & $0.79\pm0.04$  \\
- $\quad$ $1$-jet boosted      &  $126.9$ & $ 0.231$ & $5.52\pm0.10$ &  $124.5$ & $ 0.112$ & $7.95\pm0.17$  \\
- SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
- $\quad$ $2$-jet VBF          &  $129.6$ & $ 0.160$ & $35.28\pm24.20$ &  $122.6$ & $ 0.160$ & $1^{+0}_{-0.1}$  \\
-\hline
-\end{tabular}
-\end{center}
-\caption{
-  Median $\textrm{M}$ and resolution $\sigma/\textrm{M}$ 
-  of the distributions in $m_{\vis}$ 
-  and in $m_{\Pgt\Pgt}$ reconstructed different versions of SVfit algorithm
-  in simulated $\PZ/\Pggx \to \Pgt\Pgt$ background (B) and SM $\PHiggs \to \Pgt\Pgt$ signal (S) events 
-  selected in different event categories of the $\Pe\Pgm$ decay channel.
-  For the signal also the ratio $S/(S+B)$,
-  computed within a mass window that contains $68\%$ of signal events, is given.
-}
-\label{tab:resolutions_sm_emu}
-\end{table}
-%----------------------------------------------------------------------------------------------------
-
-The distributions in $m_{\Pgt\Pgt}$ reconstructed by the cSVfit and SVfitMEM algorithms with non--zero $\kappa$
+The distributions in $m_{\Pgt\Pgt}$ reconstructed by the cSVfit and SVfitMEM algorithms with artificial regularization term
 and by the SVfitSA algorithm are very similar.
 The SVfitSA algorithm performs well without adding an artificial regularization term of the type described in Section~\ref{sec:mem_logM} to its likelihood function.
 This is because the effect of the missing factor $\frac{1}{z^{2}}$ in the likelihood function used by the SVfitSA algorithm (\cf Section~\ref{sec:classicSVfit})
 is equivalent to using an artificial regularization term with $\kappa = 4$.
-The peaks of the $m_{\Pgt\Pgt}$ distributions reconstructed by the different versions of the SVfit algorithm are close to the true value of the mass of the $\Pgt$ lepton pair
+Regardless of the choice of $\kappa$, the peaks of the $m_{\Pgt\Pgt}$ distributions reconstructed by the different versions of the SVfit algorithm are close to the true value of the mass of the $\Pgt$ lepton pair
 in all event categories.
 Adding an artificial regularization term has little effect on the peak of the $m_{\Pgt\Pgt}$ distribution.
 The motivation for adding the artificial regularization term is to reduce the tail of the $m_{\Pgt\Pgt}$ distribution for the
 $\PZ/\Pggx \to \Pgt\Pgt$ background in the mass range in which the signal is expected.
-The improvement in sensitivity resulting from using a small positive $\kappa$ is quantified by the ratio of the number of signal over the square--root of the number of background events,
-computed within a mass window containing $68\%$ of signal events.
-The resolution on $m_{\Pgt\Pgt}$ achieved by the SVfit algorithm is best in the $1$-jet boosted and worst in the $0$-jet category.
-Events in the $0$-jet category are the most difficult to reconstruct,
-due to the fact that, in events in which the $\PHiggs$ or $\PZ$ boson has low $\pT$, 
-the $\Pgt$ leptons are typically ``back-to-back'' in the transverse plane ($\Delta\phi_{\Pgt\Pgt} \approx \pi$),
+
+The effect of adding the artificial regularization term is largest for events reconstructed in the $0$-jet category.
+Events in the $0$-jet category are the most difficult to reconstruct.
+This is because the $\Pgt$ leptons are typically ``back-to-back'' in the transverse plane ($\Delta\phi_{\Pgt\Pgt} \approx \pi$)
+in events in which the $\PHiggs$ or $\PZ$ boson has low $\pT$, 
 with the effect that the neutrinos produced in the $\Pgt$ lepton decays are emitted in opposite hemispheres and their contribution to $\MET$ cancels.
-The cancellation of neutrino momenta causes mass hypotheses of low $m_{\PHiggs}^{\textrm{test}(i)} \approx m_{\vis}$, corresponding to the case $z^{(1)} \approx 1$ and $z^{(2)} \approx 1$,
-and of high $m_{\PHiggs}^{\textrm{test}(i)} \gg m_{\vis}$, corresponding to the case $z^{(1)} \ll 1$ and $z^{(2)} \ll 1$,
+The cancellation of neutrino momenta causes mass hypotheses of low $m_{\PHiggs}^{\textrm{test}(i)} \approx m_{\vis}$
+and of high $m_{\PHiggs}^{\textrm{test}(i)} \gg m_{\vis}$
 to be degenerate in terms of the probability density $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$,
 computed according to Eq.~(\ref{eq:mem_with_hadRecoil}).
-The best estimate for the mass of the $\Pgt$ lepton pair in a given event may fluctuate, 
+In this case, the best estimate for the mass of the $\Pgt$ lepton pair in a given event may fluctuate, 
 depending on mismeasurements, within the experimental resolution, 
 on the components $\pX^{\rec}$ and $\pY^{\rec}$ of the hadronic recoil or, to a lesser extent, on the $\pT$ of $\tauh$,
 degrading the resolution on $m_{\Pgt\Pgt}$.
-The variation of the resolution on $m_{\Pgt\Pgt}$ across event categories is most pronounced in the $\Pe\Pgm$ and least pronounced in the $\tauh\tauh$ decay channel.
-This is because the fraction of $\Pgt$ lepton energy carried by the visible $\Pgt$ decay products is typically high for hadronic $\Pgt$ decays and typically low for leptonic $\Pgt$ decays,
-\cf Fig.~\ref{fig:tauDecay_z}.
-For events in the $\tauh\tauh$ decay channel the best estimate for the mass of the $\Pgt$ lepton pair is typically not much higher than $m_{\vis}$,
-regardless of the angle $\Delta\phi_{\Pgt\Pgt}$ between the $\Pgt$ leptons,
-as the energies of the neutrinos produced in hadronic $\Pgt$ decays are known to be most likely small.
-For events in the $\Pe\Pgm$ decay channel on the other hand,
-$\Pgt$ lepton decays with high energetic neutrinos are known to be likely,
-provided they are compatible with the measured value of $\MET$.
+
+The resolution on $m_{\Pgt\Pgt}$ typically improves with the $\pT$ of the $\PHiggs$ respectively $\PZ$ boson.
 In events in the $1$-jet and $2$-jet VBF categories,
 in which the $\Pgt$ lepton pair typically recoils against high $\pT$ jets,
 the angle $\Delta\phi_{\Pgt\Pgt}$ between the $\Pgt$ leptons decreases due to the Lorentz boost in direction of the $\PHiggs$ or $\PZ$ boson.
 The momenta of the neutrinos produced in the $\Pgt$ lepton decays add constructively in this case,
 with the effect that the mass of the $\Pgt$ lepton pair is constrained by the measured value of $\MET$.
-The distribution in $\pT$ of the $\Pgt$ lepton pair and in
-the angle $\Delta\phi_{\Pgt\Pgt}$ is shown in Fig.~\ref{fig:ditau_pT_and_dphi}
-for SM $\PHiggs \to \Pgt\Pgt$ signal and $\PZ/\Pggx \to \Pgt\Pgt$ background events selected in the $\Pgm\tauh$ decay
-channel.
+The distribution in $\pT$ of the $\Pgt$ lepton pair and in the angle $\Delta\phi_{\Pgt\Pgt}$ is shown in Fig.~\ref{fig:ditau_pT_and_dphi}
+for SM $\PHiggs \to \Pgt\Pgt$ signal and $\PZ/\Pggx \to \Pgt\Pgt$ background events.
+The events are selected in the $\Pgm\tauh$ decay channel.
 The distributions for events selected in the $\tauh\tauh$ and $\Pe\Pgm$ decay channels are similar.
 
 %----------------------------------------------------------------------------------------------------
@@ -477,11 +214,11 @@ The distributions for events selected in the $\tauh\tauh$ and $\Pe\Pgm$ decay ch
 \end{picture}
 \end{center}
 \caption{
-  Distributions in $\pT$ of the $\Pgt$ lepton pair (a,c) and in the
+  Distributions in $\pT$ of the $\PHiggs$ respectively $\PZ$ boson (a,c) and in the
   angle $\Delta\phi_{\Pgt\Pgt}$ (b,d) for SM $\PHiggs \to \Pgt\Pgt$ signal (a,b)
   and $\PZ/\Pggx \to \Pgt\Pgt$ background (c,d) events,
   selected in the $\Pgm\tauh$ decay channel.
-  The signal events shown in the $0$-jet, $1$-jet non--boosted and
+  The signal events shown in the $0$-jet, $1$-jet non-boosted and
   $1$-jet boosted categories ($2$-jet VBF category) are produced via the $\Pg\Pg \to \PHiggs$
   ($\Pquark\APquark \to \PHiggs$) production process.   
 }
@@ -489,36 +226,353 @@ The distributions for events selected in the $\tauh\tauh$ and $\Pe\Pgm$ decay ch
 \end{figure}
 %----------------------------------------------------------------------------------------------------
 
-The resolution on $m_{\vis}$, quantified by the ratio $\sigma/\textrm{M}$,
-varies across event categories between being worse by a factor $X.X$ to $X.X$ compared to $m_{\Pgt\Pgt}$ reconstructed by the SVfit algorithm.
-The magnitude of the shift between $m_{\vis}$ and $m_{\Pgt\Pgt}^{\true}$ depends on the decay channel and on the event category.
-The shift is largest in the $\Pe\Pgm$ channel and smallest in the $\tauh\tauh$ channel,
-reflecting the difference between leptonic and hadronic $\Pgt$ decays in the fraction $z$ of $\Pgt$ lepton energy carried by the visible $\Pgt$ decay products.
-The magnitude of the shift is reduced by the selection criteria on $\pT$.
-The effect of $\pT$ thresholds differs by event category,
-as, for fixed thresholds, $m_{\vis}$ decreases proportional to the cosine of the angle between the $\Pgt$ leptons,
-$m_{\vis} \approx \pT^{\vis(1)} \, \cosh\eta_{\vis(1)} \cdot \pT^{\vis(2)} \, \cosh\eta_{\vis(2)} \cdot \left( 1 - \cos\sphericalangle(\Pgt,\Pgt) \right)$.
-For events in the $0$-jet category, which contain mostly $\Pgt$ lepton pairs with $\Delta\phi_{\Pgt\Pgt} \approx \pi$,
-the selection criteria on $\pT$ of the visible $\Pgt$ decay products remove events with $m_{\vis}$ below twice the higher $\pT$ threshold applied to either $\Pgt$ lepton,
-while events of significantly lower $m_{\vis}$ may be selected in the $1$-jet and $2$-jet VBF categories in case they contain a $\PHiggs$ or $\PZ$ boson of high $\pT$.
+The variation of the resolution on $m_{\Pgt\Pgt}$ across event categories is most pronounced in the $\Pe\Pgm$ and least pronounced in the $\tauh\tauh$ decay channel.
+This is because the fraction of $\Pgt$ lepton energy carried by the visible $\Pgt$ decay products is typically high for hadronic $\Pgt$ decays and typically low for leptonic $\Pgt$ decays,
+\cf Fig.~\ref{fig:tauDecay_z}.
+For events in the $\tauh\tauh$ decay channel the best estimate for the mass of the $\Pgt$ lepton pair is typically not much higher than $m_{\vis}$,
+regardless of the angle $\Delta\phi_{\Pgt\Pgt}$ between the $\Pgt$ leptons,
+as the energies of the neutrinos produced in hadronic $\Pgt$ decays are known to be most likely small.
+For events in the $\Pe\Pgm$ decay channel on the other hand,
+$\Pgt$ lepton decays with high energetic neutrinos are known to be likely,
+provided they are compatible with the measured value of $\MET$,
+causing mass hypotheses of low $m_{\PHiggs}^{\textrm{test}(i)} \approx m_{\vis}$ (corresponding to the case $z^{(1)} \approx 1$ and $z^{(2)} \approx 1$)
+and of high $m_{\PHiggs}^{\textrm{test}(i)} \gg m_{\vis}$ (corresponding to the case $z^{(1)} \ll 1$ and $z^{(2)} \ll 1$)
+to be more degenerate in terms of the probability density $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$
+compared to the $\tauh\tauh$ and $\Pgm\tauh$ channels.
 
-The distributions in $m_{\Pgt\Pgt}$ reconstructed by the CA method exhibit pronounced high mass tails.
-The tails are due to resolution effects and reduce the sensitivity of the SM $\PHiggs \to \Pgt\Pgt$ analysis,
+Numerical values for the resolution in $m_{\Pgt\Pgt}$ achieved by the different algorithms are given in Tables~\ref{tab:resolutions_sm_tautau} to~\ref{tab:resolutions_sm_emu}.
+The mass of the visible $\Pgt$ decay products, $m_{\vis}$, is given in the tables for comparison.
+The resolution is quantified in terms of $\sigma/\textrm{M}$, the root-mean-square (RMS) $\sigma$ of each distribution relative to its median $\textrm{M}$,
+and in terms of $\textrm{S}/(\textrm{S} + \textrm{B})$, the ratio of the number $\textrm{S}$ of SM $\PHiggs \to \Pgt\Pgt$ signal events to the sum $\textrm{S} + \textrm{B}$ of signal plus $\PZ/\Pggx \to \Pgt\Pgt$ background events.
+The signal and background event yields are computed within a mass window containing $68\%$ of signal events,
+with $16\%$ of signal events on either side of the mass window.
+The $\textrm{S}$ and $\textrm{B}$ event yields are determined for SM signal and background cross sections.
+
+%----------------------------------------------------------------------------------------------------
+%
+% mass resolutions in SM Higgs->tautau signal and Z/gamma*->tautau background events,
+% in event categories motivated by Run 1 SM Higgs->tautau analysis
+%
+\begin{table}
+\begin{center}
+\begin{tabular}{|l|ccc|ccc|}
+\hline
+\multicolumn{7}{|c|}{$\tauh\tauh$ decay channel} \\
+\hline
+\hline
+\multirow{2}{17mm}{Sample} & \multicolumn{3}{c|}{$m_{\vis}$} & \multicolumn{3}{c|}{SVfitSA} \\
+\cline{2-7}
+ & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] \\
+\hline
+$\PZ \to \Pgt\Pgt$: & & & & & & \\
+        $\quad$ $0$-jet              &  $100.0$ & $ 0.089$ & $-$     &  $117.9$ & $ 0.096$ & $-$  \\
+        $\quad$ $1$-jet non-boosted &  $80.5$ & $ 0.179$  & $-$     &  $97.0$  & $ 0.146$ & $-$  \\
+        $\quad$ $1$-jet boosted      &  $69.9$ & $ 0.201$  & $-$     &  $90.4$  & $ 0.115$ & $-$  \\
+        $\quad$ $2$-jet VBF          &  $69.0$ & $ 0.196$  & $-$     &  $92.0$  & $ 0.087$ & $-$  \\
+        SM $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
+        $\quad$ $0$-jet              &  $109.2$ & $ 0.091$ & $21.81\pm0.70$  &  $130.0$ & $ 0.096$ & $24.06\pm1.54$ \\
+        $\quad$ $1$-jet non-boosted &  $103.9$ & $ 0.138$ & $13.55\pm0.71$  &  $127.0$ & $ 0.106$ & $33.17\pm4.23$  \\
+        $\quad$ $1$-jet boosted      &  $93.8$  & $ 0.199$ & $2.30\pm0.10$   &  $123.3$ & $ 0.095$ & $26.34\pm4.89$  \\
+        SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & &  \\
+        $\quad$ $2$-jet VBF          &  $94.7$  & $ 0.183$ & $20.89\pm1.49$  &  $123.4$ & $ 0.100$ & $1^{+0}_{-0.1}$  \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|ccc|ccc|}
+\hline
+\multirow{2}{17mm}{Sample} & \multicolumn{3}{c|}{cSVfit, $\kappa=0$} & \multicolumn{3}{c|}{cSVfit, $\kappa=5$} \\
+\cline{2-7}
+ & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] \\
+\hline
+$\PZ \to \Pgt\Pgt$: & & & & & & \\
+ $\quad$ $0$-jet              &  $128.8$ & $ 0.340$ & $-$     &  $115.6$ & $ 0.097$ & $-$  \\
+ $\quad$ $1$-jet non-boosted &  $99.6$  & $ 0.157$ & $-$     &  $95.0$  & $ 0.144$ & $-$  \\
+ $\quad$ $1$-jet boosted      &  $91.6$  & $ 0.117$ & $-$     &  $89.0$  & $ 0.117$ & $-$  \\
+ $\quad$ $2$-jet VBF          &  $93.0$  & $ 0.090$ & $-$     &  $90.5$  & $ 0.091$ & $-$  \\
+ SM $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
+ $\quad$ $0$-jet              &  $143.6$ & $ 0.217$ & $26.49\pm1.64$ &  $127.6$ & $ 0.093$ & $26.91\pm1.67$ \\
+ $\quad$ $1$-jet non-boosted &  $133.3$ & $ 0.143$ & $28.63\pm3.49$ &  $124.7$ & $ 0.104$ & $26.88\pm3.23$  \\
+ $\quad$ $1$-jet boosted      &  $125.0$ & $ 0.096$ & $26.02\pm4.71$ &  $121.8$ & $ 0.096$ & $26.46\pm4.76$  \\
+ SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
+ $\quad$ $2$-jet VBF          &  $125.8$ & $ 0.109$ & $1^{+0}_{-0.1}$  &  $121.6$ & $ 0.099$ & $1^{+0}_{-0.1}$  \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|ccc|ccc|}
+\hline
+\multirow{2}{17mm}{Sample} & \multicolumn{3}{c|}{SVfitMEM, $\kappa=0$} & \multicolumn{3}{c|}{SVfitMEM, $\kappa=5$} \\
+\cline{2-7}
+ & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] \\
+\hline
+$\PZ \to \Pgt\Pgt$: & & & & & & \\
+        $\quad$ $0$-jet              &  $128.1$ & $ 0.159$ & $-$     &  $115.6$ & $ 0.101$ & $-$  \\
+        $\quad$ $1$-jet non-boosted &  $99.2$  & $ 0.163$ & $-$     &  $95.4$  & $ 0.141$ & $-$  \\
+        $\quad$ $1$-jet boosted      &  $91.8$  & $ 0.118$ & $-$     &  $89.2$  & $ 0.116$ & $-$  \\
+        $\quad$ $2$-jet VBF          &  $94.5$  & $ 0.091$ & $-$     &  $91.5$  & $ 0.085$ & $-$  \\
+        SM $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
+        $\quad$ $0$-jet              &  $142.2$ & $ 0.878$ & $22.59\pm1.51$ &  $127.9$ & $ 0.097$ & $24.63\pm1.68$  \\
+        $\quad$ $1$-jet non-boosted &  $133.0$ & $ 0.744$ & $27.52\pm3.33$ &  $125.1$ & $ 0.106$ & $26.72\pm3.22$  \\
+        $\quad$ $1$-jet boosted      &  $125.1$ & $ 0.095$ & $24.16\pm4.46$ &  $121.9$ & $ 0.096$ & $28.93\pm5.64$  \\
+        SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
+        $\quad$ $2$-jet VBF          &  $125.7$ & $ 0.100$ & $1^{+0}_{-0.1}$ &  $121.8$ & $ 0.100$ & $1^{+0}_{-0.1}$  \\
+\hline
+\end{tabular}
+\end{center}
+\caption{
+  Median $\textrm{M}$ and resolution $\sigma/\textrm{M}$ 
+  of the distributions in $m_{\vis}$ 
+  and in $m_{\Pgt\Pgt}$ reconstructed by different versions of SVfit algorithm
+  in simulated SM $\PHiggs \to \Pgt\Pgt$ signal (S) and $\PZ/\Pggx \to \Pgt\Pgt$ background (B) and events 
+  selected in different event categories in the $\tauh\tauh$ decay channel.
+  The improvement in signal-to-background separation is quantified also by the ratio $S/(S+B)$,
+  computed within a mass window containing $68\%$ of signal events, as explained in the text.
+}
+\label{tab:resolutions_sm_tautau}
+\end{table}
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|l|ccc|ccc|}
+\hline
+\multicolumn{7}{|c|}{$\Pgm\tauh$ decay channel} \\
+\hline
+\hline
+\multirow{2}{17mm}{Sample} & \multicolumn{3}{c|}{$m_{\vis}$} & \multicolumn{3}{c|}{SVfitSA} \\
+\cline{2-7}
+ & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] \\
+\hline
+$\PZ \to \Pgt\Pgt$: & & & & & & \\
+        $\quad$ $0$-jet              &  $66.8$ & $ 0.135$ & $-$      &  $95.4$ & $ 0.134$  & $-$  \\
+        $\quad$ $1$-jet non-boosted &  $62.7$ & $ 0.185$ & $-$      &  $93.9$ & $ 0.139$  & $-$  \\
+        $\quad$ $1$-jet boosted      &  $59.1$ & $ 0.250$ & $-$      &  $90.7$ & $ 0.119$  & $-$  \\
+        $\quad$ $2$-jet VBF          &  $55.1$ & $ 0.275$ & $-$      &  $89.9$ & $ 0.141$  & $-$  \\
+        SM $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
+        $\quad$ $0$-jet              &  $80.6$ & $ 0.179$ & $0.76\pm0.01$  &  $119.4$ & $ 0.167$ & $1.10\pm0.02$  \\
+        $\quad$ $1$-jet non-boosted &  $77.4$ & $ 0.217$ & $1.44\pm0.02$  &  $122.7$ & $ 0.141$ & $5.54\pm0.31$  \\
+        $\quad$ $1$-jet boosted      &  $80.0$ & $ 0.244$ & $1.96\pm0.03$  &  $124.5$ & $ 0.103$ & $21.7\pm5.68$  \\
+        SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: &  & & & & & \\
+        $\quad$ $2$-jet VBF          &  $74.2$ & $ 0.248$ & $10.62\pm0.14$  &  $122.8$ & $ 0.117$ & $50.33\pm17.68$  \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|ccc|ccc|}
+\hline
+\multirow{2}{17mm}{Sample} & \multicolumn{3}{c|}{cSVfit, $\kappa=0$} & \multicolumn{3}{c|}{cSVfit, $\kappa=4$} \\
+\cline{2-7}
+ & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] \\
+\hline
+$\PZ \to \Pgt\Pgt$: & & & & & & \\
+        $\quad$ $0$-jet              &  $121.6$ & $ 0.859$ & $-$     &  $94.8$ & $ 0.136$ & $-$  \\
+        $\quad$ $1$-jet non-boosted &  $100.9$ & $ 0.385$ & $-$     &  $92.9$ & $ 0.138$ & $-$  \\
+        $\quad$ $1$-jet boosted      &  $92.4$  & $ 0.117$ & $-$     &  $90.5$ & $ 0.12$ & $-$  \\
+        $\quad$ $2$-jet VBF          &  $92.1$  & $ 0.162$ & $-$     &  $90.1$ & $ 0.136$ & $-$  \\
+        SM $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
+        $\quad$ $0$-jet              &  $150.6$ & $ 0.772$ & $1.12\pm0.02$  &  $119.2$ & $ 0.165$ & $ 1.19\pm0.02$  \\
+        $\quad$ $1$-jet non-boosted &  $133.1$ & $ 0.418$ & $4.62\pm0.24$  &  $122.1$ & $ 0.140$ & $ 5.97\pm0.34$  \\
+        $\quad$ $1$-jet boosted      &  $126.1$ & $ 0.110$ & $20.33\pm5.14$ &  $123.5$ & $ 0.103$ & $ 26.51\pm7.38$  \\
+        SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
+        $\quad$ $2$-jet VBF          &  $127.2$ & $ 0.116$ & $28.53\pm9.12$ &  $122.0$ & $ 0.116$ & $ 50.06\pm17.68$  \\
+\hline
+\end{tabular}
+
+\begin{tabular}{|l|ccc|ccc|}
+\hline
+\multirow{2}{17mm}{Sample} & \multicolumn{3}{c|}{SVfitMEM, $\kappa=0$} & \multicolumn{3}{c|}{SVfitMEM, $\kappa=4$} \\
+\cline{2-7}
+ & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] \\
+\hline
+$\PZ \to \Pgt\Pgt$: & & & & & & \\
+        $\quad$ $0$-jet              &  $116.4$ & $ 0.343$ & $-$     &  $94.0$ & $ 0.138$ & $-$  \\
+        $\quad$ $1$-jet non-boosted &  $100.4$ & $ 0.232$ & $-$     &  $92.4$ & $ 0.139$ & $-$  \\
+        $\quad$ $1$-jet boosted      &  $92.6$  & $ 0.117$ & $-$     &  $89.8$ & $ 0.121$ & $-$  \\
+        $\quad$ $2$-jet VBF          &  $93.1$  & $ 0.164$ & $-$     &  $89.8$ & $ 0.142$ & $-$  \\
+        SM $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
+        $\quad$ $0$-jet              &  $145.3$ & $ 0.362$ & $1.00\pm0.02$  &  $118.4$ & $ 0.165$ & $ 1.07\pm0.02$  \\
+        $\quad$ $1$-jet non-boosted &  $132.5$ & $ 0.233$ & $4.47\pm0.22$  &  $121.5$ & $ 0.140$ & $ 5.67\pm0.32$  \\
+        $\quad$ $1$-jet boosted      &  $126.2$ & $ 0.110$ & $19.96\pm5.14$ &  $123.5$ & $ 0.103$ & $ 23.82\pm6.51$  \\
+        SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
+        $\quad$ $2$-jet VBF          &  $127.4$ & $ 0.116$ & $28.84\pm9.13$ &  $121.9$ & $ 0.116$ & $ 50.39\pm17.68$  \\
+\hline
+\end{tabular}
+\end{center}
+\caption{
+  Median $\textrm{M}$ and resolution $\sigma/\textrm{M}$ 
+  of the distributions in $m_{\vis}$ 
+  and in $m_{\Pgt\Pgt}$ reconstructed by different versions of SVfit algorithm
+  in simulated SM $\PHiggs \to \Pgt\Pgt$ signal (S) and $\PZ/\Pggx \to \Pgt\Pgt$ background (B) and events 
+  selected in different event categories in the $\Pgm\tauh$ decay channel.
+  The improvement in signal-to-background separation is quantified also by the ratio $S/(S+B)$,
+  computed within a mass window containing $68\%$ of signal events, as explained in the text.
+}
+\label{tab:resolutions_sm_mutau}
+\end{table}
+
+\begin{table}
+\begin{center}
+%\begin{tabular}{|l|ccc|ccc|}
+\begin{tabular}{|l|C{1.2cm}C{1.2cm}C{2.1cm}|C{1.2cm}C{1.2cm}C{2cm}|}
+\hline
+\multicolumn{7}{|c|}{$\Pe\Pgm$ decay channel} \\
+\hline
+\hline
+\multirow{2}{17mm}{Sample} & \multicolumn{3}{c|}{$m_{\vis}$} & \multicolumn{3}{c|}{SVfitSA} \\
+\cline{2-7}
+ & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] \\
+\hline
+$\PZ \to \Pgt\Pgt$: & & & & & & \\
+        $\quad$ $0$-jet              &  $48.1$ & $ 0.229$ & $-$ &  $88.2$ & $ 0.219$ & $-$  \\
+        $\quad$ $1$-jet non-boosted &  $46.1$ & $ 0.259$ & $-$ &  $89.5$ & $ 0.177$ & $-$  \\
+        $\quad$ $1$-jet boosted      &  $53.6$ & $ 0.302$ & $-$ &  $91.1$ & $ 0.156$ & $-$  \\
+        $\quad$ $2$-jet VBF          &  $38.5$ & $ 0.217$ & $-$ &  $90.0$ & $ 0.150$ & $-$  \\
+        SM $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
+        $\quad$ $0$-jet              &  $55.6$ & $ 0.274$ & $0.18\pm0.00$ &  $108.4$ & $ 0.260$ & $0.20\pm0.00$  \\
+        $\quad$ $1$-jet non-boosted &  $53.3$ & $ 0.300$ & $0.35\pm0.01$ &  $119.4$ & $ 0.191$ & $0.78\pm0.03$  \\
+        $\quad$ $1$-jet boosted      &  $64.3$ & $ 0.278$ & $0.38\pm0.01$ &  $124.4$ & $ 0.116$ & $8.11\pm5.29$  \\
+        SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
+        $\quad$ $2$-jet VBF          &  $51.2$ & $ 0.332$ & $4.38\pm0.07$ &  $122.1$ & $ 0.159$ & $1^{+0}_{-0.1}$ \\
+\hline
+\end{tabular}
+
+%\begin{tabular}{|l|ccc|ccc|}
+\begin{tabular}{|l|C{1.2cm}C{1.2cm}C{2.1cm}|C{1.2cm}C{1.2cm}C{2cm}|}
+\hline
+\multirow{2}{17mm}{Sample} & \multicolumn{3}{c|}{cSVfit, $\kappa=0$} & \multicolumn{3}{c|}{cSVfit, $\kappa=3$} \\
+\cline{2-7}
+ & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] \\
+\hline
+$\PZ \to \Pgt\Pgt$: & & & & & & \\
+ $\quad$ $0$-jet              &  $159.8$ & $ 1.646$ & $-$ &  $92.8$ & $ 0.24$ & $-$  \\
+ $\quad$ $1$-jet non-boosted &  $103.8$ & $ 1.066$ & $-$ &  $91.4$ & $ 0.195$ & $-$  \\
+ $\quad$ $1$-jet boosted      &  $92.1$  & $ 0.280$ & $-$ &  $89.9$ & $ 0.156$ & $-$  \\
+ $\quad$ $2$-jet VBF          &  $97.0$  & $ 0.568$ & $-$ &  $89.8$ & $ 0.134$ & $-$  \\
+ SM $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
+ $\quad$ $0$-jet              &  $174.4$ & $ 1.352$ & $0.35\pm0.01$ &  $114.7$ & $ 0.274$ & $0.31\pm0.01$  \\
+ $\quad$ $1$-jet non-boosted &  $135.2$ & $ 0.825$ & $1.27\pm0.06$ &  $121.6$ & $ 0.191$ & $1.17\pm0.05$  \\
+ $\quad$ $1$-jet boosted      &  $126.2$ & $ 0.576$ & $0.16\pm0.09$ &  $124.0$ & $ 0.111$ & $0.24\pm0.17$  \\
+ SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
+ $\quad$ $2$-jet VBF          &  $129.2$ & $ 0.160$ & $1^{+0}_{-0.1}$ &  $122.7$ & $ 0.160$  & $1^{+0}_{-0.1}$  \\
+\hline
+\end{tabular}
+
+%\begin{tabular}{|l|ccc|ccc|}
+\begin{tabular}{|l|C{1.2cm}C{1.2cm}C{2.1cm}|C{1.2cm}C{1.2cm}C{2cm}|}
+\hline
+\multirow{2}{17mm}{Sample} & \multicolumn{3}{c|}{SVfitMEM, $\kappa=0$} & \multicolumn{3}{c|}{SVfitMEM, $\kappa=3$} \\
+\cline{2-7}
+ & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] & $\textrm{M}$~[\GeV\unskip] & $\sigma/\textrm{M}$ & $\tfrac{S}{S+B}$ [\%] \\
+\hline
+$\PZ \to \Pgt\Pgt$: & & & & & & \\
+ $\quad$ $0$-jet              &  $140.4$ & $ 0.614$ & $-$ &  $89.0$ & $ 0.232$ & $-$  \\
+ $\quad$ $1$-jet non-boosted &  $102.6$ & $ 0.362$ & $-$ &  $90.1$ & $ 0.183$ & $-$  \\
+ $\quad$ $1$-jet boosted      &  $92.3$  & $ 0.287$ & $-$ &  $90.8$ & $ 0.249$ & $-$  \\
+ $\quad$ $2$-jet VBF          &  $95.5$  & $ 0.225$ & $-$ &  $88.0$ & $ 0.161$ & $-$  \\
+ SM $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
+ $\quad$ $0$-jet              &  $161.2$ & $ 0.506$ & $0.21\pm0.01$ &  $110.4$ & $ 0.267$ & $0.21\pm0.01$  \\
+ $\quad$ $1$-jet non-boosted &  $134.6$ & $ 0.343$ & $0.97\pm0.05$ &  $120.7$ & $ 0.192$ & $0.79\pm0.04$  \\
+ $\quad$ $1$-jet boosted      &  $126.9$ & $ 0.231$ & $5.52\pm0.10$ &  $124.5$ & $ 0.112$ & $7.95\pm0.17$  \\
+ SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & \\
+ $\quad$ $2$-jet VBF          &  $129.6$ & $ 0.160$ & $35.28\pm24.20$ &  $122.6$ & $ 0.160$ & $1^{+0}_{-0.1}$  \\
+\hline
+\end{tabular}
+\end{center}
+\caption{
+  Median $\textrm{M}$ and resolution $\sigma/\textrm{M}$ 
+  of the distributions in $m_{\vis}$ 
+  and in $m_{\Pgt\Pgt}$ reconstructed by different versions of SVfit algorithm
+  in simulated SM $\PHiggs \to \Pgt\Pgt$ signal (S) and $\PZ/\Pggx \to \Pgt\Pgt$ background (B) and events 
+  selected in different event categories in the $\Pe\Pgm$ decay channel.
+  The improvement in signal-to-background separation is quantified also by the ratio $S/(S+B)$,
+  computed within a mass window containing $68\%$ of signal events, as explained in the text.
+}
+\label{tab:resolutions_sm_emu}
+\end{table}
+%----------------------------------------------------------------------------------------------------
+
+The choice of quantifying the resolution in terms of the ratio $\sigma/\textrm{M}$ is motivated 
+by the fact that the distributions in $m_{\Pgt\Pgt}$, respectively in $m_{\vis}$, may be shifted with respect to $m_{\Pgt\Pgt}^{\true}$.
+While the distributions in $m_{\Pgt\Pgt}$ reconstructed by the different versions of the SVfit algorithm,
+as well as by the CA method, peak close to $m_{\Pgt\Pgt}^{\true}$,
+the distributions in $m_{\vis}$ exhibit significant shifts towards lower mass.
+The shift of the $m_{\vis}$ distribution is in general highest for events in the $\Pe\Pgm$ decay channel and lowest for events in the $\tauh\tauh$ decay channel,
+reflecting the fact that the visible $\Pgt$ decay products typically carry a lower fraction of $\Pgt$ lepton energy in leptonic compared to hadronic $\Pgt$ decays.
+The shift is more pronounced in events selected in the $1$-jet and $2$-jet VBF categories and less pronounced in the $0$-jet category.
+In particular in the $\tauh\tauh$ channel,
+the $\pT$ cuts that are applied on the $\tauh$ remove most of the $\PZ/\Pggx \to \Pgt\Pgt$ events in the $0$-jet category,
+except for a few events with large $m_{\vis}$.
+The events selected in the $1$-jet and $2$-jet VBF categories typically have smaller $m_{\vis}$, as $m_{\vis}$ decreases proportional to the cosine of the angle between the $\Pgt$ leptons,
+$m_{\vis} \approx \pT^{\vis(1)} \, \cosh\eta_{\vis(1)} \cdot \pT^{\vis(2)} \, \cosh\eta_{\vis(2)} \cdot \left( 1 - \cos\sphericalangle(\Pgt,\Pgt) \right)$.
+All algorithms can be trivially calibrated such that the median of each mass distribution coincides with the true mass of the $\Pgt$ lepton pair,
+by scaling the output of the algorithm by a suitably chosen constant.
+The advantage of quantifying the resolution in terms of the ratio $\sigma/\textrm{M}$ is that the ratio
+is invariant under such scaling.
+
+The ratio of the SM $\PHiggs \to \Pgt\Pgt$ signal to the $\PZ/\Pggx \to \Pgt\Pgt$ background in general increases with jet multiplicity.
+The ratio is more favourable in the $1$-jet boosted compared to the $1$-jet non-boosted category.
+The categories with the highest signal-to-background ratio, the $1$-jet boosted and the $2$-jet VBF category,
+in fact provide most of the sensitivity of the SM $\PHiggs \to \Pgt\Pgt$ analysis.
+Due to the correlation of between jet multiplicity, the $\pT$ of the $\PHiggs$ respectively $\PZ$ boson, and $\Delta\phi_{\Pgt\Pgt}$,
+visualized in Fig.~\ref{fig:ditau_pT_and_dphi}, the improvement in mass resolution provided by the SVfit algorithm is largest in these categories,
+enhancing the separation of the SM $\PHiggs \to \Pgt\Pgt$ signal from the $\PZ/\Pggx \to \Pgt\Pgt$ background where it matters most.
+In the SM $\PHiggs \to \Pgt\Pgt$ analysis performed by the CMS collaboration during LHC Run $1$,
+the use of $m_{\Pgt\Pgt}$ reconstructed by the SVfit algorithm for the signal extraction has increased the expected significance for observing a signal by $\approx 40\%$ compared to $m_{\vis}$~\cite{HIG-13-004}.
+
+The reconstruction of $m_{\Pgt\Pgt}$ by the CA method performs suboptimal compared to SVfit.
+In particular the pronounced high mass tails in the $m_{\Pgt\Pgt}$ distribution, arising from resolution effects,
+significantly reduce the sensitivity for observing a signal,
 as they cause a sizeable fraction of $\PZ/\Pggx \to \Pgt\Pgt$ background events
 to be reconstructed near the signal region $m_{\Pgt\Pgt} \approx 125$~\GeV.
-The resolution is worse for $m_{\Pgt\Pgt}$ reconstructed by the CA method compared to $m_{\vis}$.
 A further disadvantage of the CA method is that it fails to yield a physical solution for approximately half of the events,
-while all other algorithms provide a physical solution for every event.
-The fraction of events for which the CA method fails to find a physical solution is reflected by the normalization of the distributions
-in Figs.~\ref{fig:massDistributions_sm_tautau} to~\ref{fig:massDistributions_sm_emu}.
+whereas the SVfit algorithm provides a physical solution for every event. 
 
-Compared to either $m_{\vis}$ or to $m_{\Pgt\Pgt}$ reconstructed by the CA method,
-the SVfit algorithm significantly improves the separation of the SM $\PHiggs \to \Pgt\Pgt$ signal
-from the irreducible $\PZ/\Pggx \to \Pgt\Pgt$ background.
-In the SM $\PHiggs \to \Pgt\Pgt$ analysis performed by the CMS collaboration during LHC Run $1$,
-the use of $m_{\Pgt\Pgt}$ reconstructed by the SVfit algorithm
-has increased the sensitivity for measuring the signal rate by $\approx 40\%$,
-corresponding to a gain of a factor two in integrated luminosity of the analyzed dataset~\cite{HIG-13-004}.
+The performance of the cSVfit algorithm to reconstruct the $\pT$,
+$\eta$, and $\phi$ of the $\Pgt$ lepton pair is studied in SM $\PHiggs
+\to \Pgt\Pgt$ signal events produced via the gluon fusion process
+and in $\PZ/\Pggx \to \Pgt\Pgt$ background events,
+separately for the decay channels $\tauh\tauh$, $\Pgm\tauh$, and $\Pe\Pgm$.
+Distributions of the difference between reconstructed and true $\pT$,
+$\eta$, and $\phi$ of the $\PHiggs$ boson are shown in
+Fig.~\ref{fig:resolutions_sm_pT_eta_and_phi}.
+Compared to the case that the $\PHiggs$ boson $\pT$ and $\phi$ are
+reconstructed by computing the sum of the momenta of the visible $\Pgt$
+decay products and $\MET$, the cSVfit algorithm improves the
+resolution by $10$--$20\%$. The pseudo-rapidity $\eta$ of the
+$\PHiggs$ boson can only be reconstructed with the cSVfit algorithm.
+Typical resolutions on the $\pT$, $\eta$, and $\phi$ of the $\PHiggs$ boson,
+reconstructed by the cSVfit algorithm, amount to $10$~\GeV, $0.4$~\rad, and $0.8$~\rad,
+respectively.
+
+%----------------------------------------------------------------------------------------------------
+%
+% resolution in ditau pT, eta, and phi reconstructed by the cSVfit algorithm in SM Higgs->tautau signal events,
+% compared to reconstructing the Higgs boson pT and phi by computing the sum of momenta of the visible tau decay products and MET
+%
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\begin{center}
+\begin{picture}(180,210)(0,0)
+\put(-2.5, -2.0){\mbox{\includegraphics*[height=214mm]
+{plots_sept_16/Higgs_resolutions_pT.pdf}}}
+\put(50.5, -2.0){\mbox{\includegraphics*[height=214mm]
+{plots_sept_16/Higgs_resolutions_eta.pdf}}}
+\put(103.5, -2.0){\mbox{\includegraphics*[height=214mm]
+{plots_sept_16/Higgs_resolutions_phi.pdf}}}
+\end{picture}
+\end{center}
+\caption{
+  Resolution on $\pT$ (a,d,g), $\eta$ (b,e,h), and $\phi$ (c,f,i) of the $\Pgt$ lepton
+  pair in SM $\PHiggs \to \Pgt\Pgt$ signal and $\PZ/\Pggx \to
+  \Pgt\Pgt$ background events,
+  separately for the decay channels $\tauh\tauh$ (a,b,c), $\Pgm\tauh$ (d,e,f),
+  and $\Pe\Pgm$ (g,h,i).
+  The SM $\PHiggs \to \Pgt\Pgt$ signal events are produced via the
+  gluon fusion process.
+  The resolutions on $\pT$ and $\phi$ achieved by computing the sum of
+  the momenta of the visible $\Pgt$ decay products and $\MET$ are shown for comparison.
+}
+\label{fig:resolutions_sm_pT_eta_and_phi}
+\end{figure}
+%----------------------------------------------------------------------------------------------------
 
 Distributions in $m_{\Pgt\Pgt}$ reconstructed by different versions of
 the SVfit algorithm, by the CA method, and of $m_{\vis}$ in heavy
@@ -567,6 +621,7 @@ The axis of abscissae and the ordinate are drawn in logarithmic scale to better 
   Distributions in alternative mass observables in simulated $\PHiggsps \to \Pgt\Pgt$ signal events of different mass:
   $200$~\GeV (a), $300$~\GeV (b), $500$~\GeV (c), $800$~\GeV (d), and $1200$~\GeV (e).
   The events are selected in the $\tauh\tauh$ decay channel.
+  The axis of abscissae ranges from $0.1$ to $8$.
 }
 \label{fig:massDistributions_mssm_tautau}
 \end{figure}
@@ -598,6 +653,7 @@ The axis of abscissae and the ordinate are drawn in logarithmic scale to better 
   Distributions in alternative mass observables in simulated $\PHiggsps \to \Pgt\Pgt$ signal events of different mass:
   $200$~\GeV (a), $300$~\GeV (b), $500$~\GeV (c), $800$~\GeV (d), and $1200$~\GeV (e).
   The events are selected in the $\Pgm\tauh$ decay channel.
+  The axis of abscissae ranges from $0.1$ to $8$.
 }
 \label{fig:massDistributions_mssm_mutau}
 \end{figure}
@@ -630,6 +686,7 @@ The axis of abscissae and the ordinate are drawn in logarithmic scale to better 
   Distributions in alternative mass observables in simulated $\PHiggsps \to \Pgt\Pgt$ signal events of different mass:
   $200$~\GeV (a), $300$~\GeV (b), $500$~\GeV (c), $800$~\GeV (d), and $1200$~\GeV (e).
   The events are selected in the $\Pe\Pgm$ decay channel.
+  The axis of abscissae ranges from $0.1$ to $8$.
 }
 \label{fig:massDistributions_mssm_emu}
 \end{figure}
@@ -641,14 +698,8 @@ background in all three decay channels.
 Numerical values for the median $\textrm{M}$ and for the ratio $\sigma/\textrm{M}$ of the
 distribution, are given in Tables~\ref{tab:resolutions_mssm_tautau}
 to~\ref{tab:resolutions_mssm_emu}.
-The Tables also give the median $\textrm{M}$ and ratio $\sigma/\textrm{M}$
+The tables also give the median $\textrm{M}$ and ratio $\sigma/\textrm{M}$
 for a heavy spin $1$ resonance.
-We interpret the fact that the performance of the SVfitMEM and cSVfit algorithms is very similar for an $\PHiggsps \to \Pgt\Pgt$ signal of mass $2600$~\GeV
-and for a $\PZ' \to \Pgt\Pgt$ signal of mass $2500$~\GeV as evidence that the choice of using
-the LO ME for the gluon fusion process $\Pg\Pg \to \PHiggs$ in the SVfitMEM algorithm represents no limitation for using
-the SVfitMEM algorithm in data analyses of $\Pgt$ lepton pair production other than studies of Higgs boson production.
-The improvement in signal and background separation provided by the
-SVfit algorithm is illustrated in Fig.~\ref{fig:distributions_mVis_vs_SVfit}.
 
 %----------------------------------------------------------------------------------------------------
 %
@@ -719,14 +770,10 @@ $\PZ' \to \Pgt\Pgt$: & & & &  \\
 \caption{
   Median $\textrm{M}$ and resolution $\sigma/\textrm{M}$ 
   of the distributions in $m_{\vis}$ 
-  and in $m_{\Pgt\Pgt}$ reconstructed different versions of SVfit algorithm
-  in simulated $\PZ/\Pggx \to \Pgt\Pgt$ background events (B) 
-  and in signal events containing either heavy pseudoscalar Higgs
-  bosons $\PHiggsps$ or heavy spin $1$ resonances $\PZ'$ (S).
-  For the signal also the ratio $S/(S+B)$,
-  computed within a mass window containing $68\%$ of
-  signal events and for a product of signal cross section times branching
-  fraction of $1$~pb and, is given.
+  and in $m_{\Pgt\Pgt}$ reconstructed by different versions of SVfit algorithm,
+  in simulated signal events containing either heavy pseudoscalar Higgs
+  bosons $\PHiggsps$ or heavy spin $1$ resonances $\PZ'$
+  and in simulated $\PZ/\Pggx \to \Pgt\Pgt$ background events.
   The events are selected in the $\tauh\tauh$ decay channel.
 }
 \label{tab:resolutions_mssm_tautau}
@@ -797,14 +844,10 @@ $\PZ' \to \Pgt\Pgt$: & & & &  \\
 \caption{
   Median $\textrm{M}$ and resolution $\sigma/\textrm{M}$ 
   of the distributions in $m_{\vis}$ 
-  and in $m_{\Pgt\Pgt}$ reconstructed different versions of SVfit algorithm
-  in simulated $\PZ/\Pggx \to \Pgt\Pgt$ background events (B) 
-  and in signal events containing either heavy pseudoscalar Higgs
-  bosons $\PHiggsps$ or heavy spin $1$ resonances $\PZ'$ (S).
-  For the signal also the ratio $S/(S+B)$,
-  computed within a mass window containing $68\%$ of
-  signal events and for a product of signal cross section times branching
-  fraction of $1$~pb and, is given.
+  and in $m_{\Pgt\Pgt}$ reconstructed by different versions of SVfit algorithm,
+  in simulated signal events containing either heavy pseudoscalar Higgs
+  bosons $\PHiggsps$ or heavy spin $1$ resonances $\PZ'$
+  and in simulated $\PZ/\Pggx \to \Pgt\Pgt$ background events.
   The events are selected in the $\Pgm\tauh$ decay channel.
 }
 \label{tab:resolutions_mssm_mutau}
@@ -875,19 +918,23 @@ $\PZ' \to \Pgt\Pgt$: & & & &  \\
 \caption{
   Median $\textrm{M}$ and resolution $\sigma/\textrm{M}$ 
   of the distributions in $m_{\vis}$ 
-  and in $m_{\Pgt\Pgt}$ reconstructed different versions of SVfit algorithm
-  in simulated $\PZ/\Pggx \to \Pgt\Pgt$ background events (B) 
-  and in signal events containing either heavy pseudoscalar Higgs
-  bosons $\PHiggsps$ or heavy spin $1$ resonances $\PZ'$ (S).
-  For the signal also the ratio $S/(S+B)$,
-  computed within a mass window containing $68\%$ of
-  signal events and for a product of signal cross section times branching
-  fraction of $1$~pb and, is given.
+  and in $m_{\Pgt\Pgt}$ reconstructed by different versions of SVfit algorithm,
+  in simulated signal events containing either heavy pseudoscalar Higgs
+  bosons $\PHiggsps$ or heavy spin $1$ resonances $\PZ'$
+  and in simulated $\PZ/\Pggx \to \Pgt\Pgt$ background events.
   The events are selected in the $\Pe\Pgm$ decay channel.
 }
 \label{tab:resolutions_mssm_emu}
 \end{table}
 %----------------------------------------------------------------------------------------------------
+
+We interpret the fact that the performance of the SVfitMEM and cSVfit algorithms is very similar for an $\PHiggsps \to \Pgt\Pgt$ signal of mass $2600$~\GeV
+and for a $\PZ' \to \Pgt\Pgt$ signal of mass $2500$~\GeV as evidence that the choice of using
+the LO ME for the gluon fusion process $\Pg\Pg \to \PHiggs$ in the SVfitMEM algorithm represents no limitation for using
+the SVfitMEM algorithm in data analyses of $\Pgt$ lepton pair production other than studies of Higgs boson production.
+
+The improvement in signal and background separation provided by the
+SVfit algorithm is illustrated in Fig.~\ref{fig:distributions_mVis_vs_SVfit}.
 
 \begin{figure}
 \setlength{\unitlength}{1mm}
@@ -916,90 +963,6 @@ $\PZ' \to \Pgt\Pgt$: & & & &  \\
 \label{fig:distributions_mVis_vs_SVfit}
 \end{figure}
 
-The performance of the cSVfit algorithm to reconstruct the $\pT$,
-$\eta$, and $\phi$ of the $\Pgt$ lepton pair is studied in SM $\PHiggs
-\to \Pgt\Pgt$ signal events produced via the gluon fusion process
-and in $\PZ/\Pggx \to \Pgt\Pgt$ background events,
-separately for the decay channels $\tauh\tauh$, $\Pgm\tauh$, and $\Pe\Pgm$.
-Distributions of the difference between reconstructed and true $\pT$,
-$\eta$, and $\phi$ of the $\PHiggs$ boson are shown in
-Fig.~\ref{fig:resolutions_sm_pT_eta_and_phi}.
-Compared to the case that the $\PHiggs$ boson $\pT$ and $\phi$ are
-reconstructed by computing the sum of the momenta of the visible $\Pgt$
-decay products and $\MET$, the cSVfit algorithm improves the
-resolution by $10$--$20\%$. The pseudo--rapidity $\eta$ of the
-$\PHiggs$ boson can only be reconstructed with the cSVfit algorithm.
-Typical resolutions on the $\pT$, $\eta$, and $\phi$ of the $\PHiggs$ boson,
-reconstructed by the cSVfit algorithm, amount to $X.X$~\GeV, $X.X$~\mrad, and $X.X$~\mrad,
-respectively.
-
-%----------------------------------------------------------------------------------------------------
-%
-% resolution in ditau pT, eta, and phi reconstructed by the cSVfit algorithm in SM Higgs->tautau signal events,
-% compared to reconstructing the Higgs boson pT and phi by computing the sum of momenta of the visible tau decay products and MET
-%
-
-\begin{figure}
-\setlength{\unitlength}{1mm}
-\begin{center}
-\begin{picture}(180,210)(0,0)
-\put(-2.5, 2.0){\mbox{\includegraphics*[height=214mm]
-{plots_sept_16/Higgs_resolutions_pT.pdf}}}
-\put(50.5, 2.0){\mbox{\includegraphics*[height=214mm]
-{plots_sept_16/Higgs_resolutions_eta.pdf}}}
-\put(103.5, 2.0){\mbox{\includegraphics*[height=214mm]
-{plots_sept_16/Higgs_resolutions_phi.pdf}}}
-\end{picture}
-\end{center}
-
-%\begin{figure}
-%\setlength{\unitlength}{1mm}
-%\begin{center}
-%\begin{picture}(180,160)(0,0)
-%\put(-2.5, 114.0){\mbox{\includegraphics*[height=46mm]
-%  {plots_sept_16/Higgs_resolution_pT_hadhad.pdf}}}
-%\put(51.5, 114.0){\mbox{\includegraphics*[height=46mm]
-%  {plots_sept_16/Higgs_resolution_eta_hadhad.pdf}}}
-%\put(109.5, 114.0){\mbox{\includegraphics*[height=46mm] 
-%  {plots_sept_16/Higgs_resolution_phi_hadhad.pdf}}}
-%\put(-2.5, 58.0){\mbox{\includegraphics*[height=46mm]
-%  {plots_sept_16/Higgs_resolution_pT_muhad.pdf}}}
-%\put(51.5, 58.0){\mbox{\includegraphics*[height=46mm]
-%  {plots_sept_16/Higgs_resolution_eta_muhad.pdf}}}
-%\put(109.5, 58.0){\mbox{\includegraphics*[height=46mm] 
-%  {plots_sept_16/Higgs_resolution_phi_muhad.pdf}}}
-%\put(-2.5, 2.0){\mbox{\includegraphics*[height=46mm]
-%  {plots_sept_16/Higgs_resolution_pT_emu.pdf}}}
-%\put(51.5, 2.0){\mbox{\includegraphics*[height=46mm]
-%  {plots_sept_16/Higgs_resolution_eta_emu.pdf}}}
-%\put(109.5, 2.0){\mbox{\includegraphics*[height=46mm] 
-%  {plots_sept_16/Higgs_resolution_phi_emu.pdf}}}
-%\put( 24.5, 112.0){\small (a)}
-%\put( 76.5, 112.0){\small (b)}
-%\put(136.5, 112.0){\small (c)}
-%\put( 24.5,  56.0){\small (d)}
-%\put( 76.5,  56.0){\small (e)}
-%\put(136.5,  56.0){\small (f)}
-%\put( 24.5,   0.0){\small (g)}
-%\put( 76.5,   0.0){\small (h)}
-%\put(136.5,  0.0){\small (i)}
-%\end{picture}
-%\end{center}
-\caption{
-  Resolution on $\pT$ (a,d,g), $\eta$ (b,e,h), and $\phi$ (c,f,i) of the $\Pgt$ lepton
-  pair in SM $\PHiggs \to \Pgt\Pgt$ signal and $\PZ/\Pggx \to
-  \Pgt\Pgt$ background events,
-  separately for the decay channels $\tauh\tauh$ (a,b,c), $\Pgm\tauh$ (d,e,f),
-  and $\Pe\Pgm$ (g,h,i).
-  The SM $\PHiggs \to \Pgt\Pgt$ signal events are produced via the
-  gluon fusion process.
-  The resolutions on $\pT$ and $\phi$ achieved by computing the sum of
-  the momenta of the visible $\Pgt$ decay products and $\MET$ are shown for comparison.
-}
-\label{fig:resolutions_sm_pT_eta_and_phi}
-\end{figure}
-%----------------------------------------------------------------------------------------------------
-
 We conclude the discussion of the performance of the SVfit algorithm
 with a comparison of the computing time requirements of the SVfitMEM,
 cSVfit, and SVfitSA algorithms.
@@ -1012,23 +975,24 @@ with the number of evaluations of the integrand.
 The SVfitMEM (SVfitSA) algorithm performs $20,000$ ($10,000$)
 evaluations of the integrand per mass hypothesis
 $m_{\PHiggs}^{\textrm{test}(i)}$.
+The number of evaluations of the integrand per mass hypothesis $m_{\PHiggs}^{\textrm{test}(i)}$ is chosen such that the
+resolution on $m_{\Pgt\Pgt}$ is within $1\%$ compared to the resolution obtained in case an infinite (very large) number of evaluations of the
+integrand is performed.
 The number of mass hypotheses tested for an event varies depending on the
 conditions described in Section~\ref{sec:mem_numericalMaximization}.
-Due to the fact that the series of mass hypotheses is given by a
-recursive relation,
-defined by Eq.~(\ref{eq:mTauTau_step_size}), the number of test mass
+For the series of mass hypotheses defined by Eq.~(\ref{eq:mTauTau_step_size}), the number of test mass
 hypotheses increases approximately logarithmically with the
 true mass of the $\Pgt$ lepton pair. 
 For signal events the probability density $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$
 is typically computed for a series of $20$--$30$ mass hypotheses $m_{\PHiggs}^{\textrm{test}(i)}$.
+The average length of the series of test mass hypothesis varies with the decay channel.
+The series is typically the longest in the $\Pe\Pgm$ channel and the shortest in the $\tauh\tauh$,
+as the value of $m_{\vis}$ that is used to initialize the series is farther away respectively less far away from the true mass of the $\Pgt$ lepton pair,
+where the probability density $\mathcal{P}^{\textrm{max}}$ is expected to reach its maximum.
 Background events may require to compute $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$ for a larger number of test mass hypotheses,
 as the probability density may be almost degenerate over a large range in $m_{\PHiggs}^{\textrm{test}(i)}$.
-The number of evaluations of the integrand that is performed for a single event is chosen such that the
-an almost optimal resolution is achieved, within less than $1\%$ relative to
-the case that an infinite (very large) number of evaluations of the
-integrand is performed.
 The number of evaluations of the integrand is higher for the SVfitMEM
-compared to the SVfitSA algorithm, to account for the fact that the additional PDF and TF factors
+compared to the SVfitSA algorithm, accounting for the fact that the additional PDF and TF factors
 raise the variation of the integrand,
 which requires a higher numerical precision of the integration in
 order to reliably determine the maximum $\mathcal{P}^{\textrm{max}}$ of the probability density.
@@ -1040,35 +1004,30 @@ by a custom implementation of the Markov chain Monte Carlo method, as described 
 In the latter case, the integrand is evaluated $100,000$ times per event and there is no
 iteration over a sequence of mass hypotheses.
 The computing time is measured by CPU time, 
-using a single core of a $X.XX$~GHz Intel\TReg~Xeon\TReg~XXXX processor.
+using a single core of a $2.30$~GHz Intel\TReg~Xeon\TReg~E$5$-$2695$ v$3$ processor.
 The distribution of the computing time, in units of seconds per event, 
 spent to compute $m_{\Pgt\Pgt}$
 in SM SM $\PHiggs \to \Pgt\Pgt$ signal and $\PZ/\Pggx \to \Pgt\Pgt$ background events
 using the SVfitMEM, cSVfit and SVfitSA algorithms is shown in
 Fig.~\ref{fig:computing_time}.
-The cSVfit algorithm requires about $1$~s of CPU time per event.
+Numerical values of the mean and RMS of the CPU time distributions are given in Table~\ref{tab:computing_time}.
+The cSVfit algorithm requires about $0.5$~s of CPU time per event.
 Within this time, the mass $m_{\Pgt\Pgt}$ of the $\Pgt$ lepton pair,
 as well as its $\pT$, $\eta$, $\phi$, and transverse mass
 $m_{T\Pgt\Pgt}$ are reconstructed.
 Compared to the SVfitSA algorithm, the cSVfit algorithm reduces the
-computing time by a factor $2$--$3$. 
+computing time by a significant factor. 
 The reduction in computing time is
 due to the more efficient Markov chain Monte
 Carlo integration method, compared to
 computing the probability density
 $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$
 for a series of mass hypotheses.
+The double-peak structure in the CPU time distribution of the SVfitSA algorithm is due to events in which the numerical uncertainty on the integral of the likelihood function, 
+as estimated by VEGAS, exceeds a certain precision target.
+In this case, another $10,000$ evaluations of the integrand are performed by the SVfitSA algorithm, up to a total of $50,000$ evaluations of the integrand per test mass hypothesis.
 Compared to the cSVfit algorithm, the computing time requirement of the SVfitMEM algorithm is higher
 by about one order of magnitude. 
-Considering that the resolution on $m_{\Pgt\Pgt}$,
-quantified by the ratio $\sigma/\textrm{M}$, achieved
-by the SVfitMEM and cSVfit algorithms is almost identical, we find that the cSVfit
-algorithm represents the best compromise between physics performance and computing time requirements.
-The merit of the SVfitMEM algorithm is that the 
-formalism to treat $\Pgt$ lepton decays in the ME method, developed
-for the SVfitMEM algorithm, can be used
-in future applications of the ME method to data analyses with $\Pgt$
-leptons in the final state.
 
 %----------------------------------------------------------------------------------------------------
 %
@@ -1092,4 +1051,94 @@ leptons in the final state.
 }
 \label{fig:computing_time}
 \end{figure}
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|l|C{1.5cm}C{1.5cm}|C{1.5cm}C{1.5cm}|}
+\hline
+\multicolumn{5}{|c|}{$\tauh\tauh$ decay channel} \\
+\hline
+\hline
+\multirow{2}{24mm}{Algorithm} & \multicolumn{2}{c|}{$\PZ/\Pggx \to \Pgt\Pgt$} & \multicolumn{2}{c|}{SM $\PHiggs \to \Pgt\Pgt$} \\
+\cline{2-5}
+& Mean~[s] & RMS~[s] & Mean~[s] & RMS~[s] \\
+\hline
+SVfitSA & $3.51$ & $5.24$ & $3.75$ & $5.87$ \\
+cSVfit & & & & \\
+$\quad \kappa=0$ & $0.72$ & $0.17$ & $0.73$ & $0.18$ \\
+$\quad \kappa=5$ & $0.77$ & $0.20$ & $0.78$ & $0.20$ \\
+SVfitMEM & & & & \\
+$\quad \kappa=0$ & $13.07$ & $6.27$ & $14.03$ & $6.89$ \\
+$\quad \kappa=5$ & $10.72$ & $4.72$ & $11.44$ & $5.02$ \\
+\hline
+\end{tabular}
+
+\vspace{3.5mm}
+
+\begin{tabular}{|l|C{1.5cm}C{1.5cm}|C{1.5cm}C{1.5cm}|}
+\hline
+\multicolumn{5}{|c|}{$\Pgm\tauh$ decay channel} \\
+\hline
+\hline
+\multirow{2}{24mm}{Algorithm} & \multicolumn{2}{c|}{$\PZ/\Pggx \to \Pgt\Pgt$} & \multicolumn{2}{c|}{SM $\PHiggs \to \Pgt\Pgt$} \\
+\cline{2-5}
+& Mean~[s\unskip] & RMS~[s\unskip] & Mean~[s\unskip] & RMS~[s\unskip] \\
+\hline
+SVfitSA & $5.82$ & $9.22$ & $5.02$ & $7.91$ \\
+cSVfit & & & & \\
+$\quad \kappa=0$ & $0.62$ & $0.11$ & $0.56$ & $0.12$ \\
+$\quad \kappa=4$ & $0.73$ & $0.17$ & $0.61$ & $0.16$ \\
+SVfitMEM & & & & \\
+$\quad \kappa=0$ & $22.64$ & $12.99$ & $18.45$ & $10.15$ \\
+$\quad \kappa=4$ & $18.38$ & $7.49$ & $15.83$ & $6.68$ \\
+\hline
+\end{tabular}
+
+\vspace{3.5mm}
+
+\begin{tabular}{|l|C{1.5cm}C{1.5cm}|C{1.5cm}C{1.5cm}|}
+\hline
+\multicolumn{5}{|c|}{$\Pe\Pgm$ decay channel} \\
+\hline
+\hline
+\multirow{2}{24mm}{Algorithm} & \multicolumn{2}{c|}{$\PZ/\Pggx \to \Pgt\Pgt$} & \multicolumn{2}{c|}{SM $\PHiggs \to \Pgt\Pgt$} \\
+\cline{2-5}
+& Mean~[s\unskip] & RMS~[s\unskip] & Mean~[s\unskip] & RMS~[s\unskip] \\
+\hline
+SVfitSA & $10.26$ & $14.65$ & $7.68$ & $10.35$ \\
+cSVfit & & & & \\
+$\quad \kappa=0$ & $0.34$ & $0.06$ & $0.34$ & $0.06$ \\
+$\quad \kappa=3$ & $0.39$ & $0.08$ & $0.37$ & $0.09$ \\
+SVfitMEM & & & & \\
+$\quad \kappa=0$ & $30.92$ & $16.59$ & $19.37$ & $12.29$ \\
+$\quad \kappa=3$ & $22.56$ & $7.70$ & $16.62$ & $7.43$ \\
+\hline
+\end{tabular}
+\end{center}
+\caption{
+  CPU time per event required for reconstruction of $m_{\Pgt\Pgt}$ by
+  the SVfitMEM, cSVfit, and SVfitSA algorithms
+  in simulated SM $\PHiggs \to \Pgt\Pgt$ signal 
+  and $\PZ/\Pggx \to \Pgt\Pgt$ background events
+  in the decay channels $\tauh\tauh$, $\Pgm\tauh$,
+  and $\Pe\Pgm$.
+}
+\label{tab:computing_time}
+\end{table}
 %----------------------------------------------------------------------------------------------------
+
+Considering that the resolution on $m_{\Pgt\Pgt}$,
+quantified by the ratio $\sigma/\textrm{M}$, achieved
+by the SVfitMEM and cSVfit algorithms is almost identical, we find that the cSVfit
+algorithm represents the best compromise between physics performance and computing time requirements.
+The optimal resolution on $m_{\Pgt\Pgt}$, quantified by the ratio $\sigma/\textrm{M}$,
+is achieved in case an artificial regularization term of the type described in Section~\ref{sec:mem_logM}, with small positive $\kappa$,
+is added to the likelihood function.
+We expect the optimal choice of $\kappa$ to depend on the rates of signal and background processes as well as on the experimental resolution,
+and we recommend to perform a reoptimization of $\kappa$ in practical applications of our algorithm.
+
+The merit of the SVfitMEM algorithm is that the 
+formalism to treat $\Pgt$ lepton decays in the ME method, developed
+for the SVfitMEM algorithm, can be used
+in future applications of the ME method to data analyses with $\Pgt$
+leptons in the final state.
