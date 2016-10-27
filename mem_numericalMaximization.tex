@@ -17,17 +17,17 @@ expected resolution on $m_{\PHiggs}$,
 typically amounting to $15$--$20\%$ relative to the true mass of the $\Pgt$ lepton pair.
 In order to reduce the computing time, the series is computed in two passes.
 The purpose of the first pass, which uses a step size $\delta = 0.10$, is to find an approximate value of $m_{\Pgt\Pgt}$
-that maximizes the probability density $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$.
-The series of mass hypotheses that is used in the first pass stops when $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$ falls below one per mille 
+that maximizes the probability density $\mathcal{P}$.
+The series of mass hypotheses that is used in the first pass stops when $\mathcal{P}$ falls below one per mille 
 of the maximal probability density $\mathcal{P}^{\textrm{max}}$
 computed for any $m_{\PHiggs}^{\textrm{test}(i)}$ so far in a given event.
 In the second pass, which uses a step size of $\delta = 0.01$,
-further $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$ values 
+further $\mathcal{P}$ values 
 are computed for mass hypotheses $m_{\PHiggs}^{\textrm{test}(i)}$ that
 are within a region around the maximum
 for which the probability density computed in the first pass exceeds
 $0.10 \cdot \mathcal{P}^{\textrm{max}}$.
-Finally, the graph of $\log \left( \mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)}) \, \cdot \, \mbox{\GeV}^{8} \right)$ 
+Finally, the graph of $\log \left( \mathcal{P} \, \cdot \, \mbox{\GeV}^{8} \right)$ 
 versus $m_{\PHiggs}^{\textrm{test}(i)}$ is fitted by a second order polynomial
 in the region around the maximum,
 and $m_{\Pgt\Pgt}$ is taken to be the point at which the polynomial reaches its maximum.

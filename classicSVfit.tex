@@ -49,7 +49,8 @@ This choice has the advantage that the sequence of Markov chain states does not 
 which allows for $\mathcal{F}(\bm{p})$ to consist of multiple components that can be evaluated by the same Markov chain.
 Each component can be an arbitrary function of the momenta $\bm{p}^{(1)})$ and $\bm{p}^{(2)})$ of the two $\Pgt$ leptons.
 In the default implementation of the algorithm,
-the $\pT$, $\eta$, $\phi$ and transverse mass, $m_{T\Pgt\Pgt}$, of the $\Pgt$ lepton pair
+the $\pT$, $\eta$, $\phi$ and transverse mass, $m_{T\Pgt\Pgt} = (\ET^{\Pgt(1)} + \ET^{\Pgt(2)})^{2} 
+ - \left( (\pX^{\Pgt(1)} + \pX^{\Pgt(2)})^{2} + (\pY^{\Pgt(1)} + \pY^{\Pgt(2)})^{2} \right)$, of the $\Pgt$ lepton pair
 are reconstructed in addition to the mass $m_{\Pgt\Pgt}$.
 We refer to this version of the SVfit algorithm as the ``classic'' SVfit (cSVfit) algorithm.
 
@@ -75,7 +76,7 @@ is equivalent to adding an artificial regularization term of the type described 
 This can be seen in the limit that the angles $\theta_{\inv}$ between the $\bm{p}^{\inv}$ and $\bm{p}^{\vis}$ vectors are zero for both $\Pgt$ leptons.
 In this limit, $m_{\PHiggs}^{\textrm{test}} \approx \frac{m_{\vis}}{\sqrt{z^{(1)}z^{(2)}}}$,
 with $m_{\vis}$ denoting the measured mass of the visible $\Pgt$ decay products
-and $\log \left( \mathcal{P} \cdot \mbox{~\GeV}^{8} \right) + 4 \cdot \log \left( m_{\PHiggs}^{\textrm{test}(i)} / \mbox{~\GeV} \right) \approx \log \left( \mathcal{P} \cdot \mbox{~\GeV}^{8} \right) + 4 \cdot \log \left( m_{\vis} / \mbox{~\GeV} \right) - \log \left( \frac{1}{\left( z^{(1)} \right)^{2} \, \left( z^{(2)} \right)^{2}} \right) \approx \log \left( \frac{\mathcal{P} \cdot \mbox{~\GeV}^{8}}{\left( z^{(1)} \right)^{2} \, \left( z^{(2)} \right)^{2}} \right)$,
+and $\log \left( \mathcal{P} \cdot \mbox{~\GeV}^{8} \right) + 4 \cdot \log \left( m_{\PHiggs}^{\textrm{test}(i)} / \mbox{~\GeV} \right) \approx \log \left( \mathcal{P} \cdot \mbox{~\GeV}^{8} \right) + 4 \cdot \log \left( m_{\vis} / \mbox{~\GeV} \right) - \log \left( \frac{1}{\left( z^{(1)} \, z^{(2)} \right)^{2}} \right) \approx \log \left( \frac{\mathcal{P} \cdot \mbox{~\GeV}^{8}}{\left( z^{(1)} \, z^{(2)} \right)^{2}} \right)$,
 where the term $4 \cdot \log \left( m_{\vis} / \mbox{~\GeV} \right)$ has been omitted from the sum in the last step.
 As the term $4 \cdot \log \left( m_{\vis} / \mbox{~\GeV} \right)$ does not depend on $m_{\PHiggs}^{\textrm{test}(i)}$,
 it has no effect on the reconstruction of $m_{\Pgt\Pgt}$.
