@@ -87,6 +87,20 @@ V.~Khachatryan, et~al., {Precise determination of the mass of the Higgs boson
   \href {http://dx.doi.org/10.1140/epjc/s10052-015-3351-7}
   {\path{doi:10.1140/epjc/s10052-015-3351-7}}.
 
+\bibitem{HIG-13-004}
+S.~Chatrchyan, et~al., {Evidence for the $125$~GeV Higgs boson decaying to a
+  pair of $\tau$ leptons}, JHEP 05 (2014) 104.
+\newblock \href {http://arxiv.org/abs/1401.5041} {\path{arXiv:1401.5041}},
+  \href {http://dx.doi.org/10.1007/JHEP05(2014)104}
+  {\path{doi:10.1007/JHEP05(2014)104}}.
+
+\bibitem{Aad:2015vsa}
+G.~Aad, et~al., {Evidence for the Higgs-boson Yukawa coupling to $\tau$ leptons
+  with the ATLAS detector}, JHEP 04 (2015) 117.
+\newblock \href {http://arxiv.org/abs/1501.04943} {\path{arXiv:1501.04943}},
+  \href {http://dx.doi.org/10.1007/JHEP04(2015)117}
+  {\path{doi:10.1007/JHEP04(2015)117}}.
+
 \bibitem{HIG-15-002}
 {CMS Collaboration},
   \href{http://cms-physics.web.cern.ch/cms-physics/public/HIG-15-002.pdf}{{Mea%
@@ -96,13 +110,6 @@ surements of the Higgs boson production and decay rates and constraints on its
   Physics Analysis Summary CMS-PAS-HIG-15-002 (2015).
 \newline\urlprefix\url{http://cms-physics.web.cern.ch/cms-physics/public/HIG-1%
 5-002.pdf}
-
-\bibitem{HIG-13-004}
-S.~Chatrchyan, et~al., {Evidence for the $125$~GeV Higgs boson decaying to a
-  pair of $\tau$ leptons}, JHEP 05 (2014) 104.
-\newblock \href {http://arxiv.org/abs/1401.5041} {\path{arXiv:1401.5041}},
-  \href {http://dx.doi.org/10.1007/JHEP05(2014)104}
-  {\path{doi:10.1007/JHEP05(2014)104}}.
 
 \bibitem{HIG-14-002}
 V.~Khachatryan, et~al., {Constraints on the Higgs boson width from off-shell
@@ -394,6 +401,18 @@ G.~P. Lepage, {A new algorithm for adaptive multidimensional integration},
   J.~Comput.~Phys. 27 (1978) 192.
 \newblock \href {http://dx.doi.org/10.1016/0021-9991(78)90004-9}
   {\path{doi:10.1016/0021-9991(78)90004-9}}.
+
+\bibitem{penalizedMaximumLikelihood1}
+S.~R. Cole, H.~Chu, S.~Greenland, {Maximum likelihood, profile likelihood, and
+  penalized likelihood: a primer}, Am.~J.~ Epidemiol. 179~(2) (2014) 252.
+\newblock \href {http://dx.doi.org/10.1093/aje/kwt245}
+  {\path{doi:10.1093/aje/kwt245}}.
+
+\bibitem{penalizedMaximumLikelihood2}
+S.~Greenland, {Principles of multilevel modelling}, Int.~J.~ Epidemiol. 29~(1)
+  (2000) 158.
+\newblock \href {http://dx.doi.org/10.1093/ije/29.1.158}
+  {\path{doi:10.1093/ije/29.1.158}}.
 
 \bibitem{Metropolis_Hastings}
 W.~K. Hastings, {Monte Carlo sampling methods using Markov Chains and their

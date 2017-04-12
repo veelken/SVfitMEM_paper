@@ -4,6 +4,40 @@
 The best estimate, $m_{\Pgt\Pgt}$, for the mass of the $\Pgt$ lepton pair in a given event
 is obtained by computing the probability density $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$ 
 for a series of mass hypotheses $m_{\PHiggs}^{\textrm{test}(i)}$, using Eq.~(\ref{eq:mem_with_hadRecoil}), and determining the value of $m_{\PHiggs}$ that maximizes this probability density.
+
+Graphs of the probability density $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$ 
+as function of $m_{\PHiggs}^{\textrm{test}(i)}$ are shown in Fig.~\ref{fig:likelihoodGraphs} for two exemplary events.
+The events are drawn from a simulated sample of $\PZ/\Pggx \to \Pgt\Pgt$ background events, produced as described in Section~\ref{sec:performance}.
+In the first event (``$0$-jet'') the $\PZ$ boson has little $\pT$, while in the second event (``$1$-jet boosted'') the $\PZ$ boson recoils against a high $\pT$ jet.
+The scale of the ordinate is adjusted such that the probability density is equal to one
+for the value of $m_{\PHiggs}^{\textrm{test}(i)}$ that maximises $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$.
+The width of the graph reflects the experimental resolution on $m_{\Pgt\Pgt}$.
+As will be explained in more detail in Section~\ref{sec:performance}, the resolution on $m_{\Pgt\Pgt}$ improves considerably in case the $\PZ$ boson has high $\pT$.
+The graphs of the probability density are superimposed for two cases:
+for the case that the artificial regularization term described in Section~\ref{sec:mem_logM} is used respectively not used.
+In the $\PZ/\Pggx \to \Pgt\Pgt$ background event in which the $\PZ$ boson has little $\pT$
+the probability density decreases slowly as function of the mass hypothesis in case no artificial regularization is used,
+with the effect that such events have a sizeable probability for the reconstructed $m_{\Pgt\Pgt}$ to populate, due to resolution effects, 
+the region in which the $\PHiggs$ boson signal is searched for.
+
+\begin{figure}
+\setlength{\unitlength}{1mm}
+\begin{center}
+\begin{picture}(160,68)(0,0)
+\put(-2.5, 0.0){\mbox{\includegraphics*[height=68mm]{plots_apr07_2017/makeSVfitMEM_likelihoodGraphs_DYJetsToLLM50_0Jets_r1_ls618805_ev123760983.pdf}}}
+\put(81.0, 0.0){\mbox{\includegraphics*[height=68mm]{plots_apr07_2017/makeSVfitMEM_likelihoodGraphs_DYJetsToLLM50_1JetBoosted_r1_ls781771_ev156354150.pdf}}}
+\end{picture}
+\end{center}
+\caption{
+  Graphs of the probability density $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$ 
+  as function of the mass hypothesis $m_{\PHiggs}^{\textrm{test}(i)}$ in two exemplary simulated $\PZ/\Pggx \to \Pgt\Pgt$ background events.
+  In the event shown on the left (``$0$-jet'') the $\PZ$ boson has little $\pT$, while in the event shown on the right (``$1$-jet boosted'') the $\PZ$ boson recoils against a high $\pT$ jet.
+  The scale of the ordinate is adjusted such that the probability density is equal to one
+  for the value of $m_{\PHiggs}^{\textrm{test}(i)}$ that maximises $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$.
+}
+\label{fig:likelihoodGraphs}
+\end{figure}
+
 The integral in Eq.~(\ref{eq:mem_with_hadRecoil}) is evaluated numerically using the VAMP algorithm.
 For each mass hypotheses $m_{\PHiggs}^{\textrm{test}(i)}$ the integrand is evaluated $20,000$ times.
 The series of mass hypotheses is defined by a recursive relation: 
@@ -15,6 +49,7 @@ where $m_{\vis}$ denotes the mass of the visible $\Pgt$ decay products.
 The step size $\delta$ is chosen such that it is small compared to the
 expected resolution on $m_{\PHiggs}$,
 typically amounting to $15$--$20\%$ relative to the true mass of the $\Pgt$ lepton pair.
+
 In order to reduce the computing time, the series is computed in two passes.
 The purpose of the first pass, which uses a step size $\delta = 0.10$, is to find an approximate value of $m_{\Pgt\Pgt}$
 that maximizes the probability density $\mathcal{P}$.
@@ -27,7 +62,8 @@ are computed for mass hypotheses $m_{\PHiggs}^{\textrm{test}(i)}$ that
 are within a region around the maximum
 for which the probability density computed in the first pass exceeds
 $0.10 \cdot \mathcal{P}^{\textrm{max}}$.
-Finally, the graph of $\log \left( \mathcal{P} \, \cdot \, \mbox{\GeV}^{8} \right)$ 
+
+Finally, the graph of $\log(\mathcal{P} \, \cdot \, \mbox{\GeV}^{8})$ 
 versus $m_{\PHiggs}^{\textrm{test}(i)}$ is fitted by a second order polynomial
 in the region around the maximum,
 and $m_{\Pgt\Pgt}$ is taken to be the point at which the polynomial reaches its maximum.
