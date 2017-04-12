@@ -523,18 +523,23 @@ K.~Melnikov, F.~Petriello, {Electroweak gauge boson production at hadron
 
 \bibitem{Dittmaier:2011ti}
 S.~Dittmaier, et~al., {Handbook of LHC Higgs cross--sections: 1. inclusive
-  observables}\href {http://arxiv.org/abs/1101.0593} {\path{arXiv:1101.0593}},
-  \href {http://dx.doi.org/10.5170/CERN-2011-002}
+  observables}. \,\href {http://arxiv.org/abs/1101.0593}
+  {\path{arXiv:1101.0593}}, \href {http://dx.doi.org/10.5170/CERN-2011-002}
   {\path{doi:10.5170/CERN-2011-002}}.
 
 \bibitem{Heinemeyer:2013tqa}
 J.~R. Andersen, et~al., {Handbook of LHC Higgs cross--sections: 3. Higgs
-  properties}\href {http://arxiv.org/abs/1307.1347} {\path{arXiv:1307.1347}},
-  \href {http://dx.doi.org/10.5170/CERN-2013-004}
+  properties}. \,\href {http://arxiv.org/abs/1307.1347}
+  {\path{arXiv:1307.1347}}, \href {http://dx.doi.org/10.5170/CERN-2013-004}
   {\path{doi:10.5170/CERN-2013-004}}.
 
+\bibitem{AntiKT}
+M.~Cacciari, G.~P. Salam, G.~Soyez, The anti-kt jet clustering algorithm, JHEP
+  04 (2008) 063.
+\newblock \href {http://arxiv.org/abs/0802.1189} {\path{arXiv:0802.1189}}.
+
 \bibitem{ATLAS_HiggsTauTau_SM}
-G.~Aad, et~al., {Evidence for the Higgs-boson Yukawa coupling to $\tau$ leptons
+G.~Aad, et~al., {Evidence for the Higgs-boson Yukawa coupling to $\Pgt$ leptons
   with the ATLAS detector}, JHEP 04 (2015) 117.
 \newblock \href {http://arxiv.org/abs/1501.04943} {\path{arXiv:1501.04943}},
   \href {http://dx.doi.org/10.1007/JHEP04(2015)117}
@@ -547,5 +552,12 @@ G.~Aad, et~al., {Search for neutral Higgs bosons of the minimal supersymmetric
 \newblock \href {http://arxiv.org/abs/1409.6064} {\path{arXiv:1409.6064}},
   \href {http://dx.doi.org/10.1007/JHEP11(2014)056}
   {\path{doi:10.1007/JHEP11(2014)056}}.
+
+\bibitem{HIG-17-003}
+{CMS Collaboration}, \href{http://cds.cern.ch/record/2257067}{{Search for the
+  associated production of a Higgs boson with a top quark pair in final states
+  with a $\Pgt$ lepton at $\sqrt{s} = 13$~TeV}}, CMS Physics Analysis Summary
+  CMS-PAS-HIG-17-003 (2017).
+\newline\urlprefix\url{http://cds.cern.ch/record/2257067}
 
 \end{thebibliography}

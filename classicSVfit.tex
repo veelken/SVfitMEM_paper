@@ -35,8 +35,8 @@ the integral:
 is computed.
 The function $\mathcal{F}(\bm{p})$ in the integrand can be an arbitrary function of the momenta $\bm{p}^{(1)})$ and $\bm{p}^{(2)})$ of the two $\Pgt$ leptons.
 The integral is evaluated numerically, using a custom implementation of the Markov chain Monte Carlo integration method with the Metropolis--Hastings algorithm~\cite{Metropolis_Hastings}.
-The actual value $\mathcal{L}(\bm{y})$ of the integral is discarded.
-The reconstruction of the mass $m_{\Pgt\Pgt}$ of the $\Pgt$ lepton pair is instead based on choosing 
+The actual value $\mathcal{L}(\bm{y})$ of the integral is irrelevant.
+The reconstruction of the mass $m_{\Pgt\Pgt}$ of the $\Pgt$ lepton pair is based on choosing 
 $\mathcal{F}(\bm{p}) \equiv (\Ehat_{\Pgt(1)} + \Ehat_{\Pgt(2)})^{2} 
  - \left( (\pXhat^{\Pgt(1)} + \pXhat^{\Pgt(2)})^{2} + (\pYhat^{\Pgt(1)} + \pYhat^{\Pgt(2)})^{2} + (\pZhat^{\Pgt(1)} + \pZhat^{\Pgt(2)})^{2} \right)$
 and recording the values of $\mathcal{F}(\bm{p})$ for each evaluation of the integrand in Eq.~(\ref{eq:cSVfit_with_hadRecoil}) by the Markov chain
@@ -70,13 +70,13 @@ Compared to the cSVfit algorithm,
 the version of the SVfit algorithm used for analyses of data recorded by the CMS experiment during LHC Run $1$
 used an incomplete expression for the product of the differential phase space element and the ME for the $\Pgt$ lepton decays.
 In particular the factor $\frac{1}{z^{2}}$ in the functions $f_{\Phadron}$ and $f_{\Plepton}$, 
-given by Eqs.~(\ref{eq:hadTauDecays_f}) and~(\ref{eq:lepTauDecays_f}), were missing.
+given by Eqs.~(\ref{eq:hadTauDecays_f}) and~(\ref{eq:lepTauDecays_f}), were missing by mistake.
 The effect of the missing factors $\frac{1}{z^{2}}$ 
 is equivalent to adding an artificial regularization term of the type described in Section~\ref{sec:mem_logM} with $\kappa = 4$ to the likelihood function.
 This can be seen in the limit that the angles $\theta_{\inv}$ between the $\bm{p}^{\inv}$ and $\bm{p}^{\vis}$ vectors are zero for both $\Pgt$ leptons.
 In this limit, $m_{\PHiggs}^{\textrm{test}} \approx \frac{m_{\vis}}{\sqrt{z^{(1)}z^{(2)}}}$,
 with $m_{\vis}$ denoting the measured mass of the visible $\Pgt$ decay products
-and $\log \left( \mathcal{P} \cdot \mbox{~\GeV}^{8} \right) + 4 \cdot \log \left( m_{\PHiggs}^{\textrm{test}(i)} / \mbox{~\GeV} \right) \approx \log \left( \mathcal{P} \cdot \mbox{~\GeV}^{8} \right) + 4 \cdot \log \left( m_{\vis} / \mbox{~\GeV} \right) - \log \left( \frac{1}{\left( z^{(1)} \, z^{(2)} \right)^{2}} \right) \approx \log \left( \frac{\mathcal{P} \cdot \mbox{~\GeV}^{8}}{\left( z^{(1)} \, z^{(2)} \right)^{2}} \right)$,
-where the term $4 \cdot \log \left( m_{\vis} / \mbox{~\GeV} \right)$ has been omitted from the sum in the last step.
-As the term $4 \cdot \log \left( m_{\vis} / \mbox{~\GeV} \right)$ does not depend on $m_{\PHiggs}^{\textrm{test}(i)}$,
+and $\log(\mathcal{P} \cdot \textrm{~\GeV}^{8}) + 4 \cdot \log(m_{\PHiggs}^{\textrm{test}(i)} \cdot \textrm{~\GeV}^{-1}) \approx \log(\mathcal{P} \cdot \textrm{~\GeV}^{8}) + \log(m_{\vis}^{4} \cdot \textrm{~\GeV}^{-4}) - \log(\frac{1}{\sqrt{z^{(1)} \, z^{(2)}}^{4}}) \approx \log(\frac{\mathcal{P} \cdot \textrm{~\GeV}^{8}}{(z^{(1)} \, z^{(2)})^{2}})$.
+The term $\log(m_{\vis}^{4} \cdot \textrm{~\GeV}^{-4})$ has been omitted from the sum in the last step.
+As this term does not depend on $m_{\PHiggs}^{\textrm{test}(i)}$,
 it has no effect on the reconstruction of $m_{\Pgt\Pgt}$.

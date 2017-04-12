@@ -25,19 +25,27 @@ Parton shower and hadronization processes are modelled using the generator PYTHI
 The latter is based on the Monash tune~\cite{PYTHIA_MonashTune}.
 The decays of $\Pgt$ leptons, including polarization effects, are modelled by PYTHIA.
 The samples are normalized according to cross section for the purpose of comparing different mass reconstruction algorithms in terms of signal-to-background separation.
-The cross section of the irreducible $\PZ/\Pggx \to \Pgt\Pgt$ background is computed at NNLO accuracy and amounts to $1.92 \times 10^{3}$~pb~\cite{FEWZ}.
+The cross section for the irreducible $\PZ/\Pggx \to \Pgt\Pgt$ background is computed at NNLO accuracy and amounts to $1.92 \times 10^{3}$~pb~\cite{FEWZ}.
 The cross sections for the SM $\PHiggs \to \Pgt\Pgt$ signal have been computed as detailed in Ref.~\cite{Dittmaier:2011ti},
 with the updates described in Ref.~\cite{Heinemeyer:2013tqa} included.
-They amount to $43.9$~pb for the $\Pg\Pg \to \PHiggs$ and to $3.75$~pb for the $\Pquark\APquark \to \PHiggs$ production process.
+They amount to $2.77$~pb for $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$ and to $2.37 \cdot 10^{-1}$~pb for $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$.
 The $\PHiggsps \to \Pgt\Pgt$ and $\PZ' \to \Pgt\Pgt$ samples 
 are scaled to a product of cross section times branching fraction, for the decay into $\Pgt$ lepton pairs, of $1$~pb.
 
-The experimental resolutions on the $\pT$ of $\tauh$ and on the $\pX^{\rec}$ and $\pY^{\rec}$ of the hadronic recoil 
-are simulated by sampling from the TF described in
-Sections~\ref{sec:mem_TF_tauToHadDecays}
-and~\ref{sec:mem_TF_hadRecoil}.
-The $\eta$, $\phi$, and $m_{\vis}$ of $\tauh$,
-as well as the $\pT$, $\eta$, and $\phi$ of electrons and muons are assumed to be reconstructed perfectly.
+The events are studied on generator level.
+The $\pT$, $\eta$, and $\phi$ of the electrons and muons produced in the $\Pgt$ lepton decays
+are assumed to be reconstructed perfectly.
+The $\tauh$ are built by adding the visible decay products of a given $\Pgt$ lepton, excluding the neutrinos.
+The experimental resolution on the $\pT$ of the $\tauh$ is simulated by sampling from the TF described in Section~\ref{sec:mem_TF_tauToHadDecays},
+while the $\eta$, $\phi$, and $m_{\vis}$ of the $\tauh$ are assumed to be reconstructed perfectly.
+Jets are reconstructed by the anti-$k_{T}$ algorithm~\cite{AntiKT} with a distance parameter $R = 0.4$,
+using all stable visible generator level particles as input.
+The components $\pX^{\rec}$ and $\pY^{\rec}$ of the hadronic recoil are computed according to Eq.~(\ref{eq:met}):
+$\pX^{\rec} = -( \pX^{\vis(1)} + \pX^{\vis(2)} + \METx )$
+and
+$\pY^{\rec} = -( \pY^{\vis(1)} + \pY^{\vis(2)} + \METy )$
+and sampling from the TF described in Section~\ref{sec:mem_TF_hadRecoil},
+where $\METx$ and $\METy$ correspond to, respectively, the $x$ and $y$ components of the sum of the momenta of all neutrinos produced in the $\Pgt$ lepton decays.
 
 Distributions in $m_{\Pgt\Pgt}$ are computed separately for events in which 
 both $\Pgt$ leptons decay hadronically ($\tauh\tauh$), 
@@ -161,15 +169,17 @@ and by the SVfitSA algorithm are very similar.
 The SVfitSA algorithm performs well without adding an artificial regularization term of the type described in Section~\ref{sec:mem_logM} to its likelihood function.
 This is because the effect of the missing factor $\frac{1}{z^{2}}$ in the likelihood function used by the SVfitSA algorithm (\cf Section~\ref{sec:classicSVfit})
 is equivalent to using an artificial regularization term with $\kappa = 4$.
-Regardless of the choice of $\kappa$, the peaks of the $m_{\Pgt\Pgt}$ distributions reconstructed by the different versions of the SVfit algorithm are close to the true value of the mass of the $\Pgt$ lepton pair
-in all event categories.
-Adding an artificial regularization term has little effect on the peak of the $m_{\Pgt\Pgt}$ distribution.
-The motivation for adding the artificial regularization term is to reduce the tail of the $m_{\Pgt\Pgt}$ distribution for the
-$\PZ/\Pggx \to \Pgt\Pgt$ background in the mass range in which the signal is expected.
+Regardless of the choice of $\kappa$, the peaks of the $m_{\Pgt\Pgt}$ distributions reconstructed by the different versions of the SVfit algorithm 
+are close to the true value of the mass of the $\Pgt$ lepton pair in the $1$-jet boosted and $2$-jet VBF categories.
+In the $0$-jet and $1$-jet non-boosted categories,
+the distributions in $m_{\Pgt\Pgt}$ reconstructed by the cSVfit and SVfitMEM algorithms with $\kappa = 0$
+exhibit a tendency to overestimate the mass of the $\Pgt$ lepton pair.
+The choice of a small positive $\kappa$ reduces this tendency and makes the distributions in $m_{\Pgt\Pgt}$ peak close to the true mass of the $\Pgt$ lepton pair
+in the $0$-jet and $1$-jet non-boosted categories.
 
-The effect of adding the artificial regularization term is largest for events reconstructed in the $0$-jet category.
-Events in the $0$-jet category are the most difficult to reconstruct.
-In events in which the $\PHiggs$ or $\PZ$ boson has low $\pT$
+The effect of adding the artificial regularization term is largest for events reconstructed in the $0$-jet category,
+which are the most difficult to reconstruct.
+This is because in events in which the $\PHiggs$ or $\PZ$ boson has low $\pT$
 the $\Pgt$ leptons are typically ``back-to-back'' in the transverse plane ($\Delta\phi_{\Pgt\Pgt} \approx \pi$), 
 with the effect that the neutrinos produced in the $\Pgt$ lepton decays are emitted in opposite hemispheres and their contribution to $\MET$ cancels.
 The cancellation of neutrino momenta causes mass hypotheses of low $m_{\PHiggs}^{\textrm{test}(i)} \approx m_{\vis}$
@@ -186,7 +196,7 @@ in which the $\Pgt$ lepton pair typically recoils against high $\pT$ jets,
 the angle $\Delta\phi_{\Pgt\Pgt}$ between the $\Pgt$ leptons decreases due to the Lorentz boost in direction of the $\PHiggs$ or $\PZ$ boson.
 The momenta of the neutrinos produced in the $\Pgt$ lepton decays add constructively in this case,
 with the effect that the mass of the $\Pgt$ lepton pair is constrained by the measured value of $\MET$.
-The distribution in $\pT$ of the $\Pgt$ lepton pair and in the angle $\Delta\phi_{\Pgt\Pgt}$ is shown in Fig.~\ref{fig:ditau_pT_and_dphi}
+The correlation between the $\pT$ of the $\Pgt$ lepton pair and the angle $\Delta\phi_{\Pgt\Pgt}$ is visualized in Fig.~\ref{fig:ditau_pT_and_dphi}
 for SM $\PHiggs \to \Pgt\Pgt$ signal and $\PZ/\Pggx \to \Pgt\Pgt$ background events.
 The events are selected in the $\Pgm\tauh$ decay channel.
 The distributions for events selected in the $\tauh\tauh$ and $\Pe\Pgm$ decay channels are similar.
@@ -586,7 +596,7 @@ respectively.
 
 Distributions in $m_{\Pgt\Pgt}$ reconstructed by different versions of
 the SVfit algorithm, by the CA method, and of $m_{\vis}$ in hypothetic signal events containing heavy
-pseudoscalar Higgs bosons are shown in
+pseudoscalar Higgs bosons and heavy spin $1$ resonances are shown in
 Figs.~\ref{fig:massDistributions_mssm_tautau}
 to~\ref{fig:massDistributions_mssm_emu}.
 The distributions in $m_{\Pgt\Pgt}$ reconstructed by the cSVfit and
@@ -660,14 +670,12 @@ such that potential high mass signals would likely be buried underneath the high
 \end{figure}
 %----------------------------------------------------------------------------------------------------
 
-The SVfit algorithm significantly improves the separation of the
-heavy Higgs boson signal from the irreducible $\PZ/\Pggx \to \Pgt\Pgt$
+The SVfit algorithm significantly improves the separation of 
+the heavy Higgs boson and heavy spin $1$ resonance signals from the irreducible $\PZ/\Pggx \to \Pgt\Pgt$
 background in all three decay channels.
-Numerical values for the median $\textrm{M}$ and for the ratio $\sigma/\textrm{M}$ of the
-distribution, are given in Tables~\ref{tab:resolutions_mssm_tautau}
+Numerical values for the median $\textrm{M}$ as well as for the resolutions $\sigma_{l}/\textrm{M}$ and $\sigma_{h}/\textrm{M}$ of the distributions in $m_{\Pgt\Pgt}$
+are given in Tables~\ref{tab:resolutions_mssm_tautau}
 to~\ref{tab:resolutions_mssm_emu}.
-The tables also give the median $\textrm{M}$ and ratio $\sigma/\textrm{M}$
-for a heavy spin $1$ resonance of mass $2500$~\GeV .
 
 %----------------------------------------------------------------------------------------------------
 %
@@ -1094,12 +1102,11 @@ $\quad \kappa=3$ & $22.56$ & $7.70$ & $16.62$ & $7.43$ \\
 %----------------------------------------------------------------------------------------------------
 
 Considering that the resolution on $m_{\Pgt\Pgt}$,
-quantified by the ratio $\sigma/\textrm{M}$, achieved
+quantified by $\sigma_{l}/\textrm{M}$ and $\sigma_{h}/\textrm{M}$, achieved
 by the SVfitMEM and cSVfit algorithms is almost identical, we find that the cSVfit
-algorithm represents the best compromise between physics performance and computing time requirements.
+algorithm represents the best compromise between physics performance and computing time requirements in practical applications of the SVfit algorithm.
 
-The optimal resolution on $m_{\Pgt\Pgt}$, quantified by the ratio $\sigma/\textrm{M}$,
-is achieved in case an artificial regularization term of the type described in Section~\ref{sec:mem_logM}, with small positive $\kappa$,
+The optimal resolution is achieved in case an artificial regularization term of the type described in Section~\ref{sec:mem_logM}, with small positive $\kappa$,
 is added to the likelihood function.
 We expect the optimal choice of $\kappa$ to depend on the rates of signal and background processes as well as on the experimental resolution,
 and we recommend to perform a reoptimization of $\kappa$ in practical applications of our algorithm.
@@ -1109,3 +1116,7 @@ formalism to treat $\Pgt$ lepton decays in the ME method, developed
 for the SVfitMEM algorithm, can be used
 in future applications of the ME method to data analyses with $\Pgt$
 leptons in the final state.
+An example for such an application is the analysis of SM Higgs boson production in association with a pair of top quarks 
+in final states with a $\Pgt$ lepton ($\Ptop\APtop\PHiggs$, $\PHiggs \to \Pgt\Pgt$)~\cite{HIG-17-003},
+in which the existence of neutrinos from $\PW \to \Plepton\Pnu$ decays preclude the reconstruction of the Higgs boson mass by the SVfit algorithm.
+
