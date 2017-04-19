@@ -5,21 +5,6 @@ The best estimate, $m_{\Pgt\Pgt}$, for the mass of the $\Pgt$ lepton pair in a g
 is obtained by computing the probability density $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$ 
 for a series of mass hypotheses $m_{\PHiggs}^{\textrm{test}(i)}$, using Eq.~(\ref{eq:mem_with_hadRecoil}), and determining the value of $m_{\PHiggs}$ that maximizes this probability density.
 
-Graphs of the probability density $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$ 
-as function of $m_{\PHiggs}^{\textrm{test}(i)}$ are shown in Fig.~\ref{fig:likelihoodGraphs} for two exemplary events.
-The events are drawn from a simulated sample of $\PZ/\Pggx \to \Pgt\Pgt$ background events, produced as described in Section~\ref{sec:performance}.
-In the first event (``$0$-jet'') the $\PZ$ boson has little $\pT$, while in the second event (``$1$-jet boosted'') the $\PZ$ boson recoils against a high $\pT$ jet.
-The scale of the ordinate is adjusted such that the probability density is equal to one
-for the value of $m_{\PHiggs}^{\textrm{test}(i)}$ that maximises $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$.
-The width of the graph reflects the experimental resolution on $m_{\Pgt\Pgt}$.
-As will be explained in more detail in Section~\ref{sec:performance}, the resolution on $m_{\Pgt\Pgt}$ improves considerably in case the $\PZ$ boson has high $\pT$.
-The graphs of the probability density are superimposed for two cases:
-for the case that the artificial regularization term described in Section~\ref{sec:mem_logM} is used respectively not used.
-In the $\PZ/\Pggx \to \Pgt\Pgt$ background event in which the $\PZ$ boson has little $\pT$
-the probability density decreases slowly as function of the mass hypothesis in case no artificial regularization is used,
-with the effect that such events have a sizeable probability for the reconstructed $m_{\Pgt\Pgt}$ to populate, due to resolution effects, 
-the region in which the $\PHiggs$ boson signal is searched for.
-
 \begin{figure}
 \setlength{\unitlength}{1mm}
 \begin{center}
@@ -29,8 +14,8 @@ the region in which the $\PHiggs$ boson signal is searched for.
 \end{picture}
 \end{center}
 \caption{
-  Graphs of the probability density $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$ 
-  as function of the mass hypothesis $m_{\PHiggs}^{\textrm{test}(i)}$ in two exemplary simulated $\PZ/\Pggx \to \Pgt\Pgt$ background events.
+  Graphs of the probability density $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$, 
+  computed for a series of mass hypotheses $m_{\PHiggs}^{\textrm{test}(i)}$, in two exemplary simulated $\PZ/\Pggx \to \Pgt\Pgt$ background events.
   In the event shown on the left (``$0$-jet'') the $\PZ$ boson has little $\pT$, while in the event shown on the right (``$1$-jet boosted'') the $\PZ$ boson recoils against a high $\pT$ jet.
   The scale of the ordinate is adjusted such that the probability density is equal to one
   for the value of $m_{\PHiggs}^{\textrm{test}(i)}$ that maximises $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$.
@@ -39,7 +24,7 @@ the region in which the $\PHiggs$ boson signal is searched for.
 \end{figure}
 
 The integral in Eq.~(\ref{eq:mem_with_hadRecoil}) is evaluated numerically using the VAMP algorithm.
-For each mass hypotheses $m_{\PHiggs}^{\textrm{test}(i)}$ the integrand is evaluated $20,000$ times.
+For each mass hypotheses $m_{\PHiggs}^{\textrm{test}(i)}$ the integrand is evaluated $20\,000$ times.
 The series of mass hypotheses is defined by a recursive relation: 
 \begin{equation}
 m_{\PHiggs}^{\textrm{test}(i + 1)} = (1 + \delta) \,  m_{\PHiggs}^{\textrm{test}(i)} \, \mbox{ with } \, m_{\PHiggs}^{\textrm{test}(0)} = m_{\vis} \, ,
@@ -67,3 +52,18 @@ Finally, the graph of $\log(\mathcal{P} \, \cdot \, \mbox{\GeV}^{8})$
 versus $m_{\PHiggs}^{\textrm{test}(i)}$ is fitted by a second order polynomial
 in the region around the maximum,
 and $m_{\Pgt\Pgt}$ is taken to be the point at which the polynomial reaches its maximum.
+
+Graphs of the probability density $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$ 
+as function of $m_{\PHiggs}^{\textrm{test}(i)}$ are shown in Fig.~\ref{fig:likelihoodGraphs} for two exemplary events.
+The events are drawn from a simulated sample of $\PZ/\Pggx \to \Pgt\Pgt$ background events, produced as described in Section~\ref{sec:performance}.
+In the first event (``$0$-jet'') the $\PZ$ boson has little $\pT$, while in the second event (``$1$-jet boosted'') the $\PZ$ boson recoils against a high $\pT$ jet.
+The scale of the ordinate is adjusted such that the probability density is equal to one
+for the value of $m_{\PHiggs}^{\textrm{test}(i)}$ that maximises $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$.
+The width of the graph reflects the experimental resolution on $m_{\Pgt\Pgt}$.
+As will be explained in more detail in Section~\ref{sec:performance}, the resolution on $m_{\Pgt\Pgt}$ improves considerably in case the $\PZ$ boson has high $\pT$.
+The graphs of the probability density are superimposed for two cases:
+for the case that the artificial regularization term described in Section~\ref{sec:mem_logM} is used and for the case that it is not used.
+In the $\PZ/\Pggx \to \Pgt\Pgt$ background event in which the $\PZ$ boson has little $\pT$
+the probability density decreases slowly as function of the mass hypothesis in case no artificial regularization term is used,
+with the effect that such events have a sizeable probability for the reconstructed $m_{\Pgt\Pgt}$ to populate, due to resolution effects, 
+the region in which the Higgs boson signal is searched for.

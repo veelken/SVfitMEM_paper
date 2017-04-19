@@ -5,7 +5,7 @@ A variant of the SVfit algorithm without proper normalization of the likelihood 
 The algorithm differs from the SVfitMEM algorithm, described in Section~\ref{sec:mem}, in two respects,
 altering the integrand in Eq.~(\ref{eq:mem}) as well as the procedure for computing the integral.
 The indicator function $\Omega(\bm{y})$, the PDF factor $f(x_{a}) \, f(x_{b})$, the flux factor $\frac{1}{2 \, x_{a} \, x_{b} \, s}$,
-and the efficiency factor $\epsilon(\bm{p},\theta)$ in Eq~(\ref{eq:mem}) are omitted,
+and the efficiency factor $\epsilon(\bm{p},\theta)$ of Eq.~(\ref{eq:mem}) are omitted,
 as is the normalization to inclusive cross section times acceptance, given by the factor $\frac{1}{\sigma(\theta) \, \mathcal{A}(\theta)}$.
 Instead of the complete ME $\vert \mathcal{M}(\bm{p},m_{\PHiggs}) \vert^{2}$ given by Eq.~(\ref{eq:meFactorization}),
 only the terms 
@@ -23,31 +23,30 @@ The equivalent to Eq.~(\ref{eq:mem_with_hadRecoil}) reads:
 \end{align}
 Instead of computing probability densities $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs})$ for a series of mass hypotheses $m_{\PHiggs}^{\textrm{test}(i)}$ 
 and determining the value of $m_{\PHiggs}$ that maximizes the probability density,
-the integral:
+the following integral is computed:
 \begin{align}
 & \mathcal{L}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}) 
 = \frac{32\pi^{4}}{s} \, \int \, dm_{\PHiggs} \, d\Phi_{n} \, \cdot \hspace{2cm} \nonumber \\
 & \qquad \vert \BW^{(1)}_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(1)}_{\Pgt\to\cdots}(\bm{\tilde{p}}) \vert^{2} 
  \cdot \vert \BW^{(2)}_{\Pgt} \vert^{2} \cdot \vert \mathcal{M}^{(2)}_{\Pgt\to\cdots}(\bm{\tilde{p}}) \vert^{2} \cdot \nonumber \\
-& \qquad W(\bm{p}^{\vis(1)}|\bm{\hat{p}}^{\vis(1)}) \, W(\bm{p}^{\vis(2)}|\bm{\hat{p}}^{\vis(2)}) \, W_{\rec}( \pX^{\rec},\pY^{\rec} | \pXhat^{\rec},\pYhat^{\rec} ) \cdot \mathcal{F}(\bm{p}) 
+& \qquad W(\bm{p}^{\vis(1)}|\bm{\hat{p}}^{\vis(1)}) \, W(\bm{p}^{\vis(2)}|\bm{\hat{p}}^{\vis(2)}) \, W_{\rec}( \pX^{\rec},\pY^{\rec} | \pXhat^{\rec},\pYhat^{\rec} ) \cdot \mathcal{F}(\bm{p}) \, .
 \label{eq:cSVfit_with_hadRecoil}
 \end{align}
-is computed.
-The function $\mathcal{F}(\bm{p})$ in the integrand can be an arbitrary function of the momenta $\bm{p}^{(1)})$ and $\bm{p}^{(2)})$ of the two $\Pgt$ leptons.
+The function $\mathcal{F}(\bm{p})$ in the integrand may be an arbitrary function of the momenta $\bm{p}^{(1)}$ and $\bm{p}^{(2)}$ of the two $\Pgt$ leptons.
 The integral is evaluated numerically, using a custom implementation of the Markov chain Monte Carlo integration method with the Metropolis--Hastings algorithm~\cite{Metropolis_Hastings}.
 The actual value $\mathcal{L}(\bm{y})$ of the integral is irrelevant.
 The reconstruction of the mass $m_{\Pgt\Pgt}$ of the $\Pgt$ lepton pair is based on choosing 
 $\mathcal{F}(\bm{p}) \equiv (\Ehat_{\Pgt(1)} + \Ehat_{\Pgt(2)})^{2} 
- - \left( (\pXhat^{\Pgt(1)} + \pXhat^{\Pgt(2)})^{2} + (\pYhat^{\Pgt(1)} + \pYhat^{\Pgt(2)})^{2} + (\pZhat^{\Pgt(1)} + \pZhat^{\Pgt(2)})^{2} \right)$
-and recording the values of $\mathcal{F}(\bm{p})$ for each evaluation of the integrand in Eq.~(\ref{eq:cSVfit_with_hadRecoil}) by the Markov chain
+ - \left( (\pXhat^{\Pgt(1)} + \pXhat^{\Pgt(2)})^{2} + (\pYhat^{\Pgt(1)} + \pYhat^{\Pgt(2)})^{2} + (\pZhat^{\Pgt(1)} + \pZhat^{\Pgt(2)})^{2} \right)$,
+recording the values of $\mathcal{F}(\bm{p})$ for each evaluation of the integrand in Eq.~(\ref{eq:cSVfit_with_hadRecoil}) by the Markov chain
 and taking the median of the series of $\mathcal{F}(\bm{p})$ values
 as the best estimate $m_{\Pgt\Pgt}$ for the mass of the $\Pgt$ lepton pair in a given event.
 The total number of evaluations of the integrand, referred to as Markov chain ``states'',  
-amounts to $100,000$ per event. The first $10,000$ evaluations of the integrand are used as ``burn-in'' period and are excluded from the computation of the median.
+amounts to $100\,000$ per event. The first $10\,000$ evaluations of the integrand are used as ``burn-in'' period and are excluded from the computation of the median.
 The transitions between subsequent states of the Markov chain are computed for the case that $\mathcal{F}(\bm{p}) \equiv 1$.
 This choice has the advantage that the sequence of Markov chain states does not depend on $\mathcal{F}(\bm{p})$,
 which allows for $\mathcal{F}(\bm{p})$ to consist of multiple components that can be evaluated by the same Markov chain.
-Each component can be an arbitrary function of the momenta $\bm{p}^{(1)})$ and $\bm{p}^{(2)})$ of the two $\Pgt$ leptons.
+Each component may be an arbitrary function of the momenta $\bm{p}^{(1)}$ and $\bm{p}^{(2)}$ of the two $\Pgt$ leptons.
 In the default implementation of the algorithm,
 the $\pT$, $\eta$, $\phi$ and transverse mass, $m_{T\Pgt\Pgt} = (\ET^{\Pgt(1)} + \ET^{\Pgt(2)})^{2} 
  - \left( (\pX^{\Pgt(1)} + \pX^{\Pgt(2)})^{2} + (\pY^{\Pgt(1)} + \pY^{\Pgt(2)})^{2} \right)$, of the $\Pgt$ lepton pair
@@ -55,28 +54,28 @@ are reconstructed in addition to the mass $m_{\Pgt\Pgt}$.
 We refer to this version of the SVfit algorithm as the ``classic'' SVfit (cSVfit) algorithm.
 
 The cSVfit algorithm covers two use cases:
-data analyses use it either because of its capability to reconstruct kinematic observables of the $\Pgt$ lepton pair other than the mass $m_{\Pgt\Pgt}$,
+data analyses use it either because of its capability to reconstruct kinematic observables of the $\Pgt$ lepton pair other than the mass $m_{\Pgt\Pgt}$
 or because of its significantly reduced requirement on computing resources compared to the SVfitMEM algorithm.
 The $\pT$ of the $\PHiggs$ boson was used for the purpose of categorizing events in the SM $\PHiggs \to \Pgt\Pgt$ analysis 
 performed by the CMS collaboration during LHC Run $1$~\cite{HIG-13-004}.
 The $\pT$ was reconstructed by computing the vectorial sum of the momenta $\bm{p}^{\vis}$ of the visible $\Pgt$ decay products and of the missing transverse momentum $\vecMET$.
 We will demonstrate in Section~\ref{sec:performance} that reconstructing the $\pT$ of the $\PHiggs$ boson candidate by the cSVfit algorithm
 improves the resolution compared to taking the sum of the $\bm{p}^{\vis}$ and $\vecMET$ vectors.
-The transverse mass, $m_{T\Pgt\Pgt}$, of the $\PHiggs$ boson candidate has been used as observable to discriminate signal from background
-in the search for heavy $\PHiggs$ bosons in the first LHC Run $2$ data~\cite{HIG-16-006}, 
-performed by the CMS collaboration in the context of the minimal supersymmetric extension of the Standard Model (MSSM)~\cite{Fayet:1974pd,Fayet:1977yc}.
+The transverse mass $m_{T\Pgt\Pgt}$ of the $\PHiggs$ boson candidate has been used as observable to discriminate signal from background
+in the CMS search for heavy $\PHiggs$ bosons in the first LHC Run $2$ data~\cite{HIG-16-006}, 
+performed in the context of the minimal supersymmetric extension of the Standard Model (MSSM)~\cite{Fayet:1974pd,Fayet:1977yc}.
 
 Compared to the cSVfit algorithm,
 the version of the SVfit algorithm used for analyses of data recorded by the CMS experiment during LHC Run $1$
-used an incomplete expression for the product of the differential phase space element and the ME for the $\Pgt$ lepton decays.
+used an incomplete expression for the product of the differential phase space element and for the ME modelling the $\Pgt$ lepton decays.
 In particular the factor $\frac{1}{z^{2}}$ in the functions $f_{\Phadron}$ and $f_{\Plepton}$, 
 given by Eqs.~(\ref{eq:hadTauDecays_f}) and~(\ref{eq:lepTauDecays_f}), were missing by mistake.
 The effect of the missing factors $\frac{1}{z^{2}}$ 
 is equivalent to adding an artificial regularization term of the type described in Section~\ref{sec:mem_logM} with $\kappa = 4$ to the likelihood function.
-This can be seen in the limit that the angles $\theta_{\inv}$ between the $\bm{p}^{\inv}$ and $\bm{p}^{\vis}$ vectors are zero for both $\Pgt$ leptons.
-In this limit, $m_{\PHiggs}^{\textrm{test}} \approx \frac{m_{\vis}}{\sqrt{z^{(1)}z^{(2)}}}$,
+This can be seen in the limit that the angles $\theta_{\inv}$ between the $\bm{p}^{\inv}$ and $\bm{p}^{\vis}$ vectors are zero for both $\Pgt$ leptons:
+In this limit, $m_{\PHiggs}^{\textrm{test}} \approx \frac{m_{\vis}}{\sqrt{z_{(1)}z_{(2)}}}$,
 with $m_{\vis}$ denoting the measured mass of the visible $\Pgt$ decay products
-and $\log(\mathcal{P} \cdot \textrm{~\GeV}^{8}) + 4 \cdot \log(m_{\PHiggs}^{\textrm{test}(i)} \cdot \textrm{~\GeV}^{-1}) \approx \log(\mathcal{P} \cdot \textrm{~\GeV}^{8}) + \log(m_{\vis}^{4} \cdot \textrm{~\GeV}^{-4}) - \log(\frac{1}{\sqrt{z^{(1)} \, z^{(2)}}^{4}}) \approx \log(\frac{\mathcal{P} \cdot \textrm{~\GeV}^{8}}{(z^{(1)} \, z^{(2)})^{2}})$.
+and $\log(\mathcal{P} \cdot \textrm{~\GeV}^{8}) + 4 \cdot \log(m_{\PHiggs}^{\textrm{test}(i)} \cdot \textrm{~\GeV}^{-1}) \approx \log(\mathcal{P} \cdot \textrm{~\GeV}^{8}) + \log(m_{\vis}^{4} \cdot \textrm{~\GeV}^{-4}) - \log(\frac{1}{z_{(1)}^{2} \, z_{(2)}^{2}}) \approx \log(\frac{\mathcal{P} \cdot \textrm{~\GeV}^{8}}{z_{(1)}^{2} \, z_{(2)}^{2}})$.
 The term $\log(m_{\vis}^{4} \cdot \textrm{~\GeV}^{-4})$ has been omitted from the sum in the last step.
-As this term does not depend on $m_{\PHiggs}^{\textrm{test}(i)}$,
+As the term $\log(m_{\vis}^{4} \cdot \textrm{~\GeV}^{-4})$ does not depend on $m_{\PHiggs}^{\textrm{test}(i)}$,
 it has no effect on the reconstruction of $m_{\Pgt\Pgt}$.

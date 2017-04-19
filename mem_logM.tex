@@ -1,10 +1,10 @@
-high mas\subsection{Artificial regularization term}
+\subsection{Artificial regularization term}
 \label{sec:mem_logM}
 
-The cross section for the SM $\PHiggs \to \Pgt\Pgt$ signal is about three orders of magnitude smaller 
-compared the cross section for the irreducible $\PZ/\Pggx \to \Pgt\Pgt$ background.
+The SM $\PHiggs \to \Pgt\Pgt$ signal is produced at a rate about three orders of magnitude smaller 
+than the irreducible $\PZ/\Pggx \to \Pgt\Pgt$ background.
 As illustrated in Fig.~\ref{fig:xSection},
-the cross section to produce hypothetical heavy resonances, such as heavy pseudoscalar Higgs bosons or heavy spin $1$ resonances,
+the production rate for hypothetical heavy resonances, such as heavy pseudoscalar Higgs bosons or heavy spin $1$ resonances,
 typically decreases steeply with mass.
 Physics analyses at the LHC will soon start to probe signal cross sections of order $1$~fb.
 In order to maintain high sensitivity for the SM $\PHiggs \to \Pgt\Pgt$ signal as well as for hypothetical heavy resonances
@@ -12,17 +12,16 @@ it is imperative to reduce, as much as possible, high mass tails in the $m_{\Pgt
 as tails that are on or below the per mille level may yet compete with or even dwarf potential signals.
 
 As exemplified in Fig.~\ref{fig:likelihoodGraphs},
-high mass tails in $\PZ/\Pggx \to \Pgt\Pgt$ background events arise predominantly in events in which the $\PZ$ boson has little $\pT$
-and the probability density $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$ 
+high mass tails in the $m_{\Pgt\Pgt}$ distribution for the $\PZ/\Pggx \to \Pgt\Pgt$ background predominantly arise from events in which the $\PZ$ boson has little $\pT$
+and the probability density $\mathcal{P}$ 
 decreases slowly as function of $m_{\PHiggs}^{\textrm{test}(i)}$.
 
 Penalized maximum likelihood (ML) estimation is an established method for circumventing problems 
 that arise in the stability of parameter estimates in case the likelihood function is relatively flat~\cite{penalizedMaximumLikelihood1}.
 Instead of maximising the log-likelihood function $\log \mathcal{L}(\Theta|\bm{y})$,
 the penalized ML method finds the best estimate $\hat{\Theta}$ for the unknown model parameter $\Theta$ by maximising the sum $\log \mathcal{L}(\Theta|\bm{y}) + r(\Theta)$.
-The penalty function $r(\Theta)$ is added to the log-likelihood function in order to pull or shrink the best estimate $\hat{\Theta}$ for the parameter $\Theta$
-towards a value that has some rationale as good guess for $\Theta$ in information outside of the likelihood ansatz.
-
+The penalty function $r(\Theta)$ is added to the log-likelihood function in order to pull the best estimate $\hat{\Theta}$ for the parameter $\Theta$
+towards a value that has some rationale as good guess for $\Theta$ in information outside of the likelihood function.
 The penalized ML approach can be viewed as a method for introducing some tolerable degree of bias 
 in exchange for a reduction in the sampling variability of parameter estimates~\cite{penalizedMaximumLikelihood2}.
 
@@ -30,39 +29,45 @@ From a Bayesian perspective, the penalty function $r(\Theta)$ can be interpreted
 outside of any information conveyed by the measured observables $\bm{y}$.
 
 In the context of the SVfit algorithm, we choose a penalty function $r(m_{\PHiggs}^{\textrm{test}(i)})$
-that has the effect of preferring low values $m_{\Pgt\Pgt}$ 
-in case the probability density $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$ 
+which gives preference to low values of $m_{\Pgt\Pgt}$ 
+in case the probability density $\mathcal{P}$ 
 is relatively flat.
-Recall that the cross section for producing resonances decaying into $\Pgt$ lepton pairs decreases steeply with the mass of the resonance.
-The information that large mass values are less likely is not contained within the probability density given by Eq.~(\ref{eq:mem_with_hadRecoil})
-and motivates the addition of a penalty function that decreases with $m_{\PHiggs}^{\textrm{test}(i)}$.
+Recall that the cross section for producing resonances decaying into $\Pgt$ lepton pairs 
+decreases steeply with the mass of the resonance (\cf Fig.~\ref{fig:xSection}).
+The information that large mass values are less likely is not contained within the probability density defined by Eq.~(\ref{eq:mem_with_hadRecoil})
+and motivates the use of a penalized ML approach with a penalty function $r(m_{\PHiggs}^{\textrm{test}(i)})$ 
+that increases (decreases) for small (large) $m_{\PHiggs}^{\textrm{test}(i)}$.
 
-In previous applications of the SVfit algorithm for data analyses performed by the CMS collaboration regularization functions of the type 
-$-\kappa \cdot \log(m_{\PHiggs}^{\textrm{test}(i)} \cdot \mbox{~\GeV}^{-1})$ were studied.
+In previous applications of the SVfit algorithm for data analyses performed by the CMS collaboration,
+regularization functions of the type 
+$r(m_{\PHiggs}^{\textrm{test}(i)}) = -\kappa \cdot \log(m_{\PHiggs}^{\textrm{test}(i)} \cdot \mbox{~\GeV}^{-1})$ were considered.
 We will focus on these type of regularization functions in this paper,
-but remark that from a Bayesian perspective a well motivated alternative choice would be to take the logarithm of the cross section as function of mass.
+but remark that from a Bayesian perspective a well motivated alternative choice 
+would be to use as penalty function the logarithm of the cross section as function of mass.
 
-The parameter $\kappa$ is chosen with the objective of achieving an
-optimal compromise between reducing the high mass tail for the
-$\PZ/\Pggx \to \Pgt\Pgt$ background on the one hand and 
+Our choice of the parameter $\kappa$ is performed with the objective of achieving an
+optimal compromise between reducing the high mass tail in the $m_{\Pgt\Pgt}$ distribution reconstructed for 
+$\PZ/\Pggx \to \Pgt\Pgt$ background events on the one hand and 
 causing no or at most a small bias on the $m_{\Pgt\Pgt}$ distribution
 reconstructed in signal events on the other hand.
 We find that the optimal value of $\kappa$ depends on the experimental
 resolution on $\vecMET$ and on the $\pT$ of $\tauh$ and hence needs to be adjusted to the experimental conditions.
 Higher (lower) experimental resolution favors a small (large) value of $\kappa$. 
 The optimal value of $\kappa$ may furthermore differ 
-for events in which both $\Pgt$ leptons decay into hadrons,
-events in which one $\Pgt$ lepton decays hadronically and the other leptonically,
+for events in which both $\Pgt$ leptons decay hadronically,
+events in which one $\Pgt$ lepton decays into hadrons and the other into an electron or muon,
 and events in which both $\Pgt$ leptons decay into electrons or muons,
-with larger (smaller) values of $\kappa$ being favored in case both (none) of the $\Pgt$ leptons decay into hadrons.
+with larger (smaller) values of $\kappa$ being favored in case both (none) of the $\Pgt$ leptons decay hadronically.
 
-The effect of adding a regularization term of the kind $\kappa \cdot \log \left( m_{\PHiggs}^{\textrm{test}(i)} / \mbox{~\GeV} \right)$ to the 
-probability density $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$ given by Eq.~(\ref{eq:mem_with_hadRecoil})
-on the distribution in $m_{\Pgt\Pgt}$ reconstructed in simulated $\PZ/\Pggx \to \Pgt\Pgt$ background events
+The effect of adding a regularization term of the kind 
+$r(m_{\PHiggs}^{\textrm{test}(i)}) = -\kappa \cdot \log(m_{\PHiggs}^{\textrm{test}(i)} \cdot \mbox{~\GeV}^{-1})$ 
+to the probability density $\mathcal{P}$ given by Eq.~(\ref{eq:mem_with_hadRecoil})
+on the distribution in $m_{\Pgt\Pgt}$ reconstructed in $\PZ/\Pggx \to \Pgt\Pgt$ background events
 is visualized in Fig.~\ref{fig:logMscatterPlots}.
 The effect on events in which the $\PZ$ boson recoils against a high $\pT$ jet, for which the probability density typically exhibits a narrow maximum, is small, 
-while the addition of the regularization term effectively reduces the high mass tail in events in which the $\PZ$ boson has little $\pT$,
-for which the maximum of the probability density is typically broader (\cf Fig.~\ref{fig:likelihoodGraphs}).
+while the addition of the regularization term effectively reduces the high mass tail in the $m_{\Pgt\Pgt}$ distribution reconstructed in
+events in which the $\PZ$ boson has little $\pT$,
+for which the probability density decreases more slowly as function of $m_{\PHiggs}^{\textrm{test}(i)}$ (\cf Fig.~\ref{fig:likelihoodGraphs}).
 
 \begin{figure}
 \setlength{\unitlength}{1mm}

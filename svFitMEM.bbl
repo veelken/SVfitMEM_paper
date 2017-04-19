@@ -553,11 +553,4 @@ G.~Aad, et~al., {Search for neutral Higgs bosons of the minimal supersymmetric
   \href {http://dx.doi.org/10.1007/JHEP11(2014)056}
   {\path{doi:10.1007/JHEP11(2014)056}}.
 
-\bibitem{HIG-17-003}
-{CMS Collaboration}, \href{http://cds.cern.ch/record/2257067}{{Search for the
-  associated production of a Higgs boson with a top quark pair in final states
-  with a $\Pgt$ lepton at $\sqrt{s} = 13$~TeV}}, CMS Physics Analysis Summary
-  CMS-PAS-HIG-17-003 (2017).
-\newline\urlprefix\url{http://cds.cern.ch/record/2257067}
-
 \end{thebibliography}

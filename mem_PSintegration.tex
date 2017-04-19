@@ -146,8 +146,8 @@ one needs to perform the integration over $\vert \BW^{(1)}_{\Pgt} \vert^{2} \cdo
 \mathcal{M}^{(2)}_{\Pgt\to\cdots}(\bm{\tilde{p}}) \vert^{2} \, d\Phi^{(2)}$ according to
 Eq.~(\ref{eq:PSint}).
 The momenta of both $\Pgt$ leptons need to be computed as
-function of the integration variables $z^{(1)}$, $\phi_{\inv}^{(1)}$,
-$m_{\inv}^{(1)}$ and $z^{(2)}$, $\phi_{\inv}^{(2)}$,
+function of the integration variables $z_{(1)}$, $\phi_{\inv}^{(1)}$,
+$m_{\inv}^{(1)}$ and $z_{(2)}$, $\phi_{\inv}^{(2)}$,
 $m_{\inv}^{(2)}$, using Eqs.~(\ref{eq:E_inv})
 and~(\ref{eq:theta_inv}),
 where $m_{\inv}^{(i)}$ is equal to zero in case the $i$-th $\Pgt$ lepton
@@ -157,11 +157,11 @@ and the squared modulus $\vert \mathcal{M}_{\Pp\Pp \to \PHiggs \to \Pgt\Pgt}(\bm
 of the ME for $\PHiggs$ boson production and subsequent decay into a $\Pgt$ lepton pair in Eq.~(\ref{eq:mem_with_hadRecoil}).
  
 In order to improve the accuracy of the numerical integration,
-we perform a further variable transformation, replacing $z^{(2)}$ by the variable $t_{\PHiggs}$, defined below.
+we perform a further variable transformation, replacing $z_{(2)}$ by the variable $t_{\PHiggs}$, defined below.
 The transformation is executed in two steps. 
-First, we replace $z^{(2)}$ by:
+First, we replace $z_{(2)}$ by:
 \begin{equation}
-q_{\PHiggs}^{2} = \frac{q^{2}_{\vis}}{z^{(1)} \, z^{(2)}} \, ,
+q_{\PHiggs}^{2} = \frac{q^{2}_{\vis}}{z_{(1)} \, z_{(2)}} \, ,
 \label{eq:varTransform_z2_to_tHiggs_1}
 \end{equation}
 with $q_{\vis}$ denoting the mass of the visible decay products of both
@@ -174,14 +174,14 @@ q_{\PHiggs}^{2} = m_{\PHiggs}^{2} + m_{\PHiggs} \, \Gamma_{\PHiggs}
 \end{equation}
 The form of the variable transformation in Eqs.~(\ref{eq:varTransform_z2_to_tHiggs_1}) and~(\ref{eq:varTransform_z2_to_tHiggs_2}) 
 is chosen such that the Jacobi factor of the transformation from
-$z^{(2)}$ to $t_{\PHiggs}$ is proportional to the inverse of $\vert \BW_{\PHiggs} \vert^{2}$, 
+$z_{(2)}$ to $t_{\PHiggs}$ is proportional to the inverse of $\vert \BW_{\PHiggs} \vert^{2}$, 
 the squared modulus of the Breit-Wigner propagator of the $\PHiggs$ boson in
 Eq.~(\ref{eq:meHiggsBreitWigner}).
 The Jacobi factor is given by:
 \begin{equation}
-\left\lvert \frac{\partial z^{(2)}}{\partial q_{\PHiggs}^{2}} \cdot \frac{\partial
+\left\lvert \frac{\partial z_{(2)}}{\partial q_{\PHiggs}^{2}} \cdot \frac{\partial
   q_{\PHiggs}^{2}}{\partial t_{\PHiggs}} \right\rvert =
-\frac{q^{2}_{\vis}}{q_{\PHiggs}^{4} \, z^{(1)}} \cdot \frac{(q_{\PHiggs}^{2}
+\frac{q^{2}_{\vis}}{q_{\PHiggs}^{4} \, z_{(1)}} \cdot \frac{(q_{\PHiggs}^{2}
   - m_{\PHiggs}^{2})^{2} + m_{\PHiggs}^{2} \,
   \Gamma_{\PHiggs}^{2}}{m_{\PHiggs} \, \Gamma_{\PHiggs}} \, .
 \label{eq:JacobiFactor_z2_to_tHiggs}  
