@@ -39,8 +39,11 @@ and motivates the use of a penalized ML approach with a penalty function $r(m_{\
 that increases (decreases) for small (large) $m_{\PHiggs}^{\textrm{test}(i)}$.
 
 In previous applications of the SVfit algorithm for data analyses performed by the CMS collaboration,
-regularization functions of the type 
-$r(m_{\PHiggs}^{\textrm{test}(i)}) = -\kappa \cdot \log(m_{\PHiggs}^{\textrm{test}(i)} \cdot \mbox{~\GeV}^{-1})$ were considered.
+regularization functions of the following type were considered:
+\begin{equation} 
+r(m_{\PHiggs}^{\textrm{test}(i)}) = -\kappa \cdot \log(m_{\PHiggs}^{\textrm{test}(i)} \cdot \mbox{~\GeV}^{-1}) \, .
+\label{eq:logM}
+\end{equation}
 We will focus on these type of regularization functions in this paper,
 but remark that from a Bayesian perspective a well motivated alternative choice 
 would be to use as penalty function the logarithm of the cross section as function of mass.
