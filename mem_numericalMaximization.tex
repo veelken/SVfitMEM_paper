@@ -33,7 +33,7 @@ m_{\PHiggs}^{\textrm{test}(i + 1)} = (1 + \delta) \,  m_{\PHiggs}^{\textrm{test}
 where $m_{\vis}$ denotes the mass of the visible $\Pgt$ decay products.
 The step size $\delta$ is chosen such that it is small compared to the
 expected resolution on $m_{\PHiggs}$,
-typically amounting to $15$--$20\%$ relative to the true mass of the $\Pgt$ lepton pair.
+which typically amounts to $15$--$20\%$ relative to the true mass of the $\Pgt$ lepton pair (\cf Section~\ref{sec:performance}).
 
 In order to reduce the computing time, the series is computed in two passes.
 The purpose of the first pass, which uses a step size $\delta = 0.10$, is to find an approximate value of $m_{\Pgt\Pgt}$
@@ -58,12 +58,12 @@ as function of $m_{\PHiggs}^{\textrm{test}(i)}$ are shown in Fig.~\ref{fig:likel
 The events are drawn from a simulated sample of $\PZ/\Pggx \to \Pgt\Pgt$ background events, produced as described in Section~\ref{sec:performance}.
 In the first event (``$0$-jet'') the $\PZ$ boson has little $\pT$, while in the second event (``$1$-jet boosted'') the $\PZ$ boson recoils against a high $\pT$ jet.
 The scale of the ordinate is adjusted such that the probability density is equal to one
-for the value of $m_{\PHiggs}^{\textrm{test}(i)}$ that maximises $\mathcal{P}(\bm{p}^{\vis(1)},\bm{p}^{\vis(2)};\pX^{\rec},\pY^{\rec}|m_{\PHiggs}^{\textrm{test}(i)})$.
+for the value of $m_{\PHiggs}^{\textrm{test}(i)}$ that maximises $\mathcal{P}$.
 The width of the graph reflects the experimental resolution on $m_{\Pgt\Pgt}$.
 As will be explained in more detail in Section~\ref{sec:performance}, the resolution on $m_{\Pgt\Pgt}$ improves considerably in case the $\PZ$ boson has high $\pT$.
 The graphs of the probability density are superimposed for two cases:
 for the case that the artificial regularization term described in Section~\ref{sec:mem_logM} is used and for the case that it is not used.
 In the $\PZ/\Pggx \to \Pgt\Pgt$ background event in which the $\PZ$ boson has little $\pT$
-the probability density decreases slowly as function of the mass hypothesis in case no artificial regularization term is used,
+the probability density decreases slowly as function of the mass hypothesis in case no artificial regularization term is used
 with the effect that such events have a sizeable probability for the reconstructed $m_{\Pgt\Pgt}$ to populate, due to resolution effects, 
 the region in which the Higgs boson signal is searched for.

@@ -29,9 +29,11 @@ The samples are normalized according to cross section for the purpose of compari
 The cross section for the irreducible $\PZ/\Pggx \to \Pgt\Pgt$ background is computed at NNLO accuracy and amounts to $1.92 \times 10^{3}$~pb~\cite{FEWZ}.
 The cross sections for the SM $\PHiggs \to \Pgt\Pgt$ signal have been computed as detailed in Ref.~\cite{Dittmaier:2011ti},
 with the updates described in Ref.~\cite{Heinemeyer:2013tqa} included.
-They amount to $2.77$~pb for $\Pg\Pg \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$ and to $2.37 \cdot 10^{-1}$~pb for $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$.
+The product of cross section times the branching fraction for the decay into a $\Pgt$ lepton pair
+amounts to $2.77$~pb for SM $\PHiggs$ bosons produced via gluon fusion 
+and to $2.37 \cdot 10^{-1}$~pb for SM $\PHiggs$ bosons produced via vector boson fusion.
 The $\PHiggsps \to \Pgt\Pgt$ and $\PZ' \to \Pgt\Pgt$ samples 
-are scaled to a product of cross section times branching fraction, for the decay into $\Pgt$ lepton pairs, of $1$~pb.
+are scaled to a product of cross section times branching fraction, for the decay into a pair of $\Pgt$ leptons, of $1$~pb.
 
 The events are studied on generator level.
 The $\pT$, $\eta$, and $\phi$ of the electrons and muons produced in the $\Pgt$ lepton decays
@@ -84,11 +86,11 @@ SM $\PHiggs \to \Pgt\Pgt$ analysis performed by the CMS collaboration during LHC
 \end{itemize}
 The event categorization is based on generator level quantities.
 We do not expect that migrations between the event categories due to resolution effects 
-significantly affect the conclusions of these studies
+significantly affect the conclusions of the $m_{\Pgt\Pgt}$ resolution studies.
 
 The $m_{\Pgt\Pgt}$ distributions reconstructed by the SVfitMEM and cSVfit algorithms in these event categories 
 in the $\tauh\tauh$, $\Pgm\tauh$, and $\Pe\Pgm$ decay channels are shown in Figs.~\ref{fig:massDistributions_sm_tautau} to~\ref{fig:massDistributions_sm_emu}.
-They are compared to the distributions in $m_{\Pgt\Pgt}$  reconstructed by the ``collinear-approximation'' (CA) method~\cite{massRecoCollinearApprox}
+They are compared to the distributions in $m_{\Pgt\Pgt}$ reconstructed by the ``collinear-approximation'' (CA) method~\cite{massRecoCollinearApprox}
 and by the previous version of the
 SVfit algorithm, described in Ref.~\cite{SVfit}, to which we refer to as the SVfit ``standalone'' (SVfitSA) algorithm.
 The SVfitMEM and cSVfit algorithms are utilized with and without the artificial regularization term described in Section~\ref{sec:mem_logM}.
@@ -264,7 +266,7 @@ are often degenerate in terms of the probability density $\mathcal{P}$.
 Numerical values for the resolution in $m_{\Pgt\Pgt}$ achieved by the different algorithms are given in Tables~\ref{tab:resolutions_sm_tautau} to~\ref{tab:resolutions_sm_emu}.
 The mass of the visible $\Pgt$ decay products, $m_{\vis}$, is given in the tables for comparison.
 The resolution is quantified separately for the low mass and for the high mass tail of the mass distribution reconstructed by a given algorithm.
-The symbol $\sigma_{l}/\textrm{M}$ ($\sigma_{h}/\textrm{M}$) denotes the 
+The symbol $\sigma_{l}/\textrm{M}$ (the symbol $\sigma_{h}/\textrm{M}$) denotes the 
 ratio of the difference between the median and the $16\%$ quantile (between the $84\%$ quantile and the median) relative to the median
 of the mass distribution.
 The capability of each algorithm to separate the SM $\PHiggs \to \Pgt\Pgt$ signal from the irreducible $\PZ/\Pggx \to \Pgt\Pgt$ background 
@@ -516,7 +518,7 @@ SM $\Pquark\APquark \to \PHiggs$, $\PHiggs \to \Pgt\Pgt$: & & & & & & & & \\
 %----------------------------------------------------------------------------------------------------
 
 The choice of quantifying the resolution in terms of the ratios $\sigma_{l}/\textrm{M}$ and $\sigma_{h}/\textrm{M}$ is motivated 
-by the fact that the distributions in $m_{\Pgt\Pgt}$, respectively in $m_{\vis}$, may be shifted with respect to $m_{\Pgt\Pgt}^{\true}$.
+by the fact that the distributions in $m_{\Pgt\Pgt}$ and in $m_{\vis}$ may be shifted with respect to $m_{\Pgt\Pgt}^{\true}$.
 While the distributions in $m_{\Pgt\Pgt}$ reconstructed by the different versions of the SVfit algorithm,
 as well as by the CA method, peak close to $m_{\Pgt\Pgt}^{\true}$,
 the distributions in $m_{\vis}$ exhibit significant shifts towards lower mass.
@@ -526,11 +528,11 @@ The shift is more pronounced in events selected in the $1$-jet and $2$-jet VBF c
 In particular in the $\tauh\tauh$ channel,
 the $\pT$ cuts that are applied on the $\tauh$ remove most of the $\PZ/\Pggx \to \Pgt\Pgt$ events in the $0$-jet category,
 except for a few events with large $m_{\vis}$.
-The events selected in the $1$-jet and $2$-jet VBF categories typically have smaller $m_{\vis}$, as $m_{\vis}$ decreases proportional to the cosine of the angle between the $\Pgt$ leptons,
+The events selected in the $1$-jet and $2$-jet VBF categories typically have smaller $m_{\vis}$, as $m_{\vis}$ decreases proportional to the cosine of the angle between the $\Pgt$ leptons:
 $m_{\vis} \approx \pT^{\vis(1)} \, \cosh\eta_{\vis(1)} \cdot \pT^{\vis(2)} \, \cosh\eta_{\vis(2)} \cdot \left( 1 - \cos\sphericalangle(\Pgt^{(1)},\Pgt^{(2)}) \right)$.
 All algorithms can be trivially calibrated such that the median of each mass distribution coincides with the true mass of the $\Pgt$ lepton pair,
 by scaling the output of the algorithm by a suitably chosen constant.
-The advantage of quantifying the resolution in terms of the ratios $\sigma_{l}/\textrm{M}$ and $\sigma_{h}/\textrm{M}$ is that the ratios
+The advantage of quantifying the resolution in terms of the ratios $\sigma_{l}/\textrm{M}$ and $\sigma_{h}/\textrm{M}$ is that these ratios
 are invariant under such scaling.
 
 The ratio $\textrm{S}/(\textrm{S} + \textrm{B})$
@@ -602,7 +604,7 @@ respectively.
 %----------------------------------------------------------------------------------------------------
 
 Distributions in $m_{\Pgt\Pgt}$ reconstructed by different versions of
-the SVfit algorithm and by the CA method, as well as in $m_{\vis}$ in events containing hypothetical heavy
+the SVfit algorithm and by the CA method, as well as in $m_{\vis}$, in events containing hypothetical heavy
 pseudoscalar Higgs bosons and heavy spin $1$ resonances are shown in
 Figs.~\ref{fig:massDistributions_mssm_tautau}
 to~\ref{fig:massDistributions_mssm_emu}.
@@ -675,7 +677,7 @@ term described in Section~\ref{sec:mem_logM} is used and for the case that it is
 The SVfit algorithm significantly improves the separation of 
 the heavy $\PHiggsps$ and $\PZ'$ boson signals from the irreducible $\PZ/\Pggx \to \Pgt\Pgt$
 background in all three decay channels.
-Numerical values for the median $\textrm{M}$ as well as for the resolutions $\sigma_{l}/\textrm{M}$ and $\sigma_{h}/\textrm{M}$ of the distributions in $m_{\Pgt\Pgt}$ and in $m_{\vis}$
+Numerical values for the median $\textrm{M}$ as well as for the resolutions $\sigma_{l}/\textrm{M}$ and $\sigma_{h}/\textrm{M}$ 
 are given in Tables~\ref{tab:resolutions_mssm_tautau}
 to~\ref{tab:resolutions_mssm_emu}.
 

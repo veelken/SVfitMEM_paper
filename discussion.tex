@@ -1,0 +1,23 @@
+\section{Discussion}
+\label{sec:discussion}
+
+Considering that the resolution on $m_{\Pgt\Pgt}$,
+quantified by $\sigma_{l}/\textrm{M}$ and $\sigma_{h}/\textrm{M}$, achieved
+by the SVfitMEM and cSVfit algorithms is almost identical, we find that the cSVfit
+algorithm represents the best compromise between physics performance and computing time requirements in practical applications of the SVfit algorithm.
+
+The optimal resolution is achieved in case an artificial regularization term of the type described in Section~\ref{sec:mem_logM}, with small positive $\kappa$,
+is added to the likelihood function.
+We expect the optimal choice of $\kappa$ to depend on the experimental resolution
+as well as on the rates of signal and background processes,
+and we recommend to perform a reoptimization of $\kappa$ in practical applications of our algorithm.
+
+The merit of the SVfitMEM algorithm is that the 
+formalism to treat $\Pgt$ lepton decays in the ME method, developed
+for the SVfitMEM algorithm, can be used
+in future applications of the ME method to data analyses with $\Pgt$
+leptons in the final state.
+An example for such an application is the analysis of SM $\PHiggs$ boson production in association with a pair of top quarks ($\Ptop\APtop\PHiggs$)
+in final states with a $\Pgt$ lepton~\cite{HIG-17-003},
+in which the existence of neutrinos from $\PW \to \Plepton\Pnu$ decays preclude the reconstruction of the $\PHiggs$ boson mass by the SVfit algorithm.
+
